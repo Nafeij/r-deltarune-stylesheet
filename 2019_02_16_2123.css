@@ -4418,9 +4418,9 @@ ul.tabmenu li.selected a:visited {
 html:lang(xn) body:not(.comments-page) .link.linkflair-news { display: none; }
 .side .md a[href*="flair:news"],
 .wiki-page .wiki-page-content .md a[href*="flair:news"],
-.flairselector .linkflair-news > .linkflairlabel{ background-color: #787878;}
-.link.linkflair-news:hover { box-shadow: inset 25px 0 0 0 #787878!important; }
-.link.linkflair-news { border-left-color: #787878!important; }
+.flairselector .linkflair-news > .linkflairlabel{ background-color: #3a3a3a;}
+.link.linkflair-news:hover { box-shadow: inset 25px 0 0 0 #3a3a3a!important; }
+.link.linkflair-news { border-left-color: #3a3a3a!important; }
 	
 html:lang(xc) body:not(.comments-page) .link.linkflair-creation { display: none; }
 .side .md a[href*="flair:creation"],
