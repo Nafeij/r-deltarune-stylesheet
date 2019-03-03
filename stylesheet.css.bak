@@ -1,0 +1,5045 @@
+/*
+Most graphics used are copyright of Toby Fox.
+
+Shamelessly stolen from /r/MortalKombat. Credit goes to u/Xhogar and u/FanOfTheJoystick
+
+For raw unminified css, PM /u/Nafeij or see here: https://drive.google.com/drive/folders/18usVuMh0MBdSb2xebTkTnaj4kpJl01cm?usp=sharing
+*/
+.side .md a[href*="http://www.reddit.com/r/deltarune"],
+.side .md a[href*="http://dm.reddit.com/r/deltarune"] {
+    display: block;
+    width: 122px;
+    height: 68px;
+    margin: 0 auto;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: 100%!important;
+    transition: background-size .2s ease-out;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    right: 15px
+}
+
+.side .md a[href*="http://www.reddit.com/r/deltarune"] {
+    background: url(%%light-btn%%)
+}
+
+.side .md a[href*="http://dm.reddit.com/r/deltarune"] {
+    background: url(%%dark-btn%%)
+}
+
+.side .md a[href*="http://www.reddit.com/r/deltarune"]:hover,
+.side .md a[href*="http://dm.reddit.com/r/deltarune"]:hover {
+    background-size: 95%!important
+}
+
+.side a[href="http://www.reddit.com/r/deltarune"] {
+    pointer-events: none
+}
+
+.res-nightmode .side .md a[href="http://www.reddit.com/r/deltarune"],
+:lang(dm) .side .md a[href="http://www.reddit.com/r/deltarune"] {
+    pointer-events: auto
+}
+
+.side .md a[href="#bullet"] {
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: url(%%bullet%%) no-repeat;
+    margin: 0;
+    padding-right: 4px;
+    padding-left: 0;
+    position: relative;
+    left: 2px;
+    z-index: 0;
+    pointer-events: none;
+    cursor: none
+}
+
+.res-nightmode .side .md a[href="#bullet"],
+.side .md a[href="#bullet"]:lang(dm) {
+    background-position: 0 -10px
+}
+
+.md>ul>li>a {
+    color: #e22
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #606060;
+    box-shadow: inset 2px 0 0 #21201d, inset -2px 0 0 #21201d;
+    border-radius: 5px;
+    width: 12px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #21201d
+}
+
+::-webkit-scrollbar {
+    width: 11px
+}
+
+.res-nightmode body,
+.res-nightmode body.comments-page,
+.res-nightmode body.search-page,
+.res-nightmode body.submit-page,
+body.comments-page:lang(dm),
+body.search-page:lang(dm),
+body.submit-page:lang(dm),
+body:lang(dm) {
+    background-image: url(%%BGB%%)
+}
+
+body {
+    overflow-x: hidden
+}
+
+body,
+body.comments-page,
+body.search-page,
+body.submit-page {
+    background-image: url(%%BG%%)
+}
+
+.md code,
+.md pre {
+    background: 0 0!important;
+    border: 0
+}
+
+#header {
+    background-image: url(%%header%%);
+	background-repeat: repeat-x;
+	background-position: center 18px;
+	background-color: #202020;
+	height: 210px;
+	border: 0;
+	margin-bottom: 36px;
+	z-index: 1;
+}
+/*
+#header:after{
+    content:'';
+    background-image:url(%%twalk%%);
+    width: 58px;
+    display: block;
+    position: absolute;
+    height: 104px;
+    left: -58px;
+    z-index: -1;
+    top: 80px;    
+    animation: move 54s linear 6s 5,
+        leg 1s steps(1, end) 300;
+    -webkit-animation: move 54s linear 6s 5,
+        leg 1s steps(1, end) 300;
+}
+
+@-webkit-keyframes leg {50% {background-position: -58px 0;}}
+@keyframes leg{50% {background-position: -58px 0;}}
+
+@-webkit-keyframes move {
+    0% { left: -58px;}
+    50%, 100%{left:100vw;}
+}
+
+@keyframes move {
+    0% { left: -58px;}
+    50%, 100%{left:100vw;}
+}
+*/
+
+#header:lang(dm),
+.res-nightmode #header {
+    background-image: url(%%header-b%%), url(%%header-b-repeat%%);
+    background-repeat: no-repeat, repeat;
+    background-position: 80% 18px, center 18px;
+    background-color: #202020;
+    height: 210px;
+    border: 0;
+    animation: flutter 1s steps(4, end) 300;
+    -webkit-animation: flutter 1s steps(4, end) 300
+}
+
+@-webkit-keyframes flutter {
+    100% {
+        background-position: 80% -822px, center 18px
+    }
+}
+
+@keyframes flutter {
+    100% {
+        background-position: 80% -822px, center 18px
+    }
+}
+
+.content a,
+.md a,
+.pagename a,
+.search-expando-button,
+.search-result:link,
+.search-result:link>mark,
+.side a,
+.tabmenu li.selected a,
+.tagline a,
+.thing .title {
+    color: #e82222!important
+}
+
+.content a:lang(dm),
+.md a:lang(dm),
+.pagename a:lang(dm),
+.res-nightmode .content a,
+.res-nightmode .md a,
+.res-nightmode .pagename a,
+.res-nightmode .search-expando-button,
+.res-nightmode .search-result:link,
+.res-nightmode .search-result:link>mark,
+.res-nightmode .side a,
+.res-nightmode .tabmenu li.selected a,
+.res-nightmode .tagline a,
+.res-nightmode .thing .title,
+.search-expando-button:lang(dm),
+.search-result:link:lang(dm),
+.search-result:link>mark:lang(dm),
+.side a:lang(dm),
+.tabmenu li.selected a:lang(dm),
+.tagline a:lang(dm),
+.thing .title:lang(dm) {
+    color: #e82e2e!important
+}
+
+	/* Spoiler Format */
+	
+.md a[href$="/s"] {
+    background: #000 !important;
+    color: #000 !important;
+    transition: .2s;
+}
+.md a[href$="/s"]:hover {
+    color: #e0e0e0 !important;
+    transition: .2s;
+}
+	
+	/* Description + Spoiler Format */
+	
+.md a[href="#s"] {
+    text-decoration: none !important;
+    cursor: default;
+    background: #000;
+    color: #e0e0e0 !important;
+    display: inline-block;
+}
+.md a[href="#s"]:after {
+    content: attr(title);
+    color: #000;
+    padding: 0 0.5em;
+    visibility: visible;
+    transition: .2s;
+}
+.md a[href="#s"]:hover:after,
+.md a[href="#s"]:active:after {
+    color: #e0e0e0;
+	transition: .2s;
+}	
+	/* Title Hiding (Posts)
+	
+.thing.spoiler a.title, .thing.link.spoiler.stickied a.title {
+	color: #000 !important;
+	background: #000;
+	transition: ease-in-out 0.2s;
+}
+	
+.thing.spoiler a.title:hover, .thing.link.spoiler.stickied a.title:hover {
+	background: transparent;
+	transition: ease-in-out 0.5s;
+    color: inherit;
+}
+
+.thing.spoiler a.title:lang(dm):hover, 
+.thing.link.spoiler.stickied a.title:lang(dm):hover,
+.res-nightmode .thing.spoiler a.title:hover, 
+.res-nightmode .thing.link.spoiler.stickied a.title:hover
+{color: #e0e0e0!important;}
+
+.thing.link.spoiler.stickied a.title:hover{color:#228822}
+*/	
+.spoiler-stamp, .spoiler-stamp span {
+	visibility: visible!important;
+	opacity: 1!important;
+}
+
+/*Notice Box*/
+.side .md > ul:first-of-type {
+    position: absolute;
+    top: 239px;
+    width: 268px;
+    font-size: 11px;
+	border: 16px solid;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: #556;
+	cursor: default;
+    background: url(%%notice%%) center no-repeat;
+    z-index:100;
+    border-image: url(%%noticeborder%%) 16;
+	background-color: #B79675;
+}
+
+:lang(dm) .side .md > ul:first-of-type,
+.res-nightmode .side .md > ul:first-of-type {
+	background: url(%%noticeD%%) center no-repeat;
+	border-image: url(%%noticeborderD%%) 16;
+	background-color: #8F6E4D;
+}
+
+.side .md>ul:first-of-type li {list-style: none}
+
+.side .md > ul:first-of-type ul {
+	background-color: rgba(240,240,240,.75);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+	border-radius: 0px;
+	padding: 2px 6px;
+	margin: .25em;
+}
+:lang(dm) .side .md > ul:first-of-type ul,
+.res-nightmode .side .md > ul:first-of-type ul{background-color: rgba(40,40,40,.75);}
+
+.side .md > ul:first-of-type:hover ul {background-color: rgba(240,240,240,.95);}
+:lang(dm) .side .md > ul:first-of-type:hover ul,
+.res-nightmode .side .md > ul:first-of-type:hover ul{background-color: rgba(40,40,40,.95);}
+
+.side .md > ul:first-of-type a {line-height: 1.75em}
+.side .md>ul:first-of-type ul a::before {content: "❯ "}
+.side .md>ul:first-of-type a:hover {border-bottom: 1px dotted #888;}
+.side .md > ul:first-of-type > li {margin: 0 -8px -8px -8px}
+
+.side .md > ul:first-of-type > li > strong {
+	display: block;
+	margin: 0.25em 0 0;
+}
+
+.side .md > ul:first-of-type strong > a {
+	top: 0;
+	margin-right: -2px;
+}
+
+/* Header Flairsearch */
+
+#searchexpando{width: 161px}
+#search input[type="text"] {width:193px}
+
+.side .md > h3:first-of-type {
+    font-size: 0;
+    line-height: 28px;
+    position: absolute;
+    top: 375px;
+    right: 28px;
+    width: 100px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.side .md > h3:first-of-type::after {
+	font-size: 12px;
+	font-weight: 500;
+	position: relative;
+	z-index: 12;
+	content: "search by flair";
+	pointer-events: none;
+    color: #888;
+}
+
+.side .md > h3:first-of-type + ul {
+	position: absolute;
+	top: 397px;
+    right: 28px;
+    display: block;
+    overflow: hidden;
+    width: 100px;
+	padding: 1px;
+	list-style: none;
+	cursor: pointer;
+	height: 0;
+	transition: height 0.5s ease-out, top 0.5s ease-out;
+	border-width: 0 !important;
+}
+
+.side .md > h3:first-of-type + ul::before {
+	content: "";
+	top: -8px;
+	display: block;
+	height: 10px;
+	position: absolute;
+	width: 100%;
+}
+
+.side .md > h3:first-of-type + ul:hover, .side .md > h3:first-of-type:hover + ul {
+	height: 184px;
+	top: 405px;
+	border-width: 1px !important;
+    padding:0;
+}
+
+.side .md > h3:first-of-type + ul li a:hover {
+	border: 1px solid #ee2222;
+	padding: 3px 6px;
+}
+
+.side .md > h3:first-of-type + ul li a {
+	display: block;
+	padding: 4px 7px;
+	color: #666 !important;
+	margin-right: 19px;
+    background-color: transparent;
+}
+
+:lang(dm) .side .md > h3:first-of-type + ul li a, .res-nightmode .side .md > h3:first-of-type + ul li a{color: #eee}
+
+.side .md > h3:first-of-type + ul li a:not(:first-of-type) {
+	display: inline-block;
+	margin-top: -23px;
+	position: absolute;
+	right: -19px;
+}
+
+
+.md table {
+    margin: 5px 0 15px
+}
+
+.md td,
+.md th {
+    padding: 5px;
+    border: 1px solid #aaa
+}
+
+.res-nightmode .md td,
+:lang(dm) .md td {
+    background: #1a1714
+}
+
+.res-nightmode .md th,
+:lang(dm) .md th {
+    text-align: inherit;
+    background: #2e2a26
+}
+
+hr {
+    background: 0 0;
+    border: 0;
+    border-bottom: 1px solid #5f5c59;
+    margin: 10px 0!important
+}
+
+.tagline {
+    margin-top: 9px!important;
+    line-height: 11px
+}
+
+.link .score {
+    margin-top: 4px!important
+}
+
+.listing-page .parent {
+    margin-top: 0!important
+}
+
+.link .score.likes {
+    color: #e22
+}
+
+.link .score.dislikes {
+    color: #994747
+}
+
+.link .score.unvoted {
+    color: #888
+}
+
+.res-nightmode .comment .score,
+:lang(dm) .comment .score {
+    color: #aaa!important
+}
+
+.content,
+.md,
+.side {
+    color: #666
+}
+
+.res-nightmode .content,
+.res-nightmode .md,
+.res-nightmode .side,
+:lang(dm).content,
+:lang(dm).md,
+:lang(dm).side {
+    color: #ccc
+}
+
+#sr-more-link,
+.dropdown.srdrop .selected,
+.sr-bar a {
+    color: #CCC;
+    font-size: 8px;
+    transition: all .2s ease-out
+}
+
+#sr-header-area:hover a,
+#sr-header-area:hover.dropdown.srdrop .selected {
+    color: #e0e0e0
+}
+
+.thing .title {
+    margin-bottom: 10px
+}
+
+#sr-header-area .selected a,
+.comment .md p>a:visited,
+.pagename a:visited,
+.tagline a:visited,
+.thing .title:visited,
+.thing.visited .title {
+    color: #600!important
+}
+
+.res-nightmode #sr-header-area .selected a,
+.res-nightmode .comment .md p>a:visited,
+.res-nightmode .pagename a:visited,
+.res-nightmode .tagline a:visited,
+.res-nightmode .thing .title:visited,
+.res-nightmode .thing.visited .title,
+:lang(dm)#sr-header-area .selected a,
+:lang(dm).comment .md p>a:visited,
+:lang(dm).pagename a:visited,
+:lang(dm).tagline a:visited,
+:lang(dm).thing .title:visited,
+:lang(dm).thing.visited .title {
+    color: #b00!important
+}
+
+body.loggedin>.content:after,
+body.loggedin>.content:before {
+    display: block;
+    position: fixed
+}
+
+.user,
+.user>a {
+    position: relative
+}
+
+/*Usertab popup*/
+
+#header-bottom-right {
+    background-color: transparent;
+    bottom: -25px!important;
+    top: auto!important;
+    height: 32px;
+    font-family: determination mono, determination sans, consolas, monospace;
+    width: 246px;
+    transition: .2s linear;
+    border: 2px solid transparent;
+    right: 0;
+    padding: 0;
+    border-radius: 0
+}
+
+#header-bottom-right:hover {
+    border-color: #fff;
+    height: 68px
+}
+
+.res-nightmode #header-bottom-right:hover,
+:lang(dm) #header-bottom-right:hover {
+    border-color: #00e6ff
+}
+
+#header-bottom-right a {
+    color: #fff
+}
+
+#header-bottom-right .separator {
+    display: none
+}
+
+.user {
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+    background-image: url(%%usersnoo2%%)!important;
+    background-repeat: no-repeat;
+    background-position: 7px 21px;
+    padding: 5px 8px 0 5px;
+    background-color: #000;
+    height: 25px;
+    transition: border-bottom-color .2s linear;
+    border-bottom: 2px solid transparent;
+    z-index: 1
+}
+
+.res-nightmode .user,
+.user:lang(dm) {
+    background-image: url(%%usersnoo%%)!important;
+    background-position: 8px 5px
+}
+
+#header-bottom-right:hover .user {
+    border-bottom-color: #fff;
+    height: 28px
+}
+
+.res-nightmode #header-bottom-right:hover .user,
+:lang(dm) #header-bottom-right:hover .user {
+    border-bottom-color: #00e6ff
+}
+
+.user>a {
+    font-size: 14px;
+    top: -2px;
+    left: 0;
+	text-transform: uppercase;
+}
+
+.res-nightmode .user>a,
+:lang(dm) .user>a {
+    left: 29px;
+    top: 3px
+}
+
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
+    width: 27px!important;
+    height: 9px!important;
+    left: 3px;
+    position: absolute;
+    background-image: none!important;
+    top: 20px
+}
+
+.res-nightmode .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon,
+:lang(dm) .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
+    width: 20px!important;
+    height: 17px!important;
+    left: 5px;
+
+    top: 5px
+}
+
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay {
+    display: none
+}
+
+.user .userkarma {
+    font-size: 0;
+    top: 18px;
+    position: absolute;
+    background: url(%%hp%%) 0 -9px no-repeat;
+    width: 116px;
+    display: block;
+    height: 11px;
+    text-align: right;
+    float: right;
+    right: 14px;
+    overflow: visible
+}
+
+.user .userkarma a:first-of-type,
+.user .userkarma a:last-of-type {
+    font-size: 12px;
+    left: auto;
+    position: relative;
+    top: -16px
+}
+
+.res-nightmode .user .userkarma,
+:lang(dm) .user .userkarma {
+    height: 9px;
+    background-position: 0 0
+}
+
+.user .userkarma a:first-of-type:after {
+    content: "/";
+    margin-left: 3px;
+    margin-right: 2px
+}
+
+.user .userkarma a:last-of-type {
+    right: 0
+}
+
+#header-bottom-right a.login-required {
+    margin: 0 11px 0 40px
+}
+
+#chat,
+#header-bottom-right .gearIcon,
+#mail,
+#modmail,
+#new_modmail,
+.logout a,
+.pref-lang {
+    background-image: url(%%userbar%%)!important;
+    position: absolute;
+    top: auto;
+    bottom: -1px;
+    height: 33px;
+    width: 35px;
+    background-size: 244px 99px;
+    vertical-align: baseline!important;
+    margin: 0;
+    font-size: 0;
+    display: inline-block;
+    content: ""!important;
+    background-repeat: no-repeat
+}
+
+#header-bottom-right>a:first-of-type::after {
+    background-image: url(%%sprite1%%)!important;
+    content: "";
+    display: block;
+    height: 31px;
+    width: 244px;
+    background-position: 0 -160px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    pointer-events: none
+}
+
+.message-count {
+    display: none!important
+}
+
+#openRESPrefs {
+    position: absolute
+}
+
+#mail{ left:2px;overflow: visible;}
+#mail.nohavemail {background-position: 0 0;}
+#mail.havemail {background-position: 0 -33px;}
+#mail:hover{background-position: 0 -66px;}
+
+#chat {background-position: -35px 0;left:37px;}
+#chat.active{background-position: -35px -33px; background-size: auto;}
+#chat:hover{background-position: -35px -66px;}
+
+#modmail{left:72px;}
+#modmail.nohavemail {background-position: -70px 0 !important;}
+#modmail.havemail {background-position: -70px -33px !important;}
+#modmail:hover{background-position: -70px -66px !important;}
+
+#new_modmail{left:107px;}
+#new_modmail.nohavemail {background-position: -105px 0;}
+#new_modmail.havemail {background-position: -105px -33px;}
+#new_modmail:hover{background-position: -105px -66px;}
+
+#header-bottom-right .flat-list,
+.pref-lang {
+    left: 142px
+}
+
+.pref-lang {
+    background-position: -140px 0
+}
+
+.pref-lang:hover {
+    background-position: -140px -66px
+}
+
+#header-bottom-right .gearIcon{
+	background-image: none !important;
+	left: 177px;
+}
+
+#header-bottom-right .gearIcon:after {
+	background-image: url(%%userbar%%);
+    background-position: -175px 0;
+	display: block;
+	height: 33px;
+	content: "";
+}
+
+#header-bottom-right .gearIcon:hover:after {
+    background-position: -175px -66px
+}
+
+.logout a {
+    left: 212px;
+    background-position: -210px 0
+}
+
+.logout:hover a {
+    background-position: -210px -66px
+}
+
+#RESSettingsButton,
+#openRESPrefs {
+    bottom: 0;
+    left: 0
+}
+
+#sr-header-area {
+    background: #2e262b;
+    border: 0
+}
+
+#sr-more-link {
+    background: #2e2a26
+}
+
+#header-bottom-left {
+    bottom: -26px;
+    height: 32px;
+    border: 3px solid #fff;
+    width: 100%;
+    position: absolute;
+    background-color: #000
+}
+
+.res-nightmode #header-bottom-left,
+:lang(dm) #header-bottom-left {
+    border-color: #322431
+}
+
+#header .tabmenu:after {
+    background-position: 0 -945px;
+    float: right
+}
+
+#header .tabmenu li {
+    display: inline-block;
+    margin: 0;
+    float: left;
+    -webkit-animation: tabs-fadein .5s ease-out forwards;
+    animation: tabs-fadein .5s ease-out forwards
+}
+
+.res-nightmode #header .tabmenu li a,
+:lang(dm) #header .tabmenu li a {
+    color: #e0e0e0;
+    text-shadow: -1px -1px 0 #00133f, 1px -1px 0 #00133f, -1px 1px 0 #00133f, 1px 1px 0 #00133f
+}
+
+#header .tabmenu li a:hover,
+#header .tabmenu li.selected a {
+    color: #e0e0e0
+}
+
+#header .tabmenu li.selected a {
+    font-weight: 700;
+    color: #e0e0e0
+}
+
+.pagename {
+    font-size: 0;
+    z-index: 1
+}
+
+.pagename a {
+    display: block;
+    width: 100%;
+    height: 180px;
+    opacity: .9;
+    transition: all .2s ease-out;
+    background: url(%%hlogo%%) 115px 95px no-repeat;
+    top: -182px;
+    position: absolute
+}
+
+.pagename a:hover {
+    opacity: 1
+}
+
+.side .md>ol {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    left: 50px;
+    top: 220px;
+    z-index: 100;
+    background-color: #2e2
+}
+
+.side .md>ol>li {
+    color: #22e;
+    min-width: 200px;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    line-height: 28px;
+    text-align: left
+}
+
+.side .md>ol>li>ol>li {
+    margin-right: -1px;
+    float: left
+}
+
+.side .md>ol>li>p>strong {
+    text-transform: uppercase
+}
+
+.side .md>ol>li>ol {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.side .md>ol li a {
+    border: 1px solid #2e2;
+    padding: 5px 7px;
+    margin-top: -1px;
+    background: #4d0400;
+    display: block
+}
+
+.side .md>ol li a:hover {
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7) inset
+}
+
+.side .md>ol li em {
+    display: block;
+    padding-left: 13px;
+    font-size: 11px;
+    font-style: normal
+}
+
+.side blockquote code {
+    font-size: 12px
+}
+
+.side blockquote table {
+    margin: 0;
+    width: 100%;
+    background: 0 0
+}
+
+.side blockquote td {
+    border: 0;
+    background: 0 0;
+    font-size: 11px
+}
+
+.side blockquote a[href="#expand"] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 10px;
+    height: 25px;
+    line-height: 25px;
+    background: #FFCADB;
+    box-sizing: border-box;
+    border: 1px solid #2e2a26;
+    border-right: 1px solid #141414;
+    border-bottom: 2px solid #101010;
+    transition: .5s ease all;
+    cursor: default;
+    opacity: 1
+}
+
+.res-nightmode .side blockquote a[href="#expand"],
+:lang(dm) .side blockquote a[href="#expand"] {
+    background: #444240
+}
+
+.side blockquote a[href="#expand"]:before {
+    display: block;
+    color: #888;
+    font-size: 16px;
+    transform: rotate(90deg);
+    content: "»";
+    text-align: center
+}
+
+.res-nightmode .side blockquote a[href="#expand"]:before,
+:lang(dm) .side blockquote a[href="#expand"]:before {
+    display: block;
+    color: #111;
+    font-size: 16px;
+    transform: rotate(90deg);
+    content: "»";
+    text-align: center
+}
+
+.side blockquote:hover a[href="#expand"] {
+    margin-bottom: -3px;
+    height: 0;
+    text-decoration: none
+}
+
+.modal {
+    z-index: 2147483649!important
+}
+
+#RESPrefsDropdown {
+    z-index: 2147483648!important
+}
+
+.side .md hr {
+    background: 0 0;
+    opacity: 0;
+    border: 0
+}
+
+.side {
+    width: 330px;
+    background: url(%%side%%) #e0e0e0;
+    margin: 0 10px 20px;
+    border: 3px solid #ccc;
+	padding-top: 116px;
+}
+
+.res-nightmode .side,
+:lang(dm) .side {
+    background: url(%%sided%%) #202020;
+    border-color: #555
+}
+
+.side .login-form-side {
+    border: 0!important;
+    margin: 15px 15px 0;
+    width: 308px
+}
+
+.side .login-form-side input[type=password],
+.side .login-form-side input[type=text] {
+    width: 148px;
+    margin-left: 4px
+}
+
+.side .spacer {
+    margin: 0
+}
+
+.side .sponsorshipbox {
+    margin-left: 20px
+}
+
+.side .sponsorshipbox iframe {
+    display: block;
+    margin-top: 20px
+}
+
+.side #ad_main,
+.side #search,
+.side .sidebox,
+.side .sidecontentbox,
+.side .titlebox {
+    padding: 10px 15px 0
+}
+
+body.search-page .side .spacer:first-child {
+    min-height: 28px
+}
+
+.account-activity-box {
+    width: 340px;
+    height: 30px;
+    padding-top: 10px
+}
+
+.side .md blockquote,
+.sidecontentbox .content,
+.titlebox .tagline {
+    margin: 0 0 20px;
+    border: 0;
+    color: #202020;
+    background-color: #ffa;
+    box-shadow: 0 0 5px #101010
+}
+
+.res-nightmode .side .md blockquote,
+.res-nightmode .sidecontentbox .content,
+.res-nightmode .titlebox .tagline,
+:lang(dm) .side .md blockquote,
+:lang(dm) .sidecontentbox .content,
+:lang(dm) .titlebox .tagline {
+    margin: 0 0 20px;
+    border: 0;
+    color: #e0e0e0;
+    background-color: #333130;
+    box-shadow: 0 0 10px #101010
+}
+
+.titlebox .tagline a {
+    font-size: 12px
+}
+
+.side .md blockquote {
+    padding: 7px;
+    max-height: 305px;
+    overflow: hidden;
+    position: relative;
+    transition: .5s ease all
+}
+
+.link.last-clicked,
+.thing>.midcol,
+.titlebox .md {
+    overflow: visible
+}
+
+.side .md blockquote:hover {
+    max-height: 1000px
+}
+
+.side .md blockquote:nth-of-type(1) {
+    text-align: center
+}
+
+.side .md blockquote ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.side .md p {
+    line-height: 20px
+}
+
+.sidecontentbox {
+    margin-bottom: -20px
+}
+
+.sidecontentbox a.helplink {
+    margin: 15px 18px;
+    width: 260px
+}
+
+.res-nightmode .sidecontentbox a.helplink,
+:lang(dm) .sidecontentbox a.helplink {
+    background: #000
+}
+
+.sidecontentbox .content {
+    padding: 10px
+}
+
+.side span.score {
+    color: #e0e0e0
+}
+
+.titlebox .bottom {
+    border-top: 0;
+    padding: 5px 8px;
+    font-size: 9px;
+    margin-bottom: 0;
+    color: #999
+}
+
+.titlebox .bottom a {
+    color: #999
+}
+
+.account-activity-box a {
+    width: 280px!important;
+    margin: 14px 10px 0 0
+}
+
+.RESDialogSmall.livePreview>h3,
+.RESDialogSmall>h3,
+.side .md blockquote h1,
+.side .title h1,
+.sidecontentbox .title h1,
+form.toggle.flairtoggle {
+    text-align: center;
+    background: #e0e0e0!important;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 7px 0;
+    display: block;
+    border: 3px solid #202020;
+    border-width: 0 3px
+}
+
+.res-nightmode .RESDialogSmall.livePreview>h3,
+.res-nightmode .RESDialogSmall>h3,
+.res-nightmode .side .md blockquote h1,
+.res-nightmode .side .title h1,
+.res-nightmode .sidecontentbox .title h1,
+.res-nightmode form.toggle.flairtoggle,
+:lang(dm) .RESDialogSmall.livePreview>h3,
+:lang(dm) .RESDialogSmall>h3,
+:lang(dm) .side .md blockquote h1,
+:lang(dm) .side .title h1,
+:lang(dm) .sidecontentbox .title h1,
+:lang(dm) form.toggle.flairtoggle {
+    background: #222!important;
+    border-color: #e0e0e0
+}
+
+.RESDialogSmall>h3,
+.side .md blockquote h1,
+.sidecontentbox .title h1,
+.titlebox h1 {
+    color: #222;
+    font-family: arial, sans-serif
+}
+
+.res-nightmode .RESDialogSmall>h3,
+.res-nightmode .side .md blockquote h1,
+.res-nightmode .sidecontentbox .title h1,
+.res-nightmode .titlebox h1,
+:lang(dm) .RESDialogSmall>h3,
+:lang(dm) .side .md blockquote h1,
+:lang(dm) .sidecontentbox .title h1,
+:lang(dm) .titlebox h1 {
+    color: #e0e0e0
+}
+
+.side .md blockquote h1 a,
+.titlebox h1 a {
+    color: #c01600
+}
+
+.res-nightmode .side .md blockquote h1 a,
+.res-nightmode .titlebox h1 a,
+:lang(dm) .side .md blockquote h1 a,
+:lang(dm) .titlebox h1 a {
+    color: #e0e0e0
+}
+
+.side .md h4 {
+    margin: .2em
+}
+
+.account-activity-box a,
+.helplink,
+.side .md h4 a,
+.sidebox.create .morelink {
+    display: inline-block;
+    letter-spacing: 0;
+    color: #222!important;
+    font-weight: 700;
+    font-size: 14px;
+    background: #eee;
+    border: 1px solid #222;
+    border-radius: 2px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+    transition: all .25s ease
+}
+
+.account-activity-box a:hover,
+.helplink:hover,
+.side .md h4 a:hover,
+.sidebox.create .morelink:hover {
+    text-decoration: none!important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .34)
+}
+
+.res-nightmode .account-activity-box a,
+.res-nightmode .helplink,
+.res-nightmode .side .md h4 a,
+.res-nightmode .sidebox.create .morelink,
+:lang(dm) .account-activity-box a,
+:lang(dm) .helplink,
+:lang(dm) .side .md h4 a,
+:lang(dm) .sidebox.create .morelink {
+    background: #222;
+    color: #ddd!important;
+    border-color: transparent
+}
+
+.res-nightmode .account-activity-box a:hover,
+.res-nightmode .helplink:hover,
+.res-nightmode .side .md h4 a:hover,
+.res-nightmode .sidebox.create .morelink:hover,
+:lang(dm) .account-activity-box a:hover,
+:lang(dm) .helplink:hover,
+:lang(dm) .side .md h4 a:hover,
+:lang(dm) .sidebox.create .morelink:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .5)
+}
+
+form.toggle.flairtoggle {
+    font-family: arial, sans-serif
+}
+
+.side .md blockquote h1 {
+    width: 290px
+}
+
+.side .md blockquote li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top: 1px solid #464442
+}
+
+.side .md blockquote ul li:first-child {
+    padding-top: 0;
+    border-top: 0
+}
+
+
+.titlebox .tagline {
+	position: relative;
+    color: #2e2a26;
+    font-weight: 700;
+    text-shadow: none
+    z-index: 4;
+    padding: 10px 0 24px;
+    background: url(%%BG%%);
+    background-size: 20%;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-size: 0;
+    text-align: center;
+    border: 1px solid #202020!important;
+    box-shadow: none;
+    margin-top: 5px!important
+}
+
+.res-nightmode .titlebox .tagline,
+:lang(dm) .titlebox .tagline {
+    border-color: #e0e0e0!important;
+    background: url(%%BGB%%)
+}
+
+.titlebox .tagline .flairselectbtn {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+.titlebox .tagline .flairselectbtn:after {
+    content: "click to customize userflair";
+    color: #e22;
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    padding: 1px 0
+}
+
+.res-nightmode .titlebox .tagline .flairselectbtn:after,
+:lang(dm) .titlebox .tagline .flairselectbtn:after {
+    background-color: #222
+}
+
+.gadget .reddit-link,
+.icon-menu a {
+    background: 0 0
+}
+
+.titlebox .tagline:hover {
+    border-color: #e22!important
+}
+
+.sidecontentbox .collapse-button {
+    position: absolute;
+    top: 29px;
+    right: 23px
+}
+
+.gadget {
+    padding-top: 5px
+}
+
+.gadget .thing {
+    padding: 10px 0
+}
+
+.gadget .midcol {
+    width: 35px;
+    margin-top: -10px;
+    margin-left: 4px
+}
+
+.leavemoderator,
+.titlebox form.toggle {
+    background: 0 0;
+    color: #333
+}
+
+.res-nightmode .leavemoderator,
+.res-nightmode .titlebox form.toggle,
+:lang(dm) .leavemoderator,
+:lang(dm) .titlebox form.toggle {
+    color: #e0e0e0
+}
+
+.infobar {
+    background: #2e2a26
+}
+
+#searchexpando {border-radius: 0}
+
+.sidebox.create .spacer {
+    padding: 10px;
+    background-color: #ffa;
+    box-shadow: 0 0 10px #101010;
+    min-height: 10px
+}
+
+.res-nightmode .sidebox.create .spacer,
+:lang(dm) .sidebox.create .spacer {
+    background-color: #333130
+}
+
+.sidebox.create .spacer .subtitle {
+    color: #888
+}
+
+.morelink {
+    background: 0 0;
+    border: 0;
+    height: 40px
+}
+
+.morelink a,
+.side .md>h1 {
+    background: #d2eceb;
+    color: #202020;
+    font-size: 14px;
+    border-left: 2px solid #202020;
+    border-right: 2px solid #202020;
+    box-sizing: border-box
+}
+
+.morelink a {
+    width: 300px
+}
+
+.res-nightmode .morelink a,
+.res-nightmode .side .md>h1,
+:lang(dm) .morelink a,
+:lang(dm) .side .md>h1 {
+    background: #444240;
+    color: #e0e0e0;
+    border-color: #e0e0e0
+}
+
+.submit-link .morelink a:before,
+.submit-text .morelink a:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 40px;
+    background-image: url(%%sprite1%%)
+}
+
+.submit-link .morelink a:before {
+    background-position: -92px -40px
+}
+
+.submit-text .morelink a:before {
+    background-position: -92px -120px
+}
+
+.morelink a:hover {
+    border-color: #ffb400;
+    box-shadow: inset 0 0 12px #202020
+}
+
+.side .md>h1 {
+    background: #e0e0e0;
+    list-style: none;
+    padding: 7px 10px;
+    height: auto;
+    line-height: 20px;
+    z-index: 100
+}
+
+.res-nightmode .side .md>h1,
+:lang(dm) .side .md>h1 {
+    background: #222
+}
+
+.side .md>h1 a {
+    text-decoration: underline
+}
+
+.disabled .morelink a {
+    color: #AAA;
+    background: #191919;
+    border: #2e2a26
+}
+
+.side .subscribers .number:after {
+    content: " Lightners"
+}
+
+.side .users-online .number:after {
+    content: " kids skipped class"
+}
+
+.pretty-button {
+    font-size: 9px;
+    line-height: 13px
+}
+
+.pretty-button.negative {
+    background: #202020;
+    color: #e0e0e0;
+    border-radius: 0;
+    border: 1px solid #ffb400
+}
+
+.pretty-button.neutral {
+    border-radius: 0
+}
+
+.pretty-button.positive {
+    border-radius: 0;
+    background: #e0e0e0;
+    border: 1px solid #5d0400;
+    color: #5d0400
+}
+
+.titlebox .subButtons {
+    text-align: center
+}
+
+.titlebox .fancy-toggle-button.subscribe-button {
+    display: block
+}
+
+.titlebox .fancy-toggle-button.subscribe-button .option.active {
+    display: inline-block;
+    height: 54px;
+    width: 288px;
+    font-size: 0;
+    background: url(%%sprite1%%) -20px -303px;
+    border: 0;
+    border-radius: 0
+}
+
+.titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
+    background-position: -20px -359px
+}
+
+.titlebox .fancy-toggle-button.subscribe-button .option.remove.active {
+    background-position: -20px -191px
+}
+
+.titlebox .fancy-toggle-button.subscribe-button .option.remove.active:hover {
+    background-position: -20px -247px
+}
+
+.RESDashboardToggle,
+.RESshortcutside,
+.res-fancy-toggle-button,
+span.multi-count {
+    color: #202020!important
+}
+
+.res-nightmode .RESDashboardToggle,
+.res-nightmode .RESshortcutside,
+.res-nightmode .res-fancy-toggle-button,
+.res-nightmode span .multi-count,
+:lang(dm) .RESDashboardToggle,
+:lang(dm) .RESshortcutside,
+:lang(dm) .res-fancy-toggle-button,
+:lang(dm) span.multi-count {
+    color: #e0e0e0!important
+}
+
+.RESDashboardToggle:hover,
+.RESshortcutside:hover {
+    background: #202020!important;
+    color: #FFC90E!important;
+    border-color: #FFC90E
+}
+
+.hover-bubble,
+.res-nightmode .author-tooltip__head a,
+:lang(dm) .author-tooltip__head a {
+    color: #e0e0e0
+}
+
+.RESNotificationHeader .gearIcon:after {
+    display: none
+}
+
+.hover-bubble {
+    background: #444240;
+    border: 1px solid #444240
+}
+
+.author-tooltip__credentials-list strong,
+.hover-bubble.multi-selector strong {
+    color: #eee
+}
+
+.titlebox .subscribers {
+    padding: 7px 0;
+    display: block
+}
+
+.titlebox h1.redditname {
+    font-size: 0; margin:0;
+}
+
+.users-online:before {
+    background-image: url(%%bullet%%);
+    margin-top: 6px;
+    background-position: 0 0;
+    height: 10px
+}
+
+.res-nightmode .users-online:before,
+:lang(dm).users-online:before {
+    background-position: 0 -10px
+}
+
+.titlebox .subscribers,
+.users-online {
+    color: #202020;
+    font-size: 18px;
+    font-family: Determination Sans, Determination Mono, Arial, Serif
+}
+
+.res-nightmode .titlebox .subscribers,
+.res-nightmode .users-online,
+:lang(dm).titlebox .subscribers,
+:lang(dm).users-online {
+    color: #e0e0e0
+}
+
+/*SEARCH*/
+.searchpane{
+background:transparent
+}
+
+.searchfacets {
+    background: #191919;
+    box-shadow: 0 4px 6px -1px #202020 inset
+}
+
+#search_showmore,
+moresearchinfo {
+    display: block;
+    margin-top: 10px
+}
+
+.domain a,
+.link .buttons .redditSingleClick,
+.link .buttons li a,
+.link .score,
+.res-voteEnhancements-highlightScores span.score,
+.spam .domain,
+.spam .domain a,
+.tagline {
+    color: #888
+}
+
+.entry .buttons li.reported-stamp {
+    background-color: #e22;
+    color: #e0e0e0
+}
+
+.commentarea,
+.link {
+    -webkit-animation: link-fadein .3s ease-out 1
+}
+
+.thing,
+.thing.stickled {
+    background: #f8f8f8;
+    padding: 5px 10px
+}
+
+.res-nightmode .thing,
+.res-nightmode .thing.stickled,
+:lang(dm) .thing,
+:lang(dm) .thing.stickled {
+    background: RGBA(40,40,50,0.7)
+}
+
+.thing .parent {
+    display: block;
+    margin: -5px 0 10px
+}
+
+.thing.create-reddit {
+    background: 0 0
+}
+
+.create-reddit .linefield-content textarea {
+    height: 200px
+}
+
+.thing.link, .thing.last-clicked {
+	border: none;
+	border-left:5px solid;
+    margin-bottom: 1px;
+	box-shadow: inset 0 0 0 0 transparent;
+    transition: all .2s ease-out
+}
+
+.thing.link:hover {background: #f2f2f2}
+.thing.stickied:hover {background: #f1f3f1}
+
+.res-nightmode.thing.link:hover,
+:lang(dm).thing.link:hover {background: rgba(6, 12, 25, .7)}
+
+.res-nightmode.thing.stickied:hover,
+:lang(dm).thing.stickied:hover {background: rgba(6, 25, 12, .7)}
+
+.thing.stickied .midcol {
+    margin-left: 7px
+}
+
+.nav-buttons {
+    padding-top: 10px
+}
+
+.action-form {
+    border-radius: 0;
+    background: #1a1714;
+    border: 1px solid #232120
+}
+
+.next-suggestions a,
+.nextprev a {
+    padding: 2px 7px;
+    font-weight: 400;
+    display: inline-block;
+    border: 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffb400;
+    background: #5d0400;
+    border-radius: 0;
+    transition: all .2s ease-out
+}
+
+.next-suggestions a:hover,
+.nextprev a:hover {
+    border: 0;
+    background: #ffb400;
+    color: #5d0400
+}
+
+.next-suggestions .separator,
+.nextprev .separator {
+    border-left: 1px solid #303030
+}
+
+.entry .buttons li {
+    padding-right: 5px
+}
+
+.link .tagline {font-weight: 400}
+
+.link .buttons .redditSingleClick,
+.link .buttons li a {
+    color: #888;
+    opacity: .7
+}
+
+.res-nightmode .link .buttons li.first a,
+:lang(dm) .link .buttons li.first a {
+    color: #e0e0e0;
+    opacity: 1
+}
+
+.link:hover .buttons .redditSingleClick,
+.link:hover .buttons li a {
+    opacity: 1
+}
+
+.infobar,
+.panestack-title,
+.searchfacets,
+.searchpane,
+.tabpane-content,
+.thing.link {
+    margin-right: 360px;
+    padding-left: 20px
+}
+
+/*wiki*/
+
+.wiki-page .wiki-page-content {
+    margin-right: 385px
+}
+
+.wiki-page-content .md h1 {
+    color: inherit
+}
+
+.wiki-page #header {
+    margin-bottom: 60px
+}
+
+.panestack-title {
+    border-bottom: 0
+}
+
+.tabpane-content {
+    border: 1px solid #2e2a26;
+    border-top: 3px solid #ffb400;
+    padding-top: 15px;
+    background: #191919
+}
+
+.res-nightmode .tabpane-content,
+:lang(dm) .tabpane-content {
+    border: 1px solid #0066b5;
+    border-top: 3px solid #0066b5
+}
+
+.tagline .stickied-tagline,
+.thing.stickied a.title,
+.thing.stickied a.title.visited {
+    color: #e22!important
+}
+
+.res-nightmode.tagline .stickied-tagline,
+.res-nightmode.thing.stickied a.title,
+.res-nightmode.thing.stickied a.title.visited,
+:lang(dm).tagline .stickied-tagline,
+:lang(dm).thing.stickied a.title,
+:lang(dm).thing.stickied a.title.visited {
+    color: #39f!important
+}
+
+.thing.comment {
+    background: 0 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 10px
+}
+
+.thing.spam {
+    background: rgba(255, 197, 169, .06)
+}
+
+.thing.spam>.entry {
+    border: 1px solid #600
+}
+
+.thing.spam>.entry,
+.thing.spam>.entry.RES-keyNav-activeElement {
+    background: rgba(255, 0, 0, .1)!important
+}
+
+.comment.spam>.child,
+.message.spam>.child {
+    background: 0 0
+}
+
+.comment.spam>.child {
+    margin-left: 13px
+}
+
+.comment .midcol {
+    width: 25px;
+    margin-left: 4px
+}
+
+.comment .child,
+.comment .showreplies,
+.res-commentBoxes .comment div.child {
+    padding-left: 20px;
+    margin-left: 14px;
+    border-left: 1px dotted #666!important
+}
+
+.menuarea {
+    border-bottom: 1px dotted #494746
+}
+
+.link .rank {
+	color: #aaa;
+	margin: 30px 10px 0 -10px;
+}
+
+.thing:hover .rank {visibility: hidden;}
+
+.thing.stickied .rank {
+	background: url(%%sprite1%%) 0 -107px no-repeat !important;
+	height: 20px !important;
+	width: 20px !important;
+	margin: 28px 4px 0 -6px;
+	opacity: 0.2;
+}
+
+.link .flat-list {
+    margin-top: 2px
+}
+
+.midcol-spacer,
+body.hot-page>.content .link .midcol,
+body.listing-page>.content .link .midcol,
+body.moderator .link .midcol,
+body.search-page .link .midcol,
+body.single-page>.content .link .midcol {
+    position: relative;
+    margin-right: 16px;
+    width: 5ex!important;
+    height: 90px
+}
+
+.content {
+    margin: 7px 0 0 0
+}
+
+.res-nightmode .thing.stickied a.title:before,
+.thing.stickied a.title:before,
+:lang(dm) .thing.stickied a.title:before {
+    content: "STICKY";
+    font-size: 10px;
+    margin-right: 8px;
+    text-shadow: none;
+    padding: 4px;
+    font-weight: 400
+}
+
+,
+.thing.stickied a.title::before {
+    margin-top: 1px;
+    float: left
+}
+
+.nsfw-stamp,
+.spoiler-stamp {
+    background-color: #5d0400;
+    border: 0!important;
+    border-radius: 0;
+}
+
+.nsfw-stamp acronym,
+.spoiler-stamp span {
+    color: #ffb400;
+    text-transform: uppercase
+}
+
+.res-nightmode.nsfw-stamp acronym,
+.res-nightmode.spoiler-stamp span,
+:lang(dm).nsfw-stamp acronym,
+:lang(dm).spoiler-stamp span {
+    color: #e0e0e0
+}
+
+.thing.stickied a.title:before {
+    background-color: #282;
+    color: #fff
+}
+
+.res-nightmode .thing.stickied a.title:before,
+:lang(dm) .thing.stickied a.title:before {
+    background-color: #39f!important;
+    color: #e0e0e0
+}
+
+.thumbnail {
+    height: 70px !important;
+    width: 90px;
+    position: relative;
+    margin-right: 10px;
+    visibility: visible;
+    content: ''
+}
+
+.thumbnail.default,
+.thumbnail.nsfw,
+.thumbnail.self,
+.thumbnail.spoiler{
+	background-image: url(%%sprite1%%);
+	background-position: -392px 0; 
+	width: 70px;
+}
+
+.res-nightmode .thumbnail.self,
+:lang(dm) .thumbnail.self {
+    background-position: -392px -70px
+}
+
+.thumbnail.nsfw {
+    background-position: -532px 0
+}
+
+.res-nightmode .thumbnail.nsfw,
+:lang(dm) .thumbnail.nsfw {
+    background-position: -532px -70px
+}
+
+.thumbnail.spoiler {
+    background-position: -462px 0
+}
+
+.res-nightmode .thumbnail.spoiler,
+:lang(dm) .thumbnail.spoiler {
+    background-position: -462px -70px
+}
+
+.thumbnail img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90px;
+	top: 0;
+	height: auto;
+}
+
+.thumbnail:hover img {
+	width: 140px;
+	top: -30px;
+	transition: height 1s,top .75s 1s;
+}
+
+.expando-button,
+.expando-button.image,
+.expando-button.video-muted {
+    margin-top: 2px;
+    width: 25px!important;
+    height: 25px!important;
+    max-width: 25px!important;
+    max-height: 25px!important;
+    border-radius: 2px;
+    font-size: 0
+}
+
+.expando-button,
+.linefield .markhelp table {
+    background-color: transparent
+}
+
+.image.collapsed,
+.image.collapsed:hover,
+.image.expanded,
+.image.expanded:hover,
+.image.gallery.collapsed,
+.image.gallery.collapsed:hover,
+.image.gallery.expanded,
+.image.gallery.expanded:hover,
+.selftext.collapsed,
+.selftext.collapsed:hover,
+.selftext.expanded,
+.selftext.expanded:hover,
+.video-muted.collapsed,
+.video-muted.collapsed:hover,
+.video-muted.expanded,
+.video-muted.expanded:hover,
+.video.collapsed,
+.video.collapsed:hover,
+.video.expanded,
+.video.expanded:hover {
+    background-image: url(%%sprite1%%)!important
+}
+
+.image.collapsed,
+.image.gallery.collapsedExpando,
+.selftext.collapsed {
+    background-position: 0 0!important
+}
+
+.image.collapsed:hover,
+.image.gallery.collapsedExpando:hover,
+.selftext.collapsed:hover {
+    background-position: -25px 0!important
+}
+
+.image.expanded,
+.image.gallery.expanded,
+.selftext.expanded {
+    background-position: 0 -25px!important
+}
+
+.image.expanded:hover,
+.image.gallery.expanded:hover,
+.selftext.expanded:hover {
+    background-position: -25px -25px!important
+}
+
+.video-muted.collapsed,
+.video.collapsed {
+    background-position: 0 -50px!important
+}
+
+.video-muted.collapsed:hover,
+.video.collapsed:hover {
+    background-position: -25px -50px!important
+}
+
+.video-muted.expanded,
+.video.expanded {
+    background-position: 0 -75px!important
+}
+
+.video-muted.expanded:hover,
+.video.expanded:hover {
+    background-position: -25px -75px!important
+}
+
+.thing.comment.collapsed {
+    padding-left: 37px!important
+}
+
+.expando {
+    padding-top: 5px
+}
+
+.gadget .reddit-entry {
+    margin-left: 35px;
+    min-height: 50px
+}
+
+.gadget .arrow.down {
+    top: 35px
+}
+
+/*Create post*/
+
+.submit_text ul {
+    margin: 0 0 0 65px;
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    width: 230px
+}
+
+.submit_text ul li {
+    margin-bottom: 7px
+}
+
+.submit_text h1 {
+    display: none
+}
+
+.formtabs-content {
+    border-top: 3px solid #ffb400
+}
+
+.res-nightmode .formtabs-content,
+:lang(dm) .formtabs-content {
+    border-top: 3px solid #0066b5
+}
+
+.content.submit .info-notice,
+.roundfield {
+    border-radius: 0;
+    border: 1px solid #ff66b5;
+    background: #444240
+}
+
+
+.roundfield textarea,.usertext-edit textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],#search input, #searchexpando,textarea, .side .md > h3:first-of-type, .side .md > h3:first-of-type + ul{
+    background-color:#f8f8f8;
+    color:#222;
+    background-repeat:no-repeat;
+    background-position:left bottom;
+    border:1px solid #888;
+    outline:none
+}
+
+:lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md > h3:first-of-type, :lang(dm) .side .md > h3:first-of-type + ul,
+.res-nightmode .roundfield textarea ,.res-nightmode .usertext-edit textarea ,.res-nightmode .roundfield input[type=text] ,.res-nightmode .roundfield input[type=url] ,.res-nightmode .roundfield input[type=password] ,.res-nightmode .roundfield input[type=number] ,.res-nightmode #search input ,.res-nightmode #searchexpando,.res-nightmode textarea, .res-nightmode .side .md > h3:first-of-type, .res-nightmode .side .md > h3:first-of-type + ul {
+    border-color: #0066b5 !important;
+    background-color:#111!important;
+    color:#e0e0e0!important;
+}
+
+.comments-page .usertext-edit textarea {
+    background: url(%%usertext%%) no-repeat #e0e0e0;
+    transition: .2s all;
+    padding: 0 5px;
+    background-position: center!important
+}
+
+.res-nightmode .comments-page .usertext-edit textarea,
+:lang(dm) .comments-page .usertext-edit textarea {
+    background: url(%%usertextb%%) no-repeat #202020
+}
+
+.comments-page .usertext-edit textarea:focus,
+.comments-page .usertext-edit textarea:hover {
+    background: 0 0
+}
+
+.content.submit .info-notice {
+    padding: 10px
+}
+
+.tabmenu.formtab {
+    margin-top: 2px
+}
+
+/* Submit Page */
+
+.submit-page .content {
+    width: 520px;
+    margin: 0 auto!important;
+    padding-bottom: 15px;
+    top: -25px
+}
+
+.submit-page .content:after {
+    height: 40px;
+    bottom: -20px;
+    background-size: 40px 80px;
+    background-position: 0 -40px
+}
+
+#text-desc,
+.submit-page #link-desc,
+.submit-page #reddit-field,
+.submit-page #suggested-reddits,
+.submit-page .content h1,
+.submit-page .content.submit .info-notice,
+.submit-page .side {
+    display: none!important
+}
+
+.submit-page .tabmenu.formtab {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    top: -6px;
+    position: relative;
+    left: 0
+}
+
+.submit-page .tabmenu.formtab .selected a {
+    border-top-color: #e0e0e0!important;
+    padding: 0 8px
+}
+
+.submit-page .tabmenu.formtab a {
+    padding-bottom: 3px;
+    border-color: #e0e0e0
+}
+
+.submit-page .formtabs-content {
+    border: 0;
+    margin-bottom: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+    background-color: #e0e0e0;
+    padding: 0;
+    margin-top: 8px
+}
+
+.submit-page .formtabs-content .spacer {
+    margin: 0
+}
+
+.submit-page .roundfield {
+    background-color: #e0e0e0;
+    border-radius: 0
+}
+
+.res-nightmode .submit-page .roundfield,
+:lang(dm) .submit-page .roundfield {
+    background-color: #222
+}
+
+.submit-page .submit_text {
+    max-height: none
+}
+
+.submit-page .btn {
+    width: 520px;
+    height: 40px;
+    background: #e0e0e0;
+    color: #202020;
+    font-size: 1.2em
+}
+
+.submit-page .btn:after {
+	content: "";
+	background: url(%%sprite1%%) -270px -415px;
+	width: 270px;
+	height: 100px;
+	bottom: -120px;
+	position: relative;
+	display: block;
+	margin-top: -100px;
+	left: calc(50% - 135px);
+}
+
+#newlink-with-image-upload .image-upload-drop-target {
+    background-color: transparent
+}
+
+.res-nightmode .submit-page .btn,
+:lang(dm) .submit-page .btn {
+    background: #202020;
+    color: #e0e0e0
+}
+.res-nightmode .submit-page .btn:after,
+:lang(dm) .submit-page .btn:after {background-position: 0 -415px;}
+
+#items-required {
+    margin-left: 15px
+}
+
+.markhelp tr {
+    background-color: transparent!important
+}
+
+.comment .expand {
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px
+}
+
+.comment .author {
+    font-size: 13px;
+    display: inline-block;
+    padding: 8px 4px!important;
+    height: 10px
+}
+
+.arrow.down::after,
+.linkinfo {
+    padding: 12px;
+    text-align: center
+}
+
+.comment .flair {
+    float: left
+}
+
+.tagline a.author,
+a.author:visited {
+    color: #202020!important
+}
+
+.res-nightmode a.author,
+.res-nightmode a.author:visited,
+:lang(dm) a.author,
+:lang(dm) a.author:visited {
+    color: #e0e0e0!important
+}
+
+a.moderator,
+a.moderator:visited {
+    color: #62ae00!important
+}
+
+div.usertext-body {
+    margin-top: 9px;
+    clear: both;
+    margin-bottom: 8px
+}
+
+.new-comment .usertext-body {
+    border: 1px solid #666!important;
+    margin-top: 15px!important;
+    background: rgba(255, 255, 255, .08)!important
+}
+
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+    color: #c01600
+}
+
+.res-nightmode div.usertext-body h1,
+.res-nightmode h1 a:visited,
+.res-nightmode h2 a:visited,
+.res-nightmode h3 a:visited,
+.res-nightmode h4 a:visited,
+.res-nightmode h5 a:visited,
+.res-nightmode h6 a:visited,
+:lang(dm) div.usertext-body h1,
+:lang(dm) h1 a:visited,
+:lang(dm) h2 a:visited,
+:lang(dm) h3 a:visited,
+:lang(dm) h4 a:visited,
+:lang(dm) h5 a:visited,
+:lang(dm) h6 a:visited {
+    color: #e0e0e0
+}
+
+div.usertext-body h1,
+div.usertext-body h2,
+div.usertext-body h3,
+div.usertext-body h4,
+div.usertext-body h5,
+div.usertext-body h6 {
+    font-weight: 700
+}
+
+div .titlebox .usertext-body h1 {
+    text-align: center
+}
+
+.res-nightmode div.usertext-body h2,
+:lang(dm) div.usertext-body h2 {
+    font-size: 24px;
+    color: #e0e0e0
+}
+
+div.usertext-body h3 {
+    font-size: 22px
+}
+
+div.usertext-body h4 {
+    font-size: 20px
+}
+
+div.usertext-body h5 {
+    color: #c01600;
+    font-size: 18px
+}
+
+div.usertext-body h6 {
+    font-size: 16px
+}
+
+.infobar.mellow {
+    background: #2e2a26;
+    border: 1px solid #444240;
+    color: #e0e0e0
+}
+
+.linkinfo {
+    background: 0 0;
+    margin: 0 0 0 20px;
+    border-radius: 0;
+    width: 274px;
+    border: 0
+}
+
+.score .number::after {
+    content: "% TP";
+    font-style: italic;
+    font-size: .7em;
+    letter-spacing: .1em
+}
+
+.score .word {
+    display: none
+}
+
+.linkinfo .shortlink input {
+    border: 1px solid #666260
+}
+
+.link .usertext .md {
+    color: #e0e0e0;
+    background: 0 0;
+    border: 0;
+    border-radius: 0
+}
+
+.tagline .submitter {
+    color: #ffb400
+}
+
+.help blockquote,
+.md blockquote {
+    border-left: 2px solid #ffb400;
+    color: #e0e0e0
+}
+
+.sheets {
+    margin-right: 375px
+}
+
+.sheets textarea {
+    height: 500px
+}
+
+.linefield {
+    background: #191919;
+    border: 1px solid #2e2a26
+}
+
+.linefield .title {
+    color: #e0e0e0
+}
+
+/*Votes*/
+
+.thing>.midcol {
+    position: relative;
+    z-index: 3
+}
+
+.thing.comment .downmod:after,
+.thing.comment .upmod:after {
+    font-size: 11px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 36px;
+    opacity: 1;
+    z-index: 100;
+    white-space: nowrap
+}
+
+.arrow.down,
+.arrow.downmod,
+.arrow.up,
+.arrow.upmod {
+    background-image: url(%%sprite1%%)!important;
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    top: 5px
+}
+
+.arrow.up {
+    background-position: 0 -191px!important
+}
+
+.arrow.upmod {
+    background-position: 0 -211px!important
+}
+
+.arrow.down {
+    background-position: 0 -231px!important;
+    top: 46px
+}
+
+.arrow.downmod {
+    background-position: 0 -251px!important;
+    top: 46px
+}
+
+.link .arrow.down,
+.link .arrow.downmod,
+.link .arrow.up,
+.link .arrow.upmod {
+    margin: 6px auto 2px
+}
+
+.arrow.down::after {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    margin: -12px 0 0 -50px;
+    background: rgba(255, 206, 102);
+    border-radius: 2px;
+    color: #e22;
+    content: "For content that does not contribute to any discussion.";
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 13px;
+    transition: all .25s ease;
+    pointer-events: none;
+    white-space: nowrap
+}
+
+.arrow.down:hover::after {
+    visibility: visible;
+    margin-left: 36px
+}
+
+.arrow:before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    visibility: hidden;
+    margin-left: -40px;
+    margin-top: -55px;
+    pointer-events: none;
+    z-index: 999999;
+    background: url(%%boom%%) no-repeat;
+    animation: none;
+    opacity: 1
+}
+
+.arrow.upmod:before {
+    display: block;
+    transition: opacity 10s cubic-bezier(1, 0, 1, 0) 0s!important;
+    background-position: 9999px 0;
+    visibility: visible;
+    animation: explosion .5s steps(12) 1;
+    opacity: 0
+}
+
+@keyframes explosion {
+    from {
+        background-position: 0
+    }
+    to {
+        background-position: -1200px
+    }
+}
+
+.link .score {
+    text-align: center
+}
+
+.link .arrow.down:after,
+.link .arrow.down:before,
+.link .arrow.downmod:hover:after,
+.link .arrow.downmod:hover:before,
+.link .arrow.up:after,
+.link .arrow.up:before,
+.link .arrow.upmod:hover:after,
+.link .arrow.upmod:hover:before {
+    pointer-events: none;
+    transition: .2s ease opacity
+}
+
+.footer-parent {
+    padding-top: 34px;
+    background: url(%%rsketch%%) center bottom no-repeat
+}
+
+.res-nightmode .footer-parent,
+:lang(dm) .footer-parent {
+    padding-top: 34px;
+    background: url(%%rockscape%%) center bottom repeat-x
+}
+
+.footer {
+    position: relative;
+    border: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 150px 0 0;
+    height: 450px;
+    display: block
+}
+
+.footer .col {
+    display: inline-block;
+    vertical-align: top;
+    float: none
+}
+
+.bottommenu {
+    display: block;
+    padding: 10px 0 0;
+    background: 0 0
+}
+
+.debuginfo {
+    background: #202020;
+    margin-top: 40px
+}
+
+.search-summary .debuginfo {
+    background: 0 0
+}
+
+.bottommenu {
+    margin-top: -45px
+}
+
+form.toggle.flairtoggle {
+    font-size: 0;
+    margin-top: 20px
+}
+
+form.toggle.flairtoggle:after {
+    content: "Show flair";
+    font-size: 13px
+}
+
+.flairselector li.selected {
+    border: 0;
+    background: #444240
+}
+
+.flairselector.drop-choices {
+    overflow: hidden;
+    transition: all .33s ease-out
+}
+
+.link .flair {
+    margin-top: 2px;
+    margin-left: 0;
+    font-size: 9px;
+    float: left
+}
+
+.usertable>.toggle {
+    border: 1px solid #444240;
+    background: #2e2a26;
+    border-radius: 0
+}
+
+.flairselector {
+    position: fixed;
+    top: 10px!important;
+    left: 50%!important;
+    margin-left: -286px;
+    padding: 32px 32px 10px!important;
+    width: 540px!important;
+    z-index: 9999999;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .64);
+    box-shadow: 4px 4px 4px #202020;
+    bottom: 60px
+}
+
+.flairsample-left {
+    text-align: centeortant
+}
+
+.drop-choices {
+    background: #444
+}
+
+.res-nightmode .drop-choices,
+:lang(dm) .drop-choices {
+    background: #2e2a26
+}
+
+.flairselector .customizeut {
+    margin-right: 10px;
+    border: 1px solid #606060
+}
+
+.flairselector.drop-choices.active {
+    border: 0
+}
+
+.flairselector ul {
+    display: inline
+}
+
+.flairselector h2 {
+    background: 0 0
+}
+
+.side .flairselector h2:after {
+    display: block;
+    content: "Please contact the mods directly for flair requests.";
+    padding: 5px 0;
+    font-weight: 400;
+    color: #e0e0e0
+}
+
+.side .flairselector form:before {
+    text-align: center;
+    content: "Keep it short and SFW!";
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    color: #ffb400
+}
+
+.side .flairoptionpane ul {
+    margin: 0;
+    width: 540px!important;
+    max-width: 540px;
+    float: none!important;
+    padding-bottom: 1px
+}
+
+.flairoptionpane {
+    height: calc(100% - 160px);
+    max-height: none
+}
+
+.flairselector li {
+    margin-bottom: -1px
+}
+
+.flairselector .selected,
+.flairselector li,
+.flairselector li:hover {
+    width: auto!important;
+    height: 35px;
+    padding: 5px;
+    float: left;
+    border: 0!important;
+    overflow: hidden
+}
+
+.flairselector button {
+    margin-top: 5px
+}
+
+.flairselector li:hover {
+    background: #444240
+}
+
+.flairselector h2,
+.flairselector li a {
+    color: #ffb400!important
+}
+
+/*Flairs*/
+
+.flair {
+    position: relative;
+    background-color: #e8e8e8!important;
+    border: 1px solid #888;
+    border-radius: 3px;
+    color: #222;
+    font-weight: 400;
+    background-repeat: no-repeat!important;
+    padding-left: 15px;
+    padding-right: 8px;
+    text-indent: 13px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    font-size: 9px;
+    background: url(%%kirby-flairs%%) -9999px no-repeat
+}
+
+.flair-kround:before,
+.flair-lancer4:before,
+.flair-round:before {
+    position: absolute;
+    content: ""
+}
+
+.res-nightmode .flair,
+:lang(dm) .flair {
+    color: #999;
+    background-color: #222!important
+}
+
+.flair-1{background:url(%%smol-flairs%%) 0 0} 
+.flair-2{background:url(%%smol-flairs%%) 0 -23px} 
+.flair-3{background:url(%%smol-flairs%%) 0 -46px} 
+.flair-4{background:url(%%smol-flairs%%) 0 -69px} 
+.flair-5{background:url(%%smol-flairs%%) 0 -92px} 
+.flair-6{background:url(%%smol-flairs%%) 0 -115px} 
+.flair-7{background:url(%%smol-flairs%%) 0 -138px} 
+.flair-8{background:url(%%smol-flairs%%) 0 -161px}  
+.flair-9{background:url(%%smol-flairs%%) 0 -184px} 
+.flair-10{background:url(%%smol-flairs%%) 0 -207px} 
+.flair-11{background:url(%%smol-flairs%%) 0 -230px} 
+.flair-12{background:url(%%smol-flairs%%) 0 -253px}  
+.flair-13{background:url(%%smol-flairs%%) 0 -276px} 
+.flair-14{background:url(%%smol-flairs%%) 0 -299px} 
+.flair-15{background:url(%%smol-flairs%%) 0 -322px} 
+.flair-16{background:url(%%smol-flairs%%) 0 -345px}  
+.flair-17{background:url(%%smol-flairs%%) 0 -368px} 
+.flair-18{background:url(%%smol-flairs%%) 0 -391px} 
+.flair-19{background:url(%%smol-flairs%%) 0 -414px} 
+.flair-20{background:url(%%smol-flairs%%) 0 -437px} 
+.flair-21{background:url(%%smol-flairs%%) 0 -460px} 
+.flair-22{background:url(%%smol-flairs%%) 0 -483px}
+
+/* Animated Flairs - By @SuperKirbyLover*/
+
+.flair-ralsei1 {
+    padding-left: 26px;
+    height: 30px;
+    background-position: -29px -3943px;
+    margin-top: -4px;
+    line-height: 30px;
+    animation: sing .5s steps(2) infinite;
+    -webkit-transition: padding-left .2s, height .2s, line-height .2s;
+    transition: padding-left .2s, height .2s, line-height .2s
+}
+
+@keyframes sing {
+    from {
+        background-position: -29px -3543px
+    }
+    to {
+        background-position: -29px -3637px
+    }
+}
+
+.flair-ralsei1:hover {
+    background-position: -22px -2px;
+    text-indent: 8px;
+    padding-left: 45px;
+    height: 45px;
+    margin-top: -9px;
+    animation: spook .3s ease-out forwards
+}
+
+@keyframes spook {
+    from {
+        background-position: -22px -2px
+    }
+    to {
+        background-position: -9px -2px
+    }
+}
+
+.flair-ralsei2 {
+    padding-left: 24px;
+    height: 32px;
+    line-height: 30px;
+    background-position: -33px -59px;
+    margin-top: -6px;
+    text-indent: 12px
+}
+
+.flair-ralsei2:hover {
+    background-position: -33px -97px
+}
+
+.flair-ralsei3 {
+    height: 30px;
+    line-height: 28px;
+    background-position: -35px -136px;
+    margin-top: -2px;
+    padding-left: 22px
+}
+
+.flair-ralsei3:hover {
+    background-position: -35px -166px
+}
+
+.flair-ralsei4 {
+    height: 30px;
+    line-height: 30px;
+    margin-top: -7px;
+    padding-left: 23px;
+    text-indent: 12px;
+    animation: wind .8s steps(5) infinite;
+    background-position: -32px -2556px;
+    -webkit-transition: height .2s, line-height .2s;
+    transition: height .2s, line-height .2s
+}
+
+.flair-ralsei4:hover {
+    animation: hands .5s steps(4), clap .2s steps(2) .5s 4, hands .5s steps(4) 1.3s reverse;
+    background-position: -32px -2556px;
+    height: 40px;
+    line-height: 40px
+}
+
+@keyframes clap {
+    from {
+        background-position: -32px -2716px
+    }
+    to {
+        background-position: -32px -2796px
+    }
+}
+
+@keyframes hands {
+    from {
+        background-position: -32px -2556px
+    }
+    to {
+        background-position: -32px -2716px
+    }
+}
+
+@keyframes wind {
+    from {
+        background-position: -32px -2396px
+    }
+    to {
+        background-position: -32px -2596px
+    }
+}
+
+.flair-kris1 {
+    padding-left: 18px;
+    height: 29px;
+    background-position: 0 0;
+    margin-top: -6px;
+    line-height: 28px;
+    animation: twirl .8s steps(6) infinite
+}
+
+@keyframes twirl {
+    from {
+        background-position: -39px -197px
+    }
+    to {
+        background-position: -39px -371px
+    }
+}
+
+.flair-kris2 {
+    padding-left: 17px;
+    height: 34px;
+    line-height: 32px;
+    background-position: -28px -370px;
+    margin-top: -4px;
+    text-indent: 11px;
+    -webkit-transition: text-indent .1s .6s, padding-left .1s .6s;
+    transition: text-indent .1s .6s, padding-left .1s .6s
+}
+
+.flair-kris2:hover {
+    text-indent: 9px;
+    padding-left: 30px;
+    background-position: -28px -641px;
+    -webkit-transition: text-indent .1s 0s, padding-left .1s 0s;
+    transition: text-indent .1s 0s, padding-left .1s 0s;
+    animation: sword .7s steps(8) forwards
+}
+
+@keyframes sword {
+    from {
+        background-position: -28px -370px
+    }
+    to {
+        background-position: -28px -641px
+    }
+}
+
+.flair-kris3 {
+    padding-left: 25px;
+    height: 28px;
+    background-position: -27px -676px;
+    margin-top: -4px;
+    text-indent: 11px;
+    line-height: 27px;
+    -webkit-transition: text-indent .2s, padding-left .2s;
+    transition: text-indent .2s, padding-left .2s;
+    animation: thonk .5s steps(2) infinite
+}
+
+@keyframes thonk {
+    from {
+        background-position: -27px -676px
+    }
+    to {
+        background-position: -27px -733px
+    }
+}
+
+.flair-kris3:hover {
+    text-indent: -8px;
+    padding-left: 50px;
+    animation: act1 .7s steps(6) forwards .2s;
+    background-position: -9px -732px
+}
+
+@keyframes act1 {
+    from {
+        background-position: -9px -732px
+    }
+    to {
+        background-position: -9px -894px
+    }
+}
+
+.flair-kris4 {
+    padding-left: 30px;
+    height: 31px;
+    background-position: -25px -2951px;
+    margin-top: -2px;
+    text-indent: 12px;
+    line-height: 31px;
+    -webkit-transition: height .2s, line-height .2s;
+    transition: height .2s, line-height .2s;
+    animation: wind2 1s steps(5) .2s infinite
+}
+
+.flair-susie1,
+.flair-susie3 {
+    -webkit-transition: text-indent .2s, padding-left .2s
+}
+
+@keyframes wind2 {
+    from {
+        background-position: -25px -2796px
+    }
+    to {
+        background-position: -25px -2951px
+    }
+}
+
+.flair-kris4:hover {
+    height: 35px;
+    line-height: 35px;
+    background-position: -22px -3159px;
+    animation: shield 1s steps(5)
+}
+
+@keyframes shield {
+    from {
+        background-position: -24px -2984px
+    }
+    to {
+        background-position: -22px -3159px
+    }
+}
+
+.flair-susie1 {
+    padding-left: 24px;
+    height: 27px;
+    background-position: -33px -922px;
+    margin-top: -3px;
+    line-height: 26px;
+    text-indent: 12px;
+    animation: susielaugh .3s steps(2) infinite;
+    transition: text-indent .2s, padding-left .2s
+}
+
+@keyframes susielaugh {
+    from {
+        background-position: -33px -922px
+    }
+    to {
+        background-position: -33px -986px
+    }
+}
+
+.flair-susie1:hover {
+    background-position: -4px -3194px;
+    text-indent: 8px;
+    padding-left: 45px;
+    animation: slide .3s ease-out forwards
+}
+
+@keyframes slide {
+    from {
+        background-position: -23px -3194px
+    }
+    to {
+        background-position: -13px -3194px
+    }
+}
+
+.flair-susie2 {
+    padding-left: 21px;
+    height: 25px;
+    line-height: 24px;
+    background-position: -36px -985px
+}
+
+.flair-susie2:hover {
+    background-position: -36px -1010px
+}
+
+.flair-susie3 {
+    padding-left: 22px;
+    height: 30px;
+    margin-top: -5px;
+    line-height: 28px;
+    background-position: 0 -1034px;
+    text-indent: 11px;
+    transition: text-indent .2s, padding-left .2s
+}
+
+.flair-susie3:hover {
+    text-indent: -15px;
+    padding-left: 60px;
+    background-position: 0 -1034px;
+    animation: act2 1s steps(5) forwards .2s
+}
+
+@keyframes act2 {
+    from {
+        background-position: 0 -1064px
+    }
+    to {
+        background-position: 0 -1214px
+    }
+}
+
+.flair-susie4 {
+    background: url(%%yeet-flair%%) -8px -2px no-repeat;
+    padding-left: 38px;
+    height: 34px;
+    margin-top: -9px;
+    line-height: 36px;
+    text-indent: 12px
+}
+
+.flair-susie4:hover {
+    padding-left: 87px;
+    text-indent: -40px;
+    -webkit-transition: text-indent .2s, padding-left .2s;
+    transition: text-indent .2s, padding-left .2s;
+    background-position: -8px -2px;
+    animation: yeet .4s steps(4) forwards .2s
+}
+
+@keyframes yeet {
+    from {
+        background-position: 10px -52px
+    }
+    to {
+        background-position: 2px -232px
+    }
+}
+
+.flair-lancer1 {
+    padding-left: 15px;
+    height: 22px;
+    margin-top: -1px;
+    line-height: 21px;
+    animation: lancerlaugh .3s steps(2) infinite;
+    text-indent: 9px
+}
+
+@keyframes lancerlaugh {
+    from {
+        background-position: -42px -1246px
+    }
+    to {
+        background-position: -42px -1292px
+    }
+}
+
+.flair-lancer2 {
+    padding-left: 31px;
+    height: 30px;
+    margin-top: -4px;
+    line-height: 29px;
+    background-position: -26px -1291px;
+    text-indent: 11px
+}
+
+.flair-lancer3 {
+    padding-left: 26px;
+    height: 29px;
+    margin-top: -3px;
+    line-height: 28px;
+    background-position: -32px -1321px;
+    text-indent: 10px
+}
+
+.flair-lancer3:hover {
+    background-position: -32px -1350px
+}
+
+.flair-lancer4 {
+    padding-left: 23px;
+    height: 31px;
+    margin-top: -4px;
+    line-height: 31px;
+    text-indent: 8px;
+    background: 0 0;
+    overflow: hidden;
+    -webkit-transition: padding-left .2s, height .2s, line-height .2s;
+    transition: padding-left .2s, height .2s, line-height .2s
+}
+
+.flair-lancer4:before {
+    width: 100%;
+    height: 47px;
+    top: 0;
+    left: 0;
+    background: url(%%kirby-flairs%%) 2px -3227px no-repeat;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    -webkit-transform-origin: top left;
+    transform-origin: 35px 27px
+}
+
+.flair-lancer4:hover {
+    padding-left: 47px;
+    height: 47px;
+    line-height: 47px
+}
+
+.flair-lancer4:hover::before {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    background-position: 2px -3272px;
+    height: 47px;
+    animation: cruise 1s linear infinite, frame .6s steps(6) infinite
+}
+
+@keyframes frame {
+    from {
+        background-position: 2px -3272px
+    }
+    to {
+        background-position: 2px -3542px
+    }
+}
+
+@keyframes cruise {
+    0%,
+    100% {
+        left: 0
+    }
+    49.99% {
+        left: calc(-100%)
+    }
+    50% {
+        left: 100%
+    }
+}
+
+.flair-king1 {
+    padding-left: 19px;
+    height: 30px;
+    margin-top: -4px;
+    line-height: 29px;
+    background-position: -38px -1379px;
+    animation: kingsleep 2.2s steps(2) infinite
+}
+
+@keyframes kingsleep {
+    from {
+        background-position: -38px -1379px
+    }
+    to {
+        background-position: -38px -1439px
+    }
+}
+
+.flair-king2 {
+    padding-left: 21px;
+    height: 34px;
+    margin-top: -6px;
+    line-height: 34px;
+    background-position: -36px -1439px
+}
+
+.flair-king2:hover {
+    background-position: -36px -1473px
+}
+
+.flair-round {
+    padding-left: 9px;
+    height: 37px;
+    margin-top: -6px;
+    line-height: 37px;
+    background: 0 0;
+    overflow: hidden
+}
+
+.flair-round:before {
+    width: 100%;
+    height: 37px;
+    bottom: 0;
+    left: 0;
+    background: url(%%kirby-flairs%%) -36px -3637px no-repeat;
+    -webkit-transform-origin: 13px 21px;
+    transform-origin: 13px 21px;
+    animation: bounce .6s steps(3) infinite
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        background-position: -36px -3637px
+    }
+    50% {
+        background-position: -36px -3748px
+    }
+}
+
+.flair-round:hover::before {
+    height: 33px;
+    bottom: 2px;
+    background-position: -9999px 0;
+    animation: shrink .4s steps(2) forwards, roll 1s ease-in .5s forwards
+}
+
+@keyframes shrink {
+    from {
+        background-position: -36px -3750px
+    }
+    to {
+        background-position: -36px -3824px
+    }
+}
+
+@keyframes roll {
+    from {
+        left: 0;
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        left: -33px;
+        -webkit-transform: rotate(-100deg);
+        transform: rotate(-100deg)
+    }
+}
+
+.flair-kround {
+    padding-left: 10px;
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    text-indent: 11px;
+    background: 0 0;
+    overflow: hidden;
+    -webkit-transition: padding-left .2s 0s, height .2s 0s, line-height .2s 0s;
+    transition: padding-left .2s 0s, height .2s 0s, line-height .2s 0s
+}
+
+.flair-kround:before {
+    width: 45px;
+    height: 75px;
+    bottom: 0;
+    left: 0;
+    background: url(%%kirby-flairs%%) 7px -3800px no-repeat, url(%%kirby-flairs%%) -23px -3841px no-repeat
+}
+
+.flair-kround:hover {
+    padding-left: 27px;
+    height: 75px;
+    line-height: 75px;
+    -webkit-transition: padding-left .2s .4s, height .2s .4s, line-height .2s .4s;
+    transition: padding-left .2s .4s, height .2s .4s, line-height .2s .4s
+}
+
+.flair-kround:hover::before {
+    background-position: 7px -3817px, -23px -3874px;
+    animation: drop .3s linear forwards, grow .3s steps(2) .4s 2 forwards, grow2 .5s steps(4) 1.3s forwards, idle 5s steps(4) 2s infinite
+}
+
+@keyframes drop {
+    from {
+        background-position: 7px -3800px, -23px -3841px
+    }
+    to {
+        background-position: 7px -3788px, -23px -3841px
+    }
+}
+
+@keyframes grow {
+    0% {
+        background-position: 14px -3807px, -16px -3860px
+    }
+    100% {
+        background-position: 0 9999px, -17px -4030px
+    }
+}
+
+@keyframes grow2 {
+    0% {
+        background-position: 0 9999px, -17px -3944px
+    }
+    100% {
+        background-position: 0 9999px, -18px -4284px
+    }
+}
+
+@keyframes idle {
+    0%,
+    50% {
+        background-position: 0 9999px, -18px -4284px
+    }
+    25%,
+    75% {
+        background-position: 0 9999px, -18px -4606px
+    }
+    100% {
+        background-position: 0 9999px, -18px -4907px
+    }
+}
+
+.flair-jevil {
+    padding-left: 22px;
+    height: 25px;
+    margin-top: -5px;
+    line-height: 24px;
+    background-position: -25px -5019px;
+    text-indent: 11px;
+    -webkit-transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s;
+    transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
+}
+
+.flair-jevil:hover {
+    padding-left: 40px;
+    height: 44px;
+    line-height: 50px;
+    background-position: -15px -5065px;
+    animation: prance 1.5s steps(8) .2s 4, prance 1s steps(8) 6s 6, prance .5s steps(8) 12s infinite
+}
+
+@keyframes prance {
+    0% {
+        background-position: -17px -5071px;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1)
+    }
+    49.99% {
+        background-position: -17px -5457px;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1)
+    }
+    50% {
+        background-position: -17px -5071px;
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1)
+    }
+    99.99% {
+        background-position: -17px -5457px;
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1)
+    }
+}
+
+.flair-roulx {
+    padding-left: 23px;
+    height: 30px;
+    margin-top: -4px;
+    line-height: 30px;
+    background-position: -24px -5454px;
+    animation: zapin .5s steps(7) forwards;
+    background-color: #e8e8e8!important;
+    transition: background-color .2s
+}
+
+.flair-roulx:hover {
+    animation: zapout .5s steps(7) forwards;
+    background-color: #fff!important
+}
+
+@keyframes zapin {
+    0% {
+        background-position: 9999px 0
+    }
+    0.01% {
+        background-position: -24px -5454px
+    }
+    100% {
+        background-position: -24px -5881px
+    }
+}
+
+@keyframes zapout {
+    0% {
+        background-position: -24px -5881px
+    }
+    99.99% {
+        background-position: -24px -5454px
+    }
+    100% {
+        background-position: 9999px 0
+    }
+}
+
+.flair-noelle {
+    padding-left: 17px;
+    height: 28px;
+    line-height: 28px;
+    background-position: -39px -5945px;
+    margin-top: -5px;
+    text-indent: 12px
+}
+
+.flair-noelle:hover {
+    background-position: -39px -5995px
+}
+
+.flair-milk {
+    padding-left: 10px;
+    height: 30px;
+    margin-top: -5px;
+    line-height: 30px;
+    background-position: -44px -4985px;
+    text-indent: 11px
+}
+
+.flair-bell {
+    padding-left: 18px;
+    height: 23px;
+    margin-top: -1px;
+    line-height: 22px;
+    background-position: -39px -1507px;
+    animation: bellanim .5s steps(3) alternate infinite;
+    text-indent: 11px
+}
+
+.flair-hathy,
+.flair-hathyex {
+    padding-left: 42px;
+    height: 38px;
+    margin-top: -7px;
+    line-height: 38px
+}
+
+@keyframes bellanim {
+    from {
+        background-position: -39px -1507px
+    }
+    to {
+        background-position: -39px -1576px
+    }
+}
+
+.flair-hathyex {
+    background-position: -14px -1574px
+}
+
+.flair-hathyex:hover {
+    background-position: -14px -1613px
+}
+
+.flair-hathy {
+    background-position: -14px -1650px
+}
+
+.flair-rudinn,
+.flair-rudinnex {
+    padding-left: 21px;
+    margin-top: -4px
+}
+
+.flair-hathy:hover {
+    background-position: -14px -1689px
+}
+
+.flair-rudinn {
+    height: 32px;
+    line-height: 32px;
+    background-position: -36px -1728px;
+    animation: rudinnanim1 .7s steps(4) infinite
+}
+
+@keyframes rudinnanim1 {
+    from {
+        background-position: -36px -1728px
+    }
+    to {
+        background-position: -36px -1856px
+    }
+}
+
+.flair-rudinn:hover {
+    background-position: -36px -1856px;
+    animation: rudinnanim2 .5s steps(3) infinite
+}
+
+@keyframes rudinnanim2 {
+    from {
+        background-position: -36px -1856px
+    }
+    to {
+        background-position: -36px -1952px
+    }
+}
+
+.flair-rudinnex {
+    height: 33px;
+    line-height: 33px;
+    background-position: -36px -1952px
+}
+
+.flair-rudinnex:hover {
+    background-position: -36px -1985px
+}
+
+.flair-rabbick {
+    background: url(%%kirby-flairs%%) 0 9999px repeat-x, url(%%kirby-flairs%%) -31px -6043px no-repeat;
+    padding-left: 25px;
+    height: 31px;
+    margin-top: -5px;
+    line-height: 31px;
+    animation: ridle .7s steps(3) infinite forwards
+}
+
+.flair-rabbick:hover {
+    animation: blow .7s steps(3);
+    background-position: 0 9999px, -32px -6228px
+}
+
+@keyframes ridle {
+    from {
+        background-position: 0 9999px, -31px -6043px
+    }
+    to {
+        background-position: 0 9999px, -31px -6142px
+    }
+}
+
+@keyframes blow {
+    0% {
+        background-position: -28px -6266px, -32px -6148px
+    }
+    99.99% {
+        background-position: -10px -6266px, -32px -6268px
+    }
+    100% {
+        background-position: 0 9999px, -32px -6268px
+    }
+}
+
+.flair-clover {
+    padding-left: 18px;
+    height: 25px;
+    margin-top: -4px;
+    line-height: 24px;
+    background-position: -20px -6314px;
+    text-indent: 11px;
+    -webkit-transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s;
+    transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
+}
+
+.flair-clover:hover {
+    padding-left: 41px;
+    height: 48px;
+    line-height: 48px;
+    background-position: -14px -6314px;
+    animation: cexpand .2s linear, cidle 1s steps(5) infinite
+}
+
+@keyframes cexpand {
+    0% {
+        background-position-x: -20px
+    }
+    100% {
+        background-position-x: -14px
+    }
+}
+
+@keyframes cidle {
+    0% {
+        background-position-y: -6314px
+    }
+    100% {
+        background-position-y: -6564px
+    }
+}
+
+.flair-pon {
+    padding-left: 23px;
+    height: 32px;
+    margin-top: -6px;
+    line-height: 46px;
+    background-position: -33px -6619px
+}
+
+.flair-pon:hover {
+    animation: open .5s steps(3) forwards
+}
+
+@keyframes open {
+    from {
+        background-position: -33px -6619px
+    }
+    to {
+        background-position: -33px -6758px
+    }
+}
+
+.flair-coody {
+    padding-left: 21px;
+    height: 30px;
+    margin-top: -4px;
+    line-height: 30px;
+    background-position: -36px -2018px;
+    animation: coodyanim .8s steps(2) infinite
+}
+
+@keyframes coodyanim {
+    from {
+        background-position: -36px -2018px
+    }
+    to {
+        background-position: -36px -2078px
+    }
+}
+
+.flair-cake {
+    padding-left: 26px;
+    height: 23px;
+    margin-top: -3px;
+    line-height: 22px;
+    background-position: -31px -2078px;
+    text-indent: 10px
+}
+
+.flair-box,
+.flair-chest {
+    height: 24px;
+    margin-top: -3px;
+    line-height: 23px;
+    text-indent: 10px
+}
+
+.flair-box {
+    padding-left: 16px;
+    background-position: -41px -2101px;
+    animation: boxanim 1s steps(2) infinite
+}
+
+@keyframes boxanim {
+    from {
+        background-position: -41px -2101px
+    }
+    to {
+        background-position: -41px -2149px
+    }
+}
+
+.flair-chest {
+    padding-left: 16px;
+    background-position: -41px -2149px
+}
+
+.flair-chest:hover {
+    background-position: -41px -2173px
+}
+
+.flair-goner1,
+.flair-goner2,
+.flair-goner3,
+.flair-goner4,
+.flair-goner5,
+.flair-goner6,
+.flair-goner7,
+.flair-goner8 {
+    padding-left: 17px;
+    height: 24px;
+    margin-top: -3px;
+    line-height: 23px;
+    text-indent: 10px
+}
+
+.flair-goner1 {
+    background-position: -40px -2197px
+}
+
+.flair-goner2 {
+    background-position: -40px -2222px
+}
+
+.flair-goner3 {
+    background-position: -40px -2247px
+}
+
+.flair-goner4 {
+    background-position: -40px -2272px
+}
+
+.flair-goner5 {
+    background-position: -40px -2297px
+}
+
+.flair-goner6 {
+    background-position: -40px -2322px
+}
+
+.flair-goner7 {
+    background-position: -40px -2347px
+}
+
+.flair-goner8 {
+    background-position: -40px -2372px
+}
+
+.side .flair {margin: 2px}
+
+@media screen and (max-width:1600px) {
+    .footer {
+        height: 350px
+    }
+}
+
+body .userTagLink.hasTag {
+    background-color: #ffb400!important;
+    border: 1px solid #ffb400!important
+}
+
+#RESSubredditGroupDropdown .RESShortcutsCurrentSub a,
+#sr-header-area a.RESShortcutsCurrentSub {
+    color: #c01600!important
+}
+
+#RESHoverBody,
+#RESHoverContainer,
+#progressIndicator,
+.NERPageMarker {
+    background: #1a1714!important;
+    color: #e0e0e0!important;
+    border: 0!important
+}
+
+.RESDialogSmall:before,
+.hover-bubble.anchor-left.anchor-right:before,
+.hover-bubble.anchor-right.anchor-right:before {
+    border-left-color: #444240!important
+}
+
+.RESDialogSmall:after,
+.hover-bubble.anchor-left.anchor-right:after,
+.hover-bubble.anchor-right.anchor-right:after {
+    border-left-color: #232120!important
+}
+
+#RESHoverContainer.right::after,
+#RESHoverContainer.right::before {
+    border-color: transparent #2e2a26!important
+}
+
+.RESCloseButton {
+    background: #1a1714;
+    border: 1px solid #2e2a26;
+    color: #e0e0e0
+}
+
+.RESCloseButton:hover {
+    background: #2e2a26;
+    color: #e0e0e0;
+    border: 1px solid #1a1714
+}
+
+#userbarToggle {
+    background: #5f5c59;
+    color: #e0e0e0;
+    border-right: #686665
+}
+
+.RESDashboardToggle,
+.RESshortcutside {
+    background: 0 0!important;
+    margin-bottom: 5px;
+    color: #444240
+}
+
+body.comments-page div.content .comment,
+body.comments-page div.content .comment .comment,
+body.comments-page div.content .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #f8f8f8!important;
+    padding-bottom: 0!important;
+    border: 1px solid #aaa!important;
+    border-left-width: 3px!important
+}
+
+.res-nightmode body.comments-page div.content .comment,
+.res-nightmode body.comments-page div.content .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment,
+:lang(dm) body.comments-page div.content .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #202020!important;
+    border-color: #777!important
+}
+
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment .comment:hover,
+body.comments-page div.content .comment .comment:hover,
+body.comments-page div.content .comment:hover {
+    border-left-color: #a44!important
+}
+
+.res-commentBoxes .comment,
+.res-commentBoxes.res-commentBoxes-rounded .comment {
+    border: 0!important;
+    border-radius: 0!important;
+    overflow: visible!important
+}
+
+#RESStyleSheetTipPane {
+    margin-right: 382px!important;
+    width: auto
+}
+
+.RESDialogSmall {
+    background: #2e2a26!important;
+    color: #e0e0e0;
+    border: 1px solid #444240
+}
+
+.RESDialogSmall>h3 {
+    color: #e0e0e0;
+    height: 20px;
+    text-transform: none
+}
+
+.RESDialogSmall .livePreview,
+.usertext-edit .RESDialogSmall .md.RESDialogContents {
+    color: #202020;
+    border: 0;
+    background: #ffa!important
+}
+
+.res-nightmode .RESDialogSmall .livePreview,
+.res-nightmode .usertext-edit .RESDialogSmall .md.RESDialogContents,
+:lang(dm) .RESDialogSmall .livePreview,
+:lang(dm) .usertext-edit .RESDialogSmall .md.RESDialogContents {
+    background: #2e2a26!important;
+    color: #e0e0e0
+}
+
+.debuginfo {
+    position: relative
+}
+
+.debuginfo .icon {
+    cursor: pointer
+}
+
+/*morewikistuff*/
+
+.res-nightmode .md blockquote,
+.res-nightmode .md del,
+:lang(dm) .md blockquote,
+:lang(dm) .md del {
+    color: #aaa
+}
+
+.side .md>h3 {text-align: center;}
+.side .md del {
+    display: block;
+    text-align: center;
+    margin: 0 0 20px;
+    text-decoration: none
+}
+
+.search-expando-button,
+.side .md del a {
+    position: relative;
+    display: block;
+    margin: 0 0 7px;
+    padding: 2px 5px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, .2);
+    background-color: #1a1714;
+    border: 1px solid #444240
+}
+
+.search-expando-button {
+    display: inline-block
+}
+
+.side .md del a:hover,
+.side .md del a[href*="www."],
+html[lang=ns] .side .md del a[href*="ns."],
+html[lang=gp] .side .md del a[href*="gp."] {
+    border: 1px solid #ffb400;
+    background: #4d0400;
+    color: #ffb400
+}
+
+html[lang=ns] .side .md del a[href*="www."],
+html[lang=gp] .side .md del a[href*="www."] {
+    background-color: #1a1714;
+    border: 1px solid #444240
+}
+
+.side .md del a:active {
+    top: 2px;
+    left: 2px;
+    box-shadow: none
+}
+
+#reddit-field,
+.flairoptionpane a.author,
+.link .arrow.downmod:after,
+.link .arrow.upmod:after,
+.morelink .nub,
+.side .subscribers .word,
+.side .users-online .word,
+.side a[href="https://www.reddit.com/r/deltarune"],
+.side blockquote table th,
+.sidebox.create .spacer a,
+.thing.linkflair-spoilers .thumbnail img,
+.titlebox .bottom .flair,
+body.loggedin.subscriber>.content:after,
+body.loggedin.subscriber>.content:before,
+html:lang(ns) .link.spoiler,
+html:lang(ns) .side a[href="https://ns.reddit.com/r/deltarune"],
+ul li a[href$="#wiki_top"] {
+    display: none!important
+}
+
+html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"] {
+    display: inline-block!important
+}
+
+.commentarea .md {
+    margin-top: 0
+}
+
+/*POST RES UPDATE*/
+
+.entry.res-selected,
+.res .commentarea .entry.RES-keyNav-activeElement .noncollapsed,
+.res .entry.RES-keyNav-activeElement,
+body .combined-search-page #previoussearch .res-search-pane,
+body ul.res-search-tabs li.res-search-tab-active {
+    background-color: #8882 !important
+}
+
+.res .commentarea .entry.RES-keyNav-activeElement .md,
+.res .entry.RES-keyNav-activeElement .md-container {
+    background-color: transparent!important
+}
+
+.voteWeight {
+    background-color: rgba(0, 0, 0, .2)!important
+}
+
+#RESShortcuts,
+.srSep {
+    color: #CCC
+}
+
+.tb-bracket-button {
+    border: 1px solid #4d0400!important;
+    background: #4d0400!important;
+    color: #ffb400!important
+}
+
+.thing .tagline .author.friend {
+    padding: 4px!important
+}
+
+.thing.comment .tagline .author.friend {
+    padding: 9px 9px 10px!important
+}
+
+.search-expando.collapsed:before {
+    background: 0 0
+}
+
+.side .md>h1 a {
+    left: 0;
+    top: 0;
+    display: block
+}
+
+#sr-header-area .redesign-beta-optin,
+.entry .flairselector a.title {
+    display: none
+}
+
+.md .-text,
+.md li,
+.md p,
+.md pre>code,
+.md td,
+.md textarea,
+.md th {
+    color: #202020
+}
+
+.message.message-parent.recipient>.entry .head,
+.message.message-reply.recipient>.entry .head {
+    color: inherit
+}
+
+.message .search-result-meta,
+.message .tagline {
+    color: #202020
+}
+
+.res-nightmode .md .-text,
+.res-nightmode .md li,
+.res-nightmode .md p,
+.res-nightmode .md pre>code,
+.res-nightmode .md td,
+.res-nightmode .md textarea,
+.res-nightmode .md th,
+.res-nightmode .message .search-result-meta,
+.res-nightmode .message .tagline,
+:lang(dm).md .-text,
+:lang(dm).md li,
+:lang(dm).md p,
+:lang(dm).md pre>code,
+:lang(dm).md td,
+:lang(dm).md textarea,
+:lang(dm).md th,
+:lang(dm).message .search-result-meta,
+:lang(dm).message .tagline {
+    color: #e0e0e0
+}
+
+/*Tab Menu*/
+
+ul.tabmenu {
+    height: 15px;
+    border: 0;
+    top: 2px;
+    position: absolute;
+    left: 53px
+}
+
+ul.tabmenu li a,
+ul.tabmenu li a:visited,
+ul.tabmenu li.selected a {
+    padding: 7px 8px 10px;
+    background: #000!important;
+    color: #fff;
+    text-transform: capitalize
+}
+
+ul.tabmenu li a:hover,
+ul.tabmenu li.selected a:hover {
+    color: #ccc
+}
+
+ul.tabmenu li.selected a,
+ul.tabmenu li.selected a:hover,
+ul.tabmenu li.selected a:visited {
+    border: 2px solid #e0e0e0!important;
+    border-top-color: #202020!important;
+    border-bottom-color: #202020!important;
+    height: 29px!important;
+    color: #e0e0e0!important
+}
+
+.res-nightmode ul.tabmenu li.selected a,
+.res-nightmode ul.tabmenu li.selected a:hover,
+.res-nightmode ul.tabmenu li.selected a:visited,
+:lang(dm) ul.tabmenu li.selected a,
+:lang(dm) ul.tabmenu li.selected a:hover,
+:lang(dm) ul.tabmenu li.selected a:visited {
+    border-color: #e0e0e0
+}
+
+.subreddit-rule-item {
+    border: 2px solid transparent
+}
+
+.subreddit-rule-item:hover {
+    border-color: #202020;
+    background: 0 0
+}
+
+.res-nightmode.subreddit-rule-item:hover,
+:lang(dm).subreddit-rule-item:hover {
+    border-color: #e0e0e0
+}
+
+.gilded-gid1-icon::before,
+.gilded-gid2-icon::before,
+.gilded-gid3-icon::before {
+    background-image: url(%%gilded%%);
+    background-position: 0 0;
+    width: 16px;
+    height: 16px
+}
+
+.gilded-gid2-icon::before {
+    background-position-x: -16px
+}
+
+.gilded-gid3-icon::before {
+    background-position-x: -32px
+}
+
+.subreddit-rules-page {
+    padding-top: 0;
+    margin-bottom: 10px
+}
+
+.subreddit-rules-page::before {
+    background-image: url(%%sprite1%%);
+    background-position: -320px -160px;
+    width: 370px;
+    height: 228px;
+    left: 0;
+    position: relative;
+    top: -10px
+}
+
+/* Link-flairs */
+
+.link span.linkflairlabel {
+	max-width:none;
+}
+	
+	/* Display pop-out link flair at right of post */
+.link .title > .linkflairlabel {
+	background-color: transparent;
+	font: bold 12px Lato,Arial,sans-serif;
+	text-transform: uppercase;
+	width: 100px;
+	position: absolute;
+	left: -38px;
+	margin-top: 31px;
+	transform: rotate(90deg);
+	border: none;
+	text-align: center;
+	letter-spacing: 2px;
+	/* transition: 0.5s; */
+	opacity: 0;
+	transition: opacity 0s;
+	-webkit-transition: opacity 0s;
+}
+.link:hover .title > .linkflairlabel{
+    opacity: 1;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+}
+	
+/*.comments-page .link .title>.linkflairlabel{display: none;}*/
+
+	/* .FLAIRSELECTOR STYLING */
+	
+	/* styling of linkflairs */
+
+.entry .flairselector {
+	width: 128px !important;
+	padding: 5px !important;
+	margin-left: -64px;
+}
+
+.entry .flairselector .linkflairlabel {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	padding: 3px 0px;
+	width: 75px;
+	border:none;
+	border-radius: 0px;
+	text-align:center;
+	background-color:#606060;
+	color:#fff;
+	opacity:0.75;
+	line-height:1.6em;
+}
+	
+.link .linkflairlabel {
+	border-radius:0;
+	border:none;
+	background-color:#606060;
+	color:#fff;
+	padding:2px;
+}
+.entry .flairselector .linkflairlabel:hover{
+	opacity:1!important;
+}
+.entry .flairselector li,
+.entry .flairselector li:hover {
+	background:transparent!important;
+    height: auto!important;
+}
+	
+	/* styling of flairselector */
+.entry .flairselector a.title {
+	display:none;
+}
+
+.entry .flairselector .flairoptionpane {
+	width: 108px;
+	margin: auto;
+    padding-left: 21px;
+} /* This centers the flairs *
+.entry .flairselector ul li { padding:0!important;text-align: center!important; }
+.entry .flairselector ul {width:auto!important}
+	
+	/* header */
+.entry .flairselector h2 {
+	color:#fff;
+	background-color:#222;
+	padding-top:2px;
+	margin-bottom:6px;
+	font-size: large;
+	font-weight: bold;
+}
+	
+	/* 'SAVE' button */
+.entry .flairselector .customizer { 
+	margin-bottom:5px; 
+}
+.entry .flairselector .customizer input{
+	border: 1px solid #555;
+	color: #555;
+	border-radius: 2px
+}
+	
+.entry .flairselector button {
+	margin:0;
+	display: block;
+	position:relative;
+	width:65px;
+	margin:0 auto!important;
+}
+
+.link.link.linkflair .thumbnail:hover:after {
+	opacity: 0.85;
+}
+
+/* CATEGORIES IN SIDEBAR */
+.side .md > blockquote:nth-of-type(4) ul {
+	margin-left: 0;
+	padding-left:18px;
+}
+.side .md > blockquote:nth-of-type(4) ul li {
+	list-style: none;
+	margin:2px 0;
+	display:inline-block;
+    padding:0!important;
+    border:none!important;
+}
+.side .md > blockquote:nth-of-type(4) ul li:nth-of-type(odd) {
+	margin-right:10px;
+}
+.side .md > blockquote:nth-of-type(4) ul li a {
+	display: inline-block;
+	color: #000 !important;
+	text-align:center;
+	padding:5px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 3px;
+}
+:lang(dm) .side .md > blockquote:nth-of-type(4) ul li a,
+.res-nightmode .side .md > blockquote:nth-of-type(4) ul li a{color: #fff !important;}
+.side .md >  blockquote:nth-of-type(4) ul li a:first-of-type {
+	width:90px;
+	opacity:0.75;
+}
+.side .md > blockquote:nth-of-type(4) ul li a:nth-of-type(2) {
+	background-color:#bbb;
+	width: 25px;
+	margin-left: 3px;
+	opacity:0.75;
+}
+.side .md > blockquote:nth-of-type(4) ul li a:hover {
+	opacity:1;
+}
+.wiki-page .wiki-page-content .md strong a{
+    padding: 4px;
+    border-radius: 3px;
+    color: #fff !important;
+}
+
+	/* INDIVIDUAL LINK FLAIRS - colors and filtering function */
+html:lang(xn) body:not(.comments-page) .link.linkflair-news { display: none; }
+.side .md a[href*="flair:news"],
+.wiki-page .wiki-page-content .md a[href*="flair:news"],
+.flairselector .linkflair-news > .linkflairlabel{ background-color: #3a3a3a;}
+.link.linkflair-news:hover { box-shadow: inset 25px 0 0 0 #3a3a3a!important; }
+.link.linkflair-news { border-left-color: #3a3a3a!important; }
+	
+html:lang(xc) body:not(.comments-page) .link.linkflair-creation { display: none; }
+.side .md a[href*="flair:creation"],
+.wiki-page .wiki-page-content .md a[href*="flair:creation"],
+.flairselector .linkflair-creation > .linkflairlabel { background-color: #D63120; }
+.link.linkflair-creation:hover{ box-shadow: inset 25px 0 0 0 #D63120!important; }
+.link.linkflair-creation{ border-left-color: #D63120!important; }
+
+html:lang(xd) body:not(.comments-page) .link.linkflair-discussion { display: none; }
+.side .md a[href*="flair:discussion"],
+.wiki-page .wiki-page-content .md a[href*="flair:discussion"],
+.flairselector .linkflair-discussion > .linkflairlabel { background-color: #d35400; }
+.link.linkflair-discussion:hover{ box-shadow: inset 25px 0 0 0 #d35400!important; }
+.link.linkflair-discussion{ border-left-color: #d35400!important; }
+	
+html:lang(xq) body:not(.comments-page) .link.linkflair-question { display: none; }
+.side .md a[href*="flair:question"],
+.wiki-page .wiki-page-content .md a[href*="flair:question"],
+.flairselector .linkflair-question > .linkflairlabel { background-color:orange;}
+.link.linkflair-question:hover{ box-shadow: inset 25px 0 0 0 orange!important; }
+.link.linkflair-question{ border-left-color: orange!important; }
+
+html:lang(xt) body:not(.comments-page) .link.linkflair-theory { display: none; }
+.side .md a[href*="flair:theory"],
+.wiki-page .wiki-page-content .md a[href*="flair:theory"],
+.flairselector .linkflair-theory > .linkflairlabel { background-color: #dfb300;}
+.link.linkflair-theory:hover{ box-shadow: inset 25px 0 0 0 #dfb300!important; }
+.link.linkflair-theory{ border-left-color: #dfb300!important; }
+
+	
+html:lang(xg) body:not(.comments-page) .link.linkflair-guide { display: none; }
+.side .md a[href*="flair:guide"],
+.wiki-page .wiki-page-content .md a[href*="flair:guide"],
+.flairselector .linkflair-guide > .linkflairlabel { background-color: #DA6FF1;}
+.link.linkflair-guide:hover{ box-shadow: inset 25px 0 0 0 #DA6FF1!important; }
+.link.linkflair-guide{ border-left-color: #DA6FF1!important; }
+
+html:lang(xh) body:not(.comments-page) .link.linkflair-humor { display: none; }
+.side .md a[href*="flair:humor"],
+.wiki-page .wiki-page-content .md a[href*="flair:humor"],
+.flairselector .linkflair-humor > .linkflairlabel { background-color: #9370DB; }
+.link.linkflair-humor:hover{ box-shadow: inset 25px 0 0 0 #9370DB!important; }
+.link.linkflair-humor{ border-left-color: #9370DB!important; }
+	
+html:lang(xm) body:not(.comments-page) .link.linkflair-meta { display: none; }
+.side .md a[href*="flair:meta"],
+.wiki-page .wiki-page-content .md a[href*="flair:meta"],
+.flairselector .linkflair-meta > .linkflairlabel { background-color: #2980b9;}
+.link.linkflair-meta:hover{ box-shadow: inset 25px 0 0 0 #2980b9 !important; }
+.link.linkflair-meta{ border-left-color: #2980b9 !important; }
+
+html:lang(xo) body:not(.comments-page) .link.linkflair-other { display: none; }
+.side .md a[href*="flair:other"],
+.flairselector .linkflair-other > .linkflairlabel { background-color: #2DB0AB; }
+.link.linkflair-other:hover{ box-shadow: inset 25px 0 0 0 #2DB0AB; }
+.link.linkflair-other{ border-left-color: #2DB0AB; }
+
+html:lang(xa) body:not(.comments-page) .link.linkflair-announcement { display: none; }
+.side .md a[href*="flair:psa"],
+.wiki-page .wiki-page-content .md a[href*="flair:psa"],
+.flairselector .linkflair-announcement > .linkflairlabel { background-color: #2a2;}
+.link.linkflair-announcement:hover{ box-shadow: inset 25px 0 0 0 #2a2 !important; }
+.link.linkflair-announcement{ border-left-color: #2a2 !important; }
+	
+	/*** FLAIR REMINDER ***/
+	/* From /r/france */
+.post-submitter .link:not(.linkflair) .flairselectbtn { 
+	position: relative; 
+	font-weight: bold;
+	color: #888;
+}
+.post-submitter .link:not(.linkflair) .flairselectbtn::before {
+	position: absolute;
+	content: "Assign your own flair";
+	background: #888;
+	color: #fff;
+	top: -3.3em;
+	left: -116px;
+	height: 1.5em;
+	padding: 5px 10px;
+	line-height: 1.5;
+	text-align: center;
+	opacity: 0.75;
+	font-size: 12px;
+}
+	
+.post-submitter .link:not(.linkflair) .flairselectbtn::after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1.5em 0.7em 0;
+	border-color: #888 transparent transparent;
+	top: -1.2em;
+	left: 5px;
+	content: "";
+	position: absolute;
+	opacity: 0.75;
+}
+	
+.post-submitter .link:not(.linkflair) .flairselectbtn:hover:before,
+.post-submitter .link:not(.linkflair) .flairselectbtn:hover:after {
+	opacity:1;
+}
+/* Random Snoos */
+/* Invisible box over "corner snoo" in header, clicking returns to Reddit frontpage */
+#header-img.default-header {
+	top: -178px;
+	height: 175px;
+	width: 124px;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    background: 0 0;
+    left: -3px
+}
+
+body:not(.loggedin) #header-img.default-header {
+    background: url(%%snoosprite%%) no-repeat
+}
+
+/* Make a pseudo-element to display random snoo image if user is logged in */
+input[name=uh]~a::after {
+    content: "";
+    position: absolute;
+    left: calc(25px - 100vw);
+    top: -139px;
+    width: 180px;
+    height: 136px;
+    background: url(%%snoosprite%%);
+    pointer-events: none
+}
+
+/* Offset the sprite-map's vertical position based on the magical mysterious random hash of doom */
+input[name=uh][value^="0"] ~ a:after, input[name=uh][value^="1"] ~ a:after,
+input[name=uh][value^="2"] ~ a:after, input[name=uh][value^="3"] ~ a:after,
+input[name=uh][value^="4"] ~ a:after, input[name=uh][value^="5"] ~ a:after,
+input[name=uh][value^="6"] ~ a:after, input[name=uh][value^="7"] ~ a:after { background-position-x: -720px; } /*Kris*/
+input[name=uh][value^="8"] ~ a:after, input[name=uh][value^="9"] ~ a:after, 
+input[name=uh][value^="a"] ~ a:after, input[name=uh][value^="b"] ~ a:after,
+input[name=uh][value^="c"] ~ a:after, input[name=uh][value^="d"] ~ a:after { background-position-x: -1260px; } /*Susie*/
+input[name=uh][value^="e"] ~ a:after, input[name=uh][value^="f"] ~ a:after,
+input[name=uh][value^="g"] ~ a:after, input[name=uh][value^="h"] ~ a:after,
+input[name=uh][value^="i"] ~ a:after, input[name=uh][value^="j"] ~ a:after { background-position-x: -180px; } /*Ralsei*/
+input[name=uh][value^="k"] ~ a:after, input[name=uh][value^="l"] ~ a:after,
+input[name=uh][value^="m"] ~ a:after, input[name=uh][value^="n"] ~ a:after,
+input[name=uh][value^="o"] ~ a:after, input[name=uh][value^="p"] ~ a:after { background-position-x: -360px; } /*Lancer*/
+input[name=uh][value^="q"] ~ a:after, input[name=uh][value^="r"] ~ a:after,
+input[name=uh][value^="s"] ~ a:after, input[name=uh][value^="t"] ~ a:after,
+input[name=uh][value^="u"] ~ a:after, input[name=uh][value^="v"] ~ a:after { background-position-x: -1440px; } /*Noelle*/
+input[name=uh][value^="w"] ~ a:after, input[name=uh][value^="x"] ~ a:after { background-position-x: -540px; } /*Roulx*/
+input[name=uh][value^="y"] ~ a:after                                       { background-position-x: -1080px; } /*Jevil*/
+input[name=uh][value^="z"] ~ a:after                                       { background-position-x: -900px; } /*Chadner*/
+
+/* undertale dialogue boxes with faces (via nested lists) */
+.md ul > li {
+    position: relative;
+}
+
+.md ul > li > a[href^="/box"] + ul {
+    position: relative;
+    list-style-type: none;
+    color: #fff;
+    background-color: black;
+    padding: 0.7em 1.4em;
+    border: solid 3px #e0e0e0;
+	margin: -12px 0 0 -2em !important;
+    min-height: 71px;
+}
+
+:lang(dm) .md ul > li > a[href^="/box"] + ul,
+.res-nightmode .md ul > li > a[href^="/box"] + ul{
+	border-width: 14px;
+	border-image: url(%%boxborder%%) 14;
+}
+
+.md ul > li > a[href^="/box"] + ul ul {
+    list-style-type: none;
+}
+
+.md ul > li > a + a[href^="/box"] + ul {
+    padding-left: 105px;
+}
+
+.md ul > li > a[href="/s0"] + a[href^="/box"] + ul,
+.md ul > li > a[href="/p0"] + a[href^="/box"] + ul {
+    padding-left: 1.4em;
+}
+
+.md ul > li > a[href^="/box"] + ul a {
+    font-family: Determination Mono,Determination Sans,monospace,sans-serif;
+    text-transform: none;
+    font-size: inherit;
+    color: #6bf;
+}
+
+.md ul > li > a[href^="/box"] + ul a:visited {
+    color: #eaf;
+}
+
+.md ul > li > a[href^="/box"] + ul > li {
+	font-family: Determination Mono,Determination Sans,monospace,sans-serif;
+	line-height: 1.3em;
+	text-indent: -1em;
+	padding-left: 1em;
+	color: #fff;
+	font-size: 16px !important;
+	margin: 0;
+}
+
+.md ul > li > a[href^="/box"] + ul > li::before {
+	content: "";
+	display: inline-block;
+	background: url(%%bullet%%) 0 -6px;
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px;
+    margin-right: 8px;
+    background-size: 12px;
+}
+
+.md > ul > li > a[href^="/box"] + ul > li > ul {
+    position: relative;
+    padding-left: 0;
+    text-indent: 0;
+}
+
+.md > ul > li > a[href^="/box"] + ul > li > ul > li {
+    display: inline;
+    padding: 0 0 0 1.6em;
+    color: #fff!important;
+}
+
+.md > ul > li > a[href^="/box"] + ul > li > ul > li:first-of-type::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-image: url(%%heart%%);
+    background-size: 16px;
+}
+
+.md ul > li > a[href="/s0"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s0"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s1"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s1"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s2"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s3"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s3"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s4"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s4"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s5"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s5"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s6"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s6"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s7"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s7"] + a[href^="/box"] + ul a,
+.md ul > li > a[href="/s8"] + a[href^="/box"] + ul > li,
+.md ul > li > a[href="/s8"] + a[href^="/box"] + ul a {
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard SE", cursive;
+    font-size: 1em;
+    text-transform: none;
+    word-spacing: 0.3ex;
+    font-weight: bold;
+}
+
+.md ul > li > a + a[href^="/box"] + ul a[href="/threat"] {
+    font-family: Determination Mono,Determination Sans,monospace,sans-serif;
+}
+
+.md ul > li > a[href^="/box"] + ul a[href="/sans"],
+.md ul > li > a[href^="/box"] + ul a[href="/threat"] {
+    color: #fff;
+}
+
+a[href="/cyan"]      { color: #1ea8fc!important; }
+a[href="/orange"]       { color: #ffa040!important; }
+a[href="/blue"]     { color: #0000ff!important; }
+a[href="/purple"]  { color: #ff00ff!important; }
+a[href="/green"]      { color: #00ff00!important; }
+a[href="/yellow"]       { color: #ffff00!important; }
+a[href="/red"] { color: #ff0000!important; }
+
+a[href="/cyan"],
+a[href="/orange"],
+a[href="/blue"],
+a[href="/purple"],
+a[href="/green"],
+a[href="/yellow"],
+a[href="/red"] {
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.md ul > li > a[href^="/box"] + ul a[href="/spoiler"],
+.md ul > li > a[href^="/box"] + ul a[href="#spoiler"] {
+    color: #fff !important;
+    background-color: #fff!important;
+}
+
+.md ul > li > a[href^="/box"] + ul > li a[href="#spoiler"]:hover,
+.md ul > li > a[href^="/box"] + ul > li code {
+    color: black!important;
+}
+
+.md li > a + a[href^="/box"] + ul::before {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 90px;
+    height: 90px;
+    content: "";
+    background-image: url(%%macros%%);
+    background-position: 90px 90px;
+    background-size: 1440px; /*increase this when faces.png gets wider*/
+    z-index: 2;
+    pointer-events: none;
+}
+
+.md li > a + a[href^="/boxsmall"] + ul {
+	transform: scale(0.55);
+	top: -55px;
+	border: none;
+	background: none;
+	left: 125px;
+	position: absolute;
+	transform-origin: 0 0;
+}
+
+.md ul ul > li > a + a[href^="/box"] + ul {
+    border: none;
+    margin: -15px 0 0 -25px !important;
+    padding: 4px 0 4px 140px;
+    min-height: 39px;
+}
+.md ul ul > li > a + a[href^="/box"] + ul::before {
+	left: 50px;
+	transform: scale(0.6);
+	transform-origin: top right;
+}
+.md ul ul > li > a + a[href^="/box"] + ul > li{
+    font-size: 11px !important;
+    display: block;
+}
+    
+.md ul ul > li > a + a[href^="/box"] + ul > li::before{
+    background-image:url(%%bullet%%) !important;
+    background-size: 10px !important;
+    width: 10px !important;
+    height: 8px !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+/* toriel */
+.md ul > li > a[href="/t1"] + a[href^="/box"] + ul::before { background-position: 0px 0px; }
+.md ul > li > a[href="/t2"] + a[href^="/box"] + ul::before { background-position: -90px 0px; }
+.md ul > li > a[href="/t3"] + a[href^="/box"] + ul::before { background-position: -180px 0px; }
+.md ul > li > a[href="/t4"] + a[href^="/box"] + ul::before { background-position: -270px 0px; }
+.md ul > li > a[href="/t5"] + a[href^="/box"] + ul::before { background-position: -360px 0px; }
+.md ul > li > a[href="/t6"] + a[href^="/box"] + ul::before { background-position: -450px 0px; }
+.md ul > li > a[href="/t7"] + a[href^="/box"] + ul::before { background-position: -540px 0px; }
+.md ul > li > a[href="/t8"] + a[href^="/box"] + ul::before { background-position: -630px 0px; }
+.md ul > li > a[href="/t9"] + a[href^="/box"] + ul::before { background-position: -720px 0px; }
+.md ul > li > a[href="/t10"] + a[href^="/box"] + ul::before { background-position: -810px 0px; }
+.md ul > li > a[href="/t11"] + a[href^="/box"] + ul::before { background-position: -900px 0px; }
+.md ul > li > a[href="/t12"] + a[href^="/box"] + ul::before { background-position: -990px 0px; }
+.md ul > li > a[href="/t13"] + a[href^="/box"] + ul::before { background-position: -1080px 0px; }
+.md ul > li > a[href="/t14"] + a[href^="/box"] + ul::before { background-position: -1170px 0px; }
+.md ul > li > a[href="/t15"] + a[href^="/box"] + ul::before { background-position: -1260px 0px; }
+.md ul > li > a[href="/t16"] + a[href^="/box"] + ul::before { background-position: -1350px 0px; }
+/* susie */
+.md ul > li > a[href="/su1"] + a[href^="/box"] + ul::before { background-position: 0px -90px; }
+.md ul > li > a[href="/su2"] + a[href^="/box"] + ul::before { background-position: -90px -90px; }
+.md ul > li > a[href="/su3"] + a[href^="/box"] + ul::before { background-position: -180px -90px; }
+.md ul > li > a[href="/su4"] + a[href^="/box"] + ul::before { background-position: -270px -90px; }
+.md ul > li > a[href="/su5"] + a[href^="/box"] + ul::before { background-position: -360px -90px; }
+.md ul > li > a[href="/su6"] + a[href^="/box"] + ul::before { background-position: -450px -90px; }
+.md ul > li > a[href="/su7"] + a[href^="/box"] + ul::before { background-position: -540px -90px; }
+.md ul > li > a[href="/su8"] + a[href^="/box"] + ul::before { background-position: -630px -90px; }
+.md ul > li > a[href="/su9"] + a[href^="/box"] + ul::before { background-position: -720px -90px; }
+.md ul > li > a[href="/su10"] + a[href^="/box"] + ul::before { background-position: -810px -90px; }
+.md ul > li > a[href="/su11"] + a[href^="/box"] + ul::before { background-position: -900px -90px; }
+.md ul > li > a[href="/su12"] + a[href^="/box"] + ul::before { background-position: -990px -90px; }
+.md ul > li > a[href="/su13"] + a[href^="/box"] + ul::before { background-position: -1080px -90px; }
+.md ul > li > a[href="/su14"] + a[href^="/box"] + ul::before { background-position: -1170px -90px; }
+.md ul > li > a[href="/su15"] + a[href^="/box"] + ul::before { background-position: -1260px -90px; }
+.md ul > li > a[href="/su16"] + a[href^="/box"] + ul::before { background-position: -1350px -90px; }
+
+.md ul > li > a[href="/su17"] + a[href^="/box"] + ul::before { background-position: 0px -180px; }
+.md ul > li > a[href="/su18"] + a[href^="/box"] + ul::before { background-position: -90px -180px; }
+.md ul > li > a[href="/su19"] + a[href^="/box"] + ul::before { background-position: -180px -180px; }
+.md ul > li > a[href="/su20"] + a[href^="/box"] + ul::before { background-position: -270px -180px; }
+.md ul > li > a[href="/su21"] + a[href^="/box"] + ul::before { background-position: -360px -180px; }
+.md ul > li > a[href="/su22"] + a[href^="/box"] + ul::before { background-position: -450px -180px; }
+.md ul > li > a[href="/su23"] + a[href^="/box"] + ul::before { background-position: -540px -180px; }
+.md ul > li > a[href="/su24"] + a[href^="/box"] + ul::before { background-position: -630px -180px; }
+.md ul > li > a[href="/su25"] + a[href^="/box"] + ul::before { background-position: -720px -180px; }
+.md ul > li > a[href="/su26"] + a[href^="/box"] + ul::before { background-position: -810px -180px; }
+/* alphys */
+.md ul > li > a[href="/a1"] + a[href^="/box"] + ul::before { background-position: 0px -270px; }
+.md ul > li > a[href="/a2"] + a[href^="/box"] + ul::before { background-position: -90px -270px; }
+.md ul > li > a[href="/a3"] + a[href^="/box"] + ul::before { background-position: -180px -270px; }
+.md ul > li > a[href="/a4"] + a[href^="/box"] + ul::before { background-position: -270px -270px; }
+.md ul > li > a[href="/a5"] + a[href^="/box"] + ul::before { background-position: -360px -270px; }
+.md ul > li > a[href="/a6"] + a[href^="/box"] + ul::before { background-position: -450px -270px; }
+.md ul > li > a[href="/a7"] + a[href^="/box"] + ul::before { background-position: -540px -270px; }
+.md ul > li > a[href="/a8"] + a[href^="/box"] + ul::before { background-position: -630px -270px; }
+.md ul > li > a[href="/a9"] + a[href^="/box"] + ul::before { background-position: -720px -270px; }
+.md ul > li > a[href="/a10"] + a[href^="/box"] + ul::before { background-position: -810px -270px; }
+.md ul > li > a[href="/a11"] + a[href^="/box"] + ul::before { background-position: -900px -270px; }
+.md ul > li > a[href="/a12"] + a[href^="/box"] + ul::before { background-position: -990px -270px; }
+
+/* jockington (cool snake guy)*/
+.md ul > li > a[href="/j1"] + a[href^="/box"] + ul::before { background-position: 0px -360px; }
+
+/* nerdy */
+.md ul > li > a[href="/b1"] + a[href^="/box"] + ul::before { background-position: 0px -450px; }
+.md ul > li > a[href="/b2"] + a[href^="/box"] + ul::before { background-position: -90px -450px; }
+.md ul > li > a[href="/b3"] + a[href^="/box"] + ul::before { background-position: -180px -450px; }
+.md ul > li > a[href="/b4"] + a[href^="/box"] + ul::before { background-position: -270px -450px; }
+.md ul > li > a[href="/b5"] + a[href^="/box"] + ul::before { background-position: -360px -450px; }
+.md ul > li > a[href="/b6"] + a[href^="/box"] + ul::before { background-position: -450px -450px; }
+
+/* catti */
+.md ul > li > a[href="/ci1"] + a[href^="/box"] + ul::before { background-position: 0px -540px; }
+.md ul > li > a[href="/ci2"] + a[href^="/box"] + ul::before { background-position: -90px -540px; }
+.md ul > li > a[href="/ci3"] + a[href^="/box"] + ul::before { background-position: -180px -540px; }
+
+/* noelle */
+.md ul > li > a[href="/n1"] + a[href^="/box"] + ul::before { background-position: 0px -630px; }
+.md ul > li > a[href="/n2"] + a[href^="/box"] + ul::before { background-position: -90px -630px; }
+.md ul > li > a[href="/n3"] + a[href^="/box"] + ul::before { background-position: -180px -630px; }
+.md ul > li > a[href="/n4"] + a[href^="/box"] + ul::before { background-position: -270px -630px; }
+.md ul > li > a[href="/n5"] + a[href^="/box"] + ul::before { background-position: -360px -630px; }
+.md ul > li > a[href="/n6"] + a[href^="/box"] + ul::before { background-position: -450px -630px; }
+.md ul > li > a[href="/n7"] + a[href^="/box"] + ul::before { background-position: -540px -630px; }
+.md ul > li > a[href="/n8"] + a[href^="/box"] + ul::before { background-position: -630px -630px; }
+.md ul > li > a[href="/n9"] + a[href^="/box"] + ul::before { background-position: -720px -630px; }
+.md ul > li > a[href="/n10"] + a[href^="/box"] + ul::before { background-position: -810px -630px; }
+.md ul > li > a[href="/n11"] + a[href^="/box"] + ul::before { background-position: -900px -630px; }
+.md ul > li > a[href="/n12"] + a[href^="/box"] + ul::before { background-position: -990px -630px; }
+
+/* ralsei */
+.md ul > li > a[href="/r1"] + a[href^="/box"] + ul::before { background-position: 0px -720px; }
+.md ul > li > a[href="/r2"] + a[href^="/box"] + ul::before { background-position: -90px -720px; }
+.md ul > li > a[href="/r3"] + a[href^="/box"] + ul::before { background-position: -180px -720px; }
+.md ul > li > a[href="/r4"] + a[href^="/box"] + ul::before { background-position: -270px -720px; }
+.md ul > li > a[href="/r5"] + a[href^="/box"] + ul::before { background-position: -360px -720px; }
+.md ul > li > a[href="/r6"] + a[href^="/box"] + ul::before { background-position: -450px -720px; }
+.md ul > li > a[href="/r7"] + a[href^="/box"] + ul::before { background-position: -540px -720px; }
+.md ul > li > a[href="/r8"] + a[href^="/box"] + ul::before { background-position: -630px -720px; }
+.md ul > li > a[href="/r9"] + a[href^="/box"] + ul::before { background-position: -720px -720px; }
+.md ul > li > a[href="/r10"] + a[href^="/box"] + ul::before { background-position: -810px -720px; }
+.md ul > li > a[href="/r11"] + a[href^="/box"] + ul::before { background-position: -900px -720px; }
+.md ul > li > a[href="/r12"] + a[href^="/box"] + ul::before { background-position: -990px -720px; }
+.md ul > li > a[href="/r13"] + a[href^="/box"] + ul::before { background-position: -1080px -720px; }
+.md ul > li > a[href="/r14"] + a[href^="/box"] + ul::before { background-position: -1170px -720px; }
+.md ul > li > a[href="/r15"] + a[href^="/box"] + ul::before { background-position: -1260px -720px; }
+.md ul > li > a[href="/r16"] + a[href^="/box"] + ul::before { background-position: -1350px -720px; }
+
+.md ul > li > a[href="/r17"] + a[href^="/box"] + ul::before { background-position: 0 -810px; }
+.md ul > li > a[href="/r18"] + a[href^="/box"] + ul::before { background-position: -90px -810px; }
+.md ul > li > a[href="/r19"] + a[href^="/box"] + ul::before { background-position: -180px -810px; }
+
+/* lancer */
+.md ul > li > a[href="/l1"] + a[href^="/box"] + ul::before { background-position: 0px -900px; }
+.md ul > li > a[href="/l2"] + a[href^="/box"] + ul::before { background-position: -90px -900px; }
+.md ul > li > a[href="/l3"] + a[href^="/box"] + ul::before { background-position: -180px -900px; }
+.md ul > li > a[href="/l4"] + a[href^="/box"] + ul::before { background-position: -270px -900px; }
+.md ul > li > a[href="/l5"] + a[href^="/box"] + ul::before { background-position: -360px -900px; }
+.md ul > li > a[href="/l6"] + a[href^="/box"] + ul::before { background-position: -450px -900px; }
+.md ul > li > a[href="/l7"] + a[href^="/box"] + ul::before { background-position: -540px -900px; }
+.md ul > li > a[href="/l8"] + a[href^="/box"] + ul::before { background-position: -630px -900px; }
+.md ul > li > a[href="/l9"] + a[href^="/box"] + ul::before { background-position: -720px -900px; }
+.md ul > li > a[href="/l10"] + a[href^="/box"] + ul::before { background-position: -810px -900px; }
+.md ul > li > a[href="/l11"] + a[href^="/box"] + ul::before { background-position: -900px -900px; }
+.md ul > li > a[href="/l12"] + a[href^="/box"] + ul::before { background-position: -990px -900px; }
+.md ul > li > a[href="/l13"] + a[href^="/box"] + ul::before { background-position: -1080px -900px; }
+.md ul > li > a[href="/l14"] + a[href^="/box"] + ul::before { background-position: -1170px -900px; }
+.md ul > li > a[href="/l15"] + a[href^="/box"] + ul::before { background-position: -1260px -900px; }
+
+/* rouxls kaard */
+.md ul > li > a[href="/rk1"] + a[href^="/box"] + ul::before { background-position: 0px -990px; }
+.md ul > li > a[href="/rk2"] + a[href^="/box"] + ul::before { background-position: -90px -990px; }
+.md ul > li > a[href="/rk3"] + a[href^="/box"] + ul::before { background-position: -180px -990px; }
+.md ul > li > a[href="/rk4"] + a[href^="/box"] + ul::before { background-position: -270px -990px; }
+.md ul > li > a[href="/rk5"] + a[href^="/box"] + ul::before { background-position: -360px -990px; }
+.md ul > li > a[href="/rk6"] + a[href^="/box"] + ul::before { background-position: -450px -990px; }
+.md ul > li > a[href="/rk7"] + a[href^="/box"] + ul::before { background-position: -540px -990px; }
+
+/* the king */
+.md ul > li > a[href="/k1"] + a[href^="/box"] + ul::before { background-position: 0px -1080px; }
+.md ul > li > a[href="/k2"] + a[href^="/box"] + ul::before { background-position: -90px -1080px; }
+.md ul > li > a[href="/k3"] + a[href^="/box"] + ul::before { background-position: -180px -1080px; }
+.md ul > li > a[href="/k4"] + a[href^="/box"] + ul::before { background-position: -270px -1080px; }
+.md ul > li > a[href="/k5"] + a[href^="/box"] + ul::before { background-position: -360px -1080px; }
+.md ul > li > a[href="/k6"] + a[href^="/box"] + ul::before { background-position: -450px -1080px; }
+.md ul > li > a[href="/k7"] + a[href^="/box"] + ul::before { background-position: -540px -1080px; }
+.md ul > li > a[href="/k8"] + a[href^="/box"] + ul::before { background-position: -630px -1080px; }
+.md ul > li > a[href="/k9"] + a[href^="/box"] + ul::before { background-position: -720px -1080px; }
+
+/* undyne */
+.md ul > li > a[href="/u1"] + a[href^="/box"] + ul::before { background-position: 0px -1170px; }
+.md ul > li > a[href="/u2"] + a[href^="/box"] + ul::before { background-position: -90px -1170px; }
+.md ul > li > a[href="/u3"] + a[href^="/box"] + ul::before { background-position: -180px -1170px; }
+.md ul > li > a[href="/u4"] + a[href^="/box"] + ul::before { background-position: -270px -1170px; }
+.md ul > li > a[href="/u5"] + a[href^="/box"] + ul::before { background-position: -360px -1170px; }
+.md ul > li > a[href="/u6"] + a[href^="/box"] + ul::before { background-position: -450px -1170px; }
+.md ul > li > a[href="/u7"] + a[href^="/box"] + ul::before { background-position: -540px -1170px; }
+.md ul > li > a[href="/u8"] + a[href^="/box"] + ul::before { background-position: -630px -1170px; }
+
+/* Rudolph */
+.md ul > li > a[href="/ru1"] + a[href^="/box"] + ul::before { background-position: 0px -1260px; }
+.md ul > li > a[href="/ru2"] + a[href^="/box"] + ul::before { background-position: -90px -1260px; }
+.md ul > li > a[href="/ru3"] + a[href^="/box"] + ul::before { background-position: -180px -1260px; }
+.md ul > li > a[href="/ru4"] + a[href^="/box"] + ul::before { background-position: -270px -1260px; }
+.md ul > li > a[href="/ru5"] + a[href^="/box"] + ul::before { background-position: -360px -1260px; }
+.md ul > li > a[href="/ru6"] + a[href^="/box"] + ul::before { background-position: -450px -1260px; }
+.md ul > li > a[href="/ru7"] + a[href^="/box"] + ul::before { background-position: -540px -1260px; }
+.md ul > li > a[href="/ru8"] + a[href^="/box"] + ul::before { background-position: -630px -1260px; }
+
+/* Asgore */
+.md ul > li > a[href="/as1"] + a[href^="/box"] + ul::before { background-position: 0px -1350px; }
+.md ul > li > a[href="/as2"] + a[href^="/box"] + ul::before { background-position: -90px -1350px; }
+.md ul > li > a[href="/as3"] + a[href^="/box"] + ul::before { background-position: -180px -1350px; }
+.md ul > li > a[href="/as4"] + a[href^="/box"] + ul::before { background-position: -270px -1350px; }
+.md ul > li > a[href="/as5"] + a[href^="/box"] + ul::before { background-position: -360px -1350px; }
+.md ul > li > a[href="/as6"] + a[href^="/box"] + ul::before { background-position: -450px -1350px; }
+.md ul > li > a[href="/as7"] + a[href^="/box"] + ul::before { background-position: -540px -1350px; }
+.md ul > li > a[href="/as8"] + a[href^="/box"] + ul::before { background-position: -630px -1350px; }
+.md ul > li > a[href="/as9"] + a[href^="/box"] + ul::before { background-position: -720px -1350px; }
+.md ul > li > a[href="/as10"] + a[href^="/box"] + ul::before { background-position: -810px -1350px; }
+.md ul > li > a[href="/as11"] + a[href^="/box"] + ul::before { background-position: -900px -1350px; }
+.md ul > li > a[href="/as12"] + a[href^="/box"] + ul::before { background-position: -990px -1350px; }
+.md ul > li > a[href="/as13"] + a[href^="/box"] + ul::before { background-position: -1080px -1350px; }
+.md ul > li > a[href="/as14"] + a[href^="/box"] + ul::before { background-position: -1170px -1350px; }
+
+/* Sans */
+.md ul > li > a[href="/s1"] + a[href^="/box"] + ul::before { background-position: 0px -1440px; }
+.md ul > li > a[href="/s2"] + a[href^="/box"] + ul::before { background-position: -90px -1440px; }
+.md ul > li > a[href="/s3"] + a[href^="/box"] + ul::before { background-position: -180px -1440px; }
+.md ul > li > a[href="/s4"] + a[href^="/box"] + ul::before { background-position: -270px -1440px; }
+.md ul > li > a[href="/s5"] + a[href^="/box"] + ul::before { background-position: -360px -1440px; }
+.md ul > li > a[href="/s6"] + a[href^="/box"] + ul::before { background-position: -450px -1440px; }
+.md ul > li > a[href="/s7"] + a[href^="/box"] + ul::before { background-position: -540px -1440px; }
+.md ul > li > a[href="/s8"] + a[href^="/box"] + ul::before { background-position: -630px -1440px; }
+
+/* catty */
+.md ul > li > a[href="/c1"] + a[href^="/box"] + ul::before { background-position: 0px -1530px; }
+.md ul > li > a[href="/c2"] + a[href^="/box"] + ul::before { background-position: -90px -1530px; }
+.md ul > li > a[href="/c3"] + a[href^="/box"] + ul::before { background-position: -180px -1530px; }
+.md ul > li > a[href="/c4"] + a[href^="/box"] + ul::before { background-position: -270px -1530px; }
+.md ul > li > a[href="/c5"] + a[href^="/box"] + ul::before { background-position: -360px -1530px; }
+.md ul > li > a[href="/c6"] + a[href^="/box"] + ul::before { background-position: -450px -1530px; }
+.md ul > li > a[href="/c7"] + a[href^="/box"] + ul::before { background-position: -540px -1530px; }
+.md ul > li > a[href="/c8"] + a[href^="/box"] + ul::before { background-position: -630px -1530px; }
+.md ul > li > a[href="/c9"] + a[href^="/box"] + ul::before { background-position: -720px -1530px; }
+
+/* Bratty */
+.md ul > li > a[href="/br1"] + a[href^="/box"] + ul::before { background-position: 0px -1620px; }
+.md ul > li > a[href="/br2"] + a[href^="/box"] + ul::before { background-position: -90px -1620px; }
+.md ul > li > a[href="/br3"] + a[href^="/box"] + ul::before { background-position: -180px -1620px; }
+.md ul > li > a[href="/br4"] + a[href^="/box"] + ul::before { background-position: -270px -1620px; }
+.md ul > li > a[href="/br5"] + a[href^="/box"] + ul::before { background-position: -360px -1620px; }
+.md ul > li > a[href="/br6"] + a[href^="/box"] + ul::before { background-position: -450px -1620px; }
+.md ul > li > a[href="/br7"] + a[href^="/box"] + ul::before { background-position: -540px -1620px; }
+
+/* burgershorts */
+.md ul > li > a[href="/bu1"] + a[href^="/box"] + ul::before { background-position: 0px -1710px; }
+.md ul > li > a[href="/bu2"] + a[href^="/box"] + ul::before { background-position: -90px -1710px; }
+.md ul > li > a[href="/bu3"] + a[href^="/box"] + ul::before { background-position: -180px -1710px; }
+.md ul > li > a[href="/bu4"] + a[href^="/box"] + ul::before { background-position: -270px -1710px; }
+.md ul > li > a[href="/bu5"] + a[href^="/box"] + ul::before { background-position: -360px -1710px; }
+.md ul > li > a[href="/bu6"] + a[href^="/box"] + ul::before { background-position: -450px -1710px; }
+.md ul > li > a[href="/bu7"] + a[href^="/box"] + ul::before { background-position: -540px -1710px; }
+.md ul > li > a[href="/bu8"] + a[href^="/box"] + ul::before { background-position: -630px -1710px; }
+
+/* hiding spoiler faces from non-subscribers */
+body:not(.subscriber) .md ul > li > a[href="/r16"] + a[href^="/box"] + ul::before,
+body:not(.subscriber) .md ul > li > a[href="/r17"] + a[href^="/box"] + ul::before,
+body:not(.subscriber) .md ul > li > a[href="/r18"] + a[href^="/box"] + ul::before,
+body:not(.subscriber) .md ul > li > a[href="/r19"] + a[href^="/box"] + ul::before{
+    display: none;
+}
+
+/* ad blocker*/
+.premium-banner {display: none}
+
+/* christmas 
+
+input[name="uh"] ~ a::after {
+	top:-178px;
+	height:175px
+}
+
+.flair-ralseitree {
+    padding-left: 19px;
+    height: 33px;
+    background-position: -36px -6804px;
+    margin-top: -4px;
+    line-height: 33px;
+    animation: sparkle .5s steps(2) infinite;
+    -webkit-transition: height .2s, line-height .2s;
+    transition: height .2s, line-height .2s
+}
+
+@keyframes sparkle {
+    from {
+        background-position: -36px -6804px
+    }
+    to {
+        background-position: -36px -6906px
+    }
+}
+
+.flair-ralseitree:hover {
+    height: 51px;
+    line-height: 51px;
+}
+*/
