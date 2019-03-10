@@ -379,7 +379,7 @@ body.submit-page {
 }
 
 .side .md > h3:first-of-type + ul:hover, .side .md > h3:first-of-type:hover + ul {
-	height: 184px;
+	height: 230px;
 	top: 405px;
 	border-width: 1px !important;
     padding:0;
@@ -418,8 +418,8 @@ body.submit-page {
     border: 1px solid #aaa
 }
 
-.res-nightmode .md td,
-:lang(dm) .md td {
+.res-nightmode .content .md td,
+:lang(dm) .content .md td {
     background: #1a1714
 }
 

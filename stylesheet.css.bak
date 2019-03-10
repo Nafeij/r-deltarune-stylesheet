@@ -418,8 +418,8 @@ body.submit-page {
     border: 1px solid #aaa
 }
 
-.res-nightmode .md td,
-:lang(dm) .md td {
+.res-nightmode .content .md td,
+:lang(dm) .content .md td {
     background: #1a1714
 }
 
@@ -2827,6 +2827,7 @@ form.toggle.flairtoggle:after {
 .flair-20{background:url(%%smol-flairs%%) 0 -437px} 
 .flair-21{background:url(%%smol-flairs%%) 0 -460px} 
 .flair-22{background:url(%%smol-flairs%%) 0 -483px}
+.flair-23{background:url(%%smol-flairs%%) 0 -506px}
 
 /* Animated Flairs - By @SuperKirbyLover*/
 
