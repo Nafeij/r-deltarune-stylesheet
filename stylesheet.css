@@ -5010,7 +5010,7 @@ body:not(.subscriber) .md ul > li > a[href="/r19"] + a[href^="/box"] + ul::befor
 }
 
 /* ad blocker*/
-.premium-banner {display: none}
+.premium-banner, .ad-container {display: none}
 
 /* christmas 
 

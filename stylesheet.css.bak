@@ -379,7 +379,7 @@ body.submit-page {
 }
 
 .side .md > h3:first-of-type + ul:hover, .side .md > h3:first-of-type:hover + ul {
-	height: 184px;
+	height: 230px;
 	top: 405px;
 	border-width: 1px !important;
     padding:0;
