@@ -5,6 +5,7 @@ The [css stylesheet](https://www.reddit.com/r/deltarune/about/stylesheet/) for t
 
 - If you don't have git, ```sudo apt-get install git```
 - Clone: ```git clone https://github.com/Nafeij/r-deltarune-stylesheet.git```
+- If you have previously done the steps above, ```git pull```
 
 - Do stuff
 
