@@ -1,0 +1,212 @@
+---
+    author:
+        comment_karma: < -10
+    action: filter
+    action_reason: "Low Comment Karma"
+    message: |
+        The above [{{kind}}]({{permalink}}) was automatically removed, as you must have at least neutral (0 or more) comment and post karma in order to post on /r/deltarune. If your post is legitimate and you wish to have it approved manually, [contact us here](https://www.reddit.com/message/compose?to=%2Fr%2Fdeltarune).
+---
+    author:
+        post_karma: < -10
+    action: filter
+    action_reason: "Low Post Karma"
+    message: |
+        The above [{{kind}}]({{permalink}}) was automatically removed, as you must have at least neutral (0 or more) comment and post karma in order to post on /r/deltarune. If your post is legitimate and you wish to have it approved manually, [contact us here](https://www.reddit.com/message/compose?to=%2Fr%2Fdeltarune).
+---
+    author:
+        account_age: < 1 day
+    action: filter
+    action_reason: "New Account"
+    message: |
+        The above [{{kind}}]({{permalink}}) was automatically removed, as your account must be more that a day old in order to post on /r/deltarune. If your post is legitimate and you wish to have it approved manually, [contact us here](https://www.reddit.com/message/compose?to=%2Fr%2Fdeltarune).
+---
+    reports: 3
+    action: filter
+    action_reason: "Report Threshold"
+    message: |
+        The above [{{kind}}]({{permalink}}) was automatically removed due to receiving 3 reports. Please verify that this action was correct. If your post is legitimate and you wish to have it approved manually, [contact us here](https://www.reddit.com/message/compose?to=%2Fr%2Fdeltarune).
+---
+    title+body (regex): ["nsf[wl]", "not safe for (work|life)"]
+    action: report
+    action_reason: "{{match-1}}"
+---
+    # Non-ASCII character (likely spam)
+    moderators_exempt: True
+    ~title (regex, full-exact): >-
+        [a-zA-Z0-9 \°\”\“\™\®\²\³\^\’\´\`\§\!\,\.\–\~\\\|\@\#\$\€\£\%\^\&\*\(\)\_\\+\-\=\{\}\;\'\:\"\/\<\>?\[\]]+
+    action: report
+    action_reason: "Non-ASCII character (likely spam)"
+
+---
+    #Filter possible new account spam
+    type: text submission
+    author:
+        is_contributor: false
+        account_age: '< 8'
+    body+title (includes): [imgur, sex]
+    body_shorter_than: 201
+    action: filter
+    action_reason: "Possible imgur spammer"
+
+---
+    type: text submission
+    title (regex): [\u0400-\u04FF]
+    action: filter
+    action_reason: "suspected spam by cyrillic characters"
+
+---
+    type: text submission
+    title (regex): [Ѐ-ӿ]
+    action: filter
+    action_reason: "suspected spam by cyrillic characters"
+    
+---
+    type: comment
+    body: ["repost", "troll"]
+    is_top_level: true
+    parent_submission:
+        action: report
+        action_reason: "Possible {{match}}"
+---
+    title+body (regex): ["pike?(ys?|ies)", "pakis?", "(ph|f)agg?s?([e0aio]ts?|oted|otry)", "nigg?s?", "nigg?[aeoi]s?", "(ph|f)[@a]gs?", "n[i!j1e]+gg?(rs?|ett?e?s?|lets?|ress?e?s?|r[a0oe]s?|[ie@ao0!]rs?|r[o0]ids?|ab[o0]s?|erest)", "j[!i]gg?[aer]+(boo?s?|b00?s?)", "jigg?[aer]+(b[0o]ing)", "p[0o]rch\\s*-?m[0o]nke?(ys?|ies?)", "g(ooks?|00ks?)", "k[iy]+kes?", "b[ea]ne[ry]s?", "(towel|rag)\\s*heads?", "wet\\s*backs?", "dark(e?y|ies?)", "(shit|mud)\\s*-?skins?", "tarbab(ys?|ies?)", "ape\\s*-?fricans?", "lesbos?", "coons?(y|i?e?s?|er)", "trann(ys?|ies?)", "mignorants?", "lady\\s*-?boys?", "spics?", "/?r?/?coon\\s*town", "/?r?/?ni?1?ggers?", "shit\\s*lords?", "Homos?",  "groids?", "chimpires?", "mud\\s*childr?e?n?", "n[1!i]gs?-?", "gays?(est|ly|er)", "dune\\s*coone?r?s?", "high\\s*yellows?", "shee?\\s*boons?", "cock\\s*suckers?", "tards?", "retards?", "retard\\*s?(ed|edly)", "cunts?y?", "dot\\s*heads?", "china\\s*m[ae]n", "queer\\s*bags?", "NAMBLA", "fucking\\s*(whores?)", "puss(y|ies?)", "ghey", "whore\\s*mouth", "fuck\\s*boys?", "fat\\s*fucks?", "obeasts?", "fuck\\s*(wits?|tards?)",  "beetusbehemoths?", "book\\s*fags?", "shit\\s*(bags?|dicks?)", "twats?", "fupas?", "holo\\s*hoaxe?s?", "Muslimes?", "dind[ous]", "boot\\s*lips?", "jig\\s*apes?", "nig\\s*town", "suspooks?"]
+    action: filter
+    action_reason: "hostile name calling"
+---
+    title (regex): ["a(ss|rse|es)([ -]?holes?)?","b(i|\\*)o?(tch|\\*{3})(y|es)?","cocks?([ -]?suck(ers?|ing)?)?","cum(ming|[ -]shots?)?","cunts?","((mother|motha|mutha)[ -]?)?f(u?c?k?k|\\*ck|\\*{0,2}k|\\*{3})(er|ed|ing|s)?", "s(h(i|ar?|\\*)t|\\*{3}|h\\*{2})(s|ter|e|ting)?", "cums?",  "vags?", "whores?", "slutt?y?s?", "rapes?d?y?", "sex\\s*slaves?", "anuse?s?", "mast[ue]rbat(es?|ing|ion)"]
+    action: report
+    action_reason: "foul/sexual language, possibly hostile"
+
+---
+
+    title+body (regex): ["moderator?s", "ban\\s*me", "liberal\\s*moron",  "fat\\s*(asse?s?)", "cocks?", "shut\\s*the\\s*fuck\\s*up",  "piece\\s*of\\s*shit", "fuck\\s*(you|yourself|yourselves|heads?|wads?|offs?|heads?|faces?)",  "ass\\s*(wipes?|munch|clowns?|holes?)", "d[o0]uche\\s*(bags?|n[0o]zzles?|y|mods?)", "obese?(ity)",  "over\\s*weight",  "condescending", "pompous", "pricks?", "suck\\s*it", "stick\\s*up\\s*(their|there|thier|they'?r?e?)\\s*asse?s?",  "ignorant", "wankers?", "jack\\s*(offs?|tards?|asse?s?)",  "butt\\s*(munch|holes?|hurt)", "load\\s?of\\s*shit", "insulti?n?g\\s*(you|my)", "f[#u]+ck\\s*is\\s*wrong",  "piss\\s*off", "suck\\s*it",  "b[o0i]tche?s?(ing|ed|iness)", "an\\s*(ass)",  "neck\\s*beards?", "passive\\s*aggressive", "dick\\s*weed", "you'?re?\\s*dumb", "pa?edos?", "pa?edophiles?", "(dumb)\\s*fucks?", "shit\\s*(dicks?|heads?)", "entitled", "fucking\\s*(idiots?|bitche?s?|morons?|dicks?|mouth)", "shit\\s*posts?", "diatribe", "self\\s*-?important", "elitis(t|m)", "patroniz(e|ing)", "dickish", "man\\s*child", "man\\s*children", "fedoras?", "m'lady", "autists?", "circle\\s*jerki?n?g?", "pedants?", "suck\\s*my"]
+    action: report
+    report_reason: "Fightin' words  - {{match}}"
+
+---
+
+    title+body (regex): ["apes?",  "bigot(s|ed)", "monk(ey|ies)", "gorillas?", "chimpanzees?", "interracial", "great\\s*apes?", "mud\\s*huts?", "baboons?", "white\\s*blood", "w?raci[s]+s", "urban\\s*thugs?", "white\\s*devils?", "racists?", "white\\s*(supremacists?|man|males?|powers?)", "persons?\\s*of\\s*color", "race\\s*mixing", "ethnonationalist", "cis\\s*males?", "whites", "black\\s*(lies?|lives?)", "red\\s*pills?", "chimp", "shekel", "goyim", "nuffin", "groid"]
+    action: report
+    report_reason: "Possible Racism - {{match}}"
+
+---
+
+    title+body (regex): ["kill\\s*your(self|selves)", "commit\\s*suicide", "I\\s*hope\\s*(you|she|he)\\s*dies?"]
+    action: report
+    report_reason: "Death threats - {{match}}"
+
+---
+
+    title+body (regex): ["troll*(s|ed|ing)"]
+    action: report
+    report_reason: "Mentioning Trolls - {{match}}"
+
+---
+    title+body (regex): ["J[3e]ws?", "mein", "kam[phf]", "kram[phf]",  "hitler'?s?", "Adolf'?s?", "neo\\s*nazis?", "stalin'?s?", "communis(ts?|m)", "terroris(ts?|m)", "jihadi?s?", "Allah", "islami?c?", "Islamis(ts?|m)", "Muslims?", "sharia", "Israeli?s?", "false\\s*flags?", "shills?", "zionis(ts?|m)", "ISIS", "ISIL", "anti\\s*christ", "double\\s*thinks?", "censors?e?d?", "sjws?", "sheeple", "social\\s*justice", "justice\\s*wariors?", "Mossad", "new\\s*world\\s*orders?", "patriot\\s*act", "double\\s*speak", "sock\\s*puppets?", "/?r?/?subredditcancer", "fatwah", "anti-?\\s*semit(iecst)", "JDIF"]
+    action: report
+    report_reason: "Politically Charged  - {{match}}"
+
+---
+    title+body (regex): ["\\(?(\\d{3})\\)?([ .-])(\\d{3})([ .-])(\\d{4})","(\\d{5})([ .-])(\\d{6})","\\(?(\\d{4})\\)?([ .-])(\\d{3})([ .-])(\\d{3})","\\(?(\\d{2})\\)?([ .-])(\\d{4})([ .-])(\\d{4})","\\(?(\\d{2})\\)?([ .-])(\\d{3})([ .-])(\\d{4})","\\+([\\d ]{10,15})"]
+    ~body+url (regex): "(\\[[^\\]]+?\\]\\()?(https?://|www\\.)\\S+\\)?"
+    ~body+title+url (regex): ["(800|855|866|877|888|007|911)\\W*\\d{3}\\W*\\d{4}", "\\d{3}\\W*555\\W*\\d{4}", "999-999-9999", "000-000-0000", "123-456-7890", "111-111-1111", "012-345-6789", "888-888-8888", "281\\W*330\\W*8004", "777-777-7777", "678-999-8212", "999([ .-])119([ .-])7253","0118 999 811","0118 999 881", "867( -)?5309", "505\\W*503\\W*4455", "1024 2048"]
+    action: remove
+    modmail_subject: Doxxing Alert!
+    modmail: |
+
+        {{permalink}}
+
+        The above {{kind}} by /u/{{author}} was removed because it contained a possible phone number. Please investigate immediately.
+
+        If the user is doxxing, [ban them](/r/{{subreddit}}/about/banned) and [report them to the reddit admins](http://www.reddit.com/message/compose?to=%2Fr%2Freddit.com&subject=Doxxing%20Report:%20%2Fu%2F{{author}}&message=%2Fu%2F{{author}}%20posted%20a%20phone%20number:%20{{permalink}}) immediately.
+
+---
+    title+body (regex): "\\b(?:4[0-9]{12}(?:[0-9]{3})?|5[12345][0-9]{14}|3[47][0-9]{13}|3(?:0[012345]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35[0-9]{3})[0-9]{11})\\b"
+    action: remove
+    modmail_subject: Doxxing Alert!
+    modmail: |
+
+        {{permalink}}
+
+        The above {{kind}} by /u/{{author}} was removed because it contained a possible credit card number. Please investigate immediately.
+
+        If the user is doxxing, [ban them](/r/{{subreddit}}/about/banned) and [report them to the reddit admins](http://www.reddit.com/message/compose?to=%2Fr%2Freddit.com&amp;subject=Doxxing%20Report:%20%2Fu%2F{{author}}&message=%2Fu%2F{{author}}%20posted%20a%20credit%20card%20number:%20{{permalink}}) immediately.
+
+---
+    title+body (regex): "\\b[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\b"
+    action: remove
+    modmail_subject: Doxxing Alert!
+    modmail: |
+        {{permalink}}
+
+        The above {{kind}} by /u/{{author}} was removed because it contained a possible IP address. Please investigate immediately.
+
+        If the user is doxxing, [ban them](/r/{{subreddit}}/about/banned) and [report them to the reddit admins](http://www.reddit.com/message/compose?to=%2Fr%2Freddit.com&amp;subject=Doxxing%20Report:%20%2Fu%2F{{author}}&message=%2Fu%2F{{author}}%20posted%20an%20IP%20address:%20{{permalink}}) immediately.
+
+---
+    title+body (regex): ["\\W[A-Za-z]?\\d{1,6}[A-Za-z]? (E(\\.|ast)?|W(\\.|est)?|N(\\.|orth)?|S(\\.|outh)? )?[\\p{Pi}\\p{Pf}]?\\w+( \\w+)?[\\p{Pi}\\p{Pf}]? (st(reet)?|ave(enue)?|r(oa)?d|dr(ive)?|c(our)?t|blvd|boulevard|lane|ln|highway|hwy|route|rt)"]
+    ~title+body#whitelist: [second drive, minute drive, hour drive, day drive, week drive, gb drive, tb drive, 123 Main St, 123 Main Street, 221b baker st, 221b baker street]
+    action: remove
+    modmail_subject: Doxxing Alert!
+    modmail: |
+        {{permalink}}
+
+        The above {{kind}} by /u/{{author}} was removed because it contained a possible street address. Please investigate immediately.
+
+        If the user is doxxing, [ban them](/r/{{subreddit}}/about/banned) and [report them to the reddit admins](http://www.reddit.com/message/compose?to=%2Fr%2Freddit.com&amp;subject=Doxxing%20Report:%20%2Fu%2F{{author}}&amp;message=%2Fu%2F{{author}}%20posted%20a%20street%20address:%20{{permalink}}) immediately.
+
+    #If there are new link flairs/fliar classes add them below.
+
+---
+    title: [news, announce, psa, notice]
+    set_flair: ["News","news"]
+
+---
+    title: [question, help, ?]
+    set_flair: ["Question","question"]
+    
+---
+    title: [theory]
+    set_flair: ["Theory","theory"]
+
+---
+    title: [guide, how to]
+    set_flair: ["Guide","guide"]
+
+---
+    title: [art, paint, music, song, soundtrack, drew, draw, fanart, comic]
+    set_flair: ["Creation","creation"]
+
+---
+    title: [discussion, talk]
+    set_flair: ["Discussion","discussion"]
+
+---
+    title: [meta, reddit, subreddit, r/deltarune]
+    set_flair: ["Meta","meta"]
+    
+---
+    title: [funny, joke, meme, pun, haha]
+    set_flair: ["Humor","humor"]
+    
+---
+    title: "spoiler"
+    set_spoiler: true
+    /*
+---
+#     moderators_exempt: True
+#     ~title: [news, announce, psa, notice, question, help, ?, guide, how to, art, paint, music, song, soundtrack, drew, draw, fanart, comic, discussion, talk, meta, reddit, subreddit, r/deltarune, funny, joke, meme, pun, haha]
+#     message: |
+# 
+#         AutoModerator could not identify what kind of [post]({{permalink}}) in /r/{{subreddit}} you're submitting. 
+#         
+#         1. **Please flair your submission accordingly.** Simply including the flair's text in the title before submission will get it assigned automatically. 
+#         2. In some cases, your post may be automatically flaired and you might not recieve this PM after submission.**If that happens, please make sure that the given flair is suitable.**
+#         3. Also consider **tagging your submission as a spoiler** if you think it contains any.
+#         [To flair or spoiler-tag posts, simply refer to these two buttons below your post title.](https://i.imgur.com/xHcnl0G.png)
+#         
+#         [To find out what each flair means, visit the wiki page.](/r/deltarune/wiki/flair)
+# ---
+    flair_css_class: "announcement"
+    action: remove
+    comment: |
+        Your post has been automatically removed because you used a flair which is reserved for the subreddit moderators.
