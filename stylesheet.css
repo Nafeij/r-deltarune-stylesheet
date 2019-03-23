@@ -1948,7 +1948,7 @@ body.single-page>.content .link .midcol {
 }
 
 .thumbnail.default,
-.thing.over18
+.thing.over18,
 .thumbnail.self,
 .thumbnail.spoiler{
 	background-image: url(%%sprite1%%);
