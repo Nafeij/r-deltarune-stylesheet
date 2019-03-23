@@ -1948,7 +1948,11 @@ body.single-page>.content .link .midcol {
 }
 
 .thumbnail.default,
+<<<<<<< HEAD
+.over18 .thumbnail,
+=======
 .thing.over18,
+>>>>>>> 70e1d017d5d3185ff0657401e29cba7d0eb7175a
 .thumbnail.self,
 .thumbnail.spoiler{
 	background-image: url(%%sprite1%%);
@@ -1961,12 +1965,12 @@ body.single-page>.content .link .midcol {
     background-position: -392px -70px
 }
 
-.thing.over18 {
+.over18 .thumbnail {
     background-position: -532px 0
 }
 
-.res-nightmode .thing.over18,
-:lang(dm) .thing.over18 {
+.res-nightmode .over18 .thumbnail,
+:lang(dm) .over18 .thumbnail {
     background-position: -532px -70px
 }
 
@@ -1993,6 +1997,8 @@ body.single-page>.content .link .midcol {
 	top: -30px;
 	transition: height 1s,top .75s 1s;
 }
+
+.over18 .thumbnail img {display: none;}
 
 .expando-button,
 .expando-button.image,
