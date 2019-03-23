@@ -1948,7 +1948,7 @@ body.single-page>.content .link .midcol {
 }
 
 .thumbnail.default,
-.thumbnail.nsfw,
+.thing.over18,
 .thumbnail.self,
 .thumbnail.spoiler{
 	background-image: url(%%sprite1%%);
@@ -1961,12 +1961,12 @@ body.single-page>.content .link .midcol {
     background-position: -392px -70px
 }
 
-.thumbnail.nsfw {
+.thing.over18 {
     background-position: -532px 0
 }
 
-.res-nightmode .thumbnail.nsfw,
-:lang(dm) .thumbnail.nsfw {
+.res-nightmode .thing.over18,
+:lang(dm) .thing.over18 {
     background-position: -532px -70px
 }
 
