@@ -1940,7 +1940,7 @@ body.single-page>.content .link .midcol {
 
 .thumbnail {
     height: 70px !important;
-    width: 90px;
+    width: 70px;
     position: relative;
     margin-right: 10px;
     visibility: visible;
@@ -1953,8 +1953,10 @@ body.single-page>.content .link .midcol {
 .thumbnail.spoiler{
 	background-image: url(%%sprite1%%);
 	background-position: -392px 0; 
-	width: 70px;
+	width: 70px!important;
 }
+
+.thumbnail:hover{width:90px}
 
 .res-nightmode .thumbnail.self,
 :lang(dm) .thumbnail.self {
