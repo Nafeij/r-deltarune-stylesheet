@@ -1858,7 +1858,7 @@ moresearchinfo {
 .link .rank {
 	color: #aaa;
 	margin: 30px 10px 0 -10px;
-	width: 2.2ex;
+	width: 2.2ex!important;
 }
 
 .thing:hover .rank {visibility: hidden;}
