@@ -12,4 +12,4 @@ The [css stylesheet](https://www.reddit.com/r/deltarune/about/stylesheet/) for t
 - Stage files for commit: ```git add .```
 - Commit files: ```git commit -m "<msg>"```
 - Send changes to github: ```git push```
-- If there are merge conflicts ~~contact your local suicide hotline immediately~~ [PM me](https://www.reddit.com/message/compose?to=nafeij&subject=help&message=).
+- If there are merge conflicts ~~contact local authorities immediately~~ [PM me](https://www.reddit.com/message/compose?to=nafeij&subject=help&message=).
