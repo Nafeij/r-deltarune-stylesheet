@@ -74,25 +74,12 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
     width: 11px
 }*/
 
-.res-nightmode body,
-.res-nightmode body.comments-page,
-.res-nightmode body.search-page,
-.res-nightmode body.submit-page,
-body.comments-page:lang(dm),
-body.search-page:lang(dm),
-body.submit-page:lang(dm),
-body:lang(dm) {
-    background-image: url(%%c%%)
+.res-nightmode body, body:lang(dm) {
+    background-image: url(%%c%%) !important;
 }
 
 body {
-    overflow-x: hidden
-}
-
-body,
-body.comments-page,
-body.search-page,
-body.submit-page {
+    overflow-x: hidden;
     background-image: url(%%b%%)
 }
 
@@ -103,14 +90,10 @@ body.submit-page {
 }
 
 #header {
-    background-image: url(%%j%%);
-	background-repeat: repeat-x;
-	background-position: center 18px;
-	background-color: #202020;
+    background: #222 url(%%j%%) repeat-x center;
 	height: 210px;
 	border: 0;
-	margin-bottom: 36px;
-	z-index: 1
+	margin-bottom: 26px
 }
 /*
 #header:after{
@@ -137,13 +120,8 @@ body.submit-page {
 
 #header:lang(dm),
 .res-nightmode #header {
-    background-image: url(%%k%%), url(%%l%%);
-    background-repeat: no-repeat, repeat;
-    background-position: 80% 18px, center 18px;
-    background-color: #202020;
-    height: 210px;
-    border: 0;
-    animation: flutter 1s steps(4, end) 300;
+    background: url(%%k%%) 80% 18px no-repeat, url(%%l%%) center 18px repeat;
+    animation: flutter 1s steps(4, end) 300
 }
 
 @keyframes flutter {
@@ -158,9 +136,6 @@ body.submit-page {
 .search-expando-button,
 .search-result:link,
 .search-result:link>mark,
-.side a,
-.tabmenu li.selected a,
-.tagline a,
 .thing .title {
     color: #e82222!important
 }
@@ -289,11 +264,16 @@ body.submit-page {
 #searchexpando{width: 161px}
 #search input[type=text] {width:193px}
 
+.search-page .side .md > h3:first-of-type,
+.search-page .side .md > h3:first-of-type + ul {
+    display: none
+}
+
 .side .md>h3:first-of-type {
     font-size: 0;
     line-height: 28px;
     position: absolute;
-    top: 375px;
+    top: 365px;
     right: 28px;
     width: 100px;
     height: 28px;
@@ -564,8 +544,8 @@ body.loggedin>.content:before {
 
 .res-nightmode .user>a,
 :lang(dm) .user>a {
-    left: 29px;
-    top: 3px
+    left: 31px;
+    top: 5px
 }
 
 .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
