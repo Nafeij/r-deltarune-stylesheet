@@ -273,7 +273,7 @@ body {
     font-size: 0;
     line-height: 28px;
     position: absolute;
-    top: 365px;
+    top: 370px;
     right: 28px;
     width: 100px;
     height: 28px;
@@ -317,7 +317,7 @@ body {
 
 .side .md>h3:first-of-type+ul:hover, .side .md>h3:first-of-type:hover+ul {
 	height: 337px;
-	top: 405px;
+	top: 400px;
 	border-width: 1px!important;
     padding:0
 }
@@ -930,7 +930,7 @@ body.loggedin>.content:before {
 .side {
     width: 330px;
     background: url(%%3%%) #e0e0e0;
-    margin: 0 10px 20px;
+    margin: 5px 10px 20px;
     border: 3px solid #ccc;
 	padding-top: 116px
 }
