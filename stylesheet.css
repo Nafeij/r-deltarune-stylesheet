@@ -135,36 +135,27 @@ body {
 .pagename a,
 .search-expando-button,
 .search-result:link,
-.search-result:link>mark,
-.thing .title {
+.search-result:link>mark {
     color: #e82222!important
 }
 
 .content a:lang(dm),
 .md a:lang(dm),
 .pagename a:lang(dm),
+.search-expando-button:lang(dm),
+.search-result:link:lang(dm),
+.search-result:link>mark:lang(dm),
 .res-nightmode .content a,
 .res-nightmode .md a,
 .res-nightmode .pagename a,
 .res-nightmode .search-expando-button,
 .res-nightmode .search-result:link,
-.res-nightmode .search-result:link>mark,
-.res-nightmode .side a,
-.res-nightmode .tabmenu li.selected a,
-.res-nightmode .tagline a,
-.res-nightmode .thing .title,
-.search-expando-button:lang(dm),
-.search-result:link:lang(dm),
-.search-result:link>mark:lang(dm),
-.side a:lang(dm),
-.tabmenu li.selected a:lang(dm),
-.tagline a:lang(dm),
-.thing .title:lang(dm) {
+.res-nightmode .search-result:link>mark {
     color: #e82e2e!important
 }
 
-	/* Spoiler Format */
-	
+	/* Legacy Spoiler Format */
+/*	
 .md a[href$="/s"] {
     background: #000!important;
     color: #000!important;
@@ -174,9 +165,9 @@ body {
     color: #e0e0e0!important;
     transition: .2s
 }
-	
-	/* Description+Spoiler Format */
-	
+	*/
+	/* Legacy Description+Spoiler Format */
+	/*
 .md a[href="#s"] {
     text-decoration: none!important;
     cursor: default;
@@ -201,7 +192,7 @@ body {
 .spoiler-stamp span {
     visibility: visible!important;
     opacity: 1!important
-}
+}*/
 
 /*Notice Box*/
 .side .md>ul:first-of-type {
@@ -210,54 +201,35 @@ body {
     width: 268px;
     font-size: 11px;
 	border: 16px solid;
-	list-style: none;
 	padding: 0;
-	margin: 0;
-	color: #556;
 	cursor: default;
-    background: url(%%w%%) center no-repeat;
-    z-index:100;
+    background: #b79675 url(%%w%%) center no-repeat;
     border-image: url(%%x%%) 16;
-	background-color: #b79675
 }
 
 :lang(dm) .side .md>ul:first-of-type,
 .res-nightmode .side .md>ul:first-of-type {
-	background: url(%%z%%) center no-repeat;
-	border-image: url(%%y%%) 16;
-	background-color: #8f6e4d
+	background: #8f6e4d url(%%z%%) center no-repeat;
+	border-image: url(%%y%%) 16
 }
 
 .side .md>ul:first-of-type li {list-style: none}
 
 .side .md>ul:first-of-type ul {
 	background-color: rgba(240,240,240,.75);
-	box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
-	border-radius: 0;
 	padding: 2px 6px;
 	margin: .25em
 }
 :lang(dm) .side .md>ul:first-of-type ul,
-.res-nightmode .side .md>ul:first-of-type ul{background-color: rgba(40,40,40,.75);}
+.res-nightmode .side .md>ul:first-of-type ul{background-color: #000000a0;}
 
-.side .md>ul:first-of-type:hover ul {background-color: rgba(240,240,240,.95);}
+.side .md>ul:first-of-type:hover ul {background-color: #fff}
 :lang(dm) .side .md>ul:first-of-type:hover ul,
-.res-nightmode .side .md>ul:first-of-type:hover ul{background-color: rgba(40,40,40,.95);}
+.res-nightmode .side .md>ul:first-of-type:hover ul{background-color: #000}
 
 .side .md>ul:first-of-type a {line-height: 1.75em}
 .side .md>ul:first-of-type ul a::before {content: "❯ "}
-.side .md>ul:first-of-type a:hover {border-bottom: 1px dotted #888;}
-.side .md>ul:first-of-type>li {margin: 0 -8px -8px}
-
-.side .md>ul:first-of-type>li>strong {
-	display: block;
-	margin: .25em 0 0
-}
-
-.side .md>ul:first-of-type strong>a {
-	top: 0;
-	margin-right: -2px
-}
+.side .md>ul:first-of-type>li {margin: 4px -8px -8px}
 
 /* Header Flairsearch */
 
@@ -273,7 +245,7 @@ body {
     font-size: 0;
     line-height: 28px;
     position: absolute;
-    top: 370px;
+    top: 360px;
     right: 28px;
     width: 100px;
     height: 28px;
@@ -293,7 +265,7 @@ body {
 
 .side .md>h3:first-of-type+ul {
 	position: absolute;
-	top: 397px;
+	top: 390px;
     right: 28px;
     display: block;
     overflow: hidden;
@@ -317,7 +289,7 @@ body {
 
 .side .md>h3:first-of-type+ul:hover, .side .md>h3:first-of-type:hover+ul {
 	height: 337px;
-	top: 400px;
+	top: 390px;
 	border-width: 1px!important;
     padding:0
 }
@@ -971,17 +943,16 @@ body.loggedin>.content:before {
 .side .sidebox,
 .side .sidecontentbox,
 .side .titlebox {
-    padding: 10px 15px 0
+    padding: 0 15px 10px
 }
 
-body.search-page .side .spacer:first-child {
+/*body.search-page .side .spacer:first-child {
     min-height: 28px
-}
+}*/
 
 .account-activity-box {
     width: 340px;
-    height: 30px;
-    padding-top: 10px
+    height: 30px
 }
 
 .side .md blockquote,
@@ -1000,11 +971,7 @@ body.search-page .side .spacer:first-child {
 :lang(dm) .side .md blockquote,
 :lang(dm) .sidecontentbox .content,
 :lang(dm) .titlebox .tagline {
-    margin: 0 0 20px;
-    border: 0;
-    color: #e0e0e0;
-    background-color: #333130;
-    box-shadow: 0 0 10px #101010
+    background-color: #333130
 }
 
 .titlebox .tagline a {
@@ -1019,14 +986,13 @@ body.search-page .side .spacer:first-child {
     transition: .5s ease all
 }
 
-.link.last-clicked,
-.thing>.midcol,
-.titlebox .md {
-    overflow: visible
-}
-
 .side .md blockquote:hover {
     max-height: 1000px
+}
+
+.link.last-clicked,
+.thing>.midcol{
+    overflow: visible
 }
 
 .side .md blockquote:nth-of-type(1) {
@@ -1034,7 +1000,6 @@ body.search-page .side .spacer:first-child {
 }
 
 .side .md blockquote ul {
-    margin: 0;
     padding: 0;
     list-style: none
 }
@@ -1045,11 +1010,6 @@ body.search-page .side .spacer:first-child {
 
 .sidecontentbox {
     margin-bottom: -20px
-}
-
-.sidecontentbox a.helplink {
-    margin: 15px 18px;
-    width: 260px
 }
 
 .res-nightmode .sidecontentbox a.helplink,
@@ -1150,6 +1110,7 @@ form.toggle.flairtoggle {
 }
 
 .account-activity-box a,
+.c-btn-primary,
 .helplink,
 .side .md h4 a,
 .sidebox.create .morelink {
@@ -1168,6 +1129,7 @@ form.toggle.flairtoggle {
 }
 
 .account-activity-box a:hover,
+.c-btn-primary:hover,
 .helplink:hover,
 .side .md h4 a:hover,
 .sidebox.create .morelink:hover {
@@ -1176,10 +1138,12 @@ form.toggle.flairtoggle {
 }
 
 .res-nightmode .account-activity-box a,
+.res-nightmode .c-btn-primary,
 .res-nightmode .helplink,
 .res-nightmode .side .md h4 a,
 .res-nightmode .sidebox.create .morelink,
 :lang(dm) .account-activity-box a,
+:lang(dm) .c-btn-primary,
 :lang(dm) .helplink,
 :lang(dm) .side .md h4 a,
 :lang(dm) .sidebox.create .morelink {
@@ -1189,10 +1153,12 @@ form.toggle.flairtoggle {
 }
 
 .res-nightmode .account-activity-box a:hover,
+.res-nightmode .c-btn-primary:hover,
 .res-nightmode .helplink:hover,
 .res-nightmode .side .md h4 a:hover,
 .res-nightmode .sidebox.create .morelink:hover,
 :lang(dm) .account-activity-box a:hover,
+:lang(dm) .c-btn-primary:hover,
 :lang(dm) .helplink:hover,
 :lang(dm) .side .md h4 a:hover,
 :lang(dm) .sidebox.create .morelink:hover {
@@ -2873,6 +2839,7 @@ form.toggle.flairtoggle:after {
     padding-left: 25px;
     background-position: -9px -732px;
     transition: none;
+    height: 26px
     /*animation: thonk .5s steps(2) infinite*/
 }
 
