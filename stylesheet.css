@@ -5,7 +5,7 @@ Shamelessly stolen from /r/MortalKombat. Credit goes to u/Xhogar and u/FanOfTheJ
 
 For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-deltarune-stylesheet
 */
-.side .md a[href*="http://www.reddit.com/r/deltarune"],
+/*.side .md a[href*="http://www.reddit.com/r/deltarune"],
 .side .md a[href*="http://dm.reddit.com/r/deltarune"] {
     display: block;
     width: 122px;
@@ -41,21 +41,17 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
 .res-nightmode .side .md a[href="http://www.reddit.com/r/deltarune"],
 :lang(dm) .side .md a[href="http://www.reddit.com/r/deltarune"] {
     pointer-events: auto
-}
+}*/
 
 .side .md a[href="#bullet"] {
     display: inline-block;
     width: 16px;
     height: 10px;
     background: url(%%f%%) no-repeat;
-    margin: 0;
     padding-right: 4px;
-    padding-left: 0;
     position: relative;
     left: 2px;
-    z-index: 0;
-    pointer-events: none;
-    cursor: none
+    pointer-events: none
 }
 
 .res-nightmode .side .md a[href="#bullet"],
@@ -63,11 +59,7 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
     background-position: 0 -10px
 }
 
-.md>ul>li>a {
-    color: #e22
-}
-
-::-webkit-scrollbar-thumb {
+/*::-webkit-scrollbar-thumb {
     background-color: #606060;
     box-shadow: inset 2px 0 0 #21201d, inset -2px 0 0 #21201d;
     border-radius: 5px;
@@ -80,7 +72,7 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
 
 ::-webkit-scrollbar {
     width: 11px
-}
+}*/
 
 .res-nightmode body,
 .res-nightmode body.comments-page,
@@ -344,7 +336,7 @@ body.submit-page {
 }
 
 .side .md>h3:first-of-type+ul:hover, .side .md>h3:first-of-type:hover+ul {
-	height: 230px;
+	height: 337px;
 	top: 405px;
 	border-width: 1px!important;
     padding:0
@@ -2108,7 +2100,6 @@ body.single-page>.content .link .midcol {
 
 .comments-page .usertext-edit textarea {
     background: url(%%C%%) no-repeat #e0e0e0;
-    transition: .2s all;
     padding: 0 5px;
     background-position: center!important
 }
