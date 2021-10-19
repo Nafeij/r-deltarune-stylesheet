@@ -54,7 +54,6 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
     pointer-events: none
 }
 
-.res-nightmode .side .md a[href="#bullet"],
 .side .md a[href="#bullet"]:lang(dm) {
     background-position: 0 -10px
 }
@@ -74,7 +73,7 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
     width: 11px
 }*/
 
-.res-nightmode body, body:lang(dm) {
+body:lang(dm) {
     background-image: url(%%c%%) !important;
 }
 
@@ -93,7 +92,11 @@ body {
     background: #222 url(%%j%%) repeat-x center;
 	height: 210px;
 	border: 0;
-	margin-bottom: 26px
+	margin-bottom: 31px
+}
+
+.submit-page #header {
+    margin-bottom: 40px;
 }
 /*
 #header:after{
@@ -118,8 +121,7 @@ body {
 }
 */
 
-#header:lang(dm),
-.res-nightmode #header {
+#header:lang(dm){
     background: url(%%k%%) 80% 18px no-repeat, url(%%l%%) center 18px repeat;
     animation: flutter 1s steps(4, end) 300
 }
@@ -144,13 +146,7 @@ body {
 .pagename a:lang(dm),
 .search-expando-button:lang(dm),
 .search-result:link:lang(dm),
-.search-result:link>mark:lang(dm),
-.res-nightmode .content a,
-.res-nightmode .md a,
-.res-nightmode .pagename a,
-.res-nightmode .search-expando-button,
-.res-nightmode .search-result:link,
-.res-nightmode .search-result:link>mark {
+.search-result:link>mark:lang(dm){
     color: #e82e2e!important
 }
 
@@ -207,8 +203,7 @@ body {
     border-image: url(%%x%%) 16;
 }
 
-:lang(dm) .side .md>ul:first-of-type,
-.res-nightmode .side .md>ul:first-of-type {
+:lang(dm) .side .md>ul:first-of-type{
 	background: #8f6e4d url(%%z%%) center no-repeat;
 	border-image: url(%%y%%) 16
 }
@@ -220,12 +215,10 @@ body {
 	padding: 2px 6px;
 	margin: .25em
 }
-:lang(dm) .side .md>ul:first-of-type ul,
-.res-nightmode .side .md>ul:first-of-type ul{background-color: #000000a0;}
+:lang(dm) .side .md>ul:first-of-type ul{background-color: #000000a0;}
 
 .side .md>ul:first-of-type:hover ul {background-color: #fff}
-:lang(dm) .side .md>ul:first-of-type:hover ul,
-.res-nightmode .side .md>ul:first-of-type:hover ul{background-color: #000}
+:lang(dm) .side .md>ul:first-of-type:hover ul{background-color: #000}
 
 .side .md>ul:first-of-type a {line-height: 1.75em}
 .side .md>ul:first-of-type ul a::before {content: "❯ "}
@@ -233,7 +226,10 @@ body {
 
 /* Header Flairsearch */
 
-#searchexpando{width: 161px}
+#searchexpando{
+    width: 161px;
+    border-radius: 0
+}
 #search input[type=text] {width:193px}
 
 .search-page .side .md > h3:first-of-type,
@@ -245,7 +241,7 @@ body {
     font-size: 0;
     line-height: 28px;
     position: absolute;
-    top: 360px;
+    top: 365px;
     right: 28px;
     width: 100px;
     height: 28px;
@@ -265,12 +261,12 @@ body {
 
 .side .md>h3:first-of-type+ul {
 	position: absolute;
-	top: 390px;
+	top: 395px;
     right: 28px;
     display: block;
     overflow: hidden;
     width: 100px;
-	padding: 1px;
+	padding: 0;
 	list-style: none;
 	cursor: pointer;
 	height: 0;
@@ -289,9 +285,7 @@ body {
 
 .side .md>h3:first-of-type+ul:hover, .side .md>h3:first-of-type:hover+ul {
 	height: 337px;
-	top: 390px;
 	border-width: 1px!important;
-    padding:0
 }
 
 .side .md>h3:first-of-type+ul li a:hover {
@@ -307,7 +301,7 @@ body {
     background-color: transparent
 }
 
-:lang(dm) .side .md>h3:first-of-type+ul li a, .res-nightmode .side .md>h3:first-of-type+ul li a{color: #eee}
+:lang(dm) .side .md>h3:first-of-type+ul li a{color: #eee}
 
 .side .md>h3:first-of-type+ul li a:not(:first-of-type) {
 	display: inline-block;
@@ -315,7 +309,6 @@ body {
 	position: absolute;
 	right: -19px
 }
-
 
 .md table {
     margin: 5px 0 15px
@@ -327,35 +320,24 @@ body {
     border: 1px solid #aaa
 }
 
-.res-nightmode .content .md td,
 :lang(dm) .content .md td {
     background: #1a1714
 }
 
-.res-nightmode .md th,
 :lang(dm) .md th {
     text-align: inherit;
     background: #2e2a26
 }
-
+/*
 hr {
     background: 0 0;
     border: 0;
     border-bottom: 1px solid #5f5c59;
     margin: 10px 0!important
-}
+}*/
 
 .tagline {
-    margin-top: 9px!important;
     line-height: 11px
-}
-
-.link .score {
-    margin-top: 4px!important
-}
-
-.listing-page .parent {
-    margin-top: 0!important
 }
 
 .link .score.likes {
@@ -370,20 +352,17 @@ hr {
     color: #888
 }
 
-.res-nightmode .comment .score,
 :lang(dm) .comment .score {
     color: #aaa!important
 }
 
 .content,
 .md,
-.side {
+.side,
+.titlebox .bottom a {
     color: #666
 }
 
-.res-nightmode .content,
-.res-nightmode .md,
-.res-nightmode .side,
 :lang(dm).content,
 :lang(dm).md,
 :lang(dm).side {
@@ -416,12 +395,6 @@ hr {
     color: #600!important
 }
 
-.res-nightmode #sr-header-area .selected a,
-.res-nightmode .comment .md p>a:visited,
-.res-nightmode .pagename a:visited,
-.res-nightmode .tagline a:visited,
-.res-nightmode .thing .title:visited,
-.res-nightmode .thing.visited .title,
 :lang(dm)#sr-header-area .selected a,
 :lang(dm).comment .md p>a:visited,
 :lang(dm).pagename a:visited,
@@ -446,24 +419,21 @@ body.loggedin>.content:before {
 
 #header-bottom-right {
     background-color: transparent;
-    bottom: -26px!important;
+    bottom: -30px!important;
     top: auto!important;
-    height: 32px;
+    height: 37px;
     font-family: determination mono, determination sans, consolas, monospace;
     width: 246px;
-    transition: .2s linear;
+    transition: .2s ease;
     border: 2px solid transparent;
-    right: 0;
-    padding: 0;
-    border-radius: 0
+    padding: 0
 }
 
 #header-bottom-right:hover {
     border-color: #fff;
-    height: 68px
+    height: 77px
 }
 
-.res-nightmode #header-bottom-right:hover,
 :lang(dm) #header-bottom-right:hover {
     border-color: #00e6ff
 }
@@ -480,90 +450,75 @@ body.loggedin>.content:before {
     font-size: 0;
     display: inline-block;
     width: 100%;
-    background-image: url(%%B%%)!important;
-    background-repeat: no-repeat;
-    background-position: 7px 21px;
+    background: #000 url(%%B%%) no-repeat 7px 21px;
     padding: 4px 8px 0 5px;
-    background-color: #000;
     height: 25px;
     transition: border-bottom-color .2s linear;
     border-bottom: 2px solid transparent;
     z-index: 1
 }
 
-.res-nightmode .user,
 .user:lang(dm) {
-    background-image: url(%%A%%)!important;
-    background-position: 8px 5px
+    background: #000 url(%%A%%) no-repeat 8px 8px
 }
 
 #header-bottom-right:hover .user {
     border-bottom-color: #fff;
-    height: 28px
+    height: 33px
 }
 
-.res-nightmode #header-bottom-right:hover .user,
 :lang(dm) #header-bottom-right:hover .user {
     border-bottom-color: #00e6ff
 }
 
 .user>a {
     font-size: 14px;
-    top: -2px;
-    left: 0;
 	text-transform: uppercase
 }
 
-.res-nightmode .user>a,
 :lang(dm) .user>a {
     left: 31px;
-    top: 5px
+    top: 8px
 }
 
 .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
-    width: 27px!important;
-    height: 9px!important;
+    width: 27px;
+    height: 9px;
     left: 3px;
     position: absolute;
     background-image: none!important;
     top: 20px
 }
 
-.res-nightmode .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon,
 :lang(dm) .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
-    width: 20px!important;
-    height: 17px!important;
+    width: 20px;
+    height: 17px;
     left: 5px;
     top: 5px
 }
 
-.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay {
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay,
+.message-count,
+.presence_circle {
     display: none
 }
 
 .user .userkarma {
     font-size: 0;
-    top: 18px;
     position: absolute;
     background: url(%%p%%) 0 -9px no-repeat;
     width: 116px;
     display: block;
-    height: 11px;
     text-align: right;
-    float: right;
-    right: 14px;
-    overflow: visible
+    right: 14px
 }
 
-.user .userkarma a:first-of-type,
-.user .userkarma a:last-of-type {
-    font-size: 12px;
-    left: auto;
+.user .userkarma a {
     position: relative;
-    top: -16px
+    top: -16px;
+    font-size: 12px
 }
 
-.res-nightmode .user .userkarma,
 :lang(dm) .user .userkarma {
     height: 9px;
     background-position: 0 0
@@ -571,20 +526,11 @@ body.loggedin>.content:before {
 
 .user .userkarma a:first-of-type:after {
     content: "/";
-    margin-left: 3px;
-    margin-right: 2px
-}
-
-.user .userkarma a:last-of-type {
-    right: 0
+    margin: 0 3px
 }
 
 #header-bottom-right a.login-required {
     margin: 0 11px 0 40px
-}
-
-.presence_circle {
-    display: none
 }
 
 #chat,
@@ -594,36 +540,24 @@ body.loggedin>.content:before {
 #new_modmail,
 .logout a,
 .pref-lang {
-    background-image: url(%%0%%)!important;
+    background: url(%%0%%) no-repeat 244px 99px !important;
     position: absolute;
     top: auto;
-    bottom: -1px;
+    bottom: 1px;
     height: 33px;
     width: 35px;
-    background-size: 244px 99px;
-    vertical-align: baseline!important;
     margin: 0;
-    font-size: 0;
-    display: inline-block;
-    content: ""!important;
-    background-repeat: no-repeat
+    font-size: 0
 }
 
 #header-bottom-right>a:first-of-type::after {
-    background-image: url(%%7%%)!important;
+    background: url(%%7%%) no-repeat 0 -160px;
     content: "";
-    display: block;
     height: 31px;
     width: 244px;
-    background-position: 0 -160px;
     left: 0;
     position: absolute;
-    top: 0;
     pointer-events: none
-}
-
-.message-count {
-    display: none!important
 }
 
 #openRESPrefs {
@@ -631,13 +565,13 @@ body.loggedin>.content:before {
 }
 
 #mail{ left:2px;overflow: visible;}
-#mail.nohavemail {background-position: 0 0;}
-#mail.havemail {background-position: 0 -33px;}
-#mail:hover{background-position: 0 -66px;}
+#mail.nohavemail {background-position: 0 0!important}
+#mail.havemail {background-position: 0 -33px!important}
+#mail:hover{background-position: 0 -66px!important}
 
-#chat {background-position: -35px 0;left:37px;}
-#chat.active{background-position: -35px -33px; background-size: auto;}
-#chat:hover{background-position: -35px -66px;}
+#chat {background-position: -35px 0!important;left:37px;}
+#chat.active{background-position: -35px -33px!important; background-size: auto;}
+#chat:hover{background-position: -35px -66px!important;}
 
 #modmail{left:72px;}
 #modmail.nohavemail {background-position: -70px 0!important;}
@@ -645,21 +579,17 @@ body.loggedin>.content:before {
 #modmail:hover{background-position: -70px -66px!important;}
 
 #new_modmail{left:107px;}
-#new_modmail.nohavemail {background-position: -105px 0;}
-#new_modmail.havemail {background-position: -105px -33px;}
-#new_modmail:hover{background-position: -105px -66px;}
-
-#header-bottom-right .flat-list,
-.pref-lang {
-    left: 142px
-}
+#new_modmail.nohavemail {background-position: -105px 0!important;}
+#new_modmail.havemail {background-position: -105px -33px!important;}
+#new_modmail:hover{background-position: -105px -66px!important;}
 
 .pref-lang {
-    background-position: -140px 0
+    left: 142px;
+    background-position: -140px 0!important
 }
 
 .pref-lang:hover {
-    background-position: -140px -66px
+    background-position: -140px -66px!important
 }
 
 #header-bottom-right .gearIcon{
@@ -668,8 +598,7 @@ body.loggedin>.content:before {
 }
 
 #header-bottom-right .gearIcon:after {
-	background-image: url(%%0%%);
-    background-position: -175px 0;
+	background: url(%%0%%) -175px 0;
 	display: block;
 	height: 33px;
 	content: ""
@@ -681,17 +610,11 @@ body.loggedin>.content:before {
 
 .logout a {
     left: 212px;
-    background-position: -210px 0
+    background-position: -210px 0!important
 }
 
 .logout:hover a {
-    background-position: -210px -66px
-}
-
-#RESSettingsButton,
-#openRESPrefs {
-    bottom: 0;
-    left: 0
+    background-position: -210px -66px!important
 }
 
 #sr-header-area {
@@ -699,63 +622,46 @@ body.loggedin>.content:before {
     border: 0
 }
 
-#sr-more-link {
-    background: #2e2a26
-}
-
 #header-bottom-left {
-    bottom: -26px;
-    height: 32px;
+    bottom: -31px;
+    height: 37px;
     border: 3px solid #fff;
     width: 100%;
     position: absolute;
     background-color: #000
 }
 
-.res-nightmode #header-bottom-left,
 :lang(dm) #header-bottom-left {
     border-color: #322431
 }
 
-#header .tabmenu:after {
-    background-position: 0 -945px;
-    float: right
-}
-
 #header .tabmenu li {
-    display: inline-block;
-    margin: 0;
-    float: left;
-    animation: tabs-fadein .5s ease-out forwards
+    float: left
 }
 
-.res-nightmode #header .tabmenu li a,
 :lang(dm) #header .tabmenu li a {
-    color: #e0e0e0;
-    text-shadow: -1px -1px 0 #00133f, 1px -1px 0 #00133f, -1px 1px 0 #00133f, 1px 1px 0 #00133f
+    color: #ddd
 }
 
 #header .tabmenu li a:hover,
 #header .tabmenu li.selected a {
-    color: #e0e0e0
+    color: #eee
 }
 
 #header .tabmenu li.selected a {
-    font-weight: 700;
-    color: #e0e0e0
+    font-weight: 700
 }
 
 .pagename {
-    font-size: 0;
-    z-index: 1
+    font-size: 0
 }
 
 .pagename a {
     display: block;
     width: 100%;
     height: 180px;
-    opacity: .9;
-    transition: all .2s ease-out;
+    opacity: .8;
+    transition: opacity .2s ease-out;
     background: url(%%n%%) 115px 95px no-repeat;
     top: -182px;
     position: absolute
@@ -764,7 +670,7 @@ body.loggedin>.content:before {
 .pagename a:hover {
     opacity: 1
 }
-
+/*
 .side .md>ol {
     position: absolute;
     list-style: none;
@@ -819,22 +725,10 @@ body.loggedin>.content:before {
     padding-left: 13px;
     font-size: 11px;
     font-style: normal
-}
-
-.side blockquote code {
-    font-size: 12px
-}
-
-.side blockquote table {
-    margin: 0;
-    width: 100%;
-    background: 0 0
-}
+}*/
 
 .side blockquote td {
     border: 0;
-    background: 0 0;
-    font-size: 11px
 }
 
 .side blockquote a[href="#expand"] {
@@ -842,20 +736,13 @@ body.loggedin>.content:before {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding-right: 10px;
-    height: 25px;
-    line-height: 25px;
     background: #ffcadb;
     box-sizing: border-box;
-    border: 1px solid #2e2a26;
-    border-right: 1px solid #141414;
-    border-bottom: 2px solid #101010;
-    transition: .5s ease all;
+    border: 1px solid #222;
+    transition: height .5s ease;
     cursor: default;
-    opacity: 1
 }
 
-.res-nightmode .side blockquote a[href="#expand"],
 :lang(dm) .side blockquote a[href="#expand"] {
     background: #444240
 }
@@ -869,7 +756,6 @@ body.loggedin>.content:before {
     text-align: center
 }
 
-.res-nightmode .side blockquote a[href="#expand"]:before,
 :lang(dm) .side blockquote a[href="#expand"]:before {
     display: block;
     color: #111;
@@ -880,23 +766,11 @@ body.loggedin>.content:before {
 }
 
 .side blockquote:hover a[href="#expand"] {
-    margin-bottom: -3px;
-    height: 0;
-    text-decoration: none
-}
-
-.modal {
-    z-index: 2147483649!important
-}
-
-#RESPrefsDropdown {
-    z-index: 2147483648!important
+    height: 0
 }
 
 .side .md hr {
-    background: 0 0;
-    opacity: 0;
-    border: 0
+    display: none
 }
 
 .side {
@@ -907,16 +781,14 @@ body.loggedin>.content:before {
 	padding-top: 116px
 }
 
-.res-nightmode .side,
 :lang(dm) .side {
-    background: url(%%4%%) #202020;
+    background: url(%%4%%) center #202020;
     border-color: #555
 }
 
 .side .login-form-side {
     border: 0!important;
-    margin: 15px 15px 0;
-    width: 308px
+    margin: 0 11px
 }
 
 .side .login-form-side input[type=password],
@@ -929,14 +801,14 @@ body.loggedin>.content:before {
     margin: 0
 }
 
-.side .sponsorshipbox {
+/*.side .sponsorshipbox {
     margin-left: 20px
 }
 
 .side .sponsorshipbox iframe {
     display: block;
     margin-top: 20px
-}
+}*/
 
 .side #ad_main,
 .side #search,
@@ -962,12 +834,10 @@ body.loggedin>.content:before {
     border: 0;
     color: #202020;
     background-color: #ffa;
-    box-shadow: 0 0 5px #101010
+    box-shadow: 0 0 5px #101010;
+    padding: 10px
 }
 
-.res-nightmode .side .md blockquote,
-.res-nightmode .sidecontentbox .content,
-.res-nightmode .titlebox .tagline,
 :lang(dm) .side .md blockquote,
 :lang(dm) .sidecontentbox .content,
 :lang(dm) .titlebox .tagline {
@@ -1012,31 +882,6 @@ body.loggedin>.content:before {
     margin-bottom: -20px
 }
 
-.res-nightmode .sidecontentbox a.helplink,
-:lang(dm) .sidecontentbox a.helplink {
-    background: #000
-}
-
-.sidecontentbox .content {
-    padding: 10px
-}
-
-.side span.score {
-    color: #e0e0e0
-}
-
-.titlebox .bottom {
-    border-top: 0;
-    padding: 5px 8px;
-    font-size: 9px;
-    margin-bottom: 0;
-    color: #999
-}
-
-.titlebox .bottom a {
-    color: #999
-}
-
 .account-activity-box a {
     width: 280px!important;
     margin: 14px 10px 0 0
@@ -1058,12 +903,6 @@ form.toggle.flairtoggle {
     border-width: 0 3px
 }
 
-.res-nightmode .RESDialogSmall.livePreview>h3,
-.res-nightmode .RESDialogSmall>h3,
-.res-nightmode .side .md blockquote h1,
-.res-nightmode .side .title h1,
-.res-nightmode .sidecontentbox .title h1,
-.res-nightmode form.toggle.flairtoggle,
 :lang(dm) .RESDialogSmall.livePreview>h3,
 :lang(dm) .RESDialogSmall>h3,
 :lang(dm) .side .md blockquote h1,
@@ -1082,10 +921,6 @@ form.toggle.flairtoggle {
     font-family: arial, sans-serif
 }
 
-.res-nightmode .RESDialogSmall>h3,
-.res-nightmode .side .md blockquote h1,
-.res-nightmode .sidecontentbox .title h1,
-.res-nightmode .titlebox h1,
 :lang(dm) .RESDialogSmall>h3,
 :lang(dm) .side .md blockquote h1,
 :lang(dm) .sidecontentbox .title h1,
@@ -1098,28 +933,20 @@ form.toggle.flairtoggle {
     color: #c01600
 }
 
-.res-nightmode .side .md blockquote h1 a,
-.res-nightmode .titlebox h1 a,
 :lang(dm) .side .md blockquote h1 a,
 :lang(dm) .titlebox h1 a {
     color: #e0e0e0
 }
 
-.side .md h4 {
-    margin: .2em
-}
-
 .account-activity-box a,
-.c-btn-primary,
-.helplink,
+.message-button a,
 .side .md h4 a,
 .sidebox.create .morelink {
     display: inline-block;
     letter-spacing: 0;
     color: #222!important;
-    font-weight: 700;
     font-size: 14px;
-    background: #eee;
+    background: #eee !important;
     border: 1px solid #222;
     border-radius: 2px;
     line-height: 32px;
@@ -1128,45 +955,29 @@ form.toggle.flairtoggle {
     transition: all .25s ease
 }
 
+.sidebox.create .morelink a{color:#222}
+
 .account-activity-box a:hover,
-.c-btn-primary:hover,
-.helplink:hover,
+.message-button a:hover,
 .side .md h4 a:hover,
 .sidebox.create .morelink:hover {
     text-decoration: none!important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .34)
 }
 
-.res-nightmode .account-activity-box a,
-.res-nightmode .c-btn-primary,
-.res-nightmode .helplink,
-.res-nightmode .side .md h4 a,
-.res-nightmode .sidebox.create .morelink,
 :lang(dm) .account-activity-box a,
-:lang(dm) .c-btn-primary,
-:lang(dm) .helplink,
+:lang(dm) .message-button a,
 :lang(dm) .side .md h4 a,
 :lang(dm) .sidebox.create .morelink {
-    background: #222;
-    color: #ddd!important;
-    border-color: transparent
+    background: #222!important;
+    color: #ddd!important
 }
 
-.res-nightmode .account-activity-box a:hover,
-.res-nightmode .c-btn-primary:hover,
-.res-nightmode .helplink:hover,
-.res-nightmode .side .md h4 a:hover,
-.res-nightmode .sidebox.create .morelink:hover,
 :lang(dm) .account-activity-box a:hover,
-:lang(dm) .c-btn-primary:hover,
-:lang(dm) .helplink:hover,
+:lang(dm) .message-button a:hover,
 :lang(dm) .side .md h4 a:hover,
 :lang(dm) .sidebox.create .morelink:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .5)
-}
-
-form.toggle.flairtoggle {
-    font-family: arial, sans-serif
 }
 
 .side .md blockquote h1 {
@@ -1174,8 +985,7 @@ form.toggle.flairtoggle {
 }
 
 .side .md blockquote li {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 10px 0 10px;
     border-top: 1px solid #464442
 }
 
@@ -1187,13 +997,10 @@ form.toggle.flairtoggle {
 
 .titlebox .tagline {
 	position: relative;
-    color: #2e2a26;
     font-weight: 700;
-    text-shadow: none
-    z-index: 4;
     padding: 10px 0 24px;
     background: url(%%b%%);
-    background-size: 20%;
+    background-size: 33%;
     border-radius: 2px;
     white-space: nowrap;
     font-size: 0;
@@ -1203,7 +1010,10 @@ form.toggle.flairtoggle {
     margin-top: 5px!important
 }
 
-.res-nightmode .titlebox .tagline,
+.titlebox .tagline:hover {
+    border-color: #e22!important
+}
+
 :lang(dm) .titlebox .tagline {
     border-color: #e0e0e0!important;
     background: url(%%c%%)
@@ -1230,26 +1040,15 @@ form.toggle.flairtoggle {
     padding: 1px 0
 }
 
-.res-nightmode .titlebox .tagline .flairselectbtn:after,
 :lang(dm) .titlebox .tagline .flairselectbtn:after {
     background-color: #222
 }
 
 .gadget .reddit-link,
 .icon-menu a {
-    background: 0 0
+    background: 0
 }
-
-.titlebox .tagline:hover {
-    border-color: #e22!important
-}
-
-.sidecontentbox .collapse-button {
-    position: absolute;
-    top: 29px;
-    right: 23px
-}
-
+/*
 .gadget {
     padding-top: 5px
 }
@@ -1262,7 +1061,7 @@ form.toggle.flairtoggle {
     width: 35px;
     margin-top: -10px;
     margin-left: 4px
-}
+}*/
 
 .leavemoderator,
 .titlebox form.toggle {
@@ -1270,44 +1069,23 @@ form.toggle.flairtoggle {
     color: #333
 }
 
-.res-nightmode .leavemoderator,
-.res-nightmode .titlebox form.toggle,
 :lang(dm) .leavemoderator,
 :lang(dm) .titlebox form.toggle {
     color: #e0e0e0
 }
 
-.infobar {
-    background: #2e2a26
-}
-
-#searchexpando {border-radius: 0}
-
 .sidebox.create .spacer {
-    padding: 10px;
-    background-color: #ffa;
-    box-shadow: 0 0 10px #101010;
-    min-height: 10px
+    display: none
 }
 
-.res-nightmode .sidebox.create .spacer,
-:lang(dm) .sidebox.create .spacer {
-    background-color: #333130
-}
-
-.sidebox.create .spacer .subtitle {
-    color: #888
-}
-
-.morelink {
+.submit .morelink {
     background: 0 0;
     border: 0;
     height: 40px
 }
 
-.morelink a,
+.submit .morelink a,
 .side .md>h1 {
-    background: #d2eceb;
     color: #202020;
     font-size: 14px;
     border-left: 2px solid #202020;
@@ -1315,24 +1093,24 @@ form.toggle.flairtoggle {
     box-sizing: border-box
 }
 
-.morelink a {
+.submit .morelink a {
     width: 300px
 }
 
-.res-nightmode .morelink a,
-.res-nightmode .side .md>h1,
-:lang(dm) .morelink a,
+.submit .morelink a:hover {
+    border-color: #ffb400;
+}
+
+:lang(dm) .submit .morelink a,
 :lang(dm) .side .md>h1 {
     background: #444240;
     color: #e0e0e0;
     border-color: #e0e0e0
 }
 
-.submit-link .morelink a:before,
-.submit-text .morelink a:before {
+.submit .morelink a:before {
     display: block;
     content: "";
-    width: 100%;
     height: 40px;
     background-image: url(%%7%%)
 }
@@ -1345,21 +1123,12 @@ form.toggle.flairtoggle {
     background-position: -92px -120px
 }
 
-.morelink a:hover {
-    border-color: #ffb400;
-    box-shadow: inset 0 0 12px #202020
-}
-
 .side .md>h1 {
     background: #e0e0e0;
-    list-style: none;
     padding: 7px 10px;
-    height: auto;
-    line-height: 20px;
-    z-index: 100
+    line-height: 20px
 }
 
-.res-nightmode .side .md>h1,
 :lang(dm) .side .md>h1 {
     background: #222
 }
@@ -1382,6 +1151,37 @@ form.toggle.flairtoggle {
     content: " kids skipping class"
 }
 
+.titlebox .subscribers {
+    padding: 7px 0;
+    display: block
+}
+
+.titlebox h1.redditname {
+    font-size: 0; margin:0;
+}
+
+.users-online:before {
+    margin-top: 6px;
+    background: url(%%f%%) 0 0;
+    height: 10px
+}
+
+:lang(dm).users-online:before {
+    background-position: 0 -10px
+}
+
+.titlebox .subscribers,
+.users-online {
+    color: #202020;
+    font-size: 18px;
+    font-family: Determination Sans, Determination Mono, Arial, Serif
+}
+
+:lang(dm).titlebox .subscribers,
+:lang(dm).users-online {
+    color: #e0e0e0
+}
+/*
 .pretty-button {
     font-size: 9px;
     line-height: 13px
@@ -1404,7 +1204,7 @@ form.toggle.flairtoggle {
     border: 1px solid #5d0400;
     color: #5d0400
 }
-
+*/
 .titlebox .subButtons {
     text-align: center
 }
@@ -1435,33 +1235,21 @@ form.toggle.flairtoggle {
     background-position: -20px -247px
 }
 
-.RESDashboardToggle,
-.RESshortcutside,
-.res-fancy-toggle-button,
-span.multi-count {
+.res-fancy-toggle-button {
     color: #202020!important
 }
 
-.res-nightmode .RESDashboardToggle,
-.res-nightmode .RESshortcutside,
-.res-nightmode .res-fancy-toggle-button,
-.res-nightmode span .multi-count,
-:lang(dm) .RESDashboardToggle,
-:lang(dm) .RESshortcutside,
-:lang(dm) .res-fancy-toggle-button,
-:lang(dm) span.multi-count {
+:lang(dm) .res-fancy-toggle-button{
     color: #e0e0e0!important
 }
 
-.RESDashboardToggle:hover,
-.RESshortcutside:hover {
+.res-fancy-toggle-button:hover {
     background: #202020!important;
     color: #ffc90e!important;
     border-color: #ffc90e
 }
-
+/*
 .hover-bubble,
-.res-nightmode .author-tooltip__head a,
 :lang(dm) .author-tooltip__head a {
     color: #e0e0e0
 }
@@ -1478,55 +1266,20 @@ span.multi-count {
 .author-tooltip__credentials-list strong,
 .hover-bubble.multi-selector strong {
     color: #eee
-}
-
-.titlebox .subscribers {
-    padding: 7px 0;
-    display: block
-}
-
-.titlebox h1.redditname {
-    font-size: 0; margin:0;
-}
-
-.users-online:before {
-    background-image: url(%%f%%);
-    margin-top: 6px;
-    background-position: 0 0;
-    height: 10px
-}
-
-.res-nightmode .users-online:before,
-:lang(dm).users-online:before {
-    background-position: 0 -10px
-}
-
-.titlebox .subscribers,
-.users-online {
-    color: #202020;
-    font-size: 18px;
-    font-family: Determination Sans, Determination Mono, Arial, Serif
-}
-
-.res-nightmode .titlebox .subscribers,
-.res-nightmode .users-online,
-:lang(dm).titlebox .subscribers,
-:lang(dm).users-online {
-    color: #e0e0e0
-}
+}*/
 
 /*SEARCH*/
 .searchpane{
-background:transparent
+    background:none
 }
 
-.searchfacets {
+/*.searchfacets {
     background: #191919;
     box-shadow: 0 4px 6px -1px #202020 inset
-}
+}*/
 
 #search_showmore,
-moresearchinfo {
+#moresearchinfo {
     display: block;
     margin-top: 10px
 }
@@ -1542,15 +1295,10 @@ moresearchinfo {
     color: #888
 }
 
-.entry .buttons li.reported-stamp {
+/*.entry .buttons li.reported-stamp {
     background-color: #e22;
     color: #e0e0e0
-}
-
-.commentarea,
-.link {
-    animation: link-fadein .3s ease-out 1
-}
+}*/
 
 .thing,
 .thing.stickled {
@@ -1558,8 +1306,6 @@ moresearchinfo {
     padding: 5px 10px
 }
 
-.res-nightmode .thing,
-.res-nightmode .thing.stickled,
 :lang(dm) .thing,
 :lang(dm) .thing.stickled {
     background: RGBA(40,40,50,.7)
@@ -1570,36 +1316,26 @@ moresearchinfo {
     margin: -5px 0 10px
 }
 
-.thing.create-reddit {
-    background: 0 0
-}
-
-.create-reddit .linefield-content textarea {
+/*.create-reddit .linefield-content textarea {
     height: 200px
-}
+}*/
 
 .thing.link, .thing.last-clicked {
-	border: none;
+	/*border: none;*/
 	border-left:5px solid;
     margin-bottom: 1px;
-	box-shadow: inset 0 0 0 0 transparent;
+	/*box-shadow: inset 0 0 0 0 transparent;*/
     transition: all .2s ease-out
 }
 
 .thing.link:hover {background: #f2f2f2}
 .thing.stickied:hover {background: #f1f3f1}
 
-.res-nightmode.thing.link:hover,
-:lang(dm).thing.link:hover {background: rgba(6, 12, 25, .7)}
+:lang(dm).thing.link:hover {background: #050b18a0}
 
-.res-nightmode.thing.stickied:hover,
-:lang(dm).thing.stickied:hover {background: rgba(6, 25, 12, .7)}
+:lang(dm).thing.stickied:hover {background: #05180ba0}
 
-.thing.stickied .midcol {
-    margin-left: 7px
-}
-
-.nav-buttons {
+/*.nav-buttons {
     padding-top: 10px
 }
 
@@ -1633,21 +1369,13 @@ moresearchinfo {
 .next-suggestions .separator,
 .nextprev .separator {
     border-left: 1px solid #303030
-}
-
-.entry .buttons li {
-    padding-right: 5px
-}
-
-.link .tagline {font-weight: 400}
+}*/
 
 .link .buttons .redditSingleClick,
 .link .buttons li a {
-    color: #888;
     opacity: .7
 }
 
-.res-nightmode .link .buttons li.first a,
 :lang(dm) .link .buttons li.first a {
     color: #e0e0e0;
     opacity: 1
@@ -1667,7 +1395,6 @@ moresearchinfo {
     margin-right: 360px;
     padding-left: 20px
 }
-
 /*wiki*/
 
 .wiki-page .wiki-page-content {
@@ -1693,7 +1420,6 @@ moresearchinfo {
     background: #191919
 }
 
-.res-nightmode .tabpane-content,
 :lang(dm) .tabpane-content {
     border: 1px solid #0066b5;
     border-top: 3px solid #0066b5
@@ -1705,9 +1431,6 @@ moresearchinfo {
     color: #e22!important
 }
 
-.res-nightmode.tagline .stickied-tagline,
-.res-nightmode.thing.stickied a.title,
-.res-nightmode.thing.stickied a.title.visited,
 :lang(dm).tagline .stickied-tagline,
 :lang(dm).thing.stickied a.title,
 :lang(dm).thing.stickied a.title.visited {
@@ -1796,7 +1519,6 @@ body.single-page>.content .link .midcol {
     margin: 7px 0 0
 }
 
-.res-nightmode .thing.stickied a.title:before,
 .thing.stickied a.title:before,
 :lang(dm) .thing.stickied a.title:before {
     content: "STICKY";
@@ -1826,8 +1548,6 @@ body.single-page>.content .link .midcol {
     text-transform: uppercase
 }
 
-.res-nightmode.nsfw-stamp acronym,
-.res-nightmode.spoiler-stamp span,
 :lang(dm).nsfw-stamp acronym,
 :lang(dm).spoiler-stamp span {
     color: #e0e0e0
@@ -1838,7 +1558,6 @@ body.single-page>.content .link .midcol {
     color: #fff
 }
 
-.res-nightmode .thing.stickied a.title:before,
 :lang(dm) .thing.stickied a.title:before {
     background-color: #39f!important;
     color: #e0e0e0
@@ -1864,7 +1583,6 @@ body.single-page>.content .link .midcol {
 
 .thumbnail:hover{width:90px}
 
-.res-nightmode .thumbnail.self,
 :lang(dm) .thumbnail.self {
     background-position: -392px -70px
 }
@@ -1873,7 +1591,6 @@ body.single-page>.content .link .midcol {
     background-position: -532px 0
 }
 
-.res-nightmode .over18 .thumbnail,
 :lang(dm) .over18 .thumbnail {
     background-position: -532px -70px
 }
@@ -1882,7 +1599,6 @@ body.single-page>.content .link .midcol {
     background-position: -462px 0
 }
 
-.res-nightmode .thumbnail.spoiler,
 :lang(dm) .thumbnail.spoiler {
     background-position: -462px -70px
 }
@@ -2015,7 +1731,6 @@ body.single-page>.content .link .midcol {
     border-top: 3px solid #ffb400
 }
 
-.res-nightmode .formtabs-content,
 :lang(dm) .formtabs-content {
     border-top: 3px solid #0066b5
 }
@@ -2037,8 +1752,7 @@ body.single-page>.content .link .midcol {
     outline:0
 }
 
-:lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul,
-.res-nightmode .roundfield textarea ,.res-nightmode .usertext-edit textarea ,.res-nightmode .roundfield input[type=text] ,.res-nightmode .roundfield input[type=url] ,.res-nightmode .roundfield input[type=password] ,.res-nightmode .roundfield input[type=number] ,.res-nightmode #search input ,.res-nightmode #searchexpando,.res-nightmode textarea, .res-nightmode .side .md>h3:first-of-type, .res-nightmode .side .md>h3:first-of-type+ul {
+:lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul{
     border-color: #0066b5!important;
     background-color:#111!important;
     color:#e0e0e0!important
@@ -2050,7 +1764,6 @@ body.single-page>.content .link .midcol {
     background-position: center!important
 }
 
-.res-nightmode .comments-page .usertext-edit textarea,
 :lang(dm) .comments-page .usertext-edit textarea {
     background: url(%%D%%) no-repeat #202020
 }
@@ -2131,7 +1844,6 @@ body.single-page>.content .link .midcol {
     border-radius: 0
 }
 
-.res-nightmode .submit-page .roundfield,
 :lang(dm) .submit-page .roundfield {
     background-color: #222
 }
@@ -2164,12 +1876,10 @@ body.single-page>.content .link .midcol {
     background-color: transparent
 }
 
-.res-nightmode .submit-page .btn,
 :lang(dm) .submit-page .btn {
     background: #202020;
     color: #e0e0e0
 }
-.res-nightmode .submit-page .btn:after,
 :lang(dm) .submit-page .btn:after {background-position: 0 -415px;}
 
 #items-required {
@@ -2208,8 +1918,6 @@ a.author:visited {
     color: #202020!important
 }
 
-.res-nightmode a.author,
-.res-nightmode a.author:visited,
 :lang(dm) a.author,
 :lang(dm) a.author:visited {
     color: #e0e0e0!important
@@ -2241,13 +1949,6 @@ h6 a:visited {
     color: #c01600
 }
 
-.res-nightmode div.usertext-body h1,
-.res-nightmode h1 a:visited,
-.res-nightmode h2 a:visited,
-.res-nightmode h3 a:visited,
-.res-nightmode h4 a:visited,
-.res-nightmode h5 a:visited,
-.res-nightmode h6 a:visited,
 :lang(dm) div.usertext-body h1,
 :lang(dm) h1 a:visited,
 :lang(dm) h2 a:visited,
@@ -2271,7 +1972,6 @@ div .titlebox .usertext-body h1 {
     text-align: center
 }
 
-.res-nightmode div.usertext-body h2,
 :lang(dm) div.usertext-body h2 {
     font-size: 24px;
     color: #e0e0e0
@@ -2491,7 +2191,6 @@ div.usertext-body h6 {
     background: url(%%2%%) center bottom no-repeat
 }
 
-.res-nightmode .footer-parent,
 :lang(dm) .footer-parent {
     padding-top: 34px;
     background: url(%%1%%) center bottom repeat-x
@@ -2534,7 +2233,8 @@ div.usertext-body h6 {
 
 form.toggle.flairtoggle {
     font-size: 0;
-    margin-top: 20px
+    margin-top: 10px;
+    font-family: arial, sans-serif
 }
 
 form.toggle.flairtoggle:after {
@@ -2587,7 +2287,6 @@ form.toggle.flairtoggle:after {
     background: #444
 }
 
-.res-nightmode .drop-choices,
 :lang(dm) .drop-choices {
     background: #2e2a26
 }
@@ -2695,7 +2394,6 @@ form.toggle.flairtoggle:after {
     content: ""
 }
 
-.res-nightmode .flair,
 :lang(dm) .flair {
     color: #999;
     background-color: #222!important
@@ -3860,16 +3558,6 @@ body.comments-page div.content .comment .comment .comment .comment .comment .com
     border-left-width: 3px!important
 }
 
-.res-nightmode body.comments-page div.content .comment,
-.res-nightmode body.comments-page div.content .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res-nightmode body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 :lang(dm) body.comments-page div.content .comment,
 :lang(dm) body.comments-page div.content .comment .comment,
 :lang(dm) body.comments-page div.content .comment .comment .comment,
@@ -3928,8 +3616,6 @@ body.comments-page div.content .comment:hover {
     background: #ffa!important
 }
 
-.res-nightmode .RESDialogSmall .livePreview,
-.res-nightmode .usertext-edit .RESDialogSmall .md.RESDialogContents,
 :lang(dm) .RESDialogSmall .livePreview,
 :lang(dm) .usertext-edit .RESDialogSmall .md.RESDialogContents {
     background: #2e2a26!important;
@@ -3946,8 +3632,6 @@ body.comments-page div.content .comment:hover {
 
 /*morewikistuff*/
 
-.res-nightmode .md blockquote,
-.res-nightmode .md del,
 :lang(dm) .md blockquote,
 :lang(dm) .md del {
     color: #aaa
@@ -4098,15 +3782,6 @@ body ul.res-search-tabs li.res-search-tab-active {
     color: #202020
 }
 
-.res-nightmode .md .-text,
-.res-nightmode .md li,
-.res-nightmode .md p,
-.res-nightmode .md pre>code,
-.res-nightmode .md td,
-.res-nightmode .md textarea,
-.res-nightmode .md th,
-.res-nightmode .message .search-result-meta,
-.res-nightmode .message .tagline,
 :lang(dm).md .-text,
 :lang(dm).md li,
 :lang(dm).md p,
@@ -4124,7 +3799,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 ul.tabmenu {
     height: 15px;
     border: 0;
-    top: 2px;
+    top: 6px;
     position: absolute;
     left: 53px
 }
@@ -4132,7 +3807,7 @@ ul.tabmenu {
 ul.tabmenu li a,
 ul.tabmenu li a:visited,
 ul.tabmenu li.selected a {
-    padding: 7px 8px 10px;
+    padding: 11px 8px;
     background: #000!important;
     color: #fff;
     text-transform: capitalize
@@ -4153,9 +3828,6 @@ ul.tabmenu li.selected a:visited {
     color: #e0e0e0!important
 }
 
-.res-nightmode ul.tabmenu li.selected a,
-.res-nightmode ul.tabmenu li.selected a:hover,
-.res-nightmode ul.tabmenu li.selected a:visited,
 :lang(dm) ul.tabmenu li.selected a,
 :lang(dm) ul.tabmenu li.selected a:hover,
 :lang(dm) ul.tabmenu li.selected a:visited {
@@ -4171,7 +3843,6 @@ ul.tabmenu li.selected a:visited {
     background: 0 0
 }
 
-.res-nightmode.subreddit-rule-item:hover,
 :lang(dm).subreddit-rule-item:hover {
     border-color: #e0e0e0
 }
@@ -4219,10 +3890,10 @@ ul.tabmenu li.selected a:visited {
 	background-color: transparent;
 	font: bold 12px Lato,Arial,sans-serif;
 	text-transform: uppercase;
-	width: 100px;
+	width: 95px;
 	position: absolute;
-	left: -38px;
-	margin-top: 31px;
+	left: -35px;
+	margin-top: 34px;
 	transform: rotate(90deg);
 	border: none;
 	text-align: center;
@@ -4346,8 +4017,7 @@ ul.tabmenu li.selected a:visited {
 	font-family: Arial, Helvetica, sans-serif;
 	border-radius: 3px
 }
-:lang(dm) .side .md>blockquote:nth-of-type(4) ul li a,
-.res-nightmode .side .md>blockquote:nth-of-type(4) ul li a{color: #fff!important;}
+:lang(dm) .side .md>blockquote:nth-of-type(4) ul li a{color: #fff!important;}
 .side .md> blockquote:nth-of-type(4) ul li a:first-of-type {
 	width:90px;
 	opacity:.75
@@ -4577,8 +4247,7 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
     min-height: 71px
 }
 
-:lang(dm) .md ul>li>a[href^="/box"]+ul,
-.res-nightmode .md ul>li>a[href^="/box"]+ul{
+:lang(dm) .md ul>li>a[href^="/box"]+ul{
 	border-width: 14px;
 	border-image: url(%%e%%) 14
 }
@@ -4996,7 +4665,8 @@ body:not(.subscriber) .md ul>li>a[href="/r19"]+a[href^="/box"]+ul::before{
 }
 
 /* ad blocker*/
-.premium-banner, .ad-container, .organic-listing {display: none}
+.premium-banner, .ad-container, .organic-listing
+{display: none}
 
 /* christmas 
 
