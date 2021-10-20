@@ -138,7 +138,7 @@ body {
 .search-expando-button,
 .search-result:link,
 .search-result:link>mark {
-    color: #e82222!important
+    color: #e82222
 }
 
 .content a:lang(dm),
@@ -147,7 +147,7 @@ body {
 .search-expando-button:lang(dm),
 .search-result:link:lang(dm),
 .search-result:link>mark:lang(dm){
-    color: #e82e2e!important
+    color: #e82e2e
 }
 
 	/* Legacy Spoiler Format */
@@ -246,7 +246,8 @@ body {
     width: 100px;
     height: 28px;
     cursor: pointer;
-    z-index: 100
+    z-index: 100;
+    text-align: center
 }
 
 .side .md>h3:first-of-type::after {
@@ -365,10 +366,15 @@ hr {
 
 :lang(dm).content,
 :lang(dm).md,
-:lang(dm).side {
+:lang(dm).side,
+:lang(dm) .wiki-page-content .md h1, 
+:lang(dm) .wiki-page-content .md h6,
+:lang(dm) .wiki-page-content .md h2,
+:lang(dm) .side .md h3,
+#RESShortcuts,
+.srSep {
     color: #ccc
 }
-
 #sr-more-link,
 .dropdown.srdrop .selected,
 .sr-bar a {
@@ -1395,24 +1401,18 @@ form.toggle.flairtoggle {
     margin-right: 360px;
     padding-left: 20px
 }
+
+
 /*wiki*/
 
 .wiki-page .wiki-page-content {
-    margin-right: 385px
+    margin-right: 360px
 }
 
-.wiki-page-content .md h1 {
-    color: inherit
+.wiki-page-content .wiki > .toc > ul{
+    float: none!important
 }
-
-.wiki-page #header {
-    margin-bottom: 60px
-}
-
-.panestack-title {
-    border-bottom: 0
-}
-
+/*
 .tabpane-content {
     border: 1px solid #2e2a26;
     border-top: 3px solid #ffb400;
@@ -1429,7 +1429,7 @@ form.toggle.flairtoggle {
 .thing.stickied a.title,
 .thing.stickied a.title.visited {
     color: #e22!important
-}
+}*/
 
 :lang(dm).tagline .stickied-tagline,
 :lang(dm).thing.stickied a.title,
@@ -1437,7 +1437,7 @@ form.toggle.flairtoggle {
     color: #39f!important
 }
 
-.thing.comment {
+/*.thing.comment {
     background: 0 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -1450,20 +1450,16 @@ form.toggle.flairtoggle {
 
 .thing.spam>.entry {
     border: 1px solid #600
-}
+}*/
 
 .thing.spam>.entry,
 .thing.spam>.entry.RES-keyNav-activeElement {
-    background: rgba(255, 0, 0, .1)!important
+    background: #f001 !important
 }
 
 .comment.spam>.child,
 .message.spam>.child {
-    background: 0 0
-}
-
-.comment.spam>.child {
-    margin-left: 13px
+    background: none
 }
 
 .comment .midcol {
@@ -1474,19 +1470,11 @@ form.toggle.flairtoggle {
 .comment .child,
 .comment .showreplies,
 .res-commentBoxes .comment div.child {
-    padding-left: 20px;
-    margin-left: 14px;
-    border-left: 1px dotted #666!important
-}
-
-.menuarea {
-    border-bottom: 1px dotted #494746
+    margin-left: 0
 }
 
 .link .rank {
-	color: #aaa;
-	margin: 30px 10px 0 -10px;
-	width: 2.2ex!important
+	margin: 30px 10px 0 -1px
 }
 
 .thing:hover .rank {visibility: hidden;}
@@ -1500,16 +1488,16 @@ form.toggle.flairtoggle {
 }
 
 .link .flat-list {
-    margin-top: 2px
+    margin-top: 3px
 }
 
-.midcol-spacer,
+.midcol-spacer,/*
 body.hot-page>.content .link .midcol,
 body.listing-page>.content .link .midcol,
 body.moderator .link .midcol,
 body.search-page .link .midcol,
-body.single-page>.content .link .midcol {
-    position: relative;
+body.single-page>.content */.link .midcol {
+    /*position: relative;*/
     margin-right: 16px;
     width: 5ex!important;
     height: 90px
@@ -1519,20 +1507,21 @@ body.single-page>.content .link .midcol {
     margin: 7px 0 0
 }
 
-.thing.stickied a.title:before,
-:lang(dm) .thing.stickied a.title:before {
+.thing.stickied a.title:before{
     content: "STICKY";
     font-size: 10px;
     margin-right: 8px;
-    text-shadow: none;
     padding: 4px;
-    font-weight: 400
+    font-weight: 400;
+    margin-top: 1px;
+    float: left;
+    background-color: #282;
+    color: #fff
 }
 
-,
-.thing.stickied a.title::before {
-    margin-top: 1px;
-    float: left
+:lang(dm) .thing.stickied a.title:before {
+    background-color: #39f!important;
+    color: #e0e0e0
 }
 
 .nsfw-stamp,
@@ -1544,23 +1533,8 @@ body.single-page>.content .link .midcol {
 
 .nsfw-stamp acronym,
 .spoiler-stamp span {
-    color: #ffb400;
+    color: #e0e0e0;
     text-transform: uppercase
-}
-
-:lang(dm).nsfw-stamp acronym,
-:lang(dm).spoiler-stamp span {
-    color: #e0e0e0
-}
-
-.thing.stickied a.title:before {
-    background-color: #282;
-    color: #fff
-}
-
-:lang(dm) .thing.stickied a.title:before {
-    background-color: #39f!important;
-    color: #e0e0e0
 }
 
 .thumbnail {
@@ -1568,8 +1542,7 @@ body.single-page>.content .link .midcol {
     width: 70px;
     position: relative;
     margin-right: 10px;
-    visibility: visible;
-    content: ''
+    visibility: visible
 }
 
 .thumbnail.default,
@@ -1614,37 +1587,13 @@ body.single-page>.content .link .midcol {
 
 .thumbnail:hover img {
 	width: 140px;
-	top: -30px;
-	transition: height 1s,top .75s 1s
+	top: -100%;
+	transition: top 1s 1s
 }
 
 .over18 .thumbnail img {display: none;}
 
-.expando-button,
-.linefield .markhelp table {
-    background-color: transparent
-}
-
-.image.collapsed,
-.image.collapsed:hover,
-.image.expanded,
-.image.expanded:hover,
-.image.gallery.collapsed,
-.image.gallery.collapsed:hover,
-.image.gallery.expanded,
-.image.gallery.expanded:hover,
-.selftext.collapsed,
-.selftext.collapsed:hover,
-.selftext.expanded,
-.selftext.expanded:hover,
-.video-muted.collapsed,
-.video-muted.collapsed:hover,
-.video-muted.expanded,
-.video-muted.expanded:hover,
-.video.collapsed,
-.video.collapsed:hover,
-.video.expanded,
-.video.expanded:hover {
+.expando-button{
     background-image: url(%%7%%)!important
 }
 
@@ -1692,7 +1641,7 @@ body.single-page>.content .link .midcol {
     background-position: -26px -76px!important
 }
 
-.thing.comment.collapsed {
+/*.thing.comment.collapsed {
     padding-left: 37px!important
 }
 
@@ -1707,11 +1656,11 @@ body.single-page>.content .link .midcol {
 
 .gadget .arrow.down {
     top: 35px
-}
+}*/
 
 /*Create post*/
 
-.submit_text ul {
+/*.submit_text ul {
     margin: 0 0 0 65px;
     list-style: none;
     padding: 0;
@@ -1721,26 +1670,20 @@ body.single-page>.content .link .midcol {
 
 .submit_text ul li {
     margin-bottom: 7px
-}
+}*/
 
 .submit_text h1 {
     display: none
 }
 
+/*
 .formtabs-content {
     border-top: 3px solid #ffb400
 }
 
 :lang(dm) .formtabs-content {
     border-top: 3px solid #0066b5
-}
-
-.content.submit .info-notice,
-.roundfield {
-    border-radius: 0;
-    border: 1px solid #ff66b5;
-    background: #444240
-}
+}*/
 
 
 .roundfield textarea,.usertext-edit textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],#search input, #searchexpando,textarea, .side .md>h3:first-of-type, .side .md>h3:first-of-type+ul{
@@ -1753,32 +1696,23 @@ body.single-page>.content .link .midcol {
 }
 
 :lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul{
-    border-color: #0066b5!important;
     background-color:#111!important;
     color:#e0e0e0!important
 }
 
 .comments-page .usertext-edit textarea {
-    background: url(%%C%%) no-repeat #e0e0e0;
+    background: url(%%C%%) no-repeat center #e0e0e0;
     padding: 0 5px;
-    background-position: center!important
+    background-position: 
 }
 
 :lang(dm) .comments-page .usertext-edit textarea {
-    background: url(%%D%%) no-repeat #202020
+    background: url(%%D%%) no-repeat center #202020
 }
 
 .comments-page .usertext-edit textarea:focus,
 .comments-page .usertext-edit textarea:hover {
-    background: 0 0
-}
-
-.content.submit .info-notice {
-    padding: 10px
-}
-
-.tabmenu.formtab {
-    margin-top: 2px
+    background: none
 }
 
 /* Submit Page */
@@ -1797,18 +1731,11 @@ body.single-page>.content .link .midcol {
     background-position: 0 -40px
 }
 
-#text-desc,
-.submit-page #link-desc,
-.submit-page #reddit-field,
-.submit-page #suggested-reddits,
-.submit-page .content h1,
-.submit-page .content.submit .info-notice,
 .submit-page .side {
     display: none!important
 }
 
 .submit-page .tabmenu.formtab {
-    margin: 0;
     padding: 0;
     font-size: large;
     top: -6px;
@@ -1816,20 +1743,18 @@ body.single-page>.content .link .midcol {
     left: 0
 }
 
-.submit-page .tabmenu.formtab .selected a {
-    border-top-color: #e0e0e0!important;
-    padding: 0 8px
-}
-
 .submit-page .tabmenu.formtab a {
-    padding-bottom: 3px;
     border-color: #e0e0e0
 }
 
-.submit-page .formtabs-content {
+.submit-page .tabmenu.formtab .selected a {
+    padding: 0 8px
+}
+
+.submit-page .formtabs-content, .submit-page .info-notice {
     border: 0;
     margin-bottom: 15px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 25px #0002;
     background-color: #e0e0e0;
     padding: 0;
     margin-top: 8px
@@ -1839,41 +1764,40 @@ body.single-page>.content .link .midcol {
     margin: 0
 }
 
-.submit-page .roundfield {
-    background-color: #e0e0e0;
-    border-radius: 0
+.submit-page .roundfield, .submit-page .infobar {
+    background-color: #e0e0e0!important;
+    border-radius: 0;
+    border: 1px solid #ff66b5!important;
+    width: 500px;
+    padding: 5px 10px 10px 10px!important
 }
 
-:lang(dm) .submit-page .roundfield {
-    background-color: #222
+:lang(dm) .submit-page .roundfield, :lang(dm) .submit-page .infobar {
+    background-color: #222!important;
 }
 
+/*
 .submit-page .submit_text {
     max-height: none
-}
+}*/
 
 .submit-page .btn {
-    width: 520px;
+    width: 100%;
     height: 40px;
     background: #e0e0e0;
-    color: #202020;
-    font-size: 1.2em
+    box-shadow: 0 0 25px #0002;
+    padding-top: 10px
 }
 
-.submit-page .btn:after {
+.submit-page .btn::after {
 	content: "";
 	background: url(%%7%%) -270px -415px;
 	width: 270px;
 	height: 100px;
-	bottom: -120px;
+	top: 30px;
 	position: relative;
 	display: block;
-	margin-top: -100px;
-	left: calc(50% - 135px)
-}
-
-#newlink-with-image-upload .image-upload-drop-target {
-    background-color: transparent
+	margin: 0 auto
 }
 
 :lang(dm) .submit-page .btn {
@@ -1882,18 +1806,10 @@ body.single-page>.content .link .midcol {
 }
 :lang(dm) .submit-page .btn:after {background-position: 0 -415px;}
 
-#items-required {
-    margin-left: 15px
-}
-
-.markhelp tr {
-    background-color: transparent!important
-}
-
 .comment .expand {
     float: left;
-    margin-top: 6px;
-    margin-right: 5px
+    margin-top: 8px;
+    margin-right: 4px
 }
 
 .comment .author {
@@ -1909,35 +1825,27 @@ body.single-page>.content .link .midcol {
     text-align: center
 }
 
-.comment .flair {
-    float: left
-}
-
-.tagline a.author,
-a.author:visited {
+.tagline a.author {
     color: #202020!important
 }
 
-:lang(dm) a.author,
-:lang(dm) a.author:visited {
+:lang(dm) a.author{
     color: #e0e0e0!important
 }
 
-a.moderator,
-a.moderator:visited {
+a.moderator{
     color: #62ae00!important
 }
 
 div.usertext-body {
-    margin-top: 9px;
     clear: both;
-    margin-bottom: 8px
+    margin: 9px 0 8px 0;
 }
 
 .new-comment .usertext-body {
     border: 1px solid #666!important;
     margin-top: 15px!important;
-    background: rgba(255, 255, 255, .08)!important
+    background: #fffa!important
 }
 
 h1 a:visited,
@@ -1949,7 +1857,6 @@ h6 a:visited {
     color: #c01600
 }
 
-:lang(dm) div.usertext-body h1,
 :lang(dm) h1 a:visited,
 :lang(dm) h2 a:visited,
 :lang(dm) h3 a:visited,
@@ -1994,24 +1901,21 @@ div.usertext-body h6 {
     font-size: 16px
 }
 
-.infobar.mellow {
+/*.infobar.mellow {
     background: #2e2a26;
     border: 1px solid #444240;
     color: #e0e0e0
-}
+}*/
 
 .linkinfo {
     background: 0 0;
-    margin: 0 0 0 20px;
-    border-radius: 0;
-    width: 274px;
+    margin: 0 auto;
     border: 0
 }
 
 .score .number::after {
     content: "% TP";
-    font-style: italic;
-    font-size: .7em;
+    font-size: .8em;
     letter-spacing: .1em
 }
 
@@ -2019,31 +1923,15 @@ div.usertext-body h6 {
     display: none
 }
 
-.linkinfo .shortlink input {
-    border: 1px solid #666260
-}
-
 .link .usertext .md {
-    color: #e0e0e0;
-    background: 0 0;
-    border: 0;
-    border-radius: 0
-}
-
-.tagline .submitter {
-    color: #ffb400
-}
-
-.help blockquote,
-.md blockquote {
-    border-left: 2px solid #ffb400;
-    color: #e0e0e0
+    background: none;
+    border: 0
 }
 
 .sheets {
     margin-right: 375px
 }
-
+/*
 .sheets textarea {
     height: 500px
 }
@@ -2055,15 +1943,16 @@ div.usertext-body h6 {
 
 .linefield .title {
     color: #e0e0e0
-}
+}*/
 
 /*Votes*/
 
 .thing>.midcol {
     position: relative;
-    z-index: 3
+    /*z-index: 3*/
 }
 
+/*
 .thing.comment .downmod:after,
 .thing.comment .upmod:after {
     font-size: 11px;
@@ -2074,14 +1963,13 @@ div.usertext-body h6 {
     opacity: 1;
     z-index: 100;
     white-space: nowrap
-}
+}*/
 
 .arrow.down,
 .arrow.downmod,
 .arrow.up,
 .arrow.upmod {
-    background-image: url(%%7%%)!important;
-    background-repeat: no-repeat;
+    background: url(%%7%%) no-repeat!important;
     margin: 0;
     width: 20px;
     height: 20px;
@@ -2114,31 +2002,29 @@ div.usertext-body h6 {
 }
 
 .arrow.down::after {
-    visibility: hidden;
+    opacity: 0;
     display: block;
     position: absolute;
-    z-index: 1000;
     margin: -12px 0 0 -50px;
     background-color: #9494ff;
     border-radius: 2px;
     color: #fff;
     content: "Please report this or send a modmail if it breaks subreddit rules.";
     letter-spacing: 1px;
-    font-weight: 400;
     font-size: 13px;
     transition: all .25s ease;
     pointer-events: none;
-    white-space: nowrap
+    white-space: nowrap;
+    z-index: 1
 }
 
 .arrow.down:hover::after {
-    visibility: visible;
+    opacity: 1;
     margin-left: 36px
 }
 
 .arrow:before {
     content: ' ';
-    display: inline-block;
     position: absolute;
     width: 100px;
     height: 110px;
@@ -2146,15 +2032,14 @@ div.usertext-body h6 {
     margin-left: -40px;
     margin-top: -55px;
     pointer-events: none;
-    z-index: 999999;
     background: url(%%d%%) no-repeat;
     animation: none;
-    opacity: 1
+    opacity: 1;
+    z-index: 1000
 }
 
 .arrow.upmod:before {
     display: block;
-    transition: opacity 10s cubic-bezier(1, 0, 1, 0) 0!important;
     background-position: 9999px 0;
     visibility: visible;
     animation: explosion .5s steps(12) 1;
@@ -2170,65 +2055,38 @@ div.usertext-body h6 {
     }
 }
 
-.link .score {
-    text-align: center
-}
-
-.link .arrow.down:after,
-.link .arrow.down:before,
-.link .arrow.downmod:hover:after,
-.link .arrow.downmod:hover:before,
 .link .arrow.up:after,
 .link .arrow.up:before,
 .link .arrow.upmod:hover:after,
 .link .arrow.upmod:hover:before {
-    pointer-events: none;
     transition: 1s ease opacity
 }
 
 .footer-parent {
-    padding-top: 34px;
-    background: url(%%2%%) center bottom no-repeat
+    background: url(%%2%%) center 200px no-repeat
 }
 
 :lang(dm) .footer-parent {
-    padding-top: 34px;
     background: url(%%1%%) center bottom repeat-x
 }
 
 .footer {
-    position: relative;
     border: 0;
-    margin: 0;
-    max-width: 100%;
-    padding: 150px 0 0;
-    height: 450px;
+    height: 350px;
     display: block
-}
-
-.footer .col {
-    display: inline-block;
-    vertical-align: top;
-    float: none
-}
-
-.bottommenu {
-    display: block;
-    padding: 10px 0 0;
-    background: 0 0
 }
 
 .debuginfo {
     background: #202020;
-    margin-top: 40px
+    margin-top: 30px
 }
-
+/*
 .search-summary .debuginfo {
     background: 0 0
-}
+}*/
 
 .bottommenu {
-    margin-top: -45px
+    margin-top: -30px
 }
 
 form.toggle.flairtoggle {
@@ -2244,68 +2102,66 @@ form.toggle.flairtoggle:after {
 
 .flairselector li.selected {
     border: 0;
-    background: #444240
+    background: #bbb
 }
 
-.flairselector.drop-choices {
+:lang(dm) .flairselector li.selected{
+    background: #000
+}
+
+/*.flairselector.drop-choices {
     overflow: hidden;
     transition: all .33s ease-out
-}
+}*/
 
 .link .flair {
-    margin-left: 0;
-    font-size: 9px;
     float: left
 }
 
+/*
 .usertable>.toggle {
     border: 1px solid #444240;
     background: #2e2a26;
     border-radius: 0
-}
+}*/
 
 .flairselector {
     position: fixed;
-    top: 10px!important;
+    top: 25px!important;
     left: 50%!important;
-    margin-left: -286px;
+    margin-left: -330px;
     padding: 32px 32px 10px!important;
-    width: 540px!important;
-    z-index: 9999999;
+    width: 600px!important;
+    /*z-index: 9999999;*/
     border: none;
-    border-radius: 2px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, .64);
     box-shadow: 4px 4px 4px #202020;
-    bottom: 60px
+    transition: all .33s ease-out;
+    background: #eee
 }
 
+/*
 .flairsample-left {
     text-align: centeortant
-}
+}*/
 
-.drop-choices {
-    background: #444
-}
-
-:lang(dm) .drop-choices {
+:lang(dm) .flairselector {
     background: #2e2a26
 }
-
+/*
 .flairselector .customizeut {
     margin-right: 10px;
     border: 1px solid #606060
-}
+}*/
 
 .flairselector.drop-choices.active {
     border: 0
 }
 
-.flairselector ul {
-    display: inline
-}
-
-.flairselector h2 {
-    background: 0 0
+.flairselector h2,
+.flairselector li a,
+.flairselector .flairremove a {
+    color: #ffb400!important;
+    background: none
 }
 
 .side .flairselector h2:after {
@@ -2313,24 +2169,25 @@ form.toggle.flairtoggle:after {
     content: "Please contact the mods directly for flair requests.";
     padding: 5px 0;
     font-weight: 400;
-    color: #e0e0e0
+    color: #222
+}
+
+:lang(dm) .side .flairselector h2:after{
+    color: #eee
 }
 
 .side .flairselector form:before {
     text-align: center;
     content: "Keep it short and SFW!";
-    padding: 10px;
     font-size: 14px;
     display: block;
     color: #ffb400
 }
 
 .side .flairoptionpane ul {
-    margin: 0;
-    width: 540px!important;
-    max-width: 540px;
-    float: none!important;
-    padding-bottom: 1px
+    width: 600px!important;
+    max-width: 600px;
+    display: block
 }
 
 .flairoptionpane {
@@ -2338,33 +2195,16 @@ form.toggle.flairtoggle:after {
     max-height: none
 }
 
-.flairselector li {
-    margin-bottom: -1px
-}
-
 .flairselector .selected,
-.flairselector li,
-.flairselector li:hover {
+.flairselector li {
     width: auto!important;
-    height: 35px;
-    padding: 5px;
+    height: 45px;
     float: left;
-    border: 0!important;
-    overflow: hidden
+    border: 0!important
 }
 
-.flairselector button {
-    margin-top: 5px
-}
-
-.flairselector li:hover {
-    background: #444240
-}
-
-.flairselector h2,
-.flairselector li a {
-    color: #ffb400!important
-}
+.flairselector li .flair:hover {
+pointer-events: none;}
 
 /*Flairs*/
 
@@ -2372,19 +2212,18 @@ form.toggle.flairtoggle:after {
     position: relative;
     background-color: #e8e8e8!important;
     border: 1px solid #888;
-    border-radius: 3px;
     color: #222;
     font-weight: 400;
     background-repeat: no-repeat!important;
-    padding-left: 15px;
-    padding-right: 8px;
-    text-indent: 13px;
+    padding-left: 20px;
+    padding-right: 3px;
     vertical-align: bottom;
     display: inline-block;
     height: 23px;
     line-height: 23px;
     font-size: 9px;
-    background: url(%%r%%) -9999px no-repeat
+    background: url(%%r%%) -9999px no-repeat;
+    text-indent: 5px
 }
 
 .flair-kround:before,
@@ -2426,57 +2265,63 @@ form.toggle.flairtoggle:after {
 /* Animated Flairs - By @SuperKirbyLover*/
 
 .flair-ralsei1 {
-    padding-left: 26px;
+    padding-left: 33px;
     height: 40px;
+    line-height: 40px;
     background-position: -22px -2px;
     animation: sing .5s steps(2) infinite;
-    transition: padding-left .2s, height .2s
+    text-indent: 3px
 }
 
 @keyframes sing {
     from {
-        background-position: -29px -3543px
+        background-position: -28px -3543px
     }
     to {
-        background-position: -29px -3637px
+        background-position: -28px -3637px
     }
 }
 
 .flair-ralsei1:hover {
-    background-position: -9px -2px;
-    padding-left: 45px;
+    background-position: -22px -2px;
+    padding-left: 39px;
     animation: none;
 }
 
 .flair-ralsei2 {
-    padding-left: 24px;
+    padding-left: 27px;
     height: 24px;
-    background-position: -33px -59px
+    line-height: 24px;
+    background-position: -34px -60px
 }
 
 .flair-ralsei2:hover {
-    background-position: -33px -97px
+    background-position: -34px -99px
 }
 
 .flair-ralsei3 {
-    height: 28px;
-    background-position: -35px -136px;
-    padding-left: 22px
+    height: 27px;
+    line-height: 27px;
+    background-position: -35px -137px;
+    padding-left: 27px
 }
 
 .flair-ralsei3:hover {
-    background-position: -35px -166px
+    background-position: -35px -167px
 }
 
 .flair-ralsei4 {
     height: 35px;
-    padding-left: 23px;
+    line-height: 35px;
+    padding-left: 30px;
     animation: wind .8s steps(5) infinite;
-    transition: height .2s, line-height .2s
+    transition: height .2s, line-height .2s;
+    text-indent: 2px
 }
 
 .flair-ralsei4:hover {
     animation: hands .5s steps(4), clap .2s steps(2) .5s 4, hands .5s steps(4) 1.3s reverse;
+    background-position: -32px -2556px;
 }
 
 @keyframes clap {
@@ -2507,7 +2352,9 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-kris1 {
-    padding-left: 18px;
+    padding-left: 24px;
+    height: 25px;
+    line-height: 25px;
     animation: twirl .8s steps(6) infinite
 }
 
@@ -2521,23 +2368,35 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-kris2 {
-    padding-left: 17px;
+    padding-left: 21px;
     height: 31px;
+    line-height: 31px;
     background-position: -28px -370px;
-    transition: padding-left .1s .6s,background-position .5s steps(8)
+    transition: padding-left .4s .2s
 }
 
 .flair-kris2:hover {
-    padding-left: 30px;
+    padding-left: 34px;
     background-position: -28px -641px;
-    transition: padding-left .1s, background-position .5s steps(8)
+    transition:padding-left .5s;
+    animation:sword .7s steps(8) forwards
+}
+
+@keyframes sword {
+    from {
+        background-position:-28px -370px
+    }
+    to {
+        background-position:-28px -641px
+    }
 }
 
 .flair-kris3 {
-    padding-left: 25px;
-    background-position: -9px -732px;
-    transition: none;
-    height: 26px
+    padding-left: 27px;
+    background-position: -10px -732px;
+    transition: padding-left .1s, text-indent .1s;
+    height: 26px;
+    line-height: 26px
     /*animation: thonk .5s steps(2) infinite*/
 }
 
@@ -2551,12 +2410,14 @@ form.toggle.flairtoggle:after {
 }*/
 
 .flair-kris3:hover {
-    padding-left: 50px;
+    padding-left: 47px;
     /*animation: none;*/
-    transition: padding-left .2s, background-position .7s steps(6) .2s;
-    background-position: -9px -894px
+    transition: padding-left .1s, background-position .7s steps(6) .1s;
+    background-position: -10px -894px;
+    text-indent: -8px
 }
 
+/*
 @keyframes act1 {
     from {
         background-position: -9px -732px
@@ -2564,22 +2425,15 @@ form.toggle.flairtoggle:after {
     to {
         background-position: -9px -894px
     }
-}
+}*/
 
 .flair-kris4 {
-    padding-left: 30px;
+    padding-left: 35px;
     height: 31px;
     background-position: -25px -2951px;
-    margin-top: -2px;
-    text-indent: 12px;
     line-height: 31px;
     transition: height .2s, line-height .2s;
     animation: wind2 1s steps(5) .2s infinite
-}
-
-.flair-susie1,
-.flair-susie3 {
-    transition: text-indent .2s, padding-left .2s
 }
 
 @keyframes wind2 {
@@ -2592,8 +2446,8 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-kris4:hover {
-    height: 35px;
-    line-height: 35px;
+    height: 34px;
+    line-height: 34px;
     background-position: -22px -3159px;
     animation: shield 1s steps(5)
 }
@@ -2608,14 +2462,11 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-susie1 {
-    padding-left: 24px;
-    height: 27px;
-    background-position: -33px -922px;
-    margin-top: -3px;
-    line-height: 26px;
-    text-indent: 12px;
-    animation: susielaugh .3s steps(2) infinite;
-    transition: text-indent .2s, padding-left .2s
+	padding-left: 29px;
+	height: 27px;
+	line-height: 27px;
+	animation: susielaugh .3s steps(2) infinite;
+	transition: padding-left .2s;
 }
 
 @keyframes susielaugh {
@@ -2628,12 +2479,12 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-susie1:hover {
-    background-position: -4px -3194px;
-    text-indent: 8px;
-    padding-left: 45px;
-    animation: slide .3s ease-out forwards
+	padding-left: 49px;
+	/* animation: slide .3s ease-out forwards; */
+	background-position: -13px -3194px;
+	animation: 0;
 }
-
+/*
 @keyframes slide {
     from {
         background-position: -23px -3194px
@@ -2641,12 +2492,12 @@ form.toggle.flairtoggle:after {
     to {
         background-position: -13px -3194px
     }
-}
+}*/
 
 .flair-susie2 {
-    padding-left: 21px;
+    padding-left: 26px;
     height: 25px;
-    line-height: 24px;
+    line-height: 25px;
     background-position: -36px -985px
 }
 
@@ -2655,12 +2506,10 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-susie3 {
-    padding-left: 22px;
-    height: 30px;
-    margin-top: -5px;
-    line-height: 28px;
+    padding-left: 28px;
+    height: 27px;
+    line-height: 27px;
     background-position: 0 -1034px;
-    text-indent: 11px;
     transition: text-indent .2s, padding-left .2s
 }
 
@@ -2681,18 +2530,16 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-susie4 {
-    background: url(%%E%%) -8px -2px no-repeat;
-    padding-left: 38px;
+    background: url(%%E%%) -1px -2px no-repeat;
+    padding-left: 51px;
     height: 34px;
-    margin-top: -9px;
-    line-height: 36px;
-    text-indent: 12px
+    line-height: 34px
 }
 
 .flair-susie4:hover {
-    padding-left: 87px;
-    text-indent: -40px;
-    transition: text-indent .2s, padding-left .2s;
+    padding-left: 80px;
+    text-indent: -24px;
+    transition: padding-left .2s, text-indent .2s;
     background-position: -8px -2px;
     animation: yeet .4s steps(4) forwards .2s
 }
@@ -2707,12 +2554,10 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-lancer1 {
-    padding-left: 15px;
+    padding-left: 19px;
     height: 22px;
-    margin-top: -1px;
-    line-height: 21px;
-    animation: lancerlaugh .3s steps(2) infinite;
-    text-indent: 9px
+    line-height: 22px;
+    animation: lancerlaugh .3s steps(2) infinite
 }
 
 @keyframes lancerlaugh {
@@ -2725,21 +2570,17 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-lancer2 {
-    padding-left: 31px;
+    padding-left: 36px;
     height: 30px;
-    margin-top: -4px;
-    line-height: 29px;
-    background-position: -26px -1291px;
-    text-indent: 11px
+    line-height: 30px;
+    background-position: -26px -1291px
 }
 
 .flair-lancer3 {
-    padding-left: 26px;
-    height: 29px;
-    margin-top: -3px;
-    line-height: 28px;
-    background-position: -32px -1321px;
-    text-indent: 10px
+    padding-left: 30px;
+    height: 27px;
+    line-height: 27px;
+    background-position: -32px -1321px
 }
 
 .flair-lancer3:hover {
@@ -2749,7 +2590,6 @@ form.toggle.flairtoggle:after {
 .flair-lancer4 {
     padding-left: 23px;
     height: 31px;
-    margin-top: -4px;
     line-height: 31px;
     text-indent: 8px;
     background: 0 0;
@@ -2762,7 +2602,7 @@ form.toggle.flairtoggle:after {
     height: 47px;
     top: 0;
     left: 0;
-    background: url(%%r%%) 2px -3227px no-repeat;
+    background: url(%%r%%) -1px -3227px no-repeat;
     transition: transform .3s ease-in-out;
     transform-origin: 35px 27px
 }
@@ -2775,17 +2615,18 @@ form.toggle.flairtoggle:after {
 
 .flair-lancer4:hover::before {
     transform: rotate(30deg);
-    background-position: 2px -3272px;
+    background-position: -1px -3272px;
     height: 47px;
+    top: 3px;
     animation: cruise 1s linear infinite, frame .6s steps(6) infinite
 }
 
 @keyframes frame {
     from {
-        background-position: 2px -3272px
+        background-position: -1px -3272px
     }
     to {
-        background-position: 2px -3542px
+        background-position: -1px -3542px
     }
 }
 
@@ -2803,10 +2644,9 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-king1 {
-    padding-left: 19px;
+    padding-left: 24px;
     height: 30px;
-    margin-top: -4px;
-    line-height: 29px;
+    line-height: 30px;
     background-position: -38px -1379px;
     animation: kingsleep 2.2s steps(2) infinite
 }
@@ -2821,9 +2661,8 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-king2 {
-    padding-left: 21px;
+    padding-left: 27px;
     height: 34px;
-    margin-top: -6px;
     line-height: 34px;
     background-position: -36px -1439px
 }
@@ -2833,12 +2672,12 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-round {
-    padding-left: 9px;
+    padding-left: 16px;
     height: 37px;
-    margin-top: -6px;
     line-height: 37px;
     background: 0 0;
-    overflow: hidden
+    overflow: hidden;
+    text-indent: 14px
 }
 
 .flair-round:before {
@@ -2889,14 +2728,12 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-kround {
-    padding-left: 10px;
+    padding-left: 12px;
     height: 20px;
-    margin-top: 2px;
     line-height: 20px;
-    text-indent: 11px;
     background: 0 0;
     overflow: hidden;
-    transition: padding-left .2s 0s, height .2s 0s, line-height .2s 0s
+    text-indent: 20px;
 }
 
 .flair-kround:before {
@@ -2961,19 +2798,17 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-jevil {
-    padding-left: 22px;
+    padding-left: 23px;
     height: 25px;
-    margin-top: -5px;
-    line-height: 24px;
+    line-height: 25px;
     background-position: -25px -5019px;
-    text-indent: 11px;
     transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
 }
 
 .flair-jevil:hover {
-    padding-left: 40px;
+    padding-left: 48px;
     height: 44px;
-    line-height: 50px;
+    line-height: 44px;
     background-position: -15px -5065px;
     animation: prance 1.5s steps(8) .2s 4, prance 1s steps(8) 6s 6, prance .5s steps(8) 12s infinite
 }
@@ -2998,9 +2833,8 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-roulx {
-    padding-left: 23px;
+    padding-left: 28px;
     height: 30px;
-    margin-top: -4px;
     line-height: 30px;
     background-position: -24px -5454px;
     animation: zapin .5s steps(7) forwards;
@@ -3038,12 +2872,10 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-noelle {
-    padding-left: 17px;
+    padding-left: 22px;
     height: 28px;
     line-height: 28px;
-    background-position: -39px -5945px;
-    margin-top: -5px;
-    text-indent: 12px
+    background-position: -39px -5945px
 }
 
 .flair-noelle:hover {
@@ -3051,30 +2883,18 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-milk {
-    padding-left: 10px;
+    padding-left: 15px;
     height: 30px;
-    margin-top: -5px;
     line-height: 30px;
-    background-position: -44px -4985px;
-    text-indent: 11px
+    background-position: -44px -4985px
 }
 
 .flair-bell {
-    padding-left: 18px;
+    padding-left: 22px;
     height: 23px;
-    margin-top: -1px;
-    line-height: 22px;
+    line-height: 23px;
     background-position: -39px -1507px;
-    animation: bellanim .5s steps(3) alternate infinite;
-    text-indent: 11px
-}
-
-.flair-hathy,
-.flair-hathyex {
-    padding-left: 42px;
-    height: 38px;
-    margin-top: -7px;
-    line-height: 38px
+    animation: bellanim .5s steps(3) alternate infinite
 }
 
 @keyframes bellanim {
@@ -3084,6 +2904,13 @@ form.toggle.flairtoggle:after {
     to {
         background-position: -39px -1576px
     }
+}
+
+.flair-hathy,
+.flair-hathyex {
+    padding-left: 48px;
+    height: 38px;
+    line-height: 38px
 }
 
 .flair-hathyex {
@@ -3098,14 +2925,13 @@ form.toggle.flairtoggle:after {
     background-position: -14px -1650px
 }
 
-.flair-rudinn,
-.flair-rudinnex {
-    padding-left: 21px;
-    margin-top: -4px
-}
-
 .flair-hathy:hover {
     background-position: -14px -1689px
+}
+
+.flair-rudinn,
+.flair-rudinnex {
+    padding-left: 27px
 }
 
 .flair-rudinn {
@@ -3150,9 +2976,8 @@ form.toggle.flairtoggle:after {
 
 .flair-rabbick {
     background: url(%%r%%) 0 9999px repeat-x, url(%%r%%) -31px -6043px no-repeat;
-    padding-left: 25px;
+    padding-left: 31px;
     height: 31px;
-    margin-top: -5px;
     line-height: 31px;
     animation: ridle .7s steps(3) infinite forwards
 }
@@ -3184,17 +3009,15 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-clover {
-    padding-left: 18px;
+    padding-left: 24px;
     height: 25px;
-    margin-top: -4px;
-    line-height: 24px;
+    line-height: 25px;
     background-position: -20px -6314px;
-    text-indent: 11px;
     transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
 }
 
 .flair-clover:hover {
-    padding-left: 41px;
+    padding-left: 50px;
     height: 48px;
     line-height: 48px;
     background-position: -14px -6314px;
@@ -3220,10 +3043,9 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-pon {
-    padding-left: 23px;
+    padding-left: 28px;
     height: 32px;
-    margin-top: -6px;
-    line-height: 46px;
+    line-height: 32px;
     background-position: -33px -6619px
 }
 
@@ -3241,9 +3063,8 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-coody {
-    padding-left: 21px;
+    padding-left: 24px;
     height: 30px;
-    margin-top: -4px;
     line-height: 30px;
     background-position: -36px -2018px;
     animation: coodyanim .8s steps(2) infinite
@@ -3259,24 +3080,20 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-cake {
-    padding-left: 26px;
+    padding-left: 32px;
     height: 23px;
-    margin-top: -3px;
-    line-height: 22px;
-    background-position: -31px -2078px;
-    text-indent: 10px
+    line-height: 23px;
+    background-position: -31px -2078px
 }
 
 .flair-box,
 .flair-chest {
     height: 24px;
-    margin-top: -3px;
-    line-height: 23px;
-    text-indent: 10px
+    line-height: 24px;
 }
 
 .flair-box {
-    padding-left: 16px;
+    padding-left: 21px;
     background-position: -41px -2101px;
     animation: boxanim 1s steps(2) infinite
 }
@@ -3291,7 +3108,7 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-chest {
-    padding-left: 16px;
+    padding-left: 21px;
     background-position: -41px -2149px
 }
 
@@ -3300,143 +3117,130 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-goner1 {
-    padding-left: 17px;
+    padding-left: 18px;
     height: 24px;
-    margin-top: -3px;
-    line-height: 23px;
-    text-indent: 10px
+    line-height: 24px;
+    background-position: -42px -2197px
 }
 
-.flair-goner1 {
-    background-position: -40px -2197px
-}
+.side .flair {margin: 0}
 
-.side .flair {margin: 2px}
 .flair-goldsei {
-    padding-left: 35px;
-    height: 50px;
-    line-height: 50px;
-    background: url(%%goldsei%%) 0 0;
-    margin-top: -6px;
-    text-indent: 10px
+	padding-left: 31px;
+	height: 30px;
+	line-height: 30px;
+	background: url(%%goldsei%%) -8px 0;
 }
 
 .flair-sdd {
-    height: 52px;
-    line-height: 52px;
-    padding-left: 40px;
-    margin-top: -6px;
-    text-indent: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 38px;
     background: url(%%sdd%%);
     animation: sdd 8s steps(50) infinite
 }
 
 @keyframes sdd {
     from {
-        background-position: 0 0
+        background-position: -3px -3px
     }
     to {
-        background-position: 0 -2600px
+        background-position: -3px -2603px
     }
 }
 
 .flair-kdd {
-    height: 50px;
-    line-height: 50px;
-    padding-left: 40px;
-    margin-top: -6px;
-    text-indent: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 35px;
     background: url(%%kdd%%);
     animation: kdd 8s steps(25) infinite
 }
 
 @keyframes kdd {
     from {
-        background-position: 0 0
+        background-position: -5px -3px
     }
     to {
-        background-position: 0 -1250px
+        background-position: -5px -1253px
     }
 }
 
 .flair-rdd {
-    height: 54px;
-    line-height: 54px;
-    padding-left: 44px;
-    margin-top: -6px;
-    text-indent: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 33px;
     background: url(%%rdd%%);
     animation: rdd 8s steps(27) infinite
 }
 
 @keyframes rdd {
     from {
-        background-position: 0 0
+        background-position: -7px -5px
     }
     to {
-        background-position: 0 -1458px
+        background-position: -7px -1463px
     }
+}
+
+.flair-a, .flair-b, .flair-f, .flair-h
+{
+    background-image: url(%%o%%);
 }
 
 .flair-a {
-    padding-left: 24px;
+    padding-left: 22px;
     height: 46px;
-    line-height: 47px;
-    background: url(%%o%%) 0 -1050px;
-    margin-top: -6px;
-    text-indent: 12px
+    line-height: 46px;
+    background-position: 0 -1050px;
 }
 
 .flair-a:hover {
-    background: url(%%o%%) 0 -1096px
+    background-position: 0 -1096px
 }
 
 .flair-b {
-    padding-left: 39px;
-    height: 46px;
-    line-height: 47px;
-    background: url(%%o%%) 0 0;
-    margin-top: -6px;
-    text-indent: 12px
+    padding-left: 37px;
+    height: 44px;
+    line-height: 44px;
+    background-position: 0 -2px;
 }
 
 .flair-b:hover {
-    background: url(%%o%%) 0 -46px
+    background-position: 0 -48px
 }
 
 .flair-f {
-    padding-left: 55px;
-    height: 56px;
-    line-height: 57px;
-    background: url(%%o%%) 0 -754px;
-    margin-top: -6px;
-    text-indent: 12px
+	padding-left: 41px;
+	height: 41px;
+	line-height: 41px;
+	background-position: -3px -633px;
+	background-size: 250px;
 }
 
 .flair-f:hover {
-    background: url(%%o%%) 0 -813px
+    background-position: -4px -682px;
 }
 
 .flair-h {
-    padding-left: 63px;
-    height: 62px;
-    line-height: 63px;
-    background: url(%%o%%) 0 -926px;
-    margin-top: -6px;
-    text-indent: 12px
+	padding-left: 41px;
+	height: 42px;
+	line-height: 42px;
+	background-position: 1px -616px;
+	background-size: 200px
 }
 
 .flair-h:hover {
-    background: url(%%o%%) 0 -988px
+    background-position: 1px -658px
 }
 
 .flair-D {
-    padding-left: 69px;
-    height: 47px;
+    padding-left: 61px;
+    height: 46px;
     background: url(%%a%%) 0 0;
-    margin-top: -6px;
-    line-height: 48px;
-    animation: u .8s steps(17) infinite
+    line-height: 46px;
+    text-indent: -9px;
+    animation: u 1.3s steps(17) infinite
 }
 
 @keyframes u {
@@ -3449,38 +3253,37 @@ form.toggle.flairtoggle:after {
 }
 
 .flair-E {
-    padding-left: 142px;
-    height: 122px;
-    background: url(%%s%%) 0 0;
-    margin-top: -6px;
-    line-height: 123px;
-    animation: v .9s steps(2) infinite
+	padding-left: 44px;
+	height: 37px;
+	background: url(%%s%%);
+	line-height: 37px;
+	animation: v .9s steps(2) infinite;
+	background-size: 72px;
+	background-position: -10px -15px
 }
 
 @keyframes v {
     from {
-        background-position: 0 0
+        background-position: -10px -15px
     }
     to {
-        background-position: 0 -245px
+        background-position: -10px -139px
     }
 }
 
 .flair-A {
-    padding-left: 23px;
+    padding-left: 21px;
     height: 47px;
-    line-height: 48px;
-    background: url(%%aa%%) 0 0;
-    margin-top: -6px;
-    text-indent: 12px
+    line-height: 47px;
+    background: url(%%aa%%) 0 0
 }
 
+/*
 @media screen and (max-width:1600px) {
     .footer {
         height: 350px
     }
 }
-
 body .userTagLink.hasTag {
     background-color: #ffb400!important;
     border: 1px solid #ffb400!important
@@ -3533,13 +3336,11 @@ body .userTagLink.hasTag {
     background: #5f5c59;
     color: #e0e0e0;
     border-right: #686665
-}
+}*/
 
 .RESDashboardToggle,
 .RESshortcutside {
     background: 0 0!important;
-    margin-bottom: 5px;
-    color: #444240
 }
 
 body.comments-page div.content .comment,
@@ -3592,7 +3393,7 @@ body.comments-page div.content .comment:hover {
     overflow: visible!important
 }
 
-#RESStyleSheetTipPane {
+/*#RESStyleSheetTipPane {
     margin-right: 382px!important;
     width: auto
 }
@@ -3619,12 +3420,12 @@ body.comments-page div.content .comment:hover {
 :lang(dm) .RESDialogSmall .livePreview,
 :lang(dm) .usertext-edit .RESDialogSmall .md.RESDialogContents {
     background: #2e2a26!important;
-    color: #e0e0e0
+    color: #e0e0e0!important
 }
 
 .debuginfo {
     position: relative
-}
+}*/
 
 .debuginfo .icon {
     cursor: pointer
@@ -3637,7 +3438,7 @@ body.comments-page div.content .comment:hover {
     color: #aaa
 }
 
-.side .md>h3 {text-align: center;}
+/*
 .side .md del {
     display: block;
     text-align: center;
@@ -3679,7 +3480,7 @@ html[lang=gp] .side .md del a[href*="www."] {
     top: 2px;
     left: 2px;
     box-shadow: none
-}
+}*/
 
 #reddit-field,
 .flairoptionpane a.author,
@@ -3704,10 +3505,10 @@ ul li a[href$="#wiki_top"] {
 html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"] {
     display: inline-block!important
 }
-
+/*
 .commentarea .md {
     margin-top: 0
-}
+}*/
 
 /*POST RES UPDATE*/
 
@@ -3725,19 +3526,14 @@ body ul.res-search-tabs li.res-search-tab-active {
 }
 
 .voteWeight {
-    background-color: rgba(0, 0, 0, .2)!important
+    background-color: #0002!important
 }
-
-#RESShortcuts,
-.srSep {
-    color: #ccc
-}
-
+/*
 .tb-bracket-button {
     border: 1px solid #4d0400!important;
     background: #4d0400!important;
     color: #ffb400!important
-}
+}*/
 
 .thing .tagline .author.friend {
     padding: 4px!important
@@ -3746,7 +3542,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 .thing.comment .tagline .author.friend {
     padding: 9px 9px 10px!important
 }
-
+/*
 .search-expando.collapsed:before {
     background: 0 0
 }
@@ -3755,7 +3551,7 @@ body ul.res-search-tabs li.res-search-tab-active {
     left: 0;
     top: 0;
     display: block
-}
+}*/
 
 #sr-header-area .redesign-beta-optin,
 .entry .flairselector a.title {
@@ -3793,7 +3589,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 :lang(dm).message .tagline {
     color: #e0e0e0
 }
-
+bookmark
 /*Tab Menu*/
 
 ul.tabmenu {
