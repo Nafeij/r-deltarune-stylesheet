@@ -432,6 +432,7 @@ body.loggedin>.content:before {
     width: 246px;
     transition: .2s ease;
     border: 2px solid transparent;
+    z-index: 0;
     padding: 0
 }
 
@@ -556,71 +557,73 @@ body.loggedin>.content:before {
     font-size: 0
 }
 
-#header-bottom-right>a:first-of-type::after {
-    background: url(%%7%%) no-repeat 0 -160px;
-    content: "";
-    height: 31px;
-    width: 244px;
-    left: 0;
-    position: absolute;
-    pointer-events: none
+#header-bottom-right > a:first-of-type::after {
+	background: url(%%0%%) no-repeat 2px 0;
+	content: "";
+	height: 31px;
+	width: 244px;
+	left: 0;
+	position: absolute;
+	pointer-events: none;
+	opacity: 0.4;
+    z-index: -1
 }
 
 #openRESPrefs {
     position: absolute
 }
 
-#mail{ left:2px;overflow: visible;}
-#mail.nohavemail {background-position: 0 0!important}
-#mail.havemail {background-position: 0 -33px!important}
-#mail:hover{background-position: 0 -66px!important}
+#mail{ left:18px;overflow: visible;}
+#mail.nohavemail {background-position: 2px 0!important}
+#mail.havemail {background-position: 2px -33px!important}
+#mail:hover{background-position: 2px -66px!important}
 
-#chat {background-position: -35px 0!important;left:37px;}
-#chat.active{background-position: -35px -33px!important; background-size: auto;}
-#chat:hover{background-position: -35px -66px!important;}
-
+#chat {background-position: -33px 0!important;left:53px;}
+#chat.active{background-position: -33px -33px!important; background-size: auto;}
+#chat:hover{background-position: -33px -66px!important;}
+/*
 #modmail{left:72px;}
-#modmail.nohavemail {background-position: -70px 0!important;}
-#modmail.havemail {background-position: -70px -33px!important;}
-#modmail:hover{background-position: -70px -66px!important;}
+#modmail.nohavemail {background-position: -68px 0!important;}
+#modmail.havemail {background-position: -68px -33px!important;}
+#modmail:hover{background-position: -68px -66px!important;}*/
 
-#new_modmail{left:107px;}
-#new_modmail.nohavemail {background-position: -105px 0!important;}
-#new_modmail.havemail {background-position: -105px -33px!important;}
-#new_modmail:hover{background-position: -105px -66px!important;}
+#new_modmail{left:88px;}
+#new_modmail.nohavemail {background-position: -68px 0!important;}
+#new_modmail.havemail {background-position: -68px -33px!important;}
+#new_modmail:hover{background-position: -68px -66px!important;}
 
 .pref-lang {
-    left: 142px;
-    background-position: -140px 0!important
+    left: 123px;
+    background-position: -103px 0!important
 }
 
 .pref-lang:hover {
-    background-position: -140px -66px!important
+    background-position: -103px -66px!important
 }
 
 #header-bottom-right .gearIcon{
 	background-image: none!important;
-	left: 177px
+	left: 158px
 }
 
 #header-bottom-right .gearIcon:after {
-	background: url(%%0%%) -175px 0;
+	background: url(%%0%%) -138px 0;
 	display: block;
 	height: 33px;
 	content: ""
 }
 
 #header-bottom-right .gearIcon:hover:after {
-    background-position: -175px -66px
+    background-position: -138px -66px
 }
 
 .logout a {
-    left: 212px;
-    background-position: -210px 0!important
+	left: 193px;
+	background-position: -173px 0 !important;
 }
 
 .logout:hover a {
-    background-position: -210px -66px!important
+    background-position: -173px -66px!important
 }
 
 #sr-header-area {
@@ -781,14 +784,14 @@ body.loggedin>.content:before {
 
 .side {
     width: 330px;
-    background: url(%%3%%) #e0e0e0;
+    background: url(%%3%%) #e0e0e0 center top;
     margin: 5px 10px 20px;
     border: 3px solid #ccc;
 	padding-top: 116px
 }
 
 :lang(dm) .side {
-    background: url(%%4%%) center #202020;
+    background: url(%%4%%) #202020 center top;
     border-color: #555
 }
 
@@ -1686,7 +1689,7 @@ body.single-page>.content */.link .midcol {
 }*/
 
 
-.roundfield textarea,.usertext-edit textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],#search input, #searchexpando,textarea, .side .md>h3:first-of-type, .side .md>h3:first-of-type+ul{
+.roundfield textarea,.usertext-edit textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],#search input, #searchexpando,textarea, .side .md>h3:first-of-type, .side .md>h3:first-of-type+ul, .entry .flairselector .customizer input{
     background-color:#f8f8f8;
     color:#222;
     background-repeat:no-repeat;
@@ -1695,7 +1698,7 @@ body.single-page>.content */.link .midcol {
     outline:0
 }
 
-:lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul{
+:lang(dm) .roundfield textarea ,:lang(dm) .usertext-edit textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul,:lang(dm) .entry .flairselector .customizer input{
     background-color:#111!important;
     color:#e0e0e0!important
 }
@@ -3567,7 +3570,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 .md th {
     color: #202020
 }
-
+/*
 .message.message-parent.recipient>.entry .head,
 .message.message-reply.recipient>.entry .head {
     color: inherit
@@ -3576,7 +3579,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 .message .search-result-meta,
 .message .tagline {
     color: #202020
-}
+}*/
 
 :lang(dm).md .-text,
 :lang(dm).md li,
@@ -3589,7 +3592,7 @@ body ul.res-search-tabs li.res-search-tab-active {
 :lang(dm).message .tagline {
     color: #e0e0e0
 }
-bookmark
+
 /*Tab Menu*/
 
 ul.tabmenu {
@@ -3600,36 +3603,28 @@ ul.tabmenu {
     left: 53px
 }
 
-ul.tabmenu li a,
-ul.tabmenu li a:visited,
-ul.tabmenu li.selected a {
-    padding: 11px 8px;
+ul.tabmenu li a{
+    padding: 10px 8px;
     background: #000!important;
     color: #fff;
     text-transform: capitalize
 }
 
-ul.tabmenu li a:hover,
-ul.tabmenu li.selected a:hover {
+ul.tabmenu li a:hover{
     color: #ccc
 }
 
-ul.tabmenu li.selected a,
-ul.tabmenu li.selected a:hover,
-ul.tabmenu li.selected a:visited {
+ul.tabmenu li.selected a{
     border: 2px solid #e0e0e0!important;
     border-top-color: #202020!important;
     border-bottom-color: #202020!important;
-    height: 29px!important;
     color: #e0e0e0!important
 }
 
-:lang(dm) ul.tabmenu li.selected a,
-:lang(dm) ul.tabmenu li.selected a:hover,
-:lang(dm) ul.tabmenu li.selected a:visited {
+:lang(dm) ul.tabmenu li.selected a{
     border-color: #e0e0e0
 }
-
+/*
 .subreddit-rule-item {
     border: 2px solid transparent
 }
@@ -3663,11 +3658,10 @@ ul.tabmenu li.selected a:visited {
 .subreddit-rules-page {
     padding-top: 0;
     margin-bottom: 10px
-}
+}*/
 
 .subreddit-rules-page::before {
-    background-image: url(%%7%%);
-    background-position: -320px -160px;
+    background: url(%%7%%) -320px -160px;
     width: 370px;
     height: 228px;
     left: 0;
@@ -3676,10 +3670,6 @@ ul.tabmenu li.selected a:visited {
 }
 
 /* Link-flairs */
-
-.link span.linkflairlabel {
-	max-width:none
-}
 	
 	/* Display pop-out link flair at right of post */
 .link .title>.linkflairlabel {
@@ -3710,23 +3700,19 @@ ul.tabmenu li.selected a:visited {
 	/* styling of linkflairs */
 
 .entry .flairselector {
-	width: 128px!important;
+	width: 150px!important;
 	padding: 5px!important;
-	margin-left: -64px
+	margin-left: -60px
 }
 
 .entry .flairselector .linkflairlabel {
-	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
-	padding: 3px 0;
+	padding: 3px 3px;
 	width: 75px;
-	border:none;
-	border-radius: 0;
-	text-align:center;
-	background-color:#606060;
-	color:#fff;
-	opacity:.75;
-	line-height:1.6em
+	text-align: center;
+	opacity: .75;
+	line-height: 1.6em;
+	margin: 0;
 }
 	
 .link .linkflairlabel {
@@ -3734,7 +3720,8 @@ ul.tabmenu li.selected a:visited {
 	border:none;
 	background-color:#606060;
 	color:#fff;
-	padding:2px
+	padding:2px;
+	max-width:none
 }
 .entry .flairselector .linkflairlabel:hover{
 	opacity:1!important
@@ -3750,11 +3737,9 @@ ul.tabmenu li.selected a:visited {
 	display:none
 }
 
-.entry .flairselector .flairoptionpane {
-	width: 108px;
-	margin: auto;
-    padding-left: 21px
-} /* This centers the flairs *
+.entry .flairselector .flairoptionpane ul{
+	width: min-content
+}/* This centers the flairs *
 .entry .flairselector ul li { padding:0!important;text-align: center!important; }
 .entry .flairselector ul {width:auto!important}
 	
@@ -3764,18 +3749,12 @@ ul.tabmenu li.selected a:visited {
 	background-color:#222;
 	padding-top:2px;
 	margin-bottom:6px;
-	font-size: large;
-	font-weight: 700
+	font-size: large
 }
 	
 	/* 'SAVE' button */
 .entry .flairselector .customizer { 
-	margin-bottom:5px; 
-}
-.entry .flairselector .customizer input{
-	border: 1px solid #555;
-	color: #555;
-	border-radius: 2px
+	margin-bottom:7px; 
 }
 	
 .entry .flairselector button {
@@ -3786,13 +3765,8 @@ ul.tabmenu li.selected a:visited {
 	margin:0 auto!important
 }
 
-.link.link.linkflair .thumbnail:hover:after {
-	opacity: .85
-}
-
 /* CATEGORIES IN SIDEBAR */
 .side .md>blockquote:nth-of-type(4) ul {
-	margin-left: 0;
 	padding-left:18px
 }
 .side .md>blockquote:nth-of-type(4) ul li {
@@ -3827,11 +3801,12 @@ ul.tabmenu li.selected a:visited {
 .side .md>blockquote:nth-of-type(4) ul li a:hover {
 	opacity:1
 }
+/*
 .wiki-page .wiki-page-content .md strong a{
     padding: 4px;
     border-radius: 3px;
     color: #fff!important
-}
+}*/
 
 	/* INDIVIDUAL LINK FLAIRS - colors and filtering function */
 html:lang(xn) body:not(.comments-page) .link.linkflair-news { display: none; }
@@ -3939,7 +3914,7 @@ html:lang(xw) body:not(.comments-page) .link.linkflair-originalcontent { display
 .link.linkflair-originalcontent{ border-left-color: #660800!important; }
 	
 	/*** FLAIR REMINDER ***/
-	/* From /r/france */
+	/* From /r/france 
 .post-submitter .link:not(.linkflair) .flairselectbtn { 
 	position: relative; 
 	font-weight: bold;
@@ -3976,7 +3951,7 @@ html:lang(xw) body:not(.comments-page) .link.linkflair-originalcontent { display
 .post-submitter .link:not(.linkflair) .flairselectbtn:hover:before,
 .post-submitter .link:not(.linkflair) .flairselectbtn:hover:after {
 	opacity:1
-}
+}*/
 /* Random Snoos */
 /* Invisible box over "corner snoo" in header, clicking returns to Reddit frontpage */
 #header-img.default-header {
@@ -4087,7 +4062,7 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
 	display: inline-block;
 	background: url(%%f%%) 0 -6px;
     width: 12px;
-    height: 12px;
+    height: 9px;
     margin-bottom: -1px;
     margin-right: 8px;
     background-size: 12px
@@ -4107,7 +4082,7 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
 
 .md>ul>li>a[href^="/box"]+ul>li>ul>li:first-of-type::before {
     position: absolute;
-    top: 4px;
+    top: -2px;
     left: 0;
     width: 16px;
     height: 16px;
@@ -4115,6 +4090,8 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
     background-image: url(%%m%%);
     background-size: 16px
 }
+
+
 
 .md ul>li>a[href="/s0"]+a[href^="/box"]+ul>li,
 .md ul>li>a[href="/s0"]+a[href^="/box"]+ul a,
@@ -4205,7 +4182,7 @@ a[href="/red"] {
 
 .md ul ul>li>a+a[href^="/box"]+ul {
     border: none;
-    margin: -15px 0 0 -25px!important;
+    margin: -16px 0 0 -25px!important;
     padding: 4px 0 4px 140px;
     min-height: 39px
 }
@@ -4226,6 +4203,27 @@ a[href="/red"] {
     height: 8px!important;
     position: relative!important;
     top: 0!important
+}
+
+.md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
+	margin: -62px 0 0 350px !important;
+	padding-left: 0;
+	top: -6px;
+}
+
+.md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul::before {
+	left: -90px;
+}
+
+.md ul ul > li:nth-of-type(2) > a + a[href^="/box"] + ul::after {
+	background: #000;
+	width: 12px;
+	height: 8px;
+	position: absolute;
+	content: "";
+	left: 9px;
+	top: 55px;
+	z-index: 1;
 }
 
 /* toriel */
