@@ -4007,20 +4007,22 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
     position: relative
 }
 
-.md ul>li>a[href^="/box"]+ul {
+.md ul>li>a[href^="/box"]+ul, .md ul>li>a[href^="/diagonal"] + ul{
     position: relative;
     list-style-type: none;
     color: #fff;
     background-color: #000;
-    padding: .7em 1.4em;
+    padding: 1.1em 1.4em;
     border: solid 3px #e0e0e0;
 	margin: -12px 0 0 -2em!important;
-    min-height: 71px
+    min-height: 71px;
+    max-width: 675px
 }
 
-:lang(dm) .md ul>li>a[href^="/box"]+ul{
+:lang(dm) .md ul > li > a[href^="/box"] + ul, :lang(dm) .md ul > li > a[href^="/diagonal"] + ul{
 	border-width: 14px;
-	border-image: url(%%e%%) 14
+	border-image: url(%%e%%) 14;
+    padding-top: 0.4em
 }
 
 .md ul>li>a[href^="/box"]+ul ul {
@@ -4063,7 +4065,7 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
 	background: url(%%f%%) 0 -6px;
     width: 12px;
     height: 9px;
-    margin-bottom: -1px;
+    margin-bottom: 2px;
     margin-right: 8px;
     background-size: 12px
 }
@@ -4158,10 +4160,10 @@ a[href="/red"] {
 
 .md li>a+a[href^="/box"]+ul::before {
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 10px;
     width: 90px;
-    height: 90px;
+    height: 85px;
     content: "";
     background-image: url(%%v%%);
     background-position: 90px 90px;
@@ -4183,31 +4185,35 @@ a[href="/red"] {
 .md ul ul>li>a+a[href^="/box"]+ul {
     border: none;
     margin: -16px 0 0 -25px!important;
-    padding: 4px 0 4px 140px;
+    padding: 4px 0 4px 140px!important;
     min-height: 39px
 }
 .md ul ul>li>a+a[href^="/box"]+ul::before {
 	left: 50px;
+    top: 0;
 	transform: scale(.6);
 	transform-origin: top right
 }
 .md ul ul>li>a+a[href^="/box"]+ul>li{
-    font-size: 11px!important;
+    font-size: 12px!important;
     display: block
 }
-    
+/*    
 .md ul ul>li>a+a[href^="/box"]+ul>li::before{
     background-image:url(%%f%%)!important;
     background-size: 10px!important;
     width: 10px!important;
     height: 8px!important;
     position: relative!important;
-    top: 0!important
+    top: 3px !important
+}*/
+.md ul ul>li>a+a[href^="/box"]+ul>li::before{
+    display: none;
 }
 
 .md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
 	margin: -62px 0 0 350px !important;
-	padding-left: 0;
+	padding-left: 0!important;
 	top: -6px;
 }
 
@@ -4222,27 +4228,53 @@ a[href="/red"] {
 	position: absolute;
 	content: "";
 	left: 9px;
-	top: 55px;
+	top: 52px;
 	z-index: 1;
 }
 
+.md ul > li > a[href^="/diagonal"] + ul {
+	min-height: 99px;
+}
+
+.md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul {
+	padding-left: 5em !important;
+	position: relative;
+	margin-left: 0 !important;
+	top: 17px;
+}
+
+.md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(2) > a + a[href^="/box"] + ul {
+	margin-left: 100px !important;
+	z-index: 1;
+}
+
+.md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
+	margin: -16px 0 0 200px !important;
+	z-index: 2;
+}
+
+.md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul::before {
+	left: -30px;
+	top: -10px;
+}
+
 /* toriel */
-.md ul>li>a[href="/t1"]+a[href^="/box"]+ul::before { background-position: 0 0; }
-.md ul>li>a[href="/t2"]+a[href^="/box"]+ul::before { background-position: -90px 0; }
-.md ul>li>a[href="/t3"]+a[href^="/box"]+ul::before { background-position: -180px 0; }
-.md ul>li>a[href="/t4"]+a[href^="/box"]+ul::before { background-position: -270px 0; }
-.md ul>li>a[href="/t5"]+a[href^="/box"]+ul::before { background-position: -360px 0; }
-.md ul>li>a[href="/t6"]+a[href^="/box"]+ul::before { background-position: -450px 0; }
-.md ul>li>a[href="/t7"]+a[href^="/box"]+ul::before { background-position: -540px 0; }
-.md ul>li>a[href="/t8"]+a[href^="/box"]+ul::before { background-position: -630px 0; }
-.md ul>li>a[href="/t9"]+a[href^="/box"]+ul::before { background-position: -720px 0; }
-.md ul>li>a[href="/t10"]+a[href^="/box"]+ul::before { background-position: -810px 0; }
-.md ul>li>a[href="/t11"]+a[href^="/box"]+ul::before { background-position: -900px 0; }
-.md ul>li>a[href="/t12"]+a[href^="/box"]+ul::before { background-position: -990px 0; }
-.md ul>li>a[href="/t13"]+a[href^="/box"]+ul::before { background-position: -1080px 0; }
-.md ul>li>a[href="/t14"]+a[href^="/box"]+ul::before { background-position: -1170px 0; }
-.md ul>li>a[href="/t15"]+a[href^="/box"]+ul::before { background-position: -1260px 0; }
-.md ul>li>a[href="/t16"]+a[href^="/box"]+ul::before { background-position: -1350px 0; }
+.md ul>li>a[href="/t1"]+a[href^="/box"]+ul::before { background-position: 0 -7px; }
+.md ul>li>a[href="/t2"]+a[href^="/box"]+ul::before { background-position: -90px -7px; }
+.md ul>li>a[href="/t3"]+a[href^="/box"]+ul::before { background-position: -180px -7px; }
+.md ul>li>a[href="/t4"]+a[href^="/box"]+ul::before { background-position: -270px -7px; }
+.md ul>li>a[href="/t5"]+a[href^="/box"]+ul::before { background-position: -360px -7px; }
+.md ul>li>a[href="/t6"]+a[href^="/box"]+ul::before { background-position: -450px -7px; }
+.md ul>li>a[href="/t7"]+a[href^="/box"]+ul::before { background-position: -540px -7px; }
+.md ul>li>a[href="/t8"]+a[href^="/box"]+ul::before { background-position: -630px -7px; }
+.md ul>li>a[href="/t9"]+a[href^="/box"]+ul::before { background-position: -720px -7px; }
+.md ul>li>a[href="/t10"]+a[href^="/box"]+ul::before { background-position: -810px -7px; }
+.md ul>li>a[href="/t11"]+a[href^="/box"]+ul::before { background-position: -900px -7px; }
+.md ul>li>a[href="/t12"]+a[href^="/box"]+ul::before { background-position: -990px -7px; }
+.md ul>li>a[href="/t13"]+a[href^="/box"]+ul::before { background-position: -1080px -7px; }
+.md ul>li>a[href="/t14"]+a[href^="/box"]+ul::before { background-position: -1170px -7px; }
+.md ul>li>a[href="/t15"]+a[href^="/box"]+ul::before { background-position: -1260px -7px; }
+.md ul>li>a[href="/t16"]+a[href^="/box"]+ul::before { background-position: -1350px -7px; }
 /* susie */
 .md ul>li>a[href="/su1"]+a[href^="/box"]+ul::before { background-position: 0 -90px; }
 .md ul>li>a[href="/su2"]+a[href^="/box"]+ul::before { background-position: -90px -90px; }
@@ -4289,12 +4321,12 @@ a[href="/red"] {
 .md ul>li>a[href="/j1"]+a[href^="/box"]+ul::before { background-position: 0 -360px; }
 
 /* nerdy */
-.md ul>li>a[href="/b1"]+a[href^="/box"]+ul::before { background-position: 0 -450px; }
-.md ul>li>a[href="/b2"]+a[href^="/box"]+ul::before { background-position: -90px -450px; }
-.md ul>li>a[href="/b3"]+a[href^="/box"]+ul::before { background-position: -180px -450px; }
-.md ul>li>a[href="/b4"]+a[href^="/box"]+ul::before { background-position: -270px -450px; }
-.md ul>li>a[href="/b5"]+a[href^="/box"]+ul::before { background-position: -360px -450px; }
-.md ul>li>a[href="/b6"]+a[href^="/box"]+ul::before { background-position: -450px -450px; }
+.md ul>li>a[href="/b1"]+a[href^="/box"]+ul::before { background-position: 0 -460px; }
+.md ul>li>a[href="/b2"]+a[href^="/box"]+ul::before { background-position: -90px -460px; }
+.md ul>li>a[href="/b3"]+a[href^="/box"]+ul::before { background-position: -180px -460px; }
+.md ul>li>a[href="/b4"]+a[href^="/box"]+ul::before { background-position: -270px -460px; }
+.md ul>li>a[href="/b5"]+a[href^="/box"]+ul::before { background-position: -360px -460px; }
+.md ul>li>a[href="/b6"]+a[href^="/box"]+ul::before { background-position: -450px -460px; }
 
 /* catti */
 .md ul>li>a[href="/ci1"]+a[href^="/box"]+ul::before { background-position: 0 -540px; }
@@ -4450,13 +4482,13 @@ a[href="/red"] {
 .md ul>li>a[href="/bu7"]+a[href^="/box"]+ul::before { background-position: -540px -1710px; }
 .md ul>li>a[href="/bu8"]+a[href^="/box"]+ul::before { background-position: -630px -1710px; }
 
-/* hiding spoiler faces from non-subscribers */
+/* hiding spoiler faces from non-subscribers 
 body:not(.subscriber) .md ul>li>a[href="/r16"]+a[href^="/box"]+ul::before,
 body:not(.subscriber) .md ul>li>a[href="/r17"]+a[href^="/box"]+ul::before,
 body:not(.subscriber) .md ul>li>a[href="/r18"]+a[href^="/box"]+ul::before,
 body:not(.subscriber) .md ul>li>a[href="/r19"]+a[href^="/box"]+ul::before{
     display: none
-}
+}*/
 
 /* ad blocker*/
 .premium-banner, .ad-container, .organic-listing
