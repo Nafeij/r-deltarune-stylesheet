@@ -3285,6 +3285,67 @@ pointer-events: none;}
     background: url(%%aa%%) 0 0
 }
 
+.flair-susie5 {
+	background: url(%%r2%%) -1px 0;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 28px;
+}
+
+.flair-susie5:hover {
+	background-position: -1px -49px;
+	height: 47px;
+	line-height: 47px;
+	transition: line-height .2s,height .2s, padding-left .2s, background-position-y 0s .2s;
+	animation: shake .15s linear .2s;
+}
+
+@keyframes shake {
+    0% {
+        background-position-x: 8px
+    }
+    25% {
+        background-position-x: -10px
+    }
+    50% {
+        background-position-x: 5px
+    }
+    75% {
+        background-position-x: -4px
+    }
+    100% {
+        background-position-x: -1px
+    }
+}
+
+.flair-kris5 {
+	background: url(%%r2%%) -30px -98px;
+	overflow: hidden;
+	padding-left: 16px;
+}
+
+.flair-kris5::before {
+	background: url(%%r2%%) -2px -98px;
+	width: 27px;
+	height: 28px;
+	position: absolute;
+	left: 1px;
+	top: -28px;
+	content: "";
+}
+
+.flair-kris5:hover {
+	height: 36px;
+	line-height: 36px;
+	background-position-y: -81px;
+	transition: line-height .2s,height .2s,background-position-y .2s;
+}
+
+.flair.flair-kris5:hover::before {
+	top: -4px;
+	transition: top .5s .2s;
+}
+
 /*
 @media screen and (max-width:1600px) {
     .footer {
@@ -4509,6 +4570,7 @@ a[href="/red"] {
 .md ul>li>a[href="/n40"]+a+ul::before { background-position: -630px -2160px; }
 .md ul>li>a[href="/n41"]+a+ul::before { background-position: -720px -2160px; }
 .md ul>li>a[href="/n42"]+a+ul::before { background-position: -810px -2160px; }
+.md ul>li>a[href="/n43"]+a+ul::before { background-position: -900px -2160px; }
 
 /* ralsei */
 .md ul>li>a[href="/r1"]+a+ul::before { background-position: 0 -720px; }
