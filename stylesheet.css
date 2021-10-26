@@ -2679,7 +2679,7 @@ pointer-events: none;}
 }
 
 .flair-round {
-    padding-left: 16px;
+    padding-left: 12px;
     height: 37px;
     line-height: 37px;
     background: 0 0;
@@ -2735,14 +2735,14 @@ pointer-events: none;}
 }
 
 .flair-kround {
-    padding-left: 12px;
-    height: 20px;
-    line-height: 20px;
-    background: 0 0;
-    overflow: hidden;
-    text-indent: 20px;
+    padding-left:21px;
+    height:20px;
+    margin-top:2px;
+    line-height:20px;
+    background:0 0;
+    overflow:hidden;
+    transition:padding-left .2s,height .2s,line-height .2s
 }
-
 .flair-kround:before {
     width: 45px;
     height: 75px;
@@ -2752,7 +2752,7 @@ pointer-events: none;}
 }
 
 .flair-kround:hover {
-    padding-left: 27px;
+    padding-left: 37px;
     height: 75px;
     line-height: 75px;
     transition: padding-left .2s .4s, height .2s .4s, line-height .2s .4s
@@ -2803,6 +2803,7 @@ pointer-events: none;}
         background-position: 0 9999px, -18px -4907px
     }
 }
+
 
 .flair-jevil {
     padding-left: 23px;
@@ -3226,7 +3227,7 @@ pointer-events: none;}
 }
 
 .flair-f:hover {
-    background-position: -4px -682px;
+    background-position: -2px -682px;
 }
 
 .flair-h {
@@ -3289,7 +3290,7 @@ pointer-events: none;}
 	background: url(%%r2%%) -1px 0;
 	height: 30px;
 	line-height: 30px;
-	padding-left: 28px;
+	padding-left: 27px;
 }
 
 .flair-susie5:hover {
@@ -3343,7 +3344,183 @@ pointer-events: none;}
 
 .flair.flair-kris5:hover::before {
 	top: -4px;
-	transition: top .5s .2s;
+	transition: top .5s ease-in .2s;
+}
+
+.flair-mecha {
+	background: url(%%r2%%) 0 -158px, url(%%r2%%) -70px 0;
+	padding-left: 27px;
+}
+.flair-mecha:hover {
+	height: 60px;
+	line-height: 60px;
+	transition: all .2s;
+	padding-left: 37px;
+	background-position: 0 -158px,-22px -264px;
+	animation: mecha 1s linear forwards,oof 0.5s cubic-bezier(0.1,0.5,0.5,0.1) forwards 1.3s;
+}
+
+@keyframes mecha {
+    0% {
+        background-position: 0 -158px, -20px -264px
+    }
+    20% {
+        background-position: 5px -144px, -20px -264px
+    }
+   50% {
+        background-position: 5px -144px, -20px -216px
+    }
+    69.99% {
+        background-position: 5px -144px, -20px -216px
+    }
+    70% {
+        background-position: -2px -413px, -70px 0
+    }
+    99.99% {
+        background-position: -2px -413px, -70px 0
+    }
+    100% {
+        background-position: -2px -506px, -70px 0
+    }
+}
+
+@keyframes oof {
+    0% {
+        background-position: -2px -506px, -8px -564px
+    }
+    50% {
+        background-position: -2px -531px, -8px -564px
+    }
+    99.99% {
+        background-position: -2px -510px, -8px -589px
+    }
+    100% {
+        background-position: -2px -510px, -9px -298px
+    }
+}
+
+.flair-daucer{
+    background: url(%%r2%%) -2px -652px;
+    padding-left: 47px;
+    height: 33px;
+    line-height: 33px;
+    overflow: hidden;
+}
+.flair-daucer::before {
+	content: "";
+	position: absolute;
+	background: url(%%r2%%) -12px -728px;
+	width: 35px;
+	height: 25px;
+	left: 10px;
+	top: 1px
+}
+.flair-daucer:hover{
+    animation: dprance 0.2s 3 steps(1)
+}
+.flair-daucer:hover::before{
+    animation: lid 0.5s cubic-bezier(0.1,0.5,0.5,0.1)
+}
+@keyframes dprance {
+    0% {
+        background-position: -2px -652px;
+    }
+    50% {
+        background-position: -2px -692px;
+    }
+}
+@keyframes lid {
+    0% {
+        top: 1px;
+    }
+    50% {
+        top: -33px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+/*
+@keyframes moveq {
+    from {
+        background-position: -25px -765px;
+    }
+    to {
+        background-position: -8px -765px;
+    }
+}*/
+
+.flair-queen1 {
+    background: url(%%r2%%) -25px -765px;
+    text-indent: 7px;
+}
+.flair-queen1:hover {
+	padding-left: 48px;
+	height: 54px;
+	line-height: 54px;
+	background-position-x: -8px;
+	transition: padding-left .2s, height .2s, line-height .2s, background-position-x .2s;
+	animation: drunk 2s .2s steps(14) forwards;
+}
+@keyframes drunk {
+    from {
+        background-position-y: -833px;
+    }
+    to {
+        background-position-y: -1785px;
+    }
+}
+
+.flair-noelle1 {
+	background: url(%%r2%%) -16px -1845px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 24px;
+}
+.flair-noelle1:hover {
+	height: 42px;
+	line-height: 42px;
+	transition: padding-left .2s,height .2s,line-height .2s,background-position-x .2s;
+	animation: nbox 1.3s .2s steps(13) forwards;
+}
+@keyframes nbox {
+    from {
+        background-position-y: -1845px;
+    }
+    to {
+        background-position-y: -2677px;
+    }
+}
+
+.flair-spamton {
+	background: url(%%r2%%) -6px -2750px;
+	padding-left: 24px;
+}
+
+.flair-spamton:hover {
+	height: 35px;
+	line-height: 35px;
+	padding-left: 32px;
+	background-position: -2px -4040px;
+	transition: padding-left .2s,height .2s,line-height .2s;
+	animation: smove .2s linear,slaugh 2.5s .2s steps(20);
+}
+@keyframes smove {
+    from {
+        background-position: -6px -2750px;
+    }
+    to {
+        background-position: -2px -2742px;
+    }
+}
+@keyframes slaugh {
+    from {
+        background-position-y: -2801px;
+    }
+    to {
+        background-position-y: -3981px;
+    }
 }
 
 /*
