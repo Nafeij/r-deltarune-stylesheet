@@ -2524,7 +2524,7 @@ pointer-events: none;}
     text-indent: -15px;
     padding-left: 60px;
     background-position: 0 -1034px;
-    animation: act2 1s steps(5) forwards .2s
+    animation: act2 .6s steps(5) forwards .2s
 }
 
 @keyframes act2 {
@@ -3291,6 +3291,7 @@ pointer-events: none;}
 	height: 30px;
 	line-height: 30px;
 	padding-left: 27px;
+    transition: line-height .2s,height .2s, padding-left .2s, background-position-y 0s .2s;
 }
 
 .flair-susie5:hover {
@@ -3323,6 +3324,8 @@ pointer-events: none;}
 	background: url(%%r2%%) -30px -98px;
 	overflow: hidden;
 	padding-left: 16px;
+    text-indent: 8px;
+    transition: line-height .2s,height .2s,background-position-y .2s;
 }
 
 .flair-kris5::before {
@@ -3342,13 +3345,14 @@ pointer-events: none;}
 	transition: line-height .2s,height .2s,background-position-y .2s;
 }
 
-.flair.flair-kris5:hover::before {
+.flair-kris5:hover::before {
 	top: -4px;
 	transition: top .5s ease-in .2s;
 }
 
 .flair-mecha {
 	background: url(%%r2%%) 0 -158px, url(%%r2%%) -70px 0;
+    transition: all .2s;
 	padding-left: 27px;
 }
 .flair-mecha:hover {
@@ -3357,7 +3361,7 @@ pointer-events: none;}
 	transition: all .2s;
 	padding-left: 37px;
 	background-position: 0 -158px,-22px -264px;
-	animation: mecha 1s linear forwards,oof 0.5s cubic-bezier(0.1,0.5,0.5,0.1) forwards 1.3s;
+	animation: mecha 1s forwards,oof 0.5s cubic-bezier(0.1,0.5,0.5,0.1) forwards 1.3s;
 }
 
 @keyframes mecha {
@@ -3453,22 +3457,22 @@ pointer-events: none;}
 
 .flair-queen1 {
     background: url(%%r2%%) -25px -765px;
-    text-indent: 7px;
+    transition: padding-left .2s, height .2s, line-height .2s;
+    transition: all .2s;
 }
 .flair-queen1:hover {
 	padding-left: 48px;
 	height: 54px;
 	line-height: 54px;
-	background-position-x: -8px;
-	transition: padding-left .2s, height .2s, line-height .2s, background-position-x .2s;
+	transition: padding-left .2s, height .2s, line-height .2s;
 	animation: drunk 2s .2s steps(14) forwards;
 }
 @keyframes drunk {
     from {
-        background-position-y: -833px;
+        background-position: -8px -833px;
     }
     to {
-        background-position-y: -1785px;
+        background-position: -8px -1785px;
     }
 }
 
@@ -3477,11 +3481,12 @@ pointer-events: none;}
 	height: 28px;
 	line-height: 28px;
 	padding-left: 24px;
+    transition: all .2s;
 }
 .flair-noelle1:hover {
 	height: 42px;
 	line-height: 42px;
-	transition: padding-left .2s,height .2s,line-height .2s,background-position-x .2s;
+	transition: all .2s;
 	animation: nbox 1.3s .2s steps(13) forwards;
 }
 @keyframes nbox {
@@ -3496,6 +3501,7 @@ pointer-events: none;}
 .flair-spamton {
 	background: url(%%r2%%) -6px -2750px;
 	padding-left: 24px;
+    transition: padding-left .2s,height .2s,line-height .2s;
 }
 
 .flair-spamton:hover {
@@ -3504,7 +3510,7 @@ pointer-events: none;}
 	padding-left: 32px;
 	background-position: -2px -4040px;
 	transition: padding-left .2s,height .2s,line-height .2s;
-	animation: smove .2s linear,slaugh 2.5s .2s steps(20);
+	animation: smove .2s forwards,slaugh 2.5s .2s steps(21,end) forwards;
 }
 @keyframes smove {
     from {
@@ -3519,7 +3525,547 @@ pointer-events: none;}
         background-position-y: -2801px;
     }
     to {
-        background-position-y: -3981px;
+        background-position-y: -4040px;
+    }
+}
+
+.flair-bgift {
+	padding-left: 16px;
+}
+.flair-bgift::before {
+	background: url(%%r2%%) -7px -4089px;
+	content: "";
+	width: 20px;
+	height: 22px;
+	position: absolute;
+	left: 2px;
+}
+.flair-bgift:hover::before{
+	animation: imgswap .4s linear forwards;
+}
+@keyframes imgswap {
+    0% {
+        opacity:1;
+        background-position-x: -7px
+    }
+    49.99% {
+        opacity:0;
+        background-position-x: -7px
+    }
+    50% {
+        opacity:0;
+        background-position-x: -35px
+    }
+    100% {
+        opacity:1;
+        background-position-x: -35px
+    }
+}
+
+.flair-berdly1 {
+	background: url(%%r2%%) -7px -4115px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 23px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+}
+.flair-berdly1:hover {
+	padding-left: 27px;
+	height: 38px;
+	line-height: 38px;
+	transition: padding-left .2s,height .2s,line-height .2s;
+    animation: bshake 1.5s .2s linear forwards;
+}
+@keyframes bshake {
+    0% {
+        background-position: -3px -4158px
+    }
+    4% {
+        background-position: -11px -4158px
+    }
+    8% {
+        background-position: -5px -4158px
+    }
+    12% {
+        background-position: -9px -4158px
+    }
+    16% {
+        background-position: -7px -4158px
+    }
+    49.99% {
+        background-position: -7px -4158px
+    }
+    50% {
+        background-position: -7px -4200px
+    }
+    54% {
+        background-position: -15px -4200px
+    }
+    58% {
+        background-position: -9px -4200px
+    }
+    62% {
+        background-position: -13px -4200px
+    }
+    66% {
+        background-position: -11px -4200px
+    }
+    100% {
+        background-position: -11px -4200px
+    }
+}
+.flair-roulx1{
+    background: url(%%r2wide%%) -38px 0;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+    transition: all .2s;
+}
+
+.flair-roulx1:hover {
+	height: 45px;
+	line-height: 45px;
+	padding-left: 65px;
+	transition: all .2s;
+	background-position-x: -2px;
+    animation: avast .3s .2s steps(3) forwards;
+}
+@keyframes avast {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: -198px;
+    }
+}
+.flair-berdly2{
+    background: url(%%r2%%) -7px -4240px;
+    padding-left: 30px;
+    transition: all .2s;
+}
+.flair-berdly2:hover {
+	padding-left: 38px;
+	height: 38px;
+	line-height: 38px;
+	background-position-x: -3px;
+    transition: all .2s;
+    animation: flap .3s 10 steps(1), hadjust .2s 3s forwards, strangle .2s 3s infinite steps(3);
+}
+@keyframes flap {
+    0% {
+        background-position-y: -4240px;
+    }
+    50% {
+        background-position-y: -4282px;
+    }
+}
+@keyframes hadjust {
+    0% {
+        padding-left: 38px;
+        background-position-x: -3px
+    }
+    25% {
+        background-position-x: 2px
+    }
+    50% {
+        background-position-x: -2px
+    }
+    75% {
+        background-position-x: 1px
+    }
+    100% {
+        padding-left: 43px;
+        background-position-x: 0
+    }
+}
+@keyframes strangle {
+    0% {
+        background-position-y: -4325px;
+    }
+    100% {
+        background-position-y: -4472px;
+    }
+}
+.flair-berdly3{
+    background: url(%%r2wide%%) -37px -277px;
+    transition: all .2s;
+}
+.flair-berdly3:hover {
+	padding-left: 58px;
+	height: 45px;
+	line-height: 45px;
+	background-position-x: -22px;
+	transition: all .2s;
+    animation: hadjust2 .2s forwards, halberd 1.5s .2s steps(13,end) forwards;
+}
+@keyframes hadjust2 {
+    0% {
+        background-position-y: -277px;
+    }
+    100% {
+        background-position-y: -273px;
+    }
+}
+@keyframes halberd {
+    0% {
+        background-position-y: -273px;
+    }
+    100% {
+        background-position-y: -975px;
+    }
+}
+
+.flair-susie6 {
+    background: url(%%r2%%) -16px -4476px;
+	padding-left: 24px;
+    transition: all .2s;
+}
+.flair-susie6:hover {
+	padding-left: 46px;
+	height: 35px;
+	line-height: 35px;
+	transition: all .2s;
+    animation: trigger 1s forwards, sshake .4s 1s infinite;
+}
+@keyframes trigger {
+    0% {
+        background-position: -16px -4476px;
+    }
+    20% {
+        background-position: -6px -4476px;
+    }
+    39.99% {
+        background-position: -6px -4476px;
+    }
+    40% {
+        background-position: -6px -4529px;
+    }
+    100% {
+        background-position: -6px -4529px;
+    }
+}
+@keyframes sshake {
+    0% {
+        background-position: -6px -4578px;
+    }
+    12.5% {
+        background-position: -3px -4581px;
+    }
+    25% {
+        background-position: -3px -4575px;
+    }
+    37.5% {
+        background-position: -9px -4575px;
+    }
+    50% {
+        background-position: -6px -4580px;
+    }
+    52.5% {
+        background-position: -4px -4577px;
+    }
+    75% {
+        background-position: -4px -4580px;
+    }
+    87.5% {
+        background-position: -9px -4580px;
+    }
+    100% {
+        background-position: -7px -4575px;
+    }
+}
+
+.flair-tv {
+	padding-left: 31px;
+	height: 26px;
+	background-color: #000 !important;
+	line-height: 26px;
+	color: #aaa;
+}
+
+.flair-tv::before {
+	content: "";
+	position: absolute;
+	width: 29px;
+	height: 18px;
+	left: 5px;
+	background: url(%%r2%%) -1px -4623px;
+	top: 4px;
+    animation: static .5s steps(4,end) infinite;
+}
+
+.flair-tv:hover::before {
+	background-position-x: 29px;
+}
+
+@keyframes static {
+    0% {
+        background-position-y: -4623px;
+    }
+    100% {
+        background-position-y: -4703px;
+    }
+}
+
+.flair-banana{
+    background: url(%%r2%%) 3px -4704px;
+    animation: rotata 1s steps(8,end) infinite;
+}
+
+@keyframes rotata {
+    0% {
+        background-position-y: -4704px;
+    }
+    100% {
+        background-position-y: -4872px;
+    }
+}
+
+.flair-susie7{
+    background: url(%%r2%%) -5px -4877px;
+    padding-left: 24px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+}
+.flair-susie7:hover {
+	height: 54px;
+	line-height: 54px;
+	padding-left: 32px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+    animation: sajust .2s forwards, sjump 3s .2s steps(23,end) forwards;
+}
+
+@keyframes sajust {
+    0% {
+        background-position: -5px -4877px;
+    }
+    100% {
+        background-position: -1px -4872px;
+    }
+}
+@keyframes sjump {
+    0% {
+        background-position-y: -4872px;
+    }
+    100% {
+        background-position-y: -6114px;
+    }
+}
+
+.flair-kris6{
+    background: url(%%r2%%) -5px -6172px;
+    padding-left: 24px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+}
+.flair-kris6:hover {
+    height: 42px;
+    line-height: 42px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+    animation: kjump 3s .2s steps(20,end) forwards;
+}
+@keyframes kjump {
+    0% {
+        background-position-y: -6172px;
+    }
+    100% {
+        background-position-y: -7012px;
+    }
+}
+
+.flair-noelle2{
+    background: url(%%r2%%) -5px -7061px;
+    height: 30px;
+    line-height: 30px;
+    transition: padding-left .2s,height .2s,line-height .2s;
+}
+.flair-noelle2:hover {
+	height: 48px;
+	line-height: 48px;
+	transition: padding-left .2s,height .2s,line-height .2s;
+	padding-left: 22px;
+    animation: njump .4s .2s steps(5,end) forwards, gamig .3s .6s steps(1) infinite;
+}
+@keyframes njump {
+    0% {
+        background-position-y: -7061px;
+    }
+    100% {
+        background-position-y: -7306px;
+    }
+}
+@keyframes gamig {
+    0% {
+        background-position-y: -7306px;
+    }
+    50% {
+        background-position-y: -7355px;
+    }
+}
+
+.flair-ralsei5{
+    background: url(%%r2%%) -10px -7409px;
+    transition: background-position-y 0s,height .2s,line-height .2s, padding-left .2s, background-position-x .2s;
+}
+
+.flair-ralsei5:hover {
+	background-position: -6px -7456px;
+	height: 42px;
+	line-height: 42px;
+	transition: background-position-y 0s .4s,height .2s,line-height .2s, padding-left .2s, background-position-x .2s;
+	padding-left: 30px;
+}
+
+.flair-trash {
+	background: url(%%r2%%) -9px -7500px;
+	height: 31px;
+	line-height: 31px;
+	padding-left: 28px;
+}
+
+.flair-trash:hover {
+	background-position-y: -7530px;
+}
+
+.flair-vase {
+	background: url(%%r2%%) -27px -7579px;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 19px;
+}
+
+.flair-vase:hover {
+	height: 48px;
+	line-height: 48px;
+	transition: height .2s,line-height .2s, padding-left .2s;
+	padding-left: 43px;
+    animation: sshift .2s forwards, kick .3s .5s steps(4,end) forwards;
+}
+@keyframes sshift {
+    0% {
+        background-position: -27px -7579px;
+    }
+    100% {
+        background-position: -4px -7563px;
+    }
+}
+@keyframes kick {
+    0% {
+        background-position-y: -7563px;
+    }
+    100% {
+        background-position-y: -7755px;
+    }
+}
+
+.flair-maus {
+    background: url(%%r2%%) -6px -7824px;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 32px;
+    animation: maus 1s steps(8,end) infinite;
+    overflow: hidden;
+}
+.flair-maus::before {
+    background: url(%%r2%%) -7px -7939px;
+	content: "";
+	position: absolute;
+	width: 38px;
+	height: 23px;
+	left: 1px;
+	top: -23px;
+}
+@keyframes maus {
+    0% {
+        background-position-y: -7824px;
+    }
+    100% {
+        background-position-y: -7936px;
+    }
+}
+
+.flair-maus:hover {
+    height: 25px;
+	line-height: 25px;
+    animation: mmove .2s forwards;
+    transition: height .2s,line-height .2s;
+}
+.flair-maus:hover::before {
+	top: 1px;
+	transition: top ease-in .2s .2s;
+}
+@keyframes mmove {
+    0% {
+        background-position-y: -7824px;
+    }
+    100% {
+        background-position-y: -7815px;
+    }
+}
+
+.flair-mauswheel {
+    background: url(%%r2%%) -17px -7966px;
+	padding-left: 23px;
+	height: 17px;
+	line-height: 17px;
+    transition: all .2s;
+    animation: wheel .7s steps(6,end) infinite;
+}
+
+.flair-mauswheel:hover {
+	height: 60px;
+	line-height: 60px;
+	padding-left: 60px;
+	background-position-x: 1px;
+    transition: all .2s;
+}
+
+@keyframes wheel {
+    0% {
+        background-position-y: -7966px;
+    }
+    100% {
+        background-position-y: -8326px;
+    }
+}
+
+.flair-cheese {
+    background: url(%%r2%%) -4px -8328px
+}
+
+.flair-cheese:hover {
+    background-position-y: -8348px;
+}
+
+.flair-noelle3 {
+    background: url(%%r2%%) -4px -8372px;
+	height: 27px;
+	line-height: 27px;
+	padding-left: 30px;
+	transition: height .2s, line-height .2s, padding-left .2s;
+    animation: nthink .6s steps(1) infinite;
+}
+
+.flair-noelle3:hover {
+	height: 34px;
+	line-height: 34px;
+	padding-left: 47px;
+	transition: height .2s, line-height .2s, padding-left .2s;
+    animation: nact .7s steps(7,end) .2s forwards;
+}
+
+@keyframes nthink {
+    0% {
+        background-position-y: -8372px;
+    }
+    50% {
+        background-position-y: -8420px;
+    }
+}
+
+@keyframes nact {
+    0% {
+        background-position-y: -8468px;
+    }
+    100% {
+        background-position-y: -8804px;
     }
 }
 
