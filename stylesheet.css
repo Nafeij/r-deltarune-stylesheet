@@ -5,43 +5,41 @@ Shamelessly stolen from /r/MortalKombat. Credit goes to u/Xhogar and u/FanOfTheJ
 
 For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-deltarune-stylesheet
 */
-.side .md a[href*="http://www.reddit.com/r/deltarune"],
-.side .md a[href*="http://dm.reddit.com/r/deltarune"] {
+.side .md a[href*="http://www.reddit.com/r/deltarune"],.side .md a[href*="http://dm.reddit.com/r/deltarune"]
+{
     display: block;
     width: 122px;
     height: 68px;
     margin: 0 auto;
-    background-repeat: no-repeat!important;
-    background-position: center!important;
-    background-size: 100%!important;
-    transition: background-size .2s ease-out;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% !important;
+    transition: background-size 0.2s ease-out;
     position: absolute;
     top: 30px;
     z-index: 99;
-    right: 15px
+    right: 15px;
 }
-
-.side .md a[href*="http://www.reddit.com/r/deltarune"] {
-    background: url(%%t%%)
+.side .md a[href*="http://www.reddit.com/r/deltarune"]
+{
+    background: url(%%t%%);
 }
-
-.side .md a[href*="http://dm.reddit.com/r/deltarune"] {
-    background: url(%%g%%)
+.side .md a[href*="http://dm.reddit.com/r/deltarune"]
+{
+    background: url(%%g%%);
 }
-
-.side .md a[href*="http://www.reddit.com/r/deltarune"]:hover,
-.side .md a[href*="http://dm.reddit.com/r/deltarune"]:hover {
-    background-size: 95%!important
+.side .md a[href*="http://www.reddit.com/r/deltarune"]:hover,.side .md a[href*="http://dm.reddit.com/r/deltarune"]:hover
+{
+    background-size: 95% !important;
 }
-
-.side a[href="http://www.reddit.com/r/deltarune"] {
-    pointer-events: none
+.side a[href="http://www.reddit.com/r/deltarune"]
+{
+    pointer-events: none;
 }
-
-:lang(dm) .side .md a[href="http://www.reddit.com/r/deltarune"] {
-    pointer-events: auto
+:lang(dm) .side .md a[href="http://www.reddit.com/r/deltarune"]
+{
+    pointer-events: auto;
 }
-
 .side .md a[href="#bullet"] {
     display: inline-block;
     width: 16px;
@@ -50,193 +48,102 @@ For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-de
     padding-right: 4px;
     position: relative;
     left: 2px;
-    pointer-events: none
+    pointer-events: none;
 }
-
 .side .md a[href="#bullet"]:lang(dm) {
-    background-position: 0 -10px
+    background-position: 0 -10px;
 }
-
-/*::-webkit-scrollbar-thumb {
-    background-color: #606060;
-    box-shadow: inset 2px 0 0 #21201d, inset -2px 0 0 #21201d;
-    border-radius: 5px;
-    width: 12px
-}
-
-::-webkit-scrollbar-track {
-    background-color: #21201d
-}
-
-::-webkit-scrollbar {
-    width: 11px
-}*/
-
 body:lang(dm) {
     background-image: url(%%c%%) !important;
 }
-
 body {
     overflow-x: hidden;
-    background-image: url(%%b%%)
+    background-image: url(%%b%%);
 }
-
 .md code,
 .md pre {
-    background: 0 0!important;
-    border: 0
+    background: 0 0 !important;
+    border: 0;
 }
-
 #header {
-    background: #222 url(%%j%%) repeat-x center;
-	height: 210px;
-	border: 0;
-	margin-bottom: 31px
+    background: url(%%j%%) center repeat-x #222;
+    height: 210px;
+    border: 0;
+    margin-bottom: 31px;
 }
-
 .submit-page #header {
     margin-bottom: 40px;
 }
-/*
-#header:after{
-    content:'';
-    background-image:url(%%twalk%%);
-    width: 58px;
-    display: block;
-    position: absolute;
-    height: 104px;
-    left: -58px;
-    z-index: -1;
-    top: 80px;    
-    animation: move 54s linear 6s 5,
-        leg 1s steps(1, end) 300;
+#header:lang(dm) {
+    background: url(%%k%%) 80% 18px no-repeat, url(%%l%%) center 18px;
+    animation: flutter 1s steps(4, end) 300;
 }
-
-@keyframes leg{50% {background-position: -58px 0;}}
-
-@keyframes move {
-    0% { left: -58px;}
-    50%, 100%{left:100vw;}
-}
-*/
-
-#header:lang(dm){
-    background: url(%%k%%) 80% 18px no-repeat, url(%%l%%) center 18px repeat;
-    animation: flutter 1s steps(4, end) 300
-}
-
 @keyframes flutter {
     100% {
-        background-position: 80% -822px, center 18px
+        background-position: 80% -822px, center 18px;
     }
 }
-
 .content a,
 .md a,
 .pagename a,
 .search-expando-button,
 .search-result:link,
-.search-result:link>mark {
-    color: #e82222 !important
+.search-result:link > mark {
+    color: #e82222 !important;
 }
-/*
-.content a:lang(dm),
-.md a:lang(dm),
-.pagename a:lang(dm),
-.search-expando-button:lang(dm),
-.search-result:link:lang(dm),
-.search-result:link>mark:lang(dm){
-    color: #e82e2e !important
-}*/
-
-	/* Legacy Spoiler Format */
-/*	
-.md a[href$="/s"] {
-    background: #000!important;
-    color: #000!important;
-    transition: .2s
-}
-.md a[href$="/s"]:hover {
-    color: #e0e0e0!important;
-    transition: .2s
-}
-	*/
-	/* Legacy Description+Spoiler Format */
-	/*
-.md a[href="#s"] {
-    text-decoration: none!important;
-    cursor: default;
-    background: #000;
-    color: #e0e0e0!important;
-    display: inline-block
-}
-.md a[href="#s"]:after {
-    content: attr(title);
-    color: #000;
-    padding: 0 .5em;
-    visibility: visible;
-    transition: .2s
-}
-.md a[href="#s"]:hover:after,
-.md a[href="#s"]:active:after {
-    color: #e0e0e0;
-	transition: .2s
-}
-
-.spoiler-stamp,
-.spoiler-stamp span {
-    visibility: visible!important;
-    opacity: 1!important
-}*/
-
-/*Notice Box*/
-.side .md>ul:first-of-type {
+.side .md > ul:first-of-type {
     position: absolute;
     top: 239px;
     width: 268px;
     font-size: 11px;
-	border: 16px solid;
-	padding: 0;
-	cursor: default;
-    background: #b79675 url(%%w%%) center no-repeat;
+    border: 16px solid;
+    padding: 0;
+    cursor: default;
+    background: url(%%w%%) center no-repeat #b79675;
     border-image: url(%%x%%) 16;
 }
-
-:lang(dm) .side .md>ul:first-of-type{
-	background: #8f6e4d url(%%z%%) center no-repeat;
-	border-image: url(%%y%%) 16
+:lang(dm) .side .md > ul:first-of-type {
+    background: url(%%z%%) center no-repeat #8f6e4d;
+    border-image: url(%%y%%) 16;
 }
-
-.side .md>ul:first-of-type li {list-style: none}
-
-.side .md>ul:first-of-type ul {
-	background-color: rgba(240,240,240,.75);
-	padding: 2px 6px;
-	margin: .25em
+.side .md > ul:first-of-type li {
+    list-style: none;
 }
-:lang(dm) .side .md>ul:first-of-type ul{background-color: #000000a0;}
-
-.side .md>ul:first-of-type:hover ul {background-color: #fff}
-:lang(dm) .side .md>ul:first-of-type:hover ul{background-color: #000}
-
-.side .md>ul:first-of-type a {line-height: 1.75em}
-.side .md>ul:first-of-type ul a:before {content: "❯ "}
-.side .md>ul:first-of-type>li {margin: 4px -8px -8px}
-
-/* Header Flairsearch */
-
-#searchexpando{
+.side .md > ul:first-of-type ul {
+    background-color: rgba(240, 240, 240, 0.75);
+    padding: 2px 6px;
+    margin: 0.25em;
+}
+:lang(dm) .side .md > ul:first-of-type ul {
+    background-color: #000a0;
+}
+.side .md > ul:first-of-type:hover ul {
+    background-color: #fff;
+}
+:lang(dm) .side .md > ul:first-of-type:hover ul {
+    background-color: #000;
+}
+.side .md > ul:first-of-type a {
+    line-height: 1.75em;
+}
+.side .md > ul:first-of-type ul a:before {
+    content: "❯ ";
+}
+.side .md > ul:first-of-type > li {
+    margin: 4px -8px -8px;
+}
+#searchexpando {
     width: 161px;
-    border-radius: 0
+    border-radius: 0;
 }
-#search input[type=text] {width:193px}
-
+#search input[type="text"] {
+    width: 193px;
+}
 .search-page .side .md > h3:first-of-type,
 .search-page .side .md > h3:first-of-type + ul {
-    display: none
+    display: none;
 }
-
-.side .md>h3:first-of-type {
+.side .md > h3:first-of-type {
     font-size: 0;
     line-height: 28px;
     position: absolute;
@@ -246,269 +153,223 @@ body {
     height: 28px;
     cursor: pointer;
     z-index: 100;
-    text-align: center
+    text-align: center;
 }
-
-.side .md>h3:first-of-type:after {
-	font-size: 12px;
-	font-weight: 500;
-	position: relative;
-	z-index: 12;
-	content: "search by flair";
-	pointer-events: none;
-    color: #888
+.side .md > h3:first-of-type:after {
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    z-index: 12;
+    content: "search by flair";
+    pointer-events: none;
+    color: #888;
 }
-
-.side .md>h3:first-of-type+ul {
-	position: absolute;
-	top: 395px;
+.side .md > h3:first-of-type + ul {
+    position: absolute;
+    top: 395px;
     right: 28px;
     display: block;
     overflow: hidden;
     width: 100px;
-	padding: 0;
-	list-style: none;
-	cursor: pointer;
-	height: 0;
-	transition: height .5s ease-out, top .5s ease-out;
-	border-width: 0!important
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    height: 0;
+    transition: height 0.5s ease-out, top 0.5s ease-out;
+    border-width: 0 !important;
 }
-
-.side .md>h3:first-of-type+ul:before {
-	content: "";
-	top: -8px;
-	display: block;
-	height: 10px;
-	position: absolute;
-	width: 100%
+.side .md > h3:first-of-type + ul:before {
+    content: "";
+    top: -8px;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 100%;
 }
-
-.side .md>h3:first-of-type+ul:hover, .side .md>h3:first-of-type:hover+ul {
-	height: 337px;
-	border-width: 1px!important;
+.side .md > h3:first-of-type + ul:hover,
+.side .md > h3:first-of-type:hover + ul {
+    height: 337px;
+    border-width: 1px !important;
 }
-
-.side .md>h3:first-of-type+ul li a:hover {
-	border: 1px solid #e22;
-	padding: 3px 6px
+.side .md > h3:first-of-type + ul li a:hover {
+    border: 1px solid #e22;
+    padding: 3px 6px;
 }
-
-.side .md>h3:first-of-type+ul li a {
-	display: block;
-	padding: 4px 7px;
-	color: #666!important;
-	margin-right: 19px;
-    background-color: transparent
+.side .md > h3:first-of-type + ul li a {
+    display: block;
+    padding: 4px 7px;
+    color: #666 !important;
+    margin-right: 19px;
+    background-color: transparent;
 }
-
-:lang(dm) .side .md>h3:first-of-type+ul li a{color: #eee}
-
-.side .md>h3:first-of-type+ul li a:not(:first-of-type) {
-	display: inline-block;
-	margin-top: -23px;
-	position: absolute;
-	right: -19px
+:lang(dm) .side .md > h3:first-of-type + ul li a {
+    color: #eee;
 }
-
+.side .md > h3:first-of-type + ul li a:not(:first-of-type) {
+    display: inline-block;
+    margin-top: -23px;
+    position: absolute;
+    right: -19px;
+}
 .md table {
-    margin: 5px 0 15px
+    margin: 5px 0 15px;
 }
-
 .md td,
 .md th {
     padding: 5px;
-    border: 1px solid #aaa
+    border: 1px solid #aaa;
 }
-
 :lang(dm) .content .md td {
-    background: #1a1714
+    background: #1a1714;
 }
-
 :lang(dm) .md th {
     text-align: inherit;
-    background: #2e2a26
+    background: #2e2a26;
 }
-/*
-hr {
-    background: 0 0;
-    border: 0;
-    border-bottom: 1px solid #5f5c59;
-    margin: 10px 0!important
-}*/
-
 .tagline {
-    line-height: 11px
+    line-height: 11px;
 }
-
 .link .score.likes {
-    color: #e22
+    color: #e22;
 }
-
 .link .score.dislikes {
-    color: #994747
+    color: #994747;
 }
-
 .link .score.unvoted {
-    color: #888
+    color: #888;
 }
-
 :lang(dm) .comment .score {
-    color: #aaa!important
+    color: #aaa !important;
 }
-
 .content,
 .md,
 .side,
 .titlebox .bottom a {
-    color: #666
+    color: #666;
 }
-
+#RESShortcuts,
+.srSep,
+:lang(dm) .side .md h3,
+:lang(dm) .wiki-page-content .md h1,
+:lang(dm) .wiki-page-content .md h2,
+:lang(dm) .wiki-page-content .md h6,
 :lang(dm).content,
 :lang(dm).md,
-:lang(dm).side,
-:lang(dm) .wiki-page-content .md h1, 
-:lang(dm) .wiki-page-content .md h6,
-:lang(dm) .wiki-page-content .md h2,
-:lang(dm) .side .md h3,
-#RESShortcuts,
-.srSep {
-    color: #ccc
+:lang(dm).side {
+    color: #ccc;
 }
 #sr-more-link,
 .dropdown.srdrop .selected,
 .sr-bar a {
     color: #ccc;
     font-size: 8px;
-    transition: all .2s ease-out
+    transition: all 0.2s ease-out;
 }
-
 #sr-header-area:hover a,
 #sr-header-area:hover.dropdown.srdrop .selected {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
 .thing .title {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
-
 #sr-header-area .selected a,
-.comment .md p>a:visited,
+.comment .md p > a:visited,
 .pagename a:visited,
 .tagline a:visited,
 .thing .title:visited,
 .thing.visited .title {
-    color: #600!important
+    color: #600 !important;
 }
-
 :lang(dm)#sr-header-area .selected a,
-:lang(dm).comment .md p>a:visited,
+:lang(dm).comment .md p > a:visited,
 :lang(dm).pagename a:visited,
 :lang(dm).tagline a:visited,
 :lang(dm).thing .title:visited,
 :lang(dm).thing.visited .title {
-    color: #b00!important
+    color: #b00 !important;
 }
-
-body.loggedin>.content:after,
-body.loggedin>.content:before {
+body.loggedin > .content:after,
+body.loggedin > .content:before {
     display: block;
-    position: fixed
+    position: fixed;
 }
-
 .user,
-.user>a {
-    position: relative
+.user > a {
+    position: relative;
 }
-
-/*Usertab popup*/
-
 #header-bottom-right {
     background-color: transparent;
-    bottom: -30px!important;
-    top: auto!important;
+    bottom: -30px !important;
+    top: auto !important;
     height: 37px;
     font-family: determination mono, determination sans, consolas, monospace;
     width: 246px;
-    transition: .2s ease;
+    transition: 0.2s ease;
     border: 2px solid transparent;
     z-index: 0;
-    padding: 0
+    padding: 0;
 }
-
 #header-bottom-right:hover {
     border-color: #fff;
-    height: 77px
+    height: 77px;
 }
-
 :lang(dm) #header-bottom-right:hover {
-    border-color: #00e6ff
+    border-color: #00e6ff;
 }
-
 #header-bottom-right a {
-    color: #fff
+    color: #fff;
 }
-
 #header-bottom-right .separator {
-    display: none
+    display: none;
 }
-
 .user {
     font-size: 0;
     display: inline-block;
     width: 100%;
-    background: #000 url(%%B%%) no-repeat 7px 21px;
+    background: url(%%B%%) 7px 21px no-repeat #000;
     padding: 4px 8px 0 5px;
     height: 25px;
-    transition: border-bottom-color .2s linear;
+    transition: border-bottom-color 0.2s linear;
     border-bottom: 2px solid transparent;
-    z-index: 1
+    z-index: 1;
 }
-
 .user:lang(dm) {
-    background: #000 url(%%A%%) no-repeat 8px 8px
+    background: url(%%A%%) 8px 8px no-repeat #000;
 }
-
 #header-bottom-right:hover .user {
     border-bottom-color: #fff;
-    height: 33px
+    height: 33px;
 }
-
 :lang(dm) #header-bottom-right:hover .user {
-    border-bottom-color: #00e6ff
+    border-bottom-color: #00e6ff;
 }
-
-.user>a {
+.user > a {
     font-size: 14px;
-	text-transform: uppercase
+    text-transform: uppercase;
 }
-
-:lang(dm) .user>a {
+:lang(dm) .user > a {
     left: 31px;
-    top: 8px
+    top: 8px;
 }
-
 .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
     width: 27px;
     height: 9px;
     left: 3px;
     position: absolute;
-    background-image: none!important;
-    top: 20px
+    background-image: none !important;
+    top: 20px;
 }
-
 :lang(dm) .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
     width: 20px;
     height: 17px;
     left: 5px;
-    top: 5px
+    top: 5px;
 }
-
-.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay,
 .message-count,
-.presence_circle {
-    display: none
+.presence_circle,
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay {
+    display: none;
 }
-
 .user .userkarma {
     font-size: 0;
     position: absolute;
@@ -516,29 +377,24 @@ body.loggedin>.content:before {
     width: 116px;
     display: block;
     text-align: right;
-    right: 14px
+    right: 14px;
 }
-
 .user .userkarma a {
     position: relative;
     top: -16px;
-    font-size: 12px
+    font-size: 12px;
 }
-
 :lang(dm) .user .userkarma {
     height: 9px;
-    background-position: 0 0
+    background-position: 0 0;
 }
-
 .user .userkarma a:first-of-type:after {
     content: "/";
-    margin: 0 3px
+    margin: 0 3px;
 }
-
 #header-bottom-right a.login-required {
-    margin: 0 11px 0 40px
+    margin: 0 11px 0 40px;
 }
-
 #chat,
 #header-bottom-right .gearIcon,
 #mail,
@@ -546,199 +402,139 @@ body.loggedin>.content:before {
 #new_modmail,
 .logout a,
 .pref-lang {
-    background: url(%%0%%) no-repeat 244px 99px !important;
+    background: url(%%0%%) 244px 99px no-repeat !important;
     position: absolute;
     top: auto;
     bottom: 1px;
     height: 33px;
     width: 35px;
     margin: 0;
-    font-size: 0
+    font-size: 0;
 }
-
 #header-bottom-right > a:first-of-type:after {
-	background: url(%%0%%) no-repeat 2px 0;
-	content: "";
-	height: 31px;
-	width: 244px;
-	left: 0;
-	position: absolute;
-	pointer-events: none;
-	opacity: 0.4;
-    z-index: -1
+    background: url(%%0%%) 2px 0 no-repeat;
+    content: "";
+    height: 31px;
+    width: 244px;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: -1;
 }
-
 #openRESPrefs {
-    position: absolute
+    position: absolute;
 }
-
-#mail{ left:18px;overflow: visible;}
-#mail.nohavemail {background-position: 2px 0!important}
-#mail.havemail {background-position: 2px -33px!important}
-#mail:hover{background-position: 2px -66px!important}
-
-#chat {background-position: -33px 0!important;left:53px;}
-#chat.active{background-position: -33px -33px!important; background-size: auto;}
-#chat:hover{background-position: -33px -66px!important;}
-/*
-#modmail{left:72px;}
-#modmail.nohavemail {background-position: -68px 0!important;}
-#modmail.havemail {background-position: -68px -33px!important;}
-#modmail:hover{background-position: -68px -66px!important;}*/
-
-#new_modmail{left:88px;}
-#new_modmail.nohavemail {background-position: -68px 0!important;}
-#new_modmail.havemail {background-position: -68px -33px!important;}
-#new_modmail:hover{background-position: -68px -66px!important;}
-
+#mail {
+    left: 18px;
+    overflow: visible;
+}
+#mail.nohavemail {
+    background-position: 2px 0 !important;
+}
+#mail.havemail {
+    background-position: 2px -33px !important;
+}
+#mail:hover {
+    background-position: 2px -66px !important;
+}
+#chat {
+    background-position: -33px 0 !important;
+    left: 53px;
+}
+#chat.active {
+    background-position: -33px -33px !important;
+    background-size: auto;
+}
+#chat:hover {
+    background-position: -33px -66px !important;
+}
+#new_modmail {
+    left: 88px;
+}
+#new_modmail.nohavemail {
+    background-position: -68px 0 !important;
+}
+#new_modmail.havemail {
+    background-position: -68px -33px !important;
+}
+#new_modmail:hover {
+    background-position: -68px -66px !important;
+}
 .pref-lang {
     left: 123px;
-    background-position: -103px 0!important
+    background-position: -103px 0 !important;
 }
-
 .pref-lang:hover {
-    background-position: -103px -66px!important
+    background-position: -103px -66px !important;
 }
-
-#header-bottom-right .gearIcon{
-	background-image: none!important;
-	left: 158px
+#header-bottom-right .gearIcon {
+    background-image: none !important;
+    left: 158px;
 }
-
 #header-bottom-right .gearIcon:after {
-	background: url(%%0%%) -138px 0;
-	display: block;
-	height: 33px;
-	content: ""
+    background: url(%%0%%) -138px 0;
+    display: block;
+    height: 33px;
+    content: "";
 }
-
 #header-bottom-right .gearIcon:hover:after {
-    background-position: -138px -66px
+    background-position: -138px -66px;
 }
-
 .logout a {
-	left: 193px;
-	background-position: -173px 0 !important;
+    left: 193px;
+    background-position: -173px 0 !important;
 }
-
 .logout:hover a {
-    background-position: -173px -66px!important
+    background-position: -173px -66px !important;
 }
-
 #sr-header-area {
     background: #2e262b;
-    border: 0
+    border: 0;
 }
-
 #header-bottom-left {
     bottom: -31px;
     height: 37px;
     border: 3px solid #fff;
     width: 100%;
     position: absolute;
-    background-color: #000
+    background-color: #000;
 }
-
 :lang(dm) #header-bottom-left {
-    border-color: #322431
+    border-color: #322431;
 }
-
 #header .tabmenu li {
-    float: left
+    float: left;
 }
-
 :lang(dm) #header .tabmenu li a {
-    color: #ddd
+    color: #ddd;
 }
-
 #header .tabmenu li a:hover,
 #header .tabmenu li.selected a {
-    color: #eee
+    color: #eee;
 }
-
 #header .tabmenu li.selected a {
-    font-weight: 700
+    font-weight: 700;
 }
-
 .pagename {
-    font-size: 0
+    font-size: 0;
 }
-
 .pagename a {
     display: block;
     width: 100%;
     height: 180px;
-    opacity: .8;
-    transition: opacity .2s ease-out;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-out;
     background: url(%%n%%) 115px 95px no-repeat;
     top: -182px;
-    position: absolute
-}
-
-.pagename a:hover {
-    opacity: 1
-}
-/*
-.side .md>ol {
     position: absolute;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    left: 50px;
-    top: 220px;
-    z-index: 100;
-    background-color: #2e2
 }
-
-.side .md>ol>li {
-    color: #22e;
-    min-width: 200px;
-    font-size: 14px;
-    margin-right: 20px;
-    margin-bottom: 12px;
-    line-height: 28px;
-    text-align: left
+.pagename a:hover {
+    opacity: 1;
 }
-
-.side .md>ol>li>ol>li {
-    margin-right: -1px;
-    float: left
-}
-
-.side .md>ol>li>p>strong {
-    text-transform: uppercase
-}
-
-.side .md>ol>li>ol {
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-.side .md>ol li a {
-    border: 1px solid #2e2;
-    padding: 5px 7px;
-    margin-top: -1px;
-    background: #4d0400;
-    display: block
-}
-
-.side .md>ol li a:hover {
-    text-decoration: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .7) inset
-}
-
-.side .md>ol li em {
-    display: block;
-    padding-left: 13px;
-    font-size: 11px;
-    font-style: normal
-}*/
-
 .side blockquote td {
     border: 0;
 }
-
 .side blockquote a[href="#expand"] {
     position: absolute;
     bottom: 0;
@@ -747,94 +543,68 @@ body.loggedin>.content:before {
     background: #ffcadb;
     box-sizing: border-box;
     border: 1px solid #222;
-    transition: height .5s ease;
+    transition: height 0.5s ease;
     cursor: default;
 }
-
 :lang(dm) .side blockquote a[href="#expand"] {
-    background: #444240
+    background: #444240;
 }
-
 .side blockquote a[href="#expand"]:before {
     display: block;
     color: #888;
     font-size: 16px;
     transform: rotate(90deg);
     content: "»";
-    text-align: center
+    text-align: center;
 }
-
 :lang(dm) .side blockquote a[href="#expand"]:before {
     display: block;
     color: #111;
     font-size: 16px;
     transform: rotate(90deg);
     content: "»";
-    text-align: center
+    text-align: center;
 }
-
 .side blockquote:hover a[href="#expand"] {
-    height: 0
+    height: 0;
 }
-
 .side .md hr {
-    display: none
+    display: none;
 }
-
 .side {
     width: 330px;
-    background: url(%%3%%) #e0e0e0 center top;
+    background: url(%%3%%) center top #e0e0e0;
     margin: 5px 10px 20px;
     border: 3px solid #ccc;
-	padding-top: 116px
+    padding-top: 116px;
 }
-
 :lang(dm) .side {
-    background: url(%%4%%) #202020 center top;
-    border-color: #555
+    background: url(%%4%%) center top #202020;
+    border-color: #555;
 }
-
 .side .login-form-side {
-    border: 0!important;
-    margin: 0 11px
+    border: 0 !important;
+    margin: 0 11px;
 }
-
-.side .login-form-side input[type=password],
-.side .login-form-side input[type=text] {
+.side .login-form-side input[type="password"],
+.side .login-form-side input[type="text"] {
     width: 148px;
-    margin-left: 4px
+    margin-left: 4px;
 }
-
 .side .spacer {
-    margin: 0
+    margin: 0;
 }
-
-/*.side .sponsorshipbox {
-    margin-left: 20px
-}
-
-.side .sponsorshipbox iframe {
-    display: block;
-    margin-top: 20px
-}*/
-
 .side #ad_main,
 .side #search,
 .side .sidebox,
 .side .sidecontentbox,
 .side .titlebox {
-    padding: 0 15px 10px
+    padding: 0 15px 10px;
 }
-
-/*body.search-page .side .spacer:first-child {
-    min-height: 28px
-}*/
-
 .account-activity-box {
     width: 340px;
-    height: 30px
+    height: 30px;
 }
-
 .side .md blockquote,
 .sidecontentbox .content,
 .titlebox .tagline {
@@ -843,116 +613,99 @@ body.loggedin>.content:before {
     color: #202020;
     background-color: #ffa;
     box-shadow: 0 0 5px #101010;
-    padding: 10px
+    padding: 10px;
 }
-
 :lang(dm) .side .md blockquote,
 :lang(dm) .sidecontentbox .content,
 :lang(dm) .titlebox .tagline {
-    background-color: #333130
+    background-color: #333130;
 }
-
 .titlebox .tagline a {
-    font-size: 12px
+    font-size: 12px;
 }
-
 .side .md blockquote {
     padding: 7px;
     max-height: 305px;
     overflow: hidden;
     position: relative;
-    transition: .5s ease all
+    transition: 0.5s ease all;
 }
-
 .side .md blockquote:hover {
-    max-height: 1000px
+    max-height: 1000px;
 }
-
 .link.last-clicked,
-.thing>.midcol{
-    overflow: visible
+.thing > .midcol {
+    overflow: visible;
 }
-
 .side .md blockquote:nth-of-type(1) {
-    text-align: center
+    text-align: center;
 }
-
 .side .md blockquote ul {
     padding: 0;
-    list-style: none
+    list-style: none;
 }
-
 .side .md p {
-    line-height: 20px
+    line-height: 20px;
 }
-
 .sidecontentbox {
-    margin-bottom: -20px
+    margin-bottom: -20px;
 }
-
 .account-activity-box a {
-    width: 280px!important;
-    margin: 14px 10px 0 0
+    width: 280px !important;
+    margin: 14px 10px 0 0;
 }
-
-.RESDialogSmall.livePreview>h3,
-.RESDialogSmall>h3,
+.RESDialogSmall.livePreview > h3,
+.RESDialogSmall > h3,
 .side .md blockquote h1,
 .side .title h1,
 .sidecontentbox .title h1,
 form.toggle.flairtoggle {
     text-align: center;
-    background: #e0e0e0!important;
+    background: #e0e0e0 !important;
     font-weight: 700;
     text-transform: uppercase;
     padding: 7px 0;
     display: block;
     border: 3px solid #202020;
-    border-width: 0 3px
+    border-width: 0 3px;
 }
-
-:lang(dm) .RESDialogSmall.livePreview>h3,
-:lang(dm) .RESDialogSmall>h3,
+:lang(dm) .RESDialogSmall.livePreview > h3,
+:lang(dm) .RESDialogSmall > h3,
 :lang(dm) .side .md blockquote h1,
 :lang(dm) .side .title h1,
 :lang(dm) .sidecontentbox .title h1,
 :lang(dm) form.toggle.flairtoggle {
-    background: #222!important;
-    border-color: #e0e0e0
+    background: #222 !important;
+    border-color: #e0e0e0;
 }
-
-.RESDialogSmall>h3,
+.RESDialogSmall > h3,
 .side .md blockquote h1,
 .sidecontentbox .title h1,
 .titlebox h1 {
     color: #222;
-    font-family: arial, sans-serif
+    font-family: arial, sans-serif;
 }
-
-:lang(dm) .RESDialogSmall>h3,
+:lang(dm) .RESDialogSmall > h3,
 :lang(dm) .side .md blockquote h1,
 :lang(dm) .sidecontentbox .title h1,
 :lang(dm) .titlebox h1 {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
 .side .md blockquote h1 a,
 .titlebox h1 a {
-    color: #c01600
+    color: #c01600;
 }
-
 :lang(dm) .side .md blockquote h1 a,
 :lang(dm) .titlebox h1 a {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
 .account-activity-box a,
 .message-button a,
 .side .md h4 a,
 .sidebox.create .morelink {
     display: inline-block;
     letter-spacing: 0;
-    color: #222!important;
+    color: #222 !important;
     font-size: 14px;
     background: #eee !important;
     border: 1px solid #222;
@@ -960,51 +713,44 @@ form.toggle.flairtoggle {
     line-height: 32px;
     width: 100%;
     text-align: center;
-    transition: all .25s ease
+    transition: all 0.25s ease;
 }
-
-.sidebox.create .morelink a{color:#222}
-
+.sidebox.create .morelink a {
+    color: #222;
+}
 .account-activity-box a:hover,
 .message-button a:hover,
 .side .md h4 a:hover,
 .sidebox.create .morelink:hover {
-    text-decoration: none!important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .34)
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.34);
 }
-
 :lang(dm) .account-activity-box a,
 :lang(dm) .message-button a,
 :lang(dm) .side .md h4 a,
 :lang(dm) .sidebox.create .morelink {
-    background: #222!important;
-    color: #ddd!important
+    background: #222 !important;
+    color: #ddd !important;
 }
-
 :lang(dm) .account-activity-box a:hover,
 :lang(dm) .message-button a:hover,
 :lang(dm) .side .md h4 a:hover,
 :lang(dm) .sidebox.create .morelink:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .5)
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-
 .side .md blockquote h1 {
-    width: 290px
+    width: 290px;
 }
-
 .side .md blockquote li {
-    padding: 10px 0 10px;
-    border-top: 1px solid #464442
+    padding: 10px 0;
+    border-top: 1px solid #464442;
 }
-
 .side .md blockquote ul li:first-child {
     padding-top: 0;
-    border-top: 0
+    border-top: 0;
 }
-
-
 .titlebox .tagline {
-	position: relative;
+    position: relative;
     font-weight: 700;
     padding: 10px 0 24px;
     background: url(%%b%%);
@@ -1013,29 +759,25 @@ form.toggle.flairtoggle {
     white-space: nowrap;
     font-size: 0;
     text-align: center;
-    border: 1px solid #202020!important;
+    border: 1px solid #202020 !important;
     box-shadow: none;
-    margin-top: 5px!important
+    margin-top: 5px !important;
 }
-
 .titlebox .tagline:hover {
-    border-color: #e22!important
+    border-color: #e22 !important;
 }
-
 :lang(dm) .titlebox .tagline {
-    border-color: #e0e0e0!important;
-    background: url(%%c%%)
+    border-color: #e0e0e0 !important;
+    background: url(%%c%%);
 }
-
 .titlebox .tagline .flairselectbtn {
     font-size: 0;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0
+    top: 0;
 }
-
 .titlebox .tagline .flairselectbtn:after {
     content: "click to customize userflair";
     color: #e22;
@@ -1045,186 +787,121 @@ form.toggle.flairtoggle {
     right: 0;
     bottom: 0;
     background-color: #ddd;
-    padding: 1px 0
+    padding: 1px 0;
 }
-
 :lang(dm) .titlebox .tagline .flairselectbtn:after {
-    background-color: #222
+    background-color: #222;
 }
-
 .gadget .reddit-link,
 .icon-menu a {
-    background: 0
+    background: 0;
 }
-/*
-.gadget {
-    padding-top: 5px
-}
-
-.gadget .thing {
-    padding: 10px 0
-}
-
-.gadget .midcol {
-    width: 35px;
-    margin-top: -10px;
-    margin-left: 4px
-}*/
-
 .leavemoderator,
 .titlebox form.toggle {
     background: 0 0;
-    color: #333
+    color: #333;
 }
-
 :lang(dm) .leavemoderator,
 :lang(dm) .titlebox form.toggle {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
 .sidebox.create .spacer {
-    display: none
+    display: none;
 }
-
 .submit .morelink {
     background: 0 0;
     border: 0;
-    height: 40px
+    height: 40px;
 }
-
-.submit .morelink a,
-.side .md>h1 {
+.side .md > h1,
+.submit .morelink a {
     color: #202020;
     font-size: 14px;
     border-left: 2px solid #202020;
     border-right: 2px solid #202020;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
-
 .submit .morelink a {
-    width: 300px
+    width: 300px;
 }
-
 .submit .morelink a:hover {
     border-color: #ffb400;
 }
-
-:lang(dm) .submit .morelink a,
-:lang(dm) .side .md>h1 {
+:lang(dm) .side .md > h1,
+:lang(dm) .submit .morelink a {
     background: #444240;
     color: #e0e0e0;
-    border-color: #e0e0e0
+    border-color: #e0e0e0;
 }
-
 .submit .morelink a:before {
     display: block;
     content: "";
     height: 40px;
-    background-image: url(%%7%%)
+    background-image: url(%%7%%);
 }
-
 .disabled .morelink a:before {
     display: none;
 }
-
 .submit-link .morelink a:before {
-    background-position: -92px -40px
+    background-position: -92px -40px;
 }
-
 .submit-text .morelink a:before {
-    background-position: -92px -120px
+    background-position: -92px -120px;
 }
-
-.side .md>h1 {
+.side .md > h1 {
     background: #e0e0e0;
     padding: 7px 10px;
-    line-height: 20px
+    line-height: 20px;
 }
-
-:lang(dm) .side .md>h1 {
-    background: #222
+:lang(dm) .side .md > h1 {
+    background: #222;
 }
-
-.side .md>h1 a {
-    text-decoration: underline
+.side .md > h1 a {
+    text-decoration: underline;
 }
-
 .disabled .morelink a {
     color: #aaa;
     background: #191919;
-    border: #2e2a26
+    border: #2e2a26;
 }
-
 .side .subscribers .number:after {
-    content: " Lightners"
+    content: " Lightners";
 }
-
 .side .users-online .number:after {
-    content: " kids skipping class"
+    content: " kids skipping class";
 }
-
 .titlebox .subscribers {
     padding: 7px 0;
-    display: block
+    display: block;
 }
-
 .titlebox h1.redditname {
-    font-size: 0; margin:0;
+    font-size: 0;
+    margin: 0;
 }
-
 .users-online:before {
     margin-top: 6px;
-    background: url(%%f%%) 0 0;
-    height: 10px
+    background: url(%%f%%);
+    height: 10px;
 }
-
 :lang(dm).users-online:before {
-    background-position: 0 -10px
+    background-position: 0 -10px;
 }
-
 .titlebox .subscribers,
 .users-online {
     color: #202020;
     font-size: 18px;
-    font-family: Determination Sans, Determination Mono, Arial, Serif
+    font-family: Determination Sans, Determination Mono, Arial, Serif;
 }
-
 :lang(dm).titlebox .subscribers,
 :lang(dm).users-online {
-    color: #e0e0e0
-}
-/*
-.pretty-button {
-    font-size: 9px;
-    line-height: 13px
-}
-
-.pretty-button.negative {
-    background: #202020;
     color: #e0e0e0;
-    border-radius: 0;
-    border: 1px solid #ffb400
 }
-
-.pretty-button.neutral {
-    border-radius: 0
-}
-
-.pretty-button.positive {
-    border-radius: 0;
-    background: #e0e0e0;
-    border: 1px solid #5d0400;
-    color: #5d0400
-}
-*/
 .titlebox .subButtons {
-    text-align: center
+    text-align: center;
 }
-
 .titlebox .fancy-toggle-button.subscribe-button {
-    display: block
+    display: block;
 }
-
 .titlebox .fancy-toggle-button.subscribe-button .option.active {
     display: inline-block;
     height: 54px;
@@ -1232,70 +909,36 @@ form.toggle.flairtoggle {
     font-size: 0;
     background: url(%%7%%) -20px -303px;
     border: 0;
-    border-radius: 0
+    border-radius: 0;
 }
-
 .titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
-    background-position: -20px -359px
+    background-position: -20px -359px;
 }
-
 .titlebox .fancy-toggle-button.subscribe-button .option.remove.active {
-    background-position: -20px -191px
+    background-position: -20px -191px;
 }
-
 .titlebox .fancy-toggle-button.subscribe-button .option.remove.active:hover {
-    background-position: -20px -247px
+    background-position: -20px -247px;
 }
-
 .res-fancy-toggle-button {
-    color: #202020!important
+    color: #202020 !important;
 }
-
-:lang(dm) .res-fancy-toggle-button{
-    color: #e0e0e0!important
+:lang(dm) .res-fancy-toggle-button {
+    color: #e0e0e0 !important;
 }
-
 .res-fancy-toggle-button:hover {
-    background: #202020!important;
-    color: #ffc90e!important;
-    border-color: #ffc90e
+    background: #202020 !important;
+    color: #ffc90e !important;
+    border-color: #ffc90e;
 }
-/*
-.hover-bubble,
-:lang(dm) .author-tooltip__head a {
-    color: #e0e0e0
+.searchpane {
+    background: 0 0;
 }
-
-.RESNotificationHeader .gearIcon:after {
-    display: none
-}
-
-.hover-bubble {
-    background: #444240;
-    border: 1px solid #444240
-}
-
-.author-tooltip__credentials-list strong,
-.hover-bubble.multi-selector strong {
-    color: #eee
-}*/
-
-/*SEARCH*/
-.searchpane{
-    background:none
-}
-
-/*.searchfacets {
-    background: #191919;
-    box-shadow: 0 4px 6px -1px #202020 inset
-}*/
-
-#search_showmore,
-#moresearchinfo {
+#moresearchinfo,
+#search_showmore {
     display: block;
-    margin-top: 10px
+    margin-top: 10px;
 }
-
 .domain a,
 .link .buttons .redditSingleClick,
 .link .buttons li a,
@@ -1304,100 +947,53 @@ form.toggle.flairtoggle {
 .spam .domain,
 .spam .domain a,
 .tagline {
-    color: #888
+    color: #888;
 }
-
-/*.entry .buttons li.reported-stamp {
-    background-color: #e22;
-    color: #e0e0e0
-}*/
-
 .thing,
 .thing.stickled {
     background: #fff;
-    padding: 5px 10px
+    padding: 5px 10px;
 }
-
 :lang(dm) .thing,
 :lang(dm) .thing.stickled {
     background: #282832;
 }
-
 .thing .parent {
     display: block;
-    margin: -5px 0 10px
+    margin: -5px 0 10px;
 }
-
-/*.create-reddit .linefield-content textarea {
-    height: 200px
-}*/
-
-.thing.link, .thing.last-clicked {
-	/*border: none;*/
-	border-left:5px solid;
+.over18 .thumbnail img,
+.submit_text h1 {
+    display: none;
+}
+.thing.last-clicked,
+.thing.link {
+    border-left: 5px solid;
     margin-bottom: 1px;
-	/*box-shadow: inset 0 0 0 0 transparent;*/
-    transition: all .2s ease-out
+    transition: all 0.2s ease-out;
 }
-
-.thing.link:hover {background: #f2f2f2}
-.thing.stickied:hover {background: #f1f3f1}
-
-:lang(dm).thing.link:hover {background: #050b18a0}
-
-:lang(dm).thing.stickied:hover {background: #05180ba0}
-
-/*.nav-buttons {
-    padding-top: 10px
+.thing.link:hover {
+    background: #f2f2f2;
 }
-
-.action-form {
-    border-radius: 0;
-    background: #1a1714;
-    border: 1px solid #232120
+.thing.stickied:hover {
+    background: #f1f3f1;
 }
-
-.next-suggestions a,
-.nextprev a {
-    padding: 2px 7px;
-    font-weight: 400;
-    display: inline-block;
-    border: 0;
-    font-size: 12px;
-    line-height: 20px;
-    color: #ffb400;
-    background: #5d0400;
-    border-radius: 0;
-    transition: all .2s ease-out
+:lang(dm).thing.link:hover,
+:lang(dm).thing.stickied:hover {
+    background: 0 0;
 }
-
-.next-suggestions a:hover,
-.nextprev a:hover {
-    border: 0;
-    background: #ffb400;
-    color: #5d0400
-}
-
-.next-suggestions .separator,
-.nextprev .separator {
-    border-left: 1px solid #303030
-}*/
-
 .link .buttons .redditSingleClick,
 .link .buttons li a {
-    opacity: .7
+    opacity: 0.7;
 }
-
 :lang(dm) .link .buttons li.first a {
     color: #e0e0e0;
-    opacity: 1
+    opacity: 1;
 }
-
 .link:hover .buttons .redditSingleClick,
 .link:hover .buttons li a {
-    opacity: 1
+    opacity: 1;
 }
-
 .infobar,
 .panestack-title,
 .searchfacets,
@@ -1405,115 +1001,62 @@ form.toggle.flairtoggle {
 .tabpane-content,
 .thing.link {
     margin-right: 360px;
-    padding-left: 20px
+    padding-left: 20px;
 }
-
-
-/*wiki*/
-
 .wiki-page .wiki-page-content {
-    margin-right: 360px
+    margin-right: 360px;
 }
-
-.wiki-page-content .wiki > .toc > ul{
-    float: none!important
+.wiki-page-content .wiki > .toc > ul {
+    float: none !important;
 }
-/*
-.tabpane-content {
-    border: 1px solid #2e2a26;
-    border-top: 3px solid #ffb400;
-    padding-top: 15px;
-    background: #191919
-}
-
-:lang(dm) .tabpane-content {
-    border: 1px solid #0066b5;
-    border-top: 3px solid #0066b5
-}
-
-.tagline .stickied-tagline,
-.thing.stickied a.title,
-.thing.stickied a.title.visited {
-    color: #e22!important
-}*/
-
 :lang(dm).tagline .stickied-tagline,
 :lang(dm).thing.stickied a.title,
 :lang(dm).thing.stickied a.title.visited {
-    color: #39f!important
+    color: #39f !important;
 }
-
-/*.thing.comment {
+.thing.spam > .entry,
+.thing.spam > .entry.RES-keyNav-activeElement {
+    background: 0 0 !important;
+}
+.comment.spam > .child,
+.message.spam > .child {
     background: 0 0;
-    padding-left: 0;
-    padding-bottom: 0;
-    padding-top: 10px
 }
-
-.thing.spam {
-    background: rgba(255, 197, 169, .06)
-}
-
-.thing.spam>.entry {
-    border: 1px solid #600
-}*/
-
-.thing.spam>.entry,
-.thing.spam>.entry.RES-keyNav-activeElement {
-    background: #f001 !important
-}
-
-.comment.spam>.child,
-.message.spam>.child {
-    background: none
-}
-
 .comment .midcol {
     width: 25px;
-    margin-left: 4px
+    margin-left: 4px;
 }
-
 .comment .child,
 .comment .showreplies,
 .res-commentBoxes .comment div.child {
-    margin-left: 0
+    margin-left: 0;
 }
-
 .link .rank {
-	margin: 30px 10px 0 -1px
+    margin: 30px 10px 0 -1px;
 }
-
-.thing:hover .rank {visibility: hidden;}
-
+.thing:hover .rank {
+    visibility: hidden;
+}
 .thing.stickied .rank {
-	background: url(%%7%%) 0 -107px no-repeat!important;
-	height: 20px!important;
-	width: 20px!important;
-	margin: 28px 4px 0 -6px;
-	opacity: .2
+    background: url(%%7%%) 0 -107px no-repeat !important;
+    height: 20px !important;
+    width: 20px !important;
+    margin: 28px 4px 0 -6px;
+    opacity: 0.2;
 }
-
 .link .flat-list {
-    margin-top: 3px
+    margin-top: 3px;
 }
-
-.midcol-spacer,/*
-body.hot-page>.content .link .midcol,
-body.listing-page>.content .link .midcol,
-body.moderator .link .midcol,
-body.search-page .link .midcol,
-body.single-page>.content */.link .midcol {
-    /*position: relative;*/
+.link .midcol,
+.midcol-spacer {
     margin-right: 16px;
-    width: 5ex!important;
-    height: 90px
+    width: 5ex !important;
+    height: 90px;
 }
-
 .content {
-    margin: 7px 0 0
+    margin: 7px 0 0;
 }
-
-.thing.stickied a.title:before{
+.thing.stickied a.title:before {
     content: "STICKY";
     font-size: 10px;
     margin-right: 8px;
@@ -1522,496 +1065,350 @@ body.single-page>.content */.link .midcol {
     margin-top: 1px;
     float: left;
     background-color: #282;
-    color: #fff
+    color: #fff;
 }
-
 :lang(dm) .thing.stickied a.title:before {
-    background-color: #39f!important;
-    color: #e0e0e0
+    background-color: #39f !important;
+    color: #e0e0e0;
 }
-
 .nsfw-stamp,
 .spoiler-stamp {
     background-color: #5d0400;
-    border: 0!important;
-    border-radius: 0
+    border: 0 !important;
+    border-radius: 0;
 }
-
 .nsfw-stamp acronym,
 .spoiler-stamp span {
     color: #e0e0e0;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
-
 .thumbnail {
-    height: 70px!important;
+    height: 70px !important;
     width: 70px;
     position: relative;
     margin-right: 10px;
-    visibility: visible
+    visibility: visible;
 }
-
-.thumbnail.default,
 .over18 .thumbnail,
+.thumbnail.default,
 .thumbnail.self,
-.thumbnail.spoiler{
-	background-image: url(%%7%%);
-	background-position: -392px 0; 
-	width: 70px!important
-}
-
-.thumbnail:hover{width:90px}
-
-:lang(dm) .thumbnail.self {
-    background-position: -392px -70px
-}
-
-.over18 .thumbnail {
-    background-position: -532px 0
-}
-
-:lang(dm) .over18 .thumbnail {
-    background-position: -532px -70px
-}
-
 .thumbnail.spoiler {
-    background-position: -462px 0
+    background-image: url(%%7%%);
+    background-position: -392px 0;
+    width: 70px !important;
 }
-
+.thumbnail:hover {
+    width: 90px;
+}
+:lang(dm) .thumbnail.self {
+    background-position: -392px -70px;
+}
+.over18 .thumbnail {
+    background-position: -532px 0;
+}
+:lang(dm) .over18 .thumbnail {
+    background-position: -532px -70px;
+}
+.thumbnail.spoiler {
+    background-position: -462px 0;
+}
 :lang(dm) .thumbnail.spoiler {
-    background-position: -462px -70px
+    background-position: -462px -70px;
 }
-
 .thumbnail img {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90px;
-	top: 0;
-	height: auto
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    top: 0;
+    height: auto;
 }
-
 .thumbnail:hover img {
-	width: 140px;
-	top: -100%;
-	transition: top 1s 1s
+    width: 140px;
+    top: -100%;
+    transition: top 1s 1s;
 }
-
-.over18 .thumbnail img {display: none;}
-
-.expando-button{
-    background-image: url(%%7%%)!important;
+.expando-button {
+    background-image: url(%%7%%) !important;
     background-size: 690px;
 }
-
 .image.collapsed,
 .image.gallery.collapsedExpando,
 .selftext.collapsed {
-    background-position: -1px -1px!important
+    background-position: -1px -1px !important;
 }
-
 .image.collapsed:hover,
 .image.gallery.collapsedExpando:hover,
 .selftext.collapsed:hover {
-    background-position: -26px -1px!important
+    background-position: -26px -1px !important;
 }
-
 .image.expanded,
 .image.gallery.expanded,
 .selftext.expanded {
-    background-position: -1px -26px!important
+    background-position: -1px -26px !important;
 }
-
 .image.expanded:hover,
 .image.gallery.expanded:hover,
 .selftext.expanded:hover {
-    background-position: -26px -26px!important
+    background-position: -26px -26px !important;
 }
-
 .video-muted.collapsed,
 .video.collapsed {
-    background-position: -1px -51px!important
+    background-position: -1px -51px !important;
 }
-
 .video-muted.collapsed:hover,
 .video.collapsed:hover {
-    background-position: -26px -51px!important
+    background-position: -26px -51px !important;
 }
-
 .video-muted.expanded,
 .video.expanded {
-    background-position: -1px -76px!important
+    background-position: -1px -76px !important;
 }
-
 .video-muted.expanded:hover,
 .video.expanded:hover {
-    background-position: -26px -76px!important
+    background-position: -26px -76px !important;
 }
-
-/*.thing.comment.collapsed {
-    padding-left: 37px!important
+#search input,
+#searchexpando,
+.flairselector .customizer input,
+.roundfield input[type="number"],
+.roundfield input[type="password"],
+.roundfield input[type="text"],
+.roundfield input[type="url"],
+.roundfield textarea,
+.side .md > h3:first-of-type,
+.side .md > h3:first-of-type + ul,
+textarea {
+    background-color: #f8f8f8;
+    color: #222;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    border: 1px solid #888;
+    outline: 0;
 }
-
-.expando {
-    padding-top: 5px
+:lang(dm) #search input,
+:lang(dm) #searchexpando,
+:lang(dm) .flairselector .customizer input,
+:lang(dm) .roundfield input[type="number"],
+:lang(dm) .roundfield input[type="password"],
+:lang(dm) .roundfield input[type="text"],
+:lang(dm) .roundfield input[type="url"],
+:lang(dm) .roundfield textarea,
+:lang(dm) .side .md > h3:first-of-type,
+:lang(dm) .side .md > h3:first-of-type + ul,
+:lang(dm) textarea {
+    background-color: #111 !important;
+    color: #e0e0e0 !important;
 }
-
-.gadget .reddit-entry {
-    margin-left: 35px;
-    min-height: 50px
-}
-
-.gadget .arrow.down {
-    top: 35px
-}*/
-
-/*Create post*/
-
-/*.submit_text ul {
-    margin: 0 0 0 65px;
-    list-style: none;
-    padding: 0;
-    font-size: 12px;
-    width: 230px
-}
-
-.submit_text ul li {
-    margin-bottom: 7px
-}*/
-
-.submit_text h1 {
-    display: none
-}
-
-/*
-.formtabs-content {
-    border-top: 3px solid #ffb400
-}
-
-:lang(dm) .formtabs-content {
-    border-top: 3px solid #0066b5
-}*/
-
-
-.roundfield textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],#search input, #searchexpando,textarea, .side .md>h3:first-of-type, .side .md>h3:first-of-type+ul, .flairselector .customizer input{
-    background-color:#f8f8f8;
-    color:#222;
-    background-repeat:no-repeat;
-    background-position:left bottom;
-    border:1px solid #888;
-    outline:0
-}
-
-:lang(dm) .roundfield textarea ,:lang(dm) .roundfield input[type=text] ,:lang(dm) .roundfield input[type=url] ,:lang(dm) .roundfield input[type=password] ,:lang(dm) .roundfield input[type=number] ,:lang(dm) #search input ,:lang(dm) #searchexpando, :lang(dm) textarea,:lang(dm) .side .md>h3:first-of-type, :lang(dm) .side .md>h3:first-of-type+ul,:lang(dm) .flairselector .customizer input{
-    background-color:#111!important;
-    color:#e0e0e0!important
-}
-
 .comments-page .usertext-edit textarea {
-    background: url(%%C%%) no-repeat center #e0e0e0;
+    background: url(%%C%%) center no-repeat #e0e0e0;
     padding: 0 5px;
-    background-position: 
 }
-
 :lang(dm) .comments-page .usertext-edit textarea {
-    background: url(%%D%%) no-repeat center #202020
+    background: url(%%D%%) center no-repeat #202020;
 }
-
 .comments-page .usertext-edit textarea:focus,
 .comments-page .usertext-edit textarea:hover {
-    background: none
+    background: 0 0;
 }
-
-/* Submit Page */
-
 .submit-page .content {
     width: 520px;
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     padding-bottom: 15px;
-    top: -25px
+    top: -25px;
 }
-
 .submit-page .content:after {
     height: 40px;
     bottom: -20px;
     background-size: 40px 80px;
-    background-position: 0 -40px
+    background-position: 0 -40px;
 }
-
 .submit-page .side {
-    display: none!important
+    display: none !important;
 }
-
 .submit-page .tabmenu.formtab {
     padding: 0;
     font-size: large;
     top: -6px;
     position: relative;
-    left: 0
+    left: 0;
 }
-
 .submit-page .tabmenu.formtab a {
-    border-color: #e0e0e0
+    border-color: #e0e0e0;
 }
-
 .submit-page .tabmenu.formtab .selected a {
-    padding: 0 8px
+    padding: 0 8px;
 }
-
-.submit-page .formtabs-content, .submit-page .info-notice {
+.submit-page .formtabs-content,
+.submit-page .info-notice {
     border: 0;
     margin-bottom: 15px;
     box-shadow: 0 0 25px #0002;
     background-color: #e0e0e0;
     padding: 0;
-    margin-top: 8px
+    margin-top: 8px;
 }
-
 .submit-page .formtabs-content .spacer {
-    margin: 0
+    margin: 0;
 }
-
-.submit-page .roundfield, .submit-page .infobar {
-    background-color: #e0e0e0!important;
+.submit-page .infobar,
+.submit-page .roundfield {
+    background-color: #e0e0e0 !important;
     border-radius: 0;
-    border: 1px solid #ff66b5!important;
+    border: 1px solid #ff66b5 !important;
     width: 500px;
-    padding: 5px 10px 10px 10px!important
+    padding: 5px 10px 10px !important;
 }
-
-:lang(dm) .submit-page .roundfield, :lang(dm) .submit-page .infobar {
-    background-color: #222!important;
+:lang(dm) .submit-page .infobar,
+:lang(dm) .submit-page .roundfield {
+    background-color: #222 !important;
 }
-
-/*
-.submit-page .submit_text {
-    max-height: none
-}*/
-
 .submit-page .btn {
     width: 100%;
     height: 40px;
     background: #e0e0e0;
     box-shadow: 0 0 25px #0002;
-    padding-top: 10px
+    padding-top: 10px;
 }
-
 .submit-page .btn:after {
-	content: "";
-	background: url(%%7%%) -270px -415px;
-	width: 270px;
-	height: 100px;
-	top: 30px;
-	position: relative;
-	display: block;
-	margin: 0 auto
+    content: "";
+    background: url(%%7%%) -270px -415px;
+    width: 270px;
+    height: 100px;
+    top: 30px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
 }
-
 :lang(dm) .submit-page .btn {
     background: #202020;
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-:lang(dm) .submit-page .btn:after {background-position: 0 -415px;}
-
+:lang(dm) .submit-page .btn:after {
+    background-position: 0 -415px;
+}
 .comment .expand {
     float: left;
     margin-top: 8px;
-    margin-right: 4px
+    margin-right: 4px;
 }
-
 .comment .author {
     font-size: 13px;
     display: inline-block;
-    padding: 8px 4px!important;
-    height: 10px
+    padding: 8px 4px !important;
+    height: 10px;
 }
-
 .arrow.down:after,
 .linkinfo {
     padding: 12px;
-    text-align: center
+    text-align: center;
 }
-
 .tagline a.author {
-    color: #202020!important
+    color: #202020 !important;
 }
-
-:lang(dm) a.author{
-    color: #e0e0e0!important
+:lang(dm) a.author {
+    color: #e0e0e0 !important;
 }
-
-a.moderator{
-    color: #62ae00!important
+a.moderator {
+    color: #62ae00 !important;
 }
-
 div.usertext-body {
     clear: both;
-    margin: 9px 0 8px 0;
+    margin: 9px 0 8px;
 }
-
 .new-comment .usertext-body {
-    border: 1px solid #666!important;
-    margin-top: 15px!important;
-    background: #fffa!important
+    border: 1px solid #666 !important;
+    margin-top: 15px !important;
+    background: 0 0 !important;
 }
-/*
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-    color: #c01600
+.link .usertext .md,
+.linkinfo {
+    background: 0 0;
+    border: 0;
 }
-
-:lang(dm) h1 a:visited,
-:lang(dm) h2 a:visited,
-:lang(dm) h3 a:visited,
-:lang(dm) h4 a:visited,
-:lang(dm) h5 a:visited,
-:lang(dm) h6 a:visited {
-    color: #e0e0e0
-}*/
-
 div.usertext-body h1,
 div.usertext-body h2,
 div.usertext-body h3,
 div.usertext-body h4,
 div.usertext-body h5,
 div.usertext-body h6 {
-    font-weight: 700
+    font-weight: 700;
 }
-
 div .titlebox .usertext-body h1 {
-    text-align: center
+    text-align: center;
 }
-
 :lang(dm) div.usertext-body h2 {
     font-size: 24px;
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
 div.usertext-body h3 {
-    font-size: 22px
+    font-size: 22px;
 }
-
 div.usertext-body h4 {
-    font-size: 20px
+    font-size: 20px;
 }
-
 div.usertext-body h5 {
     color: #c01600;
-    font-size: 18px
+    font-size: 18px;
 }
-
 div.usertext-body h6 {
-    font-size: 16px
+    font-size: 16px;
 }
-
-/*.infobar.mellow {
-    background: #2e2a26;
-    border: 1px solid #444240;
-    color: #e0e0e0
-}*/
-
 .linkinfo {
-    background: 0 0;
     margin: 0 auto;
-    border: 0
 }
-
 .score .number:after {
     content: "% TP";
-    font-size: .8em;
-    letter-spacing: .1em
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
 }
-
 .score .word {
-    display: none
+    display: none;
 }
-
-.link .usertext .md {
-    background: none;
-    border: 0
-}
-
 .sheets {
-    margin-right: 375px
+    margin-right: 375px;
 }
-/*
-.sheets textarea {
-    height: 500px
-}
-
-.linefield {
-    background: #191919;
-    border: 1px solid #2e2a26
-}
-
-.linefield .title {
-    color: #e0e0e0
-}*/
-
-/*Votes*/
-
-.thing>.midcol {
+.thing > .midcol {
     position: relative;
-    /*z-index: 3*/
 }
-
-/*
-.thing.comment .downmod:after,
-.thing.comment .upmod:after {
-    font-size: 11px;
-    font-weight: 700;
-    font-style: italic;
+.arrow.down:after,
+.arrow:before {
     position: absolute;
-    left: 36px;
-    opacity: 1;
-    z-index: 100;
-    white-space: nowrap
-}*/
-
+    pointer-events: none;
+}
 .arrow.down,
 .arrow.downmod,
 .arrow.up,
 .arrow.upmod {
-    background: url(%%7%%) no-repeat!important;
+    background: url(%%7%%) no-repeat !important;
     margin: 0;
     width: 20px;
     height: 20px;
-    top: 5px
+    top: 5px;
 }
-
 .arrow.up {
-    background-position: 0 -191px!important
+    background-position: 0 -191px !important;
 }
-
 .arrow.upmod {
-    background-position: 0 -211px!important
+    background-position: 0 -211px !important;
 }
-
 .arrow.down {
-    background-position: 0 -231px!important;
-    top: 46px
+    background-position: 0 -231px !important;
+    top: 46px;
 }
-
 .arrow.downmod {
-    background-position: 0 -251px!important;
-    top: 46px
+    background-position: 0 -251px !important;
+    top: 46px;
 }
-
 .link .arrow.down,
 .link .arrow.downmod,
 .link .arrow.up,
 .link .arrow.upmod {
-    margin: 6px auto 2px
+    margin: 6px auto 2px;
 }
-
 .arrow.down:after {
     opacity: 0;
     display: block;
-    position: absolute;
     margin: -12px 0 0 -50px;
     background-color: #9494ff;
     border-radius: 2px;
@@ -2019,130 +1416,99 @@ div.usertext-body h6 {
     content: "Please report this or send a modmail if it breaks subreddit rules.";
     letter-spacing: 1px;
     font-size: 13px;
-    transition: all .25s ease;
-    pointer-events: none;
+    transition: all 0.25s ease;
     white-space: nowrap;
-    z-index: 1
+    z-index: 1;
 }
-
 .arrow.down:hover:after {
     opacity: 1;
-    margin-left: 36px
+    margin-left: 36px;
 }
-
 .arrow:before {
-    content: ' ';
-    position: absolute;
+    content: " ";
     width: 100px;
     height: 110px;
     visibility: hidden;
     margin-left: -40px;
     margin-top: -55px;
-    pointer-events: none;
     background: url(%%d%%) no-repeat;
     animation: none;
     opacity: 1;
-    z-index: 1000
+    z-index: 1000;
 }
-
 .arrow.upmod:before {
     display: block;
     background-position: 9999px 0;
     visibility: visible;
-    animation: explosion .5s steps(12) 1;
-    opacity: 0
+    animation: explosion 0.5s steps(12) 1;
+    opacity: 0;
 }
-
 @keyframes explosion {
     from {
-        background-position: 0
+        background-position: 0;
     }
     to {
-        background-position: -1200px
+        background-position: -1200px;
     }
 }
-
 .link .arrow.up:after,
 .link .arrow.up:before,
 .link .arrow.upmod:hover:after,
 .link .arrow.upmod:hover:before {
-    transition: 1s ease opacity
+    transition: 1s ease opacity;
 }
-
 .footer-parent {
-    background: url(%%2%%) center 200px no-repeat
+    background: url(%%2%%) center 200px no-repeat;
 }
-
 :lang(dm) .footer-parent {
-    background: url(%%1%%) center bottom repeat-x
+    background: url(%%1%%) center bottom repeat-x;
 }
-
 .footer {
     border: 0;
     height: 350px;
-    display: block
+    display: block;
 }
-
 .debuginfo {
     background: #202020;
-    margin-top: 30px
+    margin-top: 30px;
 }
-/*
-.search-summary .debuginfo {
-    background: 0 0
-}*/
-
 .bottommenu {
-    margin-top: -30px
+    margin-top: -30px;
 }
-
 form.toggle.flairtoggle {
     font-size: 0;
     margin-top: 10px;
-    font-family: arial, sans-serif
+    font-family: arial, sans-serif;
 }
-
 form.toggle.flairtoggle:after {
     content: "Show flair";
-    font-size: 13px
+    font-size: 13px;
 }
-
+.flair-bderp::after,
+.flair-bgift:before,
+.flair-daucer:before,
+.flair-kris5:before,
+.flair-maus:before,
+.flair-tv:before {
+    content: "";
+}
 .flairselector li.selected {
     border: 0;
-    background: #bbb
+    background: #bbb;
 }
-
-:lang(dm) .flairselector li.selected{
-    background: #000
+:lang(dm) .flairselector li.selected {
+    background: #000;
 }
-
-/*.flairselector.drop-choices {
-    overflow: hidden;
-    transition: all .33s ease-out
-}*/
-
 .link .flair {
-    float: left
+    float: left;
 }
-
-/*
-.usertable>.toggle {
-    border: 1px solid #444240;
-    background: #2e2a26;
-    border-radius: 0
-}*/
-
-
-
-/*Flairs*/
-
 .flair {
     position: relative;
-    background-color: #e8e8e8!important;
+    background-color: #e8e8e8 !important;
     border: 1px solid #888;
     color: #222;
     font-weight: 400;
-    background-repeat: no-repeat!important;
+    background-repeat: no-repeat !important;
     padding-left: 20px;
     padding-right: 3px;
     vertical-align: bottom;
@@ -2151,370 +1517,345 @@ form.toggle.flairtoggle:after {
     line-height: 23px;
     font-size: 9px;
     background: url(%%r%%) -9999px no-repeat;
-    text-indent: 5px
+    text-indent: 5px;
 }
-
 .flair-kround:before,
 .flair-lancer4:before,
 .flair-round:before {
     position: absolute;
-    content: ""
+    content: "";
 }
-
 :lang(dm) .flair {
     color: #999;
-    background-color: #222!important
+    background-color: #222 !important;
 }
-
-.flair-1{background:url(%%5%%) 0 0} 
-.flair-2{background:url(%%5%%) 0 -23px} 
-.flair-3{background:url(%%5%%) 0 -46px} 
-.flair-4{background:url(%%5%%) 0 -69px} 
-.flair-5{background:url(%%5%%) 0 -92px} 
-.flair-6{background:url(%%5%%) 0 -115px} 
-.flair-7{background:url(%%5%%) 0 -138px} 
-.flair-8{background:url(%%5%%) 0 -161px}  
-.flair-9{background:url(%%5%%) 0 -184px} 
-.flair-10{background:url(%%5%%) 0 -207px} 
-.flair-11{background:url(%%5%%) 0 -230px} 
-.flair-12{background:url(%%5%%) 0 -253px}  
-.flair-13{background:url(%%5%%) 0 -276px} 
-.flair-14{background:url(%%5%%) 0 -299px} 
-.flair-15{background:url(%%5%%) 0 -322px} 
-.flair-16{background:url(%%5%%) 0 -345px}  
-.flair-17{background:url(%%5%%) 0 -368px} 
-.flair-18{background:url(%%5%%) 0 -391px} 
-.flair-19{background:url(%%5%%) 0 -414px} 
-.flair-20{background:url(%%5%%) 0 -437px} 
-.flair-21{background:url(%%5%%) 0 -460px} 
-.flair-22{background:url(%%5%%) 0 -483px}
-.flair-23{background:url(%%5%%) 0 -506px}
-
-/* Animated Flairs - By @SuperKirbyLover*/
-
+.flair-tv,
+:lang(dm) .md blockquote,
+:lang(dm) .md del {
+    color: #aaa;
+}
+.flair-1 {
+    background: url(%%5%%);
+}
+.flair-2 {
+    background: url(%%5%%) 0 -23px;
+}
+.flair-3 {
+    background: url(%%5%%) 0 -46px;
+}
+.flair-4 {
+    background: url(%%5%%) 0 -69px;
+}
+.flair-5 {
+    background: url(%%5%%) 0 -92px;
+}
+.flair-6 {
+    background: url(%%5%%) 0 -115px;
+}
+.flair-7 {
+    background: url(%%5%%) 0 -138px;
+}
+.flair-8 {
+    background: url(%%5%%) 0 -161px;
+}
+.flair-9 {
+    background: url(%%5%%) 0 -184px;
+}
+.flair-10 {
+    background: url(%%5%%) 0 -207px;
+}
+.flair-11 {
+    background: url(%%5%%) 0 -230px;
+}
+.flair-12 {
+    background: url(%%5%%) 0 -253px;
+}
+.flair-13 {
+    background: url(%%5%%) 0 -276px;
+}
+.flair-14 {
+    background: url(%%5%%) 0 -299px;
+}
+.flair-15 {
+    background: url(%%5%%) 0 -322px;
+}
+.flair-16 {
+    background: url(%%5%%) 0 -345px;
+}
+.flair-17 {
+    background: url(%%5%%) 0 -368px;
+}
+.flair-18 {
+    background: url(%%5%%) 0 -391px;
+}
+.flair-19 {
+    background: url(%%5%%) 0 -414px;
+}
+.flair-20 {
+    background: url(%%5%%) 0 -437px;
+}
+.flair-21 {
+    background: url(%%5%%) 0 -460px;
+}
+.flair-22 {
+    background: url(%%5%%) 0 -483px;
+}
+.flair-23 {
+    background: url(%%5%%) 0 -506px;
+}
 .flair-ralsei1 {
     padding-left: 33px;
     height: 40px;
     line-height: 40px;
     background-position: -22px -2px;
-    animation: sing .5s steps(2) infinite;
-    text-indent: 3px
+    animation: sing 0.5s steps(2) infinite;
+    text-indent: 3px;
 }
-
 @keyframes sing {
     from {
-        background-position: -28px -3543px
+        background-position: -28px -3543px;
     }
     to {
-        background-position: -28px -3637px
+        background-position: -28px -3637px;
     }
 }
-
 .flair-ralsei1:hover {
     background-position: -22px -2px;
     padding-left: 39px;
     animation: none;
 }
-
 .flair-ralsei2 {
     padding-left: 27px;
     height: 24px;
     line-height: 24px;
-    background-position: -34px -60px
+    background-position: -34px -60px;
 }
-
 .flair-ralsei2:hover {
-    background-position: -34px -99px
+    background-position: -34px -99px;
 }
-
 .flair-ralsei3 {
     height: 27px;
     line-height: 27px;
     background-position: -35px -137px;
-    padding-left: 27px
+    padding-left: 27px;
 }
-
 .flair-ralsei3:hover {
-    background-position: -35px -167px
+    background-position: -35px -167px;
 }
-
 .flair-ralsei4 {
     height: 35px;
     line-height: 35px;
     padding-left: 30px;
-    animation: wind .8s steps(5) infinite;
-    transition: height .2s, line-height .2s;
-    text-indent: 2px
+    animation: wind 0.8s steps(5) infinite;
+    transition: height 0.2s, line-height 0.2s;
+    text-indent: 2px;
 }
-
 .flair-ralsei4:hover {
-    animation: hands .5s steps(4), clap .2s steps(2) .5s 4, hands .5s steps(4) 1.3s reverse;
+    animation: hands 0.5s steps(4), clap 0.2s steps(2) 0.5s 4, hands 0.5s steps(4) 1.3s reverse;
     background-position: -32px -2556px;
 }
-
 @keyframes clap {
     from {
-        background-position: -32px -2716px
+        background-position: -32px -2716px;
     }
     to {
-        background-position: -32px -2796px
+        background-position: -32px -2796px;
     }
 }
-
 @keyframes hands {
     from {
-        background-position: -32px -2556px
+        background-position: -32px -2556px;
     }
     to {
-        background-position: -32px -2716px
+        background-position: -32px -2716px;
     }
 }
-
 @keyframes wind {
     from {
-        background-position: -32px -2396px
+        background-position: -32px -2396px;
     }
     to {
-        background-position: -32px -2596px
+        background-position: -32px -2596px;
     }
 }
-
 .flair-kris1 {
     padding-left: 24px;
     height: 25px;
     line-height: 25px;
-    animation: twirl .8s steps(6) infinite
+    animation: twirl 0.8s steps(6) infinite;
 }
-
 @keyframes twirl {
     from {
-        background-position: -39px -197px
+        background-position: -39px -197px;
     }
     to {
-        background-position: -39px -371px
+        background-position: -39px -371px;
     }
 }
-
 .flair-kris2 {
     padding-left: 21px;
     height: 31px;
     line-height: 31px;
     background-position: -28px -370px;
-    transition: padding-left .4s .2s
+    transition: padding-left 0.4s 0.2s;
 }
-
 .flair-kris2:hover {
     padding-left: 34px;
     background-position: -28px -641px;
-    transition:padding-left .5s;
-    animation:sword .7s steps(8) forwards
+    transition: padding-left 0.5s;
+    animation: sword 0.7s steps(8) forwards;
 }
-
 @keyframes sword {
     from {
-        background-position:-28px -370px
+        background-position: -28px -370px;
     }
     to {
-        background-position:-28px -641px
+        background-position: -28px -641px;
     }
 }
-
 .flair-kris3 {
     padding-left: 27px;
     background-position: -10px -732px;
-    transition: padding-left .1s, text-indent .1s;
+    transition: padding-left 0.1s, text-indent 0.1s;
     height: 26px;
-    line-height: 26px
-    /*animation: thonk .5s steps(2) infinite*/
+    line-height: 26px;
 }
-
-/*@keyframes thonk {
-    from {
-        background-position: -27px -676px
-    }
-    to {
-        background-position: -27px -733px
-    }
-}*/
-
 .flair-kris3:hover {
     padding-left: 47px;
-    /*animation: none;*/
-    transition: padding-left .1s, background-position .7s steps(6) .1s;
+    transition: padding-left 0.1s, background-position 0.7s steps(6) 0.1s;
     background-position: -10px -894px;
-    text-indent: -8px
+    text-indent: -8px;
 }
-
-/*
-@keyframes act1 {
-    from {
-        background-position: -9px -732px
-    }
-    to {
-        background-position: -9px -894px
-    }
-}*/
-
 .flair-kris4 {
     padding-left: 35px;
     height: 31px;
     background-position: -25px -2951px;
     line-height: 31px;
-    transition: height .2s, line-height .2s;
-    animation: wind2 1s steps(5) .2s infinite
+    transition: height 0.2s, line-height 0.2s;
+    animation: wind2 1s steps(5) 0.2s infinite;
 }
-
 @keyframes wind2 {
     from {
-        background-position: -25px -2796px
+        background-position: -25px -2796px;
     }
     to {
-        background-position: -25px -2951px
+        background-position: -25px -2951px;
     }
 }
-
 .flair-kris4:hover {
     height: 34px;
     line-height: 34px;
     background-position: -22px -3159px;
-    animation: shield 1s steps(5)
+    animation: shield 1s steps(5);
 }
-
 @keyframes shield {
     from {
-        background-position: -24px -2984px
+        background-position: -24px -2984px;
     }
     to {
-        background-position: -22px -3159px
+        background-position: -22px -3159px;
     }
 }
-
 .flair-susie1 {
-	padding-left: 29px;
-	height: 27px;
-	line-height: 27px;
-	animation: susielaugh .3s steps(2) infinite;
-	transition: padding-left .2s;
+    padding-left: 29px;
+    height: 27px;
+    line-height: 27px;
+    animation: susielaugh 0.3s steps(2) infinite;
+    transition: padding-left 0.2s;
 }
-
 @keyframes susielaugh {
     from {
-        background-position: -33px -922px
+        background-position: -33px -922px;
     }
     to {
-        background-position: -33px -986px
+        background-position: -33px -986px;
     }
 }
-
 .flair-susie1:hover {
-	padding-left: 49px;
-	/* animation: slide .3s ease-out forwards; */
-	background-position: -13px -3194px;
-	animation: 0;
+    padding-left: 49px;
+    background-position: -13px -3194px;
+    animation: 0;
 }
-/*
-@keyframes slide {
-    from {
-        background-position: -23px -3194px
-    }
-    to {
-        background-position: -13px -3194px
-    }
-}*/
-
 .flair-susie2 {
     padding-left: 26px;
     height: 25px;
     line-height: 25px;
-    background-position: -36px -985px
+    background-position: -36px -985px;
 }
-
 .flair-susie2:hover {
-    background-position: -36px -1010px
+    background-position: -36px -1010px;
 }
-
 .flair-susie3 {
     padding-left: 28px;
     height: 27px;
     line-height: 27px;
     background-position: 0 -1034px;
-    transition: text-indent .2s, padding-left .2s
+    transition: text-indent 0.2s, padding-left 0.2s;
 }
-
 .flair-susie3:hover {
     text-indent: -15px;
     padding-left: 60px;
     background-position: 0 -1034px;
-    animation: act2 .6s steps(5) forwards .2s
+    animation: act2 0.6s steps(5) forwards 0.2s;
 }
-
 @keyframes act2 {
     from {
-        background-position: 0 -1064px
+        background-position: 0 -1064px;
     }
     to {
-        background-position: 0 -1214px
+        background-position: 0 -1214px;
     }
 }
-
 .flair-susie4 {
     background: url(%%E%%) -1px -2px no-repeat;
     padding-left: 51px;
     height: 34px;
-    line-height: 34px
+    line-height: 34px;
 }
-
 .flair-susie4:hover {
     padding-left: 80px;
     text-indent: -24px;
-    transition: padding-left .2s, text-indent .2s;
+    transition: padding-left 0.2s, text-indent 0.2s;
     background-position: -8px -2px;
-    animation: yeet .4s steps(4) forwards .2s
+    animation: yeet 0.4s steps(4) forwards 0.2s;
 }
-
 @keyframes yeet {
     from {
-        background-position: 10px -52px
+        background-position: 10px -52px;
     }
     to {
-        background-position: 2px -232px
+        background-position: 2px -232px;
     }
 }
-
 .flair-lancer1 {
     padding-left: 19px;
     height: 22px;
     line-height: 22px;
-    animation: lancerlaugh .3s steps(2) infinite
+    animation: lancerlaugh 0.3s steps(2) infinite;
 }
-
 @keyframes lancerlaugh {
     from {
-        background-position: -42px -1246px
+        background-position: -42px -1246px;
     }
     to {
-        background-position: -42px -1292px
+        background-position: -42px -1292px;
     }
 }
-
 .flair-lancer2 {
     padding-left: 36px;
     height: 30px;
     line-height: 30px;
-    background-position: -26px -1291px
+    background-position: -26px -1291px;
 }
-
 .flair-lancer3 {
     padding-left: 30px;
     height: 27px;
     line-height: 27px;
-    background-position: -32px -1321px
+    background-position: -32px -1321px;
 }
-
 .flair-lancer3:hover {
-    background-position: -32px -1350px
+    background-position: -32px -1350px;
 }
-
 .flair-lancer4 {
     padding-left: 23px;
     height: 31px;
@@ -2522,92 +1863,81 @@ form.toggle.flairtoggle:after {
     text-indent: 8px;
     background: 0 0;
     overflow: hidden;
-    transition: padding-left .2s, height .2s, line-height .2s
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
 }
-
 .flair-lancer4:before {
     width: 100%;
     height: 47px;
     top: 0;
     left: 0;
     background: url(%%r%%) -1px -3227px no-repeat;
-    transition: transform .3s ease-in-out;
-    transform-origin: 35px 27px
+    transition: transform 0.3s ease-in-out;
+    transform-origin: 35px 27px;
 }
-
 .flair-lancer4:hover {
     padding-left: 47px;
     height: 47px;
-    line-height: 47px
+    line-height: 47px;
 }
-
 .flair-lancer4:hover:before {
     transform: rotate(30deg);
     background-position: -1px -3272px;
     height: 47px;
     top: 3px;
-    animation: cruise 1s linear infinite, frame .6s steps(6) infinite
+    animation: cruise 1s linear infinite, frame 0.6s steps(6) infinite;
 }
-
 @keyframes frame {
     from {
-        background-position: -1px -3272px
+        background-position: -1px -3272px;
     }
     to {
-        background-position: -1px -3542px
+        background-position: -1px -3542px;
     }
 }
-
 @keyframes cruise {
     0%,
     100% {
-        left: 0
+        left: 0;
     }
     49.99% {
-        left: calc(-100%)
+        left: calc(-100%);
     }
     50% {
-        left: 100%
+        left: 100%;
     }
 }
-
 .flair-king1 {
     padding-left: 24px;
     height: 30px;
     line-height: 30px;
     background-position: -38px -1379px;
-    animation: kingsleep 2.2s steps(2) infinite
+    animation: kingsleep 2.2s steps(2) infinite;
 }
-
 @keyframes kingsleep {
     from {
-        background-position: -38px -1379px
+        background-position: -38px -1379px;
     }
     to {
-        background-position: -38px -1439px
+        background-position: -38px -1439px;
     }
 }
-
 .flair-king2 {
     padding-left: 27px;
     height: 34px;
     line-height: 34px;
-    background-position: -36px -1439px
+    background-position: -36px -1439px;
 }
-
 .flair-king2:hover {
-    background-position: -36px -1473px
+    background-position: -36px -1473px;
 }
-
 .flair-round {
     padding-left: 12px;
     height: 37px;
     line-height: 37px;
     background: 0 0;
     overflow: hidden;
-    text-indent: 14px
+    text-indent: 14px;
 }
-
 .flair-round:before {
     width: 100%;
     height: 37px;
@@ -2615,715 +1945,580 @@ form.toggle.flairtoggle:after {
     left: 0;
     background: url(%%r%%) -36px -3637px no-repeat;
     transform-origin: 13px 21px;
-    animation: bounce .6s steps(3) infinite
+    animation: bounce 0.6s steps(3) infinite;
 }
-
 @keyframes bounce {
     0%,
     100% {
-        background-position: -36px -3637px
+        background-position: -36px -3637px;
     }
     50% {
-        background-position: -36px -3748px
+        background-position: -36px -3748px;
     }
 }
-
 .flair-round:hover:before {
     height: 33px;
     bottom: 2px;
     background-position: -9999px 0;
-    animation: shrink .4s steps(2) forwards, roll 1s ease-in .5s forwards
+    animation: shrink 0.4s steps(2) forwards, roll 1s ease-in 0.5s forwards;
 }
-
 @keyframes shrink {
     from {
-        background-position: -36px -3750px
+        background-position: -36px -3750px;
     }
     to {
-        background-position: -36px -3824px
+        background-position: -36px -3824px;
     }
 }
-
 @keyframes roll {
     from {
         left: 0;
-        transform: rotate(0)
+        transform: rotate(0);
     }
     to {
         left: -33px;
-        transform: rotate(-100deg)
+        transform: rotate(-100deg);
     }
 }
-
 .flair-kround {
-    padding-left:21px;
-    height:20px;
-    margin-top:2px;
-    line-height:20px;
-    background:0 0;
-    overflow:hidden;
-    transition:padding-left .2s,height .2s,line-height .2s
+    padding-left: 21px;
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    background: 0 0;
+    overflow: hidden;
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
 }
 .flair-kround:before {
     width: 45px;
     height: 75px;
     bottom: 0;
     left: 0;
-    background: url(%%r%%) 7px -3800px no-repeat, url(%%r%%) -23px -3841px no-repeat
+    background: url(%%r%%) 7px -3800px no-repeat, url(%%r%%) -23px -3841px no-repeat;
 }
-
 .flair-kround:hover {
     padding-left: 37px;
     height: 75px;
     line-height: 75px;
-    transition: padding-left .2s .4s, height .2s .4s, line-height .2s .4s
+    transition: padding-left 0.2s 0.4s, height 0.2s 0.4s, line-height 0.2s 0.4s;
 }
-
 .flair-kround:hover:before {
     background-position: 7px -3817px, -23px -3874px;
-    animation: drop .3s linear forwards, grow .3s steps(2) .4s 2 forwards, grow2 .5s steps(4) 1.3s forwards, idle 5s steps(4) 2s infinite
+    animation: drop 0.3s linear forwards, grow 0.3s steps(2) 0.4s 2 forwards, grow2 0.5s steps(4) 1.3s forwards, idle 5s steps(4) 2s infinite;
 }
-
 @keyframes drop {
     from {
-        background-position: 7px -3800px, -23px -3841px
+        background-position: 7px -3800px, -23px -3841px;
     }
     to {
-        background-position: 7px -3788px, -23px -3841px
+        background-position: 7px -3788px, -23px -3841px;
     }
 }
-
 @keyframes grow {
     0% {
-        background-position: 14px -3807px, -16px -3860px
+        background-position: 14px -3807px, -16px -3860px;
     }
     100% {
-        background-position: 0 9999px, -17px -4030px
+        background-position: 0 9999px, -17px -4030px;
     }
 }
-
 @keyframes grow2 {
     0% {
-        background-position: 0 9999px, -17px -3944px
+        background-position: 0 9999px, -17px -3944px;
     }
     100% {
-        background-position: 0 9999px, -18px -4284px
+        background-position: 0 9999px, -18px -4284px;
     }
 }
-
 @keyframes idle {
     0%,
     50% {
-        background-position: 0 9999px, -18px -4284px
+        background-position: 0 9999px, -18px -4284px;
     }
     25%,
     75% {
-        background-position: 0 9999px, -18px -4606px
+        background-position: 0 9999px, -18px -4606px;
     }
     100% {
-        background-position: 0 9999px, -18px -4907px
+        background-position: 0 9999px, -18px -4907px;
     }
 }
-
-
 .flair-jevil {
     padding-left: 23px;
     height: 25px;
     line-height: 25px;
     background-position: -25px -5019px;
-    transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
+    transition: text-indent 0.2s, padding-left 0.2s, height 0.2s 0s, line-height 0.2s 0s;
 }
-
 .flair-jevil:hover {
     padding-left: 48px;
     height: 44px;
     line-height: 44px;
     background-position: -15px -5065px;
-    animation: prance 1.5s steps(8) .2s 4, prance 1s steps(8) 6s 6, prance .5s steps(8) 12s infinite
+    animation: prance 1.5s steps(8) 0.2s 4, prance 1s steps(8) 6s 6, prance 0.5s steps(8) 12s infinite;
 }
-
 @keyframes prance {
     0% {
         background-position: -17px -5071px;
-        transform: scaleX(1)
+        transform: scaleX(1);
     }
     49.99% {
         background-position: -17px -5457px;
-        transform: scaleX(1)
+        transform: scaleX(1);
     }
     50% {
         background-position: -17px -5071px;
-        transform: scaleX(-1)
+        transform: scaleX(-1);
     }
     99.99% {
         background-position: -17px -5457px;
-        transform: scaleX(-1)
+        transform: scaleX(-1);
     }
 }
-
 .flair-roulx {
     padding-left: 28px;
     height: 30px;
     line-height: 30px;
     background-position: -24px -5454px;
-    animation: zapin .5s steps(7) forwards;
-    background-color: #e8e8e8!important;
-    transition: background-color .2s
+    animation: zapin 0.5s steps(7) forwards;
+    background-color: #e8e8e8 !important;
+    transition: background-color 0.2s;
 }
-
 .flair-roulx:hover {
-    animation: zapout .5s steps(7) forwards;
-    background-color: #fff!important
+    animation: zapout 0.5s steps(7) forwards;
+    background-color: #fff !important;
 }
-
 @keyframes zapin {
     0% {
-        background-position: 9999px 0
+        background-position: 9999px 0;
     }
     0.01% {
-        background-position: -24px -5454px
+        background-position: -24px -5454px;
     }
     100% {
-        background-position: -24px -5881px
+        background-position: -24px -5881px;
     }
 }
-
 @keyframes zapout {
     0% {
-        background-position: -24px -5881px
+        background-position: -24px -5881px;
     }
     99.99% {
-        background-position: -24px -5454px
+        background-position: -24px -5454px;
     }
     100% {
-        background-position: 9999px 0
+        background-position: 9999px 0;
     }
 }
-
 .flair-noelle {
     padding-left: 22px;
     height: 28px;
     line-height: 28px;
-    background-position: -39px -5945px
+    background-position: -39px -5945px;
 }
-
 .flair-noelle:hover {
-    background-position: -39px -5995px
+    background-position: -39px -5995px;
 }
-
 .flair-milk {
     padding-left: 15px;
     height: 30px;
     line-height: 30px;
-    background-position: -44px -4985px
+    background-position: -44px -4985px;
 }
-
 .flair-bell {
     padding-left: 22px;
     height: 23px;
     line-height: 23px;
     background-position: -39px -1507px;
-    animation: bellanim .5s steps(3) alternate infinite
+    animation: bellanim 0.5s steps(3) alternate infinite;
 }
-
 @keyframes bellanim {
     from {
-        background-position: -39px -1507px
+        background-position: -39px -1507px;
     }
     to {
-        background-position: -39px -1576px
+        background-position: -39px -1576px;
     }
 }
-
 .flair-hathy,
 .flair-hathyex {
     padding-left: 48px;
     height: 38px;
-    line-height: 38px
+    line-height: 38px;
 }
-
 .flair-hathyex {
-    background-position: -14px -1574px
+    background-position: -14px -1574px;
 }
-
 .flair-hathyex:hover {
-    background-position: -14px -1613px
+    background-position: -14px -1613px;
 }
-
 .flair-hathy {
-    background-position: -14px -1650px
+    background-position: -14px -1650px;
 }
-
 .flair-hathy:hover {
-    background-position: -14px -1689px
+    background-position: -14px -1689px;
 }
-
 .flair-rudinn,
 .flair-rudinnex {
-    padding-left: 27px
+    padding-left: 27px;
 }
-
 .flair-rudinn {
     height: 32px;
     line-height: 32px;
     background-position: -36px -1728px;
-    animation: rudinnanim1 .7s steps(4) infinite
+    animation: rudinnanim1 0.7s steps(4) infinite;
 }
-
 @keyframes rudinnanim1 {
     from {
-        background-position: -36px -1728px
+        background-position: -36px -1728px;
     }
     to {
-        background-position: -36px -1856px
+        background-position: -36px -1856px;
     }
 }
-
 .flair-rudinn:hover {
     background-position: -36px -1856px;
-    animation: rudinnanim2 .5s steps(3) infinite
+    animation: rudinnanim2 0.5s steps(3) infinite;
 }
-
 @keyframes rudinnanim2 {
     from {
-        background-position: -36px -1856px
+        background-position: -36px -1856px;
     }
     to {
-        background-position: -36px -1952px
+        background-position: -36px -1952px;
     }
 }
-
 .flair-rudinnex {
     height: 33px;
     line-height: 33px;
-    background-position: -36px -1952px
+    background-position: -36px -1952px;
 }
-
 .flair-rudinnex:hover {
-    background-position: -36px -1985px
+    background-position: -36px -1985px;
 }
-
 .flair-rabbick {
     background: url(%%r%%) 0 9999px repeat-x, url(%%r%%) -31px -6043px no-repeat;
     padding-left: 31px;
     height: 31px;
     line-height: 31px;
-    animation: ridle .7s steps(3) infinite forwards
+    animation: ridle 0.7s steps(3) infinite forwards;
 }
-
 .flair-rabbick:hover {
-    animation: blow .7s steps(3);
-    background-position: 0 9999px, -32px -6228px
+    animation: blow 0.7s steps(3);
+    background-position: 0 9999px, -32px -6228px;
 }
-
 @keyframes ridle {
     from {
-        background-position: 0 9999px, -31px -6043px
+        background-position: 0 9999px, -31px -6043px;
     }
     to {
-        background-position: 0 9999px, -31px -6142px
+        background-position: 0 9999px, -31px -6142px;
     }
 }
-
 @keyframes blow {
     0% {
-        background-position: -28px -6266px, -32px -6148px
+        background-position: -28px -6266px, -32px -6148px;
     }
     99.99% {
-        background-position: -10px -6266px, -32px -6268px
+        background-position: -10px -6266px, -32px -6268px;
     }
     100% {
-        background-position: 0 9999px, -32px -6268px
+        background-position: 0 9999px, -32px -6268px;
     }
 }
-
 .flair-clover {
     padding-left: 24px;
     height: 25px;
     line-height: 25px;
     background-position: -20px -6314px;
-    transition: text-indent .2s, padding-left .2s, height .2s 0s, line-height .2s 0s
+    transition: text-indent 0.2s, padding-left 0.2s, height 0.2s 0s, line-height 0.2s 0s;
 }
-
+.flair-susie5,
+.flair-susie5:hover {
+    transition: line-height 0.2s, height 0.2s, padding-left 0.2s, background-position-y 0s 0.2s;
+}
 .flair-clover:hover {
     padding-left: 50px;
     height: 48px;
     line-height: 48px;
     background-position: -14px -6314px;
-    animation: cexpand .2s linear, cidle 1s steps(5) infinite
+    animation: cexpand 0.2s linear, cidle 1s steps(5) infinite;
 }
-
 @keyframes cexpand {
     0% {
-        background-position-x: -20px
+        background-position-x: -20px;
     }
     100% {
-        background-position-x: -14px
+        background-position-x: -14px;
     }
 }
-
 @keyframes cidle {
     0% {
-        background-position-y: -6314px
+        background-position-y: -6314px;
     }
     100% {
-        background-position-y: -6564px
+        background-position-y: -6564px;
     }
 }
-
 .flair-pon {
     padding-left: 28px;
     height: 32px;
     line-height: 32px;
-    background-position: -33px -6619px
+    background-position: -33px -6619px;
 }
-
 .flair-pon:hover {
-    animation: open .5s steps(3) forwards
+    animation: open 0.5s steps(3) forwards;
 }
-
 @keyframes open {
     from {
-        background-position-y: -6619px
+        background-position-y: -6619px;
     }
     to {
-        background-position-y: -6758px
+        background-position-y: -6758px;
     }
 }
-
 .flair-coody {
     padding-left: 24px;
     height: 30px;
     line-height: 30px;
     background-position: -36px -2018px;
-    animation: coodyanim .8s steps(2) infinite
+    animation: coodyanim 0.8s steps(2) infinite;
 }
-
 @keyframes coodyanim {
     from {
-        background-position-y: -2018px
+        background-position-y: -2018px;
     }
     to {
-        background-position-y: -2078px
+        background-position-y: -2078px;
     }
 }
-
 .flair-cake {
     padding-left: 32px;
     height: 23px;
     line-height: 23px;
-    background-position: -31px -2078px
+    background-position: -31px -2078px;
 }
-
 .flair-box,
-.flair-chest {
+.flair-chest,
+.flair-goner1 {
     height: 24px;
     line-height: 24px;
 }
-
 .flair-box {
     padding-left: 21px;
     background-position: -41px -2101px;
-    animation: boxanim 1s steps(2) infinite
+    animation: boxanim 1s steps(2) infinite;
 }
-
 @keyframes boxanim {
     from {
-        background-position: -41px -2101px
+        background-position: -41px -2101px;
     }
     to {
-        background-position: -41px -2149px
+        background-position: -41px -2149px;
     }
 }
-
 .flair-chest {
     padding-left: 21px;
-    background-position: -41px -2149px
+    background-position: -41px -2149px;
 }
-
 .flair-chest:hover {
-    background-position: -41px -2173px
+    background-position: -41px -2173px;
 }
-
 .flair-goner1 {
     padding-left: 18px;
-    height: 24px;
-    line-height: 24px;
-    background-position: -42px -2197px
+    background-position: -42px -2197px;
 }
-
-.side .flair {margin: 0}
-
+.side .flair {
+    margin: 0;
+}
 .flair-goldsei {
-	padding-left: 31px;
-	height: 30px;
-	line-height: 30px;
-	background: url(%%goldsei%%) -8px 0;
+    padding-left: 31px;
+    height: 30px;
+    line-height: 30px;
+    background: url(%%goldsei%%) -8px 0;
 }
-
+.flair-kdd,
+.flair-rdd,
 .flair-sdd {
     height: 45px;
     line-height: 45px;
+}
+.flair-sdd {
     padding-left: 38px;
     background: url(%%sdd%%);
-    animation: sdd 8s steps(50) infinite
+    animation: sdd 8s steps(50) infinite;
 }
-
 @keyframes sdd {
     from {
-        background-position: -3px -3px
+        background-position: -3px -3px;
     }
     to {
-        background-position: -3px -2603px
+        background-position: -3px -2603px;
     }
 }
-
 .flair-kdd {
-    height: 45px;
-    line-height: 45px;
     padding-left: 35px;
     background: url(%%kdd%%);
-    animation: kdd 8s steps(25) infinite
+    animation: kdd 8s steps(25) infinite;
 }
-
 @keyframes kdd {
     from {
-        background-position: -5px -3px
+        background-position: -5px -3px;
     }
     to {
-        background-position: -5px -1253px
+        background-position: -5px -1253px;
     }
 }
-
 .flair-rdd {
-    height: 45px;
-    line-height: 45px;
     padding-left: 33px;
     background: url(%%rdd%%);
-    animation: rdd 8s steps(27) infinite
+    animation: rdd 8s steps(27) infinite;
 }
-
 @keyframes rdd {
     from {
-        background-position: -7px -5px
+        background-position: -7px -5px;
     }
     to {
-        background-position: -7px -1463px
+        background-position: -7px -1463px;
     }
 }
-
-.flair-a, .flair-b, .flair-f, .flair-h
-{
+.flair-a,
+.flair-b,
+.flair-f,
+.flair-h {
     background-image: url(%%o%%);
 }
-
 .flair-a {
     padding-left: 22px;
     height: 46px;
     line-height: 46px;
     background-position: 0 -1050px;
 }
-
 .flair-a:hover {
-    background-position-y: -1096px
+    background-position-y: -1096px;
 }
-
 .flair-b {
     padding-left: 37px;
     height: 44px;
     line-height: 44px;
     background-position: 0 -2px;
 }
-
 .flair-b:hover {
-    background-position: 0 -48px
+    background-position: 0 -48px;
 }
-/*
-.flair-f {
-	padding-left: 41px;
-	height: 41px;
-	line-height: 41px;
-	background-position: -3px -633px;
-	background-size: 250px;
-}
-
-.flair-f:hover {
-    background-position: -2px -682px;
-}
-*/
 .flair-h {
-	padding-left: 41px;
-	height: 42px;
-	line-height: 42px;
-	background-position: 1px -616px;
-	background-size: 200px
+    padding-left: 41px;
+    height: 42px;
+    line-height: 42px;
+    background-position: 1px -616px;
+    background-size: 200px;
 }
-
 .flair-h:hover {
-    background-position: 1px -658px
+    background-position: 1px -658px;
 }
-/*
-.flair-D {
-    padding-left: 61px;
-    height: 46px;
-    background: url(%%a%%) 0 0;
-    line-height: 46px;
-    text-indent: -9px;
-    animation: u 1.3s steps(17) infinite
+.flair-susie5 {
+    background: url(%%r2%%) -1px 0;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 27px;
 }
-
-@keyframes u {
-    from {
-        background-position-y: 0
-    }
-    to {
-        background-position-y: -799px
-    }
-}
-
-.flair-E {
-	padding-left: 44px;
-	height: 37px;
-	background: url(%%s%%) -10px -15px;
-	line-height: 37px;
-	animation: v .9s steps(2) infinite;
-	background-size: 72px;
-}
-
-@keyframes v {
-    from {
-        background-position-y: -15px
-    }
-    to {
-        background-position-y: -139px
-    }
-}
-
-.flair-A {
-    padding-left: 21px;
+.flair-susie5:hover {
+    background-position: -1px -49px;
     height: 47px;
     line-height: 47px;
-    background: url(%%aa%%)
+    animation: shake 0.15s linear 0.2s;
 }
-*/
-.flair-susie5 {
-	background: url(%%r2%%) -1px 0;
-	height: 30px;
-	line-height: 30px;
-	padding-left: 27px;
-    transition: line-height .2s,height .2s, padding-left .2s, background-position-y 0s .2s;
+.flair-kris5,
+.flair-kris5:hover {
+    transition: line-height 0.2s, height 0.2s, background-position-y 0.2s;
 }
-
-.flair-susie5:hover {
-	background-position: -1px -49px;
-	height: 47px;
-	line-height: 47px;
-	transition: line-height .2s,height .2s, padding-left .2s, background-position-y 0s .2s;
-	animation: shake .15s linear .2s;
-}
-
 @keyframes shake {
     0% {
-        background-position-x: 8px
+        background-position-x: 8px;
     }
     25% {
-        background-position-x: -10px
+        background-position-x: -10px;
     }
     50% {
-        background-position-x: 5px
+        background-position-x: 5px;
     }
     75% {
-        background-position-x: -4px
+        background-position-x: -4px;
     }
     100% {
-        background-position-x: -1px
+        background-position-x: -1px;
     }
 }
-
 .flair-kris5 {
-	background: url(%%r2%%) -30px -98px;
-	overflow: hidden;
-	padding-left: 16px;
+    background: url(%%r2%%) -30px -98px;
+    overflow: hidden;
+    padding-left: 16px;
     text-indent: 8px;
-    transition: line-height .2s,height .2s,background-position-y .2s;
 }
-
 .flair-kris5:before {
-	background: url(%%r2%%) -2px -98px;
-	width: 27px;
-	height: 28px;
-	position: absolute;
-	left: 1px;
-	top: -28px;
-	content: "";
+    background: url(%%r2%%) -2px -98px;
+    width: 27px;
+    height: 28px;
+    position: absolute;
+    left: 1px;
+    top: -28px;
 }
-
 .flair-kris5:hover {
-	height: 36px;
-	line-height: 36px;
-	background-position-y: -81px;
-	transition: line-height .2s,height .2s,background-position-y .2s;
+    height: 36px;
+    line-height: 36px;
+    background-position-y: -81px;
 }
-
 .flair-kris5:hover:before {
-	top: -4px;
-	transition: top .5s ease-in .2s;
+    top: -4px;
+    transition: top 0.5s ease-in 0.2s;
 }
-
 .flair-mecha {
-	background: url(%%r2%%) 0 -158px, url(%%r2%%) -70px 0;
-    transition: all .2s;
-	padding-left: 27px;
+    background: url(%%r2%%) 0 -158px, url(%%r2%%) -70px 0;
+    transition: all 0.2s;
+    padding-left: 27px;
 }
 .flair-mecha:hover {
-	height: 60px;
-	line-height: 60px;
-	transition: all .2s;
-	padding-left: 37px;
-	background-position: 0 -158px,-22px -264px;
-	animation: mecha 1s forwards,oof 0.5s cubic-bezier(0.1,0.5,0.5,0.1) forwards 1.3s;
+    height: 60px;
+    line-height: 60px;
+    transition: all 0.2s;
+    padding-left: 37px;
+    background-position: 0 -158px, -22px -264px;
+    animation: mecha 1s forwards, oof 0.5s cubic-bezier(0.1, 0.5, 0.5, 0.1) forwards 1.3s;
 }
-
 @keyframes mecha {
     0% {
-        background-position: 0 -158px, -20px -264px
+        background-position: 0 -158px, -20px -264px;
     }
     20% {
-        background-position: 5px -144px, -20px -264px
+        background-position: 5px -144px, -20px -264px;
     }
-   50% {
-        background-position: 5px -144px, -20px -216px
-    }
+    50%,
     69.99% {
-        background-position: 5px -144px, -20px -216px
+        background-position: 5px -144px, -20px -216px;
     }
-    70% {
-        background-position: -2px -413px, -70px 0
-    }
+    70%,
     99.99% {
-        background-position: -2px -413px, -70px 0
+        background-position: -2px -413px, -70px 0;
     }
     100% {
-        background-position: -2px -506px, -70px 0
+        background-position: -2px -506px, -70px 0;
     }
 }
-
 @keyframes oof {
     0% {
-        background-position: -2px -506px, -8px -564px
+        background-position: -2px -506px, -8px -564px;
     }
     50% {
-        background-position: -2px -531px, -8px -564px
+        background-position: -2px -531px, -8px -564px;
     }
     99.99% {
-        background-position: -2px -510px, -8px -589px
+        background-position: -2px -510px, -8px -589px;
     }
     100% {
-        background-position: -2px -510px, -9px -298px
+        background-position: -2px -510px, -9px -298px;
     }
 }
-
-.flair-daucer{
+.flair-daucer {
     background: url(%%r2%%) -2px -652px;
     padding-left: 47px;
     height: 33px;
@@ -3331,19 +2526,18 @@ form.toggle.flairtoggle:after {
     overflow: hidden;
 }
 .flair-daucer:before {
-	content: "";
-	position: absolute;
-	background: url(%%r2%%) -12px -728px;
-	width: 35px;
-	height: 25px;
-	left: 10px;
-	top: 1px
+    position: absolute;
+    background: url(%%r2%%) -12px -728px;
+    width: 35px;
+    height: 25px;
+    left: 10px;
+    top: 1px;
 }
-.flair-daucer:hover{
-    animation: dprance 0.2s 3 steps(1)
+.flair-daucer:hover {
+    animation: dprance 0.2s 3 steps(1);
 }
-.flair-daucer:hover:before{
-    animation: lid 0.5s cubic-bezier(0.1,0.5,0.5,0.1)
+.flair-daucer:hover:before {
+    animation: lid 0.5s cubic-bezier(0.1, 0.5, 0.5, 0.1);
 }
 @keyframes dprance {
     0% {
@@ -3354,38 +2548,25 @@ form.toggle.flairtoggle:after {
     }
 }
 @keyframes lid {
-    0% {
+    0%,
+    100% {
         top: 1px;
     }
     50% {
         top: -33px;
     }
-    100% {
-        top: 1px;
-    }
 }
-
-/*
-@keyframes moveq {
-    from {
-        background-position: -25px -765px;
-    }
-    to {
-        background-position: -8px -765px;
-    }
-}*/
-
 .flair-queen1 {
     background: url(%%r2%%) -25px -765px;
-    transition: all .2s;
+    transition: all 0.2s;
 }
 .flair-queen1:hover {
-	padding-left: 48px;
-	height: 54px;
-	line-height: 54px;
+    padding-left: 48px;
+    height: 54px;
+    line-height: 54px;
     background-position-x: -8px;
-	transition: all .2s;
-	animation: drunk 2s .2s steps(14) forwards;
+    transition: all 0.2s;
+    animation: drunk 2s 0.2s steps(14) forwards;
 }
 @keyframes drunk {
     from {
@@ -3395,19 +2576,24 @@ form.toggle.flairtoggle:after {
         background-position-y: -1785px;
     }
 }
-
 .flair-noelle1 {
-	background: url(%%r2%%) -16px -1845px;
-	height: 28px;
-	line-height: 28px;
-	padding-left: 24px;
-    transition: all .2s;
+    background: url(%%r2%%) -16px -1845px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 24px;
+    transition: all 0.2s;
 }
 .flair-noelle1:hover {
-	height: 42px;
-	line-height: 42px;
-	transition: all .2s;
-	animation: nbox 1.3s .2s steps(13) forwards;
+    height: 42px;
+    line-height: 42px;
+    transition: all 0.2s;
+    animation: nbox 1.3s 0.2s steps(13) forwards;
+}
+.flair-berdly1,
+.flair-berdly1:hover,
+.flair-spamton,
+.flair-spamton:hover {
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
 }
 @keyframes nbox {
     from {
@@ -3417,20 +2603,16 @@ form.toggle.flairtoggle:after {
         background-position-y: -2677px;
     }
 }
-
 .flair-spamton {
-	background: url(%%r2%%) -6px -2750px;
-	padding-left: 24px;
-    transition: padding-left .2s,height .2s,line-height .2s;
+    background: url(%%r2%%) -6px -2750px;
+    padding-left: 24px;
 }
-
 .flair-spamton:hover {
-	height: 35px;
-	line-height: 35px;
-	padding-left: 32px;
-	background-position: -2px -4040px;
-	transition: padding-left .2s,height .2s,line-height .2s;
-	animation: smove .2s forwards,slaugh 2.5s .2s steps(21,end) forwards;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 32px;
+    background-position: -2px -4040px;
+    animation: smove 0.2s forwards, slaugh 2.5s 0.2s steps(21, end) forwards;
 }
 @keyframes smove {
     from {
@@ -3448,107 +2630,97 @@ form.toggle.flairtoggle:after {
         background-position-y: -4040px;
     }
 }
-
 .flair-bgift {
-	padding-left: 16px;
+    padding-left: 16px;
 }
 .flair-bgift:before {
-	background: url(%%r2%%) -7px -4089px;
-	content: "";
-	width: 20px;
-	height: 22px;
-	position: absolute;
-	left: 2px;
+    background: url(%%r2%%) -7px -4089px;
+    width: 20px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
 }
-.flair-bgift:hover:before{
-	animation: imgswap .4s linear forwards;
+.flair-bgift:hover:before {
+    animation: imgswap 0.4s linear forwards;
 }
 @keyframes imgswap {
     0% {
-        opacity:1;
-        background-position-x: -7px
+        opacity: 1;
+        background-position-x: -7px;
     }
     49.99% {
-        opacity:0;
-        background-position-x: -7px
+        opacity: 0;
+        background-position-x: -7px;
     }
     50% {
-        opacity:0;
-        background-position-x: -35px
+        opacity: 0;
+        background-position-x: -35px;
     }
     100% {
-        opacity:1;
-        background-position-x: -35px
+        opacity: 1;
+        background-position-x: -35px;
     }
 }
-
 .flair-berdly1 {
-	background: url(%%r2%%) -7px -4115px;
+    background: url(%%r2%%) -7px -4115px;
     height: 25px;
     line-height: 25px;
     padding-left: 23px;
-    transition: padding-left .2s,height .2s,line-height .2s;
 }
 .flair-berdly1:hover {
-	padding-left: 27px;
-	height: 38px;
-	line-height: 38px;
-	transition: padding-left .2s,height .2s,line-height .2s;
-    animation: bshake 1.5s .2s linear forwards;
+    padding-left: 27px;
+    height: 38px;
+    line-height: 38px;
+    animation: bshake 1.5s 0.2s linear forwards;
 }
 @keyframes bshake {
     0% {
-        background-position: -3px -4158px
+        background-position: -3px -4158px;
     }
     4% {
-        background-position: -11px -4158px
+        background-position: -11px -4158px;
     }
     8% {
-        background-position: -5px -4158px
+        background-position: -5px -4158px;
     }
     12% {
-        background-position: -9px -4158px
+        background-position: -9px -4158px;
     }
-    16% {
-        background-position: -7px -4158px
-    }
+    16%,
     49.99% {
-        background-position: -7px -4158px
+        background-position: -7px -4158px;
     }
     50% {
-        background-position: -7px -4200px
+        background-position: -7px -4200px;
     }
     54% {
-        background-position: -15px -4200px
+        background-position: -15px -4200px;
     }
     58% {
-        background-position: -9px -4200px
+        background-position: -9px -4200px;
     }
     62% {
-        background-position: -13px -4200px
+        background-position: -13px -4200px;
     }
+    100%,
     66% {
-        background-position: -11px -4200px
-    }
-    100% {
-        background-position: -11px -4200px
+        background-position: -11px -4200px;
     }
 }
-.flair-roulx1{
+.flair-roulx1 {
     background: url(%%r2wide%%) -38px 0;
     padding-left: 30px;
     height: 30px;
     line-height: 30px;
-    transition: all .2s;
+    transition: all 0.2s;
 }
-
 .flair-roulx1:hover {
-	height: 45px;
-	line-height: 45px;
-	padding-left: 65px;
-	transition: all .2s;
-	background-position-x: -2px;
-    animation: avast .3s .2s steps(3) forwards;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 65px;
+    transition: all 0.2s;
+    background-position-x: -2px;
+    animation: avast 0.3s 0.2s steps(3) forwards;
 }
 @keyframes avast {
     from {
@@ -3558,18 +2730,18 @@ form.toggle.flairtoggle:after {
         background-position-y: -198px;
     }
 }
-.flair-berdly2{
+.flair-berdly2 {
     background: url(%%r2%%) -7px -4240px;
     padding-left: 30px;
-    transition: all .2s;
+    transition: all 0.2s;
 }
 .flair-berdly2:hover {
-	padding-left: 38px;
-	height: 38px;
-	line-height: 38px;
-	background-position-x: -3px;
-    transition: all .2s;
-    animation: flap .3s 10 steps(1), hadjust .2s 3s forwards, strangle .2s 3s infinite steps(3);
+    padding-left: 38px;
+    height: 38px;
+    line-height: 38px;
+    background-position-x: -3px;
+    transition: all 0.2s;
+    animation: flap 0.3s 10 steps(1), hadjust 0.2s 3s forwards, strangle 0.2s 3s infinite steps(3);
 }
 @keyframes flap {
     0% {
@@ -3582,20 +2754,20 @@ form.toggle.flairtoggle:after {
 @keyframes hadjust {
     0% {
         padding-left: 38px;
-        background-position-x: -3px
+        background-position-x: -3px;
     }
     25% {
-        background-position-x: 2px
+        background-position-x: 2px;
     }
     50% {
-        background-position-x: -2px
+        background-position-x: -2px;
     }
     75% {
-        background-position-x: 1px
+        background-position-x: 1px;
     }
     100% {
         padding-left: 43px;
-        background-position-x: 0
+        background-position-x: 0;
     }
 }
 @keyframes strangle {
@@ -3606,17 +2778,17 @@ form.toggle.flairtoggle:after {
         background-position-y: -4472px;
     }
 }
-.flair-berdly3{
+.flair-berdly3 {
     background: url(%%r2wide%%) -37px -277px;
-    transition: all .2s;
+    transition: all 0.2s;
 }
 .flair-berdly3:hover {
-	padding-left: 58px;
-	height: 45px;
-	line-height: 45px;
-	background-position-x: -22px;
-	transition: all .2s;
-    animation: hadjust2 .2s forwards, halberd 1.5s .2s steps(13,end) forwards;
+    padding-left: 58px;
+    height: 45px;
+    line-height: 45px;
+    background-position-x: -22px;
+    transition: all 0.2s;
+    animation: hadjust2 0.2s forwards, halberd 1.5s 0.2s steps(13, end) forwards;
 }
 @keyframes hadjust2 {
     0% {
@@ -3634,33 +2806,36 @@ form.toggle.flairtoggle:after {
         background-position-y: -975px;
     }
 }
-
 .flair-susie6 {
     background: url(%%r2%%) -16px -4476px;
-	padding-left: 24px;
-    transition: all .2s;
+    padding-left: 24px;
+    transition: all 0.2s;
 }
 .flair-susie6:hover {
-	padding-left: 46px;
-	height: 35px;
-	line-height: 35px;
-	transition: all .2s;
-    animation: trigger 1s forwards, sshake .4s 1s infinite;
+    padding-left: 46px;
+    height: 35px;
+    line-height: 35px;
+    transition: all 0.2s;
+    animation: trigger 1s forwards, sshake 0.4s 1s infinite;
+}
+.flair-kris6,
+.flair-kris6:hover,
+.flair-noelle2,
+.flair-noelle2:hover,
+.flair-susie7,
+.flair-susie7:hover {
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
 }
 @keyframes trigger {
     0% {
         background-position: -16px -4476px;
     }
-    20% {
-        background-position: -6px -4476px;
-    }
+    20%,
     39.99% {
         background-position: -6px -4476px;
     }
+    100%,
     40% {
-        background-position: -6px -4529px;
-    }
-    100% {
         background-position: -6px -4529px;
     }
 }
@@ -3693,30 +2868,24 @@ form.toggle.flairtoggle:after {
         background-position: -7px -4575px;
     }
 }
-
 .flair-tv {
-	padding-left: 31px;
-	height: 26px;
-	background-color: #000 !important;
-	line-height: 26px;
-	color: #aaa;
+    padding-left: 31px;
+    height: 26px;
+    background-color: #000 !important;
+    line-height: 26px;
 }
-
 .flair-tv:before {
-	content: "";
-	position: absolute;
-	width: 29px;
-	height: 18px;
-	left: 5px;
-	background: url(%%r2%%) -1px -4623px;
-	top: 4px;
-    animation: static .5s steps(4,end) infinite;
+    position: absolute;
+    width: 29px;
+    height: 18px;
+    left: 5px;
+    background: url(%%r2%%) -1px -4623px;
+    top: 4px;
+    animation: static 0.5s steps(4, end) infinite;
 }
-
 .flair-tv:hover:before {
-	background-position-x: 29px;
+    background-position-x: 29px;
 }
-
 @keyframes static {
     0% {
         background-position-y: -4623px;
@@ -3725,12 +2894,10 @@ form.toggle.flairtoggle:after {
         background-position-y: -4703px;
     }
 }
-
-.flair-banana{
+.flair-banana {
     background: url(%%r2%%) 3px -4704px;
-    animation: rotata 1s steps(8,end) infinite;
+    animation: rotata 1s steps(8, end) infinite;
 }
-
 @keyframes rotata {
     0% {
         background-position-y: -4704px;
@@ -3739,20 +2906,16 @@ form.toggle.flairtoggle:after {
         background-position-y: -4872px;
     }
 }
-
-.flair-susie7{
+.flair-susie7 {
     background: url(%%r2%%) -5px -4877px;
     padding-left: 24px;
-    transition: padding-left .2s,height .2s,line-height .2s;
 }
 .flair-susie7:hover {
-	height: 54px;
-	line-height: 54px;
-	padding-left: 32px;
-    transition: padding-left .2s,height .2s,line-height .2s;
-    animation: sajust .2s forwards, sjump 3s .2s steps(23,end) forwards;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 32px;
+    animation: sajust 0.2s forwards, sjump 3s 0.2s steps(23, end) forwards;
 }
-
 @keyframes sajust {
     0% {
         background-position: -5px -4877px;
@@ -3769,17 +2932,14 @@ form.toggle.flairtoggle:after {
         background-position-y: -6114px;
     }
 }
-
-.flair-kris6{
+.flair-kris6 {
     background: url(%%r2%%) -5px -6172px;
     padding-left: 24px;
-    transition: padding-left .2s,height .2s,line-height .2s;
 }
 .flair-kris6:hover {
     height: 42px;
     line-height: 42px;
-    transition: padding-left .2s,height .2s,line-height .2s;
-    animation: kjump 3s .2s steps(20,end) forwards;
+    animation: kjump 3s 0.2s steps(20, end) forwards;
 }
 @keyframes kjump {
     0% {
@@ -3789,19 +2949,16 @@ form.toggle.flairtoggle:after {
         background-position-y: -7012px;
     }
 }
-
-.flair-noelle2{
+.flair-noelle2 {
     background: url(%%r2%%) -5px -7061px;
     height: 30px;
     line-height: 30px;
-    transition: padding-left .2s,height .2s,line-height .2s;
 }
 .flair-noelle2:hover {
-	height: 48px;
-	line-height: 48px;
-	transition: padding-left .2s,height .2s,line-height .2s;
-	padding-left: 22px;
-    animation: njump .4s .2s steps(5,end) forwards, gamig .3s .6s steps(1) infinite;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 22px;
+    animation: njump 0.4s 0.2s steps(5, end) forwards, gamig 0.3s 0.6s steps(1) infinite;
 }
 @keyframes njump {
     0% {
@@ -3819,44 +2976,38 @@ form.toggle.flairtoggle:after {
         background-position-y: -7355px;
     }
 }
-
-.flair-ralsei5{
+.flair-ralsei5 {
     background: url(%%r2%%) -10px -7409px;
-    transition: background-position-y 0s,height .2s,line-height .2s, padding-left .2s, background-position-x .2s;
+    transition: background-position-y 0s, height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
 }
-
 .flair-ralsei5:hover {
-	background-position: -6px -7456px;
-	height: 42px;
-	line-height: 42px;
-	transition: background-position-y 0s .4s,height .2s,line-height .2s, padding-left .2s, background-position-x .2s;
-	padding-left: 30px;
+    background-position: -6px -7456px;
+    height: 42px;
+    line-height: 42px;
+    transition: background-position-y 0s 0.4s, height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+    padding-left: 30px;
 }
-
 .flair-trash {
-	background: url(%%r2%%) -9px -7500px;
-	height: 31px;
-	line-height: 31px;
-	padding-left: 28px;
+    background: url(%%r2%%) -9px -7500px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 28px;
 }
-
 .flair-trash:hover {
-	background-position-y: -7530px;
+    background-position-y: -7530px;
 }
-
 .flair-vase {
-	background: url(%%r2%%) -27px -7579px;
-	height: 32px;
-	line-height: 32px;
-	padding-left: 19px;
+    background: url(%%r2%%) -27px -7579px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 19px;
 }
-
 .flair-vase:hover {
-	height: 48px;
-	line-height: 48px;
-	transition: height .2s,line-height .2s, padding-left .2s;
-	padding-left: 43px;
-    animation: sshift .2s forwards, kick .3s .5s steps(4,end) forwards;
+    height: 48px;
+    line-height: 48px;
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
+    padding-left: 43px;
+    animation: sshift 0.2s forwards, kick 0.3s 0.5s steps(4, end) forwards;
 }
 @keyframes sshift {
     0% {
@@ -3874,23 +3025,21 @@ form.toggle.flairtoggle:after {
         background-position-y: -7755px;
     }
 }
-
 .flair-maus {
     background: url(%%r2%%) -6px -7824px;
-	height: 16px;
-	line-height: 16px;
-	padding-left: 32px;
-    animation: maus 1s steps(8,end) infinite;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 32px;
+    animation: maus 1s steps(8, end) infinite;
     overflow: hidden;
 }
 .flair-maus:before {
     background: url(%%r2%%) -7px -7939px;
-	content: "";
-	position: absolute;
-	width: 38px;
-	height: 23px;
-	left: 1px;
-	top: -23px;
+    position: absolute;
+    width: 38px;
+    height: 23px;
+    left: 1px;
+    top: -23px;
 }
 @keyframes maus {
     0% {
@@ -3900,16 +3049,15 @@ form.toggle.flairtoggle:after {
         background-position-y: -7936px;
     }
 }
-
 .flair-maus:hover {
     height: 25px;
-	line-height: 25px;
-    animation: mmove .2s forwards;
-    transition: height .2s,line-height .2s;
+    line-height: 25px;
+    animation: mmove 0.2s forwards;
+    transition: height 0.2s, line-height 0.2s;
 }
 .flair-maus:hover:before {
-	top: 1px;
-	transition: top ease-in .2s .2s;
+    top: 1px;
+    transition: top ease-in 0.2s 0.2s;
 }
 @keyframes mmove {
     0% {
@@ -3919,24 +3067,25 @@ form.toggle.flairtoggle:after {
         background-position-y: -7815px;
     }
 }
-
 .flair-mauswheel {
     background: url(%%r2%%) -17px -7966px;
-	padding-left: 23px;
-	height: 17px;
-	line-height: 17px;
-    transition: all .2s;
-    animation: wheel .7s steps(6,end) infinite;
+    padding-left: 23px;
+    height: 17px;
+    line-height: 17px;
+    transition: all 0.2s;
+    animation: wheel 0.7s steps(6, end) infinite;
 }
-
 .flair-mauswheel:hover {
-	height: 60px;
-	line-height: 60px;
-	padding-left: 60px;
-	background-position-x: 1px;
-    transition: all .2s;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 60px;
+    background-position-x: 1px;
+    transition: all 0.2s;
 }
-
+.flair-noelle3,
+.flair-noelle3:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
+}
 @keyframes wheel {
     0% {
         background-position-y: -7966px;
@@ -3945,32 +3094,25 @@ form.toggle.flairtoggle:after {
         background-position-y: -8326px;
     }
 }
-
 .flair-cheese {
-    background: url(%%r2%%) -4px -8328px
+    background: url(%%r2%%) -4px -8328px;
 }
-
 .flair-cheese:hover {
     background-position-y: -8348px;
 }
-
 .flair-noelle3 {
     background: url(%%r2%%) -4px -8372px;
-	height: 27px;
-	line-height: 27px;
-	padding-left: 30px;
-	transition: height .2s, line-height .2s, padding-left .2s;
-    animation: nthink .6s steps(1) infinite;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 30px;
+    animation: nthink 0.6s steps(1) infinite;
 }
-
 .flair-noelle3:hover {
-	height: 34px;
-	line-height: 34px;
-	padding-left: 47px;
-	transition: height .2s, line-height .2s, padding-left .2s;
-    animation: nact .7s steps(7,end) .2s forwards;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 47px;
+    animation: nact 0.7s steps(7, end) 0.2s forwards;
 }
-
 @keyframes nthink {
     0% {
         background-position-y: -8372px;
@@ -3979,7 +3121,6 @@ form.toggle.flairtoggle:after {
         background-position-y: -8420px;
     }
 }
-
 @keyframes nact {
     0% {
         background-position-y: -8468px;
@@ -3988,21 +3129,24 @@ form.toggle.flairtoggle:after {
         background-position-y: -8804px;
     }
 }
-
 .flair-swatchling {
-	background: url(%%r2%%) -18px -8857px;
-	transition: all .2s
+    background: url(%%r2%%) -18px -8857px;
+    transition: all 0.2s;
 }
-
 .flair-swatchling:hover {
-	height: 47px;
-	line-height: 47px;
-	padding-left: 43px;
-	transition: all .2s;
-	background-position-x: -6px;
-    animation: sclap .2s steps(1) .3s infinite;
+    height: 47px;
+    line-height: 47px;
+    padding-left: 43px;
+    transition: all 0.2s;
+    background-position-x: -6px;
+    animation: sclap 0.2s steps(1) 0.3s infinite;
 }
-
+.flair-capn,
+.flair-capn:hover,
+.flair-kk,
+.flair-kk:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+}
 @keyframes sclap {
     0% {
         background-position-y: -8906px;
@@ -4011,28 +3155,24 @@ form.toggle.flairtoggle:after {
         background-position-y: -8955px;
     }
 }
-
 .flair-hacker {
     background: url(%%r2%%) -18px -9010px;
-	height: 27px;
-	line-height: 27px;
+    height: 27px;
+    line-height: 27px;
 }
 .flair-hacker:hover {
     background-position-y: -9048px;
 }
-
 .flair-capn {
     background: url(%%r2%%) -14px -9086px;
-	padding-left: 29px;
-    transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
+    padding-left: 29px;
 }
 .flair-capn:hover {
-	height: 31px;
-	line-height: 31px;
-	padding-left: 37px;
-	transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
-	background-position-x: -11px;
-    animation: capn .2s steps(3,end) .2s alternate infinite;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 37px;
+    background-position-x: -11px;
+    animation: capn 0.2s steps(3, end) 0.2s alternate infinite;
 }
 @keyframes capn {
     0% {
@@ -4042,19 +3182,20 @@ form.toggle.flairtoggle:after {
         background-position-y: -9188px;
     }
 }
-
 .flair-kk {
     background: url(%%r2%%) -14px -9187px;
-	padding-left: 29px;
-    transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
+    padding-left: 29px;
 }
 .flair-kk:hover {
-	height: 37px;
-	line-height: 37px;
-	padding-left: 44px;
-	transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
-	background-position-x: -5px;
-	animation: kk .5s steps(4,end) .2s infinite
+    height: 37px;
+    line-height: 37px;
+    padding-left: 44px;
+    background-position-x: -5px;
+    animation: kk 0.5s steps(4, end) 0.2s infinite;
+}
+.flair-sweets,
+.flair-sweets:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
 }
 @keyframes kk {
     0% {
@@ -4064,19 +3205,16 @@ form.toggle.flairtoggle:after {
         background-position-y: -9351px;
     }
 }
-
 .flair-sweets {
     background: url(%%r2%%) -11px -9352px;
-	padding-left: 32px;
+    padding-left: 32px;
     height: 25px;
     line-height: 25px;
-    transition: height .2s, line-height .2s, padding-left .2s;
 }
 .flair-sweets:hover {
-	height: 30px;
-	line-height: 30px;
-    transition: height .2s, line-height .2s, padding-left .2s;
-	animation: sweets .2s steps(3,end) .2s alternate infinite;
+    height: 30px;
+    line-height: 30px;
+    animation: sweets 0.2s steps(3, end) 0.2s alternate infinite;
 }
 @keyframes sweets {
     0% {
@@ -4086,22 +3224,19 @@ form.toggle.flairtoggle:after {
         background-position-y: -9448px;
     }
 }
-
 .flair-nubert {
     background: url(%%r2%%) -18px -9452px;
-	height: 19px;
+    height: 19px;
     line-height: 19px;
 }
-
 .flair-nubert:hover {
-	padding-left: 25px;
-	background-position-x: -16px;
-	height: 23px;
+    padding-left: 25px;
+    background-position-x: -16px;
+    height: 23px;
     line-height: 23px;
-	transition: all .2s;
-    animation: nmove .2s forwards, nubert .6s steps(4,end) .2s infinite;
+    transition: all 0.2s;
+    animation: nmove 0.2s forwards, nubert 0.6s steps(4, end) 0.2s infinite;
 }
-
 @keyframes nmove {
     0% {
         background-position-y: -9452px;
@@ -4110,7 +3245,6 @@ form.toggle.flairtoggle:after {
         background-position-y: -9448px;
     }
 }
-
 @keyframes nubert {
     0% {
         background-position-y: -9448px;
@@ -4119,19 +3253,24 @@ form.toggle.flairtoggle:after {
         background-position-y: -9540px;
     }
 }
-
 .flair-trashy {
     background: url(%%r2%%) -17px -9551px;
 }
-
 .flair.flair-trashy:hover {
-	padding-left: 52px;
-	height: 38px;
-	line-height: 38px;
-	transition: all .2s;
-    animation: tmove .2s forwards, trashy .6s steps(4,end) .2s infinite;
+    padding-left: 52px;
+    height: 38px;
+    line-height: 38px;
+    transition: all 0.2s;
+    animation: tmove 0.2s forwards, trashy 0.6s steps(4, end) 0.2s infinite;
 }
-
+.flair-oma,
+.flair-oma:hover,
+.flair-mike,
+.flair-mike:hover,
+.flair-gmike,
+.flair-gmike:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+}
 @keyframes tmove {
     0% {
         background-position: -17px -9551px;
@@ -4140,7 +3279,6 @@ form.toggle.flairtoggle:after {
         background-position: -2px -9542px;
     }
 }
-
 @keyframes trashy {
     0% {
         background-position-y: -9542px;
@@ -4149,23 +3287,18 @@ form.toggle.flairtoggle:after {
         background-position-y: -9698px;
     }
 }
-
-
 .flair-oma {
     background: url(%%r2%%) -14px -9703px;
-	padding-left: 32px;
-	height: 27px;
-	line-height: 27px;
-    transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
+    padding-left: 32px;
+    height: 27px;
+    line-height: 27px;
 }
-
 .flair-oma:hover {
-	padding-left: 52px;
-	height: 47px;
-	line-height: 47px;
-	background-position-x: -3px;
-	transition: height .2s, line-height .2s, padding-left .2s, background-position-x .2s;
-    animation: oma .6s steps(6,end) .2s infinite;
+    padding-left: 52px;
+    height: 47px;
+    line-height: 47px;
+    background-position-x: -3px;
+    animation: oma 0.6s steps(6, end) 0.2s infinite;
 }
 
 @keyframes oma {
@@ -4177,21 +3310,31 @@ form.toggle.flairtoggle:after {
     }
 }
 
+.flair-wire,
+.flair-wire:hover {
+    transition: height 0.2s, line-height 0.2s;
+}
+
 .flair-wire {
     background: url(%%r2%%) -10px -10504px;
-	padding-left: 38px;
-	height: 28px;
-	line-height: 28px;
-	transition: height .2s,line-height .2s;
+    padding-left: 38px;
+    height: 28px;
+    line-height: 28px;
 }
-
 .flair-wire:hover {
-	height: 43px;
-	line-height: 43px;
-	transition: height .2s, line-height .2s;
-    animation: unplug .8s steps(11,end) .2s forwards;
+    height: 43px;
+    line-height: 43px;
+    animation: unplug 0.8s steps(11, end) 0.2s forwards;
 }
-
+.flair-poppup,
+.flair-queen2,
+.flair-queen2:hover,
+.flair-sneo,
+.flair-sneo:hover,
+.flair-tasque,
+.flair-tasque:hover {
+    transition: all 0.2s;
+}
 @keyframes unplug {
     0% {
         background-position-y: -10504px;
@@ -4200,22 +3343,18 @@ form.toggle.flairtoggle:after {
         background-position-y: -10010px;
     }
 }
-
 .flair-poppup {
     background: url(%%r2%%) -7px -10557px;
-	padding-left: 42px;
-	height: 33px;
-	line-height: 33px;
-    transition: all .2s;
+    padding-left: 42px;
+    height: 33px;
+    line-height: 33px;
 }
-
 .flair-poppup:hover {
-	height: 55px;
-	line-height: 55px;
-	transition: all .2s;
-    animation: poppup .6s steps(6,end) .2s infinite;
+    height: 55px;
+    line-height: 55px;
+    transition: all 0.2s;
+    animation: poppup 0.6s steps(6, end) 0.2s infinite;
 }
-
 @keyframes poppup {
     0% {
         background-position-y: -10557px;
@@ -4224,18 +3363,15 @@ form.toggle.flairtoggle:after {
         background-position-y: -10929px;
     }
 }
-
 .flair-queen2 {
     background: url(%%r2%%) -5px -10930px;
-    transition: all .2s;
 }
 .flair-queen2:hover {
-	padding-left: 42px;
-	height: 49px;
-	line-height: 49px;
-	background-position-x: -1px;
-	transition: all .2s;
-	animation: run 3s .4s steps(14,end) forwards;
+    padding-left: 42px;
+    height: 49px;
+    line-height: 49px;
+    background-position-x: -1px;
+    animation: run 3s 0.4s steps(14, end) forwards;
 }
 @keyframes run {
     from {
@@ -4245,19 +3381,15 @@ form.toggle.flairtoggle:after {
         background-position-y: -11666px;
     }
 }
-
 .flair-sneo {
     background: url(%%r2%%) -7px -11730px;
-    transition: all .2s;
 }
-
 .flair-sneo:hover {
-	padding-left: 50px;
-	height: 55px;
-	line-height: 55px;
-	background-position-x: -3px;
-	transition: all .2s;
-    animation: sneo 1.5s .4s steps(9,end) infinite;
+    padding-left: 50px;
+    height: 55px;
+    line-height: 55px;
+    background-position-x: -3px;
+    animation: sneo 1.5s 0.4s steps(9, end) infinite;
 }
 @keyframes sneo {
     from {
@@ -4267,22 +3399,24 @@ form.toggle.flairtoggle:after {
         background-position-y: -12350px;
     }
 }
-
 .flair-tasque {
     background: url(%%r2wide%%) -10px -1028px;
-	transition: all .2s;
-	padding-left: 25px;
-	height: 29px;
-	line-height: 29px;
+    padding-left: 25px;
+    height: 29px;
+    line-height: 29px;
 }
-
 .flair-tasque:hover {
-	transition: all .2s;
-	padding-left: 71px;
-	height: 40px;
-	line-height: 40px;
-	background-position-x: -6px;
-	animation: tasque .8s steps(6,end) infinite;
+    padding-left: 71px;
+    height: 40px;
+    line-height: 40px;
+    background-position-x: -6px;
+    animation: tasque 0.8s steps(6, end) infinite;
+}
+.flair-viro,
+.flair-viro:hover,
+.flair-wwire,
+.flair-wwire:hover {
+    transition: height 0.2s, line-height 0.2s;
 }
 @keyframes tasque {
     from {
@@ -4292,11 +3426,10 @@ form.toggle.flairtoggle:after {
         background-position-y: -1280px;
     }
 }
-
 .flair-car {
-	background: url(%%r2%%) -3px -12350px;
+    background: url(%%r2%%) -3px -12350px;
     padding-left: 23px;
-    animation: car .7s steps(4,end) infinite;
+    animation: car 0.7s steps(4, end) infinite;
 }
 @keyframes car {
     from {
@@ -4306,14 +3439,12 @@ form.toggle.flairtoggle:after {
         background-position-y: -12438px;
     }
 }
-
 .flair-viro {
-	background: url(%%r2%%) -7px -12443px;
-	height: 32px;
-	line-height: 32px;
-	padding-left: 31px;
-	transition: height .2s,line-height .2s;
-    animation: viro .6s steps(6,end) infinite;
+    background: url(%%r2%%) -7px -12443px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 31px;
+    animation: viro 0.6s steps(6, end) infinite;
 }
 @keyframes viro {
     from {
@@ -4323,30 +3454,38 @@ form.toggle.flairtoggle:after {
         background-position-y: -12761px;
     }
 }
-
 .flair-viro:hover {
-	transition: height .2s,line-height .2s;
-	animation: none;
-	background-position: -7px -12760px;
-	height: 42px;
-	line-height: 42px;
+    animation: none;
+    background-position: -7px -12760px;
+    height: 42px;
+    line-height: 42px;
 }
-
 .flair-wwire {
     background: url(%%r2%%) -4px -12816px;
-	padding-left: 44px;
-	height: 28px;
-	line-height: 28px;
-	transition: height .2s,line-height .2s;
+    padding-left: 44px;
+    height: 28px;
+    line-height: 28px;
 }
-
 .flair-wwire:hover {
-	height: 50px;
-	line-height: 50px;
-	transition: height .2s, line-height .2s;
-    animation: wwire 1s steps(12,end) .2s infinite;
+    height: 50px;
+    line-height: 50px;
+    animation: wwire 1s steps(12, end) 0.2s infinite;
 }
-
+.flair-game:hover,
+.flair-queen3,
+.flair-queen3:hover,
+.flair-ralsei6,
+.flair-ralsei6:hover,
+.flair-starw,
+.flair-starw:hover,
+.flair-throne,
+.flair-tmanager,
+.flair-tmanager:hover,
+.flair-what,
+.flair-what:hover,
+.flair.flair-throne:hover {
+    transition: all 0.2s;
+}
 @keyframes wwire {
     0% {
         background-position-y: -12816px;
@@ -4355,295 +3494,145 @@ form.toggle.flairtoggle:after {
         background-position-y: -13596px;
     }
 }
-
-.flair-tmanager{
+.flair-tmanager {
     background: url(%%r2%%) -24px -13601px;
-    transition: all .2s;
 }
 .flair-tmanager:hover {
-	height: 47px;
-	line-height: 47px;
-	background-position-x: -6px;
-	padding-left: 48px;
-	transition: all .2s;
+    height: 47px;
+    line-height: 47px;
+    background-position-x: -6px;
+    padding-left: 48px;
 }
-.flair-ralsei6{
+.flair-ralsei6 {
     background: url(%%r2%%) -19px -13655px;
-    transition: all .2s;
 }
 .flair-ralsei6:hover {
-	height: 41px;
-	line-height: 41px;
-	transition: all .2s;
+    height: 41px;
+    line-height: 41px;
 }
-.flair-dcone{
+.flair-dcone {
     background: url(%%r2%%) -18px -13705px;
 }
-.flair-what{
+.flair-what {
     background: url(%%r2%%) -17px -13731px;
-    transition: all .2s;
 }
 .flair-what:hover {
-	height: 60px;
-	line-height: 60px;
-	background-position-x: -7px;
-	padding-left: 45px;
-    transition: all .2s;
+    height: 60px;
+    line-height: 60px;
+    background-position-x: -7px;
+    padding-left: 45px;
 }
 .flair-game {
-	background: url(%%r2%%) -16px -13810px;
-	padding-left: 24px;
-    transition: all .2s;
+    background: url(%%r2%%) -16px -13810px;
+    padding-left: 24px;
+    transition: all 0.2s;
 }
 .flair-game:hover {
-	background-position: -5px -13803px;
-	height: 40px;
-	line-height: 40px;
-	padding-left: 45px;
-	transition: all .2s;
+    background-position: -5px -13803px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 45px;
 }
-.flair-queen3{
+.flair-queen3 {
     background: url(%%r2%%) -11px -13875px;
-    transition: all .2s;
 }
 .flair-queen3:hover {
-	background-position-x: -6px;
-	height: 51px;
-	line-height: 51px;
-	padding-left: 42px;
-	transition: all .2s;
+    background-position-x: -6px;
+    height: 51px;
+    line-height: 51px;
+    padding-left: 42px;
 }
-.flair-starw{
+.flair-starw {
     background: url(%%r2%%) -18px -13930px;
-    transition: all .2s;
 }
 .flair-starw:hover {
-	height: 36px;
-	line-height: 36px;
-	background-position-x: -11px;
-	padding-left: 31px;
-	transition: all .2s;
+    height: 36px;
+    line-height: 36px;
+    background-position-x: -11px;
+    padding-left: 31px;
 }
-.flair-throne{
+.flair-throne {
     background: url(%%r2%%) -18px -13973px;
-    transition: all .2s;
 }
 .flair.flair-throne:hover {
-	height: 32px;
-	line-height: 32px;
-	transition: all .2s;
+    height: 32px;
+    line-height: 32px;
 }
-.flair-sgift{
+.flair-sgift {
     background: url(%%r2%%) -18px -14015px;
 }
+.flair-bderp {
+    text-indent: 0;
+    padding-left: 30px;
+    padding-right: 2px;
+}
+.flair-bderp::after {
+    background: url(%%v%%) -59px -64px;
+    background-size: 1560px;
+    width: 28px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+}
+.flair-mike, .flair-gmike {
+    background: url(%%r2%%) -9px -14047px;
+    padding-left: 37px;
+    height: 33px;
+    line-height: 33px;
+}
 
-/*
-@media screen and (max-width:1600px) {
-    .footer {
-        height: 350px
+.flair-gmike {
+    background-position-y: -14437px;
+}
+
+.flair-mike:hover, .flair-gmike:hover {
+    padding-left: 41px;
+    height: 49px;
+    line-height: 49px;
+    background-position-x: -6px;
+    animation: mike 1s steps(5,end) 0.2s infinite;
+}
+
+.flair-gmike:hover {
+    animation: gmike 1s steps(5,end) 0.2s infinite;
+}
+
+@keyframes mike {
+    0% {
+        background-position-y: -14047px;
+    }
+    100% {
+        background-position-y: -14372px;
     }
 }
-body .userTagLink.hasTag {
-    background-color: #ffb400!important;
-    border: 1px solid #ffb400!important
-}
 
-#RESSubredditGroupDropdown .RESShortcutsCurrentSub a,
-#sr-header-area a.RESShortcutsCurrentSub {
-    color: #c01600!important
+@keyframes gmike {
+    0% {
+        background-position-y: -14437px;
+    }
+    100% {
+        background-position-y: -14762px;
+    }
 }
-
-#RESHoverBody,
-#RESHoverContainer,
-#progressIndicator,
-.NERPageMarker {
-    background: #1a1714!important;
-    color: #e0e0e0!important;
-    border: 0!important
-}
-
-.RESDialogSmall:before,
-.hover-bubble.anchor-left.anchor-right:before,
-.hover-bubble.anchor-right.anchor-right:before {
-    border-left-color: #444240!important
-}
-
-.RESDialogSmall:after,
-.hover-bubble.anchor-left.anchor-right:after,
-.hover-bubble.anchor-right.anchor-right:after {
-    border-left-color: #232120!important
-}
-
-#RESHoverContainer.right:after,
-#RESHoverContainer.right:before {
-    border-color: transparent #2e2a26!important
-}
-
-.RESCloseButton {
-    background: #1a1714;
-    border: 1px solid #2e2a26;
-    color: #e0e0e0
-}
-
-.RESCloseButton:hover {
-    background: #2e2a26;
-    color: #e0e0e0;
-    border: 1px solid #1a1714
-}
-
-#userbarToggle {
-    background: #5f5c59;
-    color: #e0e0e0;
-    border-right: #686665
-}*/
 
 .RESDashboardToggle,
 .RESshortcutside {
-    background: 0 0!important;
+    background: 0 0 !important;
 }
-/*
-body.comments-page div.content .comment {
-    background-color: #f8f8f8!important;
-    padding-bottom: 0!important;
-    border: 1px solid #aaa!important;
-    border-left-width: 3px!important
-}*/
-
-:lang(dm) body.comments-page div.content .comment {
-    background-color: #202020!important;
-    border-color: #777!important
-}
-
 body.comments-page div.content .comment:hover {
-    border-left-color: #a44!important
+    border-left-color: #a44 !important;
 }
-/*
-.res-commentBoxes .comment,
-.res-commentBoxes.res-commentBoxes-rounded .comment {
-    border: 0!important;
-    border-radius: 0!important;
-    overflow: visible!important
-}*/
-
-/*#RESStyleSheetTipPane {
-    margin-right: 382px!important;
-    width: auto
-}
-
-.RESDialogSmall {
-    background: #2e2a26!important;
-    color: #e0e0e0;
-    border: 1px solid #444240
-}
-
-.RESDialogSmall>h3 {
-    color: #e0e0e0;
-    height: 20px;
-    text-transform: none
-}
-
-.RESDialogSmall .livePreview,
-.usertext-edit .RESDialogSmall .md.RESDialogContents {
-    color: #202020;
-    border: 0;
-    background: #ffa!important
-}
-
-:lang(dm) .RESDialogSmall .livePreview,
-:lang(dm) .usertext-edit .RESDialogSmall .md.RESDialogContents {
-    background: #2e2a26!important;
-    color: #e0e0e0!important
-}
-
-.debuginfo {
-    position: relative
-}*/
-
 .debuginfo .icon {
-    cursor: pointer
+    cursor: pointer;
 }
-
-/*morewikistuff*/
-
-:lang(dm) .md blockquote,
-:lang(dm) .md del {
-    color: #aaa
+#reddit-field,.flairoptionpane a.author,.link .arrow.downmod:after,.link .arrow.upmod:after,.morelink .nub,.side .subscribers .word,.side .users-online .word,.side a[href="https://www.reddit.com/r/deltarune"],.side blockquote table th,.sidebox.create .spacer a,.thing.linkflair-spoilers .thumbnail img,.titlebox .bottom .flair,body.loggedin.subscriber>.content:after,body.loggedin.subscriber>.content:before,html:lang(ns) .link.spoiler,html:lang(ns) .side a[href="https://ns.reddit.com/r/deltarune"],ul li a[href$="#wiki_top"]
+{
+    display: none !important;
 }
-
-/*
-.side .md del {
-    display: block;
-    text-align: center;
-    margin: 0 0 20px;
-    text-decoration: none
+html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"]
+{
+    display: inline-block !important;
 }
-
-.search-expando-button,
-.side .md del a {
-    position: relative;
-    display: block;
-    margin: 0 0 7px;
-    padding: 2px 5px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, .2);
-    background-color: #1a1714;
-    border: 1px solid #444240
-}
-
-.search-expando-button {
-    display: inline-block
-}
-
-.side .md del a:hover,
-.side .md del a[href*="www."],
-html[lang=ns] .side .md del a[href*="ns."],
-html[lang=gp] .side .md del a[href*="gp."] {
-    border: 1px solid #ffb400;
-    background: #4d0400;
-    color: #ffb400
-}
-
-html[lang=ns] .side .md del a[href*="www."],
-html[lang=gp] .side .md del a[href*="www."] {
-    background-color: #1a1714;
-    border: 1px solid #444240
-}
-
-.side .md del a:active {
-    top: 2px;
-    left: 2px;
-    box-shadow: none
-}*/
-
-#reddit-field,
-.flairoptionpane a.author,
-.link .arrow.downmod:after,
-.link .arrow.upmod:after,
-.morelink .nub,
-.side .subscribers .word,
-.side .users-online .word,
-.side a[href="https://www.reddit.com/r/deltarune"],
-.side blockquote table th,
-.sidebox.create .spacer a,
-.thing.linkflair-spoilers .thumbnail img,
-.titlebox .bottom .flair,
-body.loggedin.subscriber>.content:after,
-body.loggedin.subscriber>.content:before,
-html:lang(ns) .link.spoiler,
-html:lang(ns) .side a[href="https://ns.reddit.com/r/deltarune"],
-ul li a[href$="#wiki_top"] {
-    display: none!important
-}
-
-html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"] {
-    display: inline-block!important
-}
-/*
-.commentarea .md {
-    margin-top: 0
-}*/
-
-/*POST RES UPDATE*/
-
 :lang(dm) body.comments-page div.content .comment,
 :lang(dm) body.comments-page div.content .comment .comment,
 :lang(dm) body.comments-page div.content .comment .comment .comment,
@@ -4654,670 +3643,559 @@ html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"] {
 :lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
 :lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 :lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-	background-color: #202020!important;
-	border-color: #777!important
+    background-color: #202020 !important;
+    border-color: #777 !important;
 }
-/*
-body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment .comment:hover,
-body.comments-page div.content .comment .comment:hover,
-body.comments-page div.content .comment:hover {
-	border-left-color: #a44!important
-}*/
-
 .entry.res-selected,
 .res .commentarea .entry.RES-keyNav-activeElement .noncollapsed,
 .res .entry.RES-keyNav-activeElement,
 body .combined-search-page #previoussearch .res-search-pane,
 body ul.res-search-tabs li.res-search-tab-active {
-    background-color: #8882!important
+    background-color: #8882 !important;
 }
-
 .res .commentarea .entry.RES-keyNav-activeElement .md,
 .res .entry.RES-keyNav-activeElement .md-container {
-    background-color: transparent!important
+    background-color: transparent !important;
 }
-
 .voteWeight {
-    background-color: #0002!important
+    background-color: #0002 !important;
 }
-/*
-.tb-bracket-button {
-    border: 1px solid #4d0400!important;
-    background: #4d0400!important;
-    color: #ffb400!important
-}*/
-
 .thing .tagline .author.friend {
-    padding: 4px!important
+    padding: 4px !important;
 }
-
 .thing.comment .tagline .author.friend {
-    padding: 9px 9px 10px!important
+    padding: 9px 9px 10px !important;
 }
-/*
-.search-expando.collapsed:before {
-    background: 0 0
-}
-
-.side .md>h1 a {
-    left: 0;
-    top: 0;
-    display: block
-}*/
-
 #sr-header-area .redesign-beta-optin,
 .flairselector a.title {
-    display: none
+    display: none;
 }
-
 .md .-text,
 .md li,
 .md p,
-.md pre>code,
+.md pre > code,
 .md td,
 .md textarea,
 .md th {
-    color: #202020
+    color: #202020;
 }
-/*
-.message.message-parent.recipient>.entry .head,
-.message.message-reply.recipient>.entry .head {
-    color: inherit
-}
-
-.message .search-result-meta,
-.message .tagline {
-    color: #202020
-}*/
-
 :lang(dm).md .-text,
 :lang(dm).md li,
 :lang(dm).md p,
-:lang(dm).md pre>code,
+:lang(dm).md pre > code,
 :lang(dm).md td,
 :lang(dm).md textarea,
 :lang(dm).md th,
 :lang(dm).message .search-result-meta,
 :lang(dm).message .tagline {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
-
-/*Tab Menu*/
-
 ul.tabmenu {
     height: 15px;
     border: 0;
     top: 6px;
     position: absolute;
-    left: 53px
+    left: 53px;
 }
-
-ul.tabmenu li a{
+ul.tabmenu li a {
     padding: 10px 8px;
-    background: #000!important;
+    background: #000 !important;
     color: #fff;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
-
-ul.tabmenu li a:hover{
-    color: #ccc
+ul.tabmenu li a:hover {
+    color: #ccc;
 }
-
-ul.tabmenu li.selected a{
-    border: 2px solid #e0e0e0!important;
-    border-top-color: #202020!important;
-    border-bottom-color: #202020!important;
-    color: #e0e0e0!important
+ul.tabmenu li.selected a {
+    border: 2px solid #e0e0e0 !important;
+    border-top-color: #202020 !important;
+    border-bottom-color: #202020 !important;
+    color: #e0e0e0 !important;
 }
-
-:lang(dm) ul.tabmenu li.selected a{
-    border-color: #e0e0e0
+:lang(dm) ul.tabmenu li.selected a {
+    border-color: #e0e0e0;
 }
-/*
-.subreddit-rule-item {
-    border: 2px solid transparent
-}
-
-.subreddit-rule-item:hover {
-    border-color: #202020;
-    background: 0 0
-}
-
-:lang(dm).subreddit-rule-item:hover {
-    border-color: #e0e0e0
-}
-
-.gilded-gid1-icon:before,
-.gilded-gid2-icon:before,
-.gilded-gid3-icon:before {
-    background-image: url(%%i%%);
-    background-position: 0 0;
-    width: 16px;
-    height: 16px
-}
-
-.gilded-gid2-icon:before {
-    background-position-x: -16px
-}
-
-.gilded-gid3-icon:before {
-    background-position-x: -32px
-}
-
-.subreddit-rules-page {
-    padding-top: 0;
-    margin-bottom: 10px
-}*/
-
 .subreddit-rules-page:before {
     background: url(%%7%%) -320px -160px;
     width: 370px;
     height: 228px;
     left: 0;
     position: relative;
-    top: -10px
+    top: -10px;
 }
-
-/* Link-flairs */
-	
-	/* Display pop-out link flair at right of post */
-.link .title>.linkflairlabel {
-	background-color: transparent;
-	font: bold 12px Lato,Arial,sans-serif;
-	text-transform: uppercase;
-	width: 95px;
-	position: absolute;
-	left: -35px;
-	margin-top: 34px;
-	transform: rotate(90deg);
-	border: none;
-	text-align: center;
-	letter-spacing: 2px;
-	/* transition: .5s; */
-	opacity: 0;
-	transition: none;
+.link .title > .linkflairlabel {
+    background-color: transparent;
+    font: 700 12px Lato, Arial, sans-serif;
+    text-transform: uppercase;
+    width: 95px;
+    position: absolute;
+    left: -35px;
+    margin-top: 34px;
+    transform: rotate(90deg);
+    border: none;
+    text-align: center;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: none;
 }
-.link:hover .title>.linkflairlabel{
+.link:hover .title > .linkflairlabel {
     opacity: 1;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 }
-	
-/*.comments-page .link .title>.linkflairlabel{display: none;}*/
-
-	/* .FLAIRSELECTOR STYLING */
-	
-	/* styling of linkflairs */
-    
 .flairselector {
-	position: fixed;
-	top: 158px !important;
-	left: 50% !important;
-	margin-left: -275px;
-	width: 540px !important;
-	padding: 5px !important;
-	background: #eee;
+    position: fixed;
+    top: 158px !important;
+    left: 50% !important;
+    margin-left: -275px;
+    width: 540px !important;
+    padding: 5px !important;
+    background: #eee;
 }
-
-/*
-.flairsample-left {
-    text-align: centeortant
-}*/
-
 :lang(dm) .flairselector {
-    background: #2e2a26
+    background: #2e2a26;
 }
-/*
-.flairselector .customizeut {
-    margin-right: 10px;
-    border: 1px solid #606060
-}*/
-
 .flairselector.drop-choices.active {
-    border: 0
+    border: 0;
 }
-/*
-.flairselector h2,
-.flairselector li a,
-.flairselector .flairremove a {
-    color: #ffb400!important;
-    background: none
-}*/
-
-.side .flairselector h2:after {
-    display: block;
-    content: "Please contact the mods directly for flair requests.";
-    padding: 5px 0;
-    font-weight: 400;
-    color: #222
+:lang(dm) .side .flairselector h2:after {
+    color: #eee;
 }
-
-:lang(dm) .side .flairselector h2:after{
-    color: #eee
-}
-
 .side .flairselector form:before {
     text-align: center;
     content: "Keep it short and SFW!";
     font-size: 14px;
     display: block;
-    color: #ffb400
+    color: #ffb400;
 }
-
-.side .flairoptionpane ul {
-	width: 580px !important;
-	max-width: 580px;
-	display: block;
-}
-
 .flairoptionpane {
-	height: calc(100% - 160px);
-	max-height: 50vh;
+    height: calc(100% - 160px);
+    max-height: 50vh;
 }
-
-.flairselector .selected,
-.flairselector li {
-    width: auto!important;
-    height: 45px;
+.side .flairselector .selected,
+.side .flairselector li {
+    width: auto !important;
+    height: 48px !important;
     float: left;
-    border: 0!important
+    border: 0 !important;
 }
-
-.flairselector li .flair:hover {
-pointer-events: none;}
-
+.side .flairselector li .flair:hover {
+    pointer-events: none;
+}
 .flairselector .linkflairlabel {
-	text-transform: uppercase;
-	padding: 3px 3px;
-	width: 75px;
-	text-align: center;
-	opacity: .75;
-	line-height: 1.6em;
-	margin: 0;
-    color:#fff;
+    text-transform: uppercase;
+    padding: 3px;
+    width: 75px;
+    text-align: center;
+    opacity: 0.75;
+    line-height: 1.6em;
+    margin: 0;
+    color: #fff;
 }
-	
 .link .linkflairlabel {
-	border-radius:0;
-	border:none;
-	background-color:#606060;
-	color:#fff;
-	padding:2px;
-	max-width:none
+    border-radius: 0;
+    border: none;
+    background-color: #606060;
+    color: #fff;
+    padding: 2px;
+    max-width: none;
 }
-.flairselector .linkflairlabel:hover{
-	opacity:1!important
+.flairselector .linkflairlabel:hover {
+    opacity: 1 !important;
 }
-.flairselector li,
-.flairselector li:hover {
-	background:transparent!important;
-    height: auto!important
+.flairselector li {
+    background: 0 0 !important;
+    height: auto !important;
+    float: left;
+    width: auto !important;
 }
-	
-	/* styling of flairselector */
 .flairselector a.title {
-	display:none
+    display: none;
 }
-
-.flairselector .flairoptionpane ul{
-	width: 180px!important
-}/* This centers the flairs *
-.entry .flairselector ul li { padding:0!important;text-align: center!important; }
-.entry .flairselector ul {width:auto!important}
-	
-	/* header */
+.flairselector .flairoptionpane ul {
+    width: 180px !important;
+}
+.side .flairoptionpane ul {
+    width: 500px !important;
+    max-width: 580px;
+    display: block;
+}
 .flairselector h2 {
-	color:#fff;
-	background-color:#222;
-	padding-top:2px;
-	margin-bottom:6px;
-	font-size: large
+    color: #fff;
+    background-color: #222;
+    padding-top: 2px;
+    margin-bottom: 6px;
+    font-size: large;
 }
-	
-	/* 'SAVE' button */
-    /*
-.flairselector .customizer { 
-	margin-bottom:7px; 
+.side .md > blockquote:nth-of-type(4) ul {
+    padding-left: 18px;
 }
-
-.flairselector button {
-	margin:0;
-	display: block;
-	position:relative;
-	width:65px;
-	margin:0 auto!important
-}*/
-
-/* CATEGORIES IN SIDEBAR */
-.side .md>blockquote:nth-of-type(4) ul {
-	padding-left:18px
+.side .md > blockquote:nth-of-type(4) ul li {
+    list-style: none;
+    margin: 2px 0;
+    display: inline-block;
+    padding: 0 !important;
+    border: none !important;
 }
-.side .md>blockquote:nth-of-type(4) ul li {
-	list-style: none;
-	margin:2px 0;
-	display:inline-block;
-    padding:0!important;
-    border:none!important
+.side .md > blockquote:nth-of-type(4) ul li:nth-of-type(odd) {
+    margin-right: 10px;
 }
-.side .md>blockquote:nth-of-type(4) ul li:nth-of-type(odd) {
-	margin-right:10px
-}
-.side .md>blockquote:nth-of-type(4) ul li a {
-	display: inline-block;
-	color: #000!important;
-	text-align:center;
-	padding:5px 0;
-	font-family: Arial, Helvetica, sans-serif;
-	border-radius: 3px
-}
-:lang(dm) .side .md>blockquote:nth-of-type(4) ul li a{color: #fff!important;}
-.side .md> blockquote:nth-of-type(4) ul li a:first-of-type {
-	width:90px;
-	opacity:.75
-}
-.side .md>blockquote:nth-of-type(4) ul li a:nth-of-type(2) {
-	background-color:#bbb;
-	width: 25px;
-	margin-left: 3px;
-	opacity:.75
-}
-.side .md>blockquote:nth-of-type(4) ul li a:hover {
-	opacity:1
-}
-/*
-.wiki-page .wiki-page-content .md strong a{
-    padding: 4px;
+.side .md > blockquote:nth-of-type(4) ul li a {
+    display: inline-block;
+    color: #000 !important;
+    text-align: center;
+    padding: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 3px;
-    color: #fff!important
-}*/
-
-	/* INDIVIDUAL LINK FLAIRS - colors and filtering function */
-html:lang(xn) body:not(.comments-page) .link.linkflair-news { display: none; }
+}
+html:lang(xa) body:not(.comments-page) .link.linkflair-announcement,
+html:lang(xc) body:not(.comments-page) .link.linkflair-creation,
+html:lang(xd) body:not(.comments-page) .link.linkflair-discussion,
+html:lang(xg) body:not(.comments-page) .link.linkflair-guide,
+html:lang(xg) body:not(.comments-page) .link.linkflair-poll,
+html:lang(xj) body:not(.comments-page) .link.linkflair-music,
+html:lang(xl) body:not(.comments-page) .link.linkflair-w,
+html:lang(xm) body:not(.comments-page) .link.linkflair-meta,
+html:lang(xn) body:not(.comments-page) .link.linkflair-news,
+html:lang(xo) body:not(.comments-page) .link.linkflair-other,
+html:lang(xq) body:not(.comments-page) .link.linkflair-question,
+html:lang(xs) body:not(.comments-page) .link.linkflair-shipping,
+html:lang(xt) body:not(.comments-page) .link.linkflair-theory,
+html:lang(xw) body:not(.comments-page) .link.linkflair-oc {
+    display: none;
+}
+:lang(dm) .side .md > blockquote:nth-of-type(4) ul li a {
+    color: #fff !important;
+}
+.side .md > blockquote:nth-of-type(4) ul li a:first-of-type {
+    width: 90px;
+    opacity: 0.75;
+}
+.side .md > blockquote:nth-of-type(4) ul li a:nth-of-type(2) {
+    background-color: #bbb;
+    width: 25px;
+    margin-left: 3px;
+    opacity: 0.75;
+}
+.side .md > blockquote:nth-of-type(4) ul li a:hover {
+    opacity: 1;
+}
+.flairselector .linkflair-news > .linkflairlabel,
 .side .md a[href*="flair:news"],
-.wiki-page .wiki-page-content .md a[href*="flair:news"],
-.flairselector .linkflair-news>.linkflairlabel{ background-color: #3a3a3a;}
-.link.linkflair-news:hover { box-shadow: inset 25px 0 0 0 #3a3a3a!important; }
-.link.linkflair-news { border-left-color: #3a3a3a!important; }
-	
-html:lang(xc) body:not(.comments-page) .link.linkflair-creation { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:news"] {
+    background-color: #3a3a3a;
+}
+.link.linkflair-news:hover {
+    box-shadow: inset 25px 0 0 0 #3a3a3a !important;
+}
+.link.linkflair-news {
+    border-left-color: #3a3a3a !important;
+}
+.flairselector .linkflair-creation > .linkflairlabel,
 .side .md a[href*="flair:creation"],
-.wiki-page .wiki-page-content .md a[href*="flair:creation"],
-.flairselector .linkflair-creation>.linkflairlabel { background-color: #d63120; }
-.link.linkflair-creation:hover{ box-shadow: inset 25px 0 0 0 #d63120!important; }
-.link.linkflair-creation{ border-left-color: #d63120!important; }
-
-html:lang(xd) body:not(.comments-page) .link.linkflair-discussion { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:creation"] {
+    background-color: #d63120;
+}
+.link.linkflair-creation:hover {
+    box-shadow: inset 25px 0 0 0 #d63120 !important;
+}
+.link.linkflair-creation {
+    border-left-color: #d63120 !important;
+}
+.flairselector .linkflair-discussion > .linkflairlabel,
 .side .md a[href*="flair:discussion"],
-.wiki-page .wiki-page-content .md a[href*="flair:discussion"],
-.flairselector .linkflair-discussion>.linkflairlabel { background-color: #d35400; }
-.link.linkflair-discussion:hover{ box-shadow: inset 25px 0 0 0 #d35400!important; }
-.link.linkflair-discussion{ border-left-color: #d35400!important; }
-	
-html:lang(xq) body:not(.comments-page) .link.linkflair-question { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:discussion"] {
+    background-color: #d35400;
+}
+.link.linkflair-discussion:hover {
+    box-shadow: inset 25px 0 0 0 #d35400 !important;
+}
+.link.linkflair-discussion {
+    border-left-color: #d35400 !important;
+}
+.flairselector .linkflair-question > .linkflairlabel,
 .side .md a[href*="flair:question"],
-.wiki-page .wiki-page-content .md a[href*="flair:question"],
-.flairselector .linkflair-question>.linkflairlabel { background-color:orange;}
-.link.linkflair-question:hover{ box-shadow: inset 25px 0 0 0 orange!important; }
-.link.linkflair-question{ border-left-color: orange!important; }
-
-html:lang(xt) body:not(.comments-page) .link.linkflair-theory { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:question"] {
+    background-color: orange;
+}
+.link.linkflair-question:hover {
+    box-shadow: inset 25px 0 0 0 orange !important;
+}
+.link.linkflair-question {
+    border-left-color: orange !important;
+}
+.flairselector .linkflair-theory > .linkflairlabel,
 .side .md a[href*="flair:theory"],
-.wiki-page .wiki-page-content .md a[href*="flair:theory"],
-.flairselector .linkflair-theory>.linkflairlabel { background-color: #dfb300;}
-.link.linkflair-theory:hover{ box-shadow: inset 25px 0 0 0 #dfb300!important; }
-.link.linkflair-theory{ border-left-color: #dfb300!important; }
-
-html:lang(xg) body:not(.comments-page) .link.linkflair-poll { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:theory"] {
+    background-color: #dfb300;
+}
+.link.linkflair-theory:hover {
+    box-shadow: inset 25px 0 0 0 #dfb300 !important;
+}
+.link.linkflair-theory {
+    border-left-color: #dfb300 !important;
+}
+.flairselector .linkflair-poll > .linkflairlabel,
 .side .md a[href*="flair:poll"],
-.wiki-page .wiki-page-content .md a[href*="flair:poll"],
-.flairselector .linkflair-poll>.linkflairlabel { background-color: #da6ff1;}
-.link.linkflair-poll:hover{ box-shadow: inset 25px 0 0 0 #da6ff1!important; }
-.link.linkflair-poll{ border-left-color: #da6ff1!important; }
-
-html:lang(xg) body:not(.comments-page) .link.linkflair-guide { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:poll"] {
+    background-color: #da6ff1;
+}
+.link.linkflair-poll:hover {
+    box-shadow: inset 25px 0 0 0 #da6ff1 !important;
+}
+.link.linkflair-poll {
+    border-left-color: #da6ff1 !important;
+}
+.flairselector .linkflair-guide > .linkflairlabel,
 .side .md a[href*="flair:guide"],
-.wiki-page .wiki-page-content .md a[href*="flair:guide"],
-.flairselector .linkflair-guide>.linkflairlabel { background-color: #DA6FF1;}
-.link.linkflair-guide:hover{ box-shadow: inset 25px 0 0 0 #DA6FF1!important; }
-.link.linkflair-guide{ border-left-color: #DA6FF1!important; }
-
-html:lang(xh) body:not(.comments-page) .link.linkflair-humor { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:guide"] {
+    background-color: #da6ff1;
+}
+.link.linkflair-guide:hover {
+    box-shadow: inset 25px 0 0 0 #da6ff1 !important;
+}
+.link.linkflair-guide {
+    border-left-color: #da6ff1 !important;
+}
+html:lang(xh) body:not(.comments-page) .link.linkflair-humor {
+    display: none;
+}
+.flairselector .linkflair-humor > .linkflairlabel,
 .side .md a[href*="flair:humor"],
-.wiki-page .wiki-page-content .md a[href*="flair:humor"],
-.flairselector .linkflair-humor>.linkflairlabel { background-color: #9370DB; }
-.link.linkflair-humor:hover{ box-shadow: inset 25px 0 0 0 #9370DB!important; }
-.link.linkflair-humor{ border-left-color: #9370DB!important; }
-	
-html:lang(xm) body:not(.comments-page) .link.linkflair-meta { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:humor"] {
+    background-color: #9370db;
+}
+.link.linkflair-humor:hover {
+    box-shadow: inset 25px 0 0 0 #9370db !important;
+}
+.link.linkflair-humor {
+    border-left-color: #9370db !important;
+}
+.flairselector .linkflair-meta > .linkflairlabel,
 .side .md a[href*="flair:meta"],
-.wiki-page .wiki-page-content .md a[href*="flair:meta"],
-.flairselector .linkflair-meta>.linkflairlabel { background-color: #2980b9;}
-.link.linkflair-meta:hover{ box-shadow: inset 25px 0 0 0 #2980b9!important; }
-.link.linkflair-meta{ border-left-color: #2980b9!important; }
-
-html:lang(xo) body:not(.comments-page) .link.linkflair-other { display: none; }
-.side .md a[href*="flair:other"],
-.flairselector .linkflair-other>.linkflairlabel { background-color: #2DB0AB; }
-.link.linkflair-other:hover{ box-shadow: inset 25px 0 0 0 #2DB0AB; }
-.link.linkflair-other{ border-left-color: #2DB0AB; }
-
-html:lang(xa) body:not(.comments-page) .link.linkflair-announcement { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:meta"] {
+    background-color: #2980b9;
+}
+.link.linkflair-meta:hover {
+    box-shadow: inset 25px 0 0 0 #2980b9 !important;
+}
+.link.linkflair-meta {
+    border-left-color: #2980b9 !important;
+}
+.flairselector .linkflair-other > .linkflairlabel,
+.side .md a[href*="flair:other"] {
+    background-color: #2db0ab;
+}
+.link.linkflair-other:hover {
+    box-shadow: inset 25px 0 0 0 #2db0ab;
+}
+.link.linkflair-other {
+    border-left-color: #2db0ab;
+}
+.flairselector .linkflair-announcement > .linkflairlabel,
 .side .md a[href*="flair:psa"],
-.wiki-page .wiki-page-content .md a[href*="flair:psa"],
-.flairselector .linkflair-announcement>.linkflairlabel { background-color: #2a2;}
-.link.linkflair-announcement:hover{ box-shadow: inset 25px 0 0 0 #2a2!important; }
-.link.linkflair-announcement{ border-left-color: #2a2!important; }
-
-html:lang(xs) body:not(.comments-page) .link.linkflair-shipping { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:psa"] {
+    background-color: #2a2;
+}
+.link.linkflair-announcement:hover {
+    box-shadow: inset 25px 0 0 0 #2a2 !important;
+}
+.link.linkflair-announcement {
+    border-left-color: #2a2 !important;
+}
+.flairselector .linkflair-shipping > .linkflairlabel,
 .side .md a[href*="flair:shipping"],
-.wiki-page .wiki-page-content .md a[href*="flair:shipping"],
-.flairselector .linkflair-shipping>.linkflairlabel { background-color: #640089;}
-.link.linkflair-shipping:hover{ box-shadow: inset 25px 0 0 0 #640089!important; }
-.link.linkflair-shipping{ border-left-color: #640089!important; }
-
-html:lang(xj) body:not(.comments-page) .link.linkflair-music { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:shipping"] {
+    background-color: #640089;
+}
+.link.linkflair-shipping:hover {
+    box-shadow: inset 25px 0 0 0 #640089 !important;
+}
+.link.linkflair-shipping {
+    border-left-color: #640089 !important;
+}
+.flairselector .linkflair-music > .linkflairlabel,
 .side .md a[href*="flair:music"],
-.wiki-page .wiki-page-content .md a[href*="flair:music"],
-.flairselector .linkflair-music>.linkflairlabel { background-color: #0ff;}
-.link.linkflair-music:hover{ box-shadow: inset 25px 0 0 0 #0ff!important; }
-.link.linkflair-music{ border-left-color: #0ff!important; }
-
-html:lang(xl) body:not(.comments-page) .link.linkflair-w { display: none; }
+.wiki-page .wiki-page-content .md a[href*="flair:music"] {
+    background-color: #0ff;
+}
+.link.linkflair-music:hover {
+    box-shadow: inset 25px 0 0 0 #0ff !important;
+}
+.link.linkflair-music {
+    border-left-color: #0ff !important;
+}
+.flairselector .linkflair-w > .linkflairlabel,
 .side .md a[href*="flair:w"],
-.wiki-page .wiki-page-content .md a[href*="flair:w"],
-.flairselector .linkflair-w>.linkflairlabel { background-color: #d3d3d3;}
-.link.linkflair-w:hover{ box-shadow: inset 25px 0 0 0 #d3d3d3!important; }
-.link.linkflair-w{ border-left-color: #d3d3d3!important; }
-
-
-html:lang(xw) body:not(.comments-page) .link.linkflair-oc {display: none}
+.wiki-page .wiki-page-content .md a[href*="flair:w"] {
+    background-color: #d3d3d3;
+}
+.link.linkflair-w:hover {
+    box-shadow: inset 25px 0 0 0 #d3d3d3 !important;
+}
+.link.linkflair-w {
+    border-left-color: #d3d3d3 !important;
+}
+.flairselector .linkflair-oc > .linkflairlabel,
 .side .md a[href*="flair:oc"],
-.wiki-page .wiki-page-content .md a[href*="flair:oc"],
-.flairselector .linkflair-oc>.linkflairlabel {background-color: #660800}
-.link.linkflair-oc:hover {box-shadow: inset 25px 0 0 0 #660800!important}
-.link.linkflair-oc {border-left-color: #660800!important}
-	
-	/*** FLAIR REMINDER ***/
-	/* From /r/france 
-.post-submitter .link:not(.linkflair) .flairselectbtn { 
-	position: relative; 
-	font-weight: bold;
-	color: #888
+.wiki-page .wiki-page-content .md a[href*="flair:oc"] {
+    background-color: #660800;
 }
-.post-submitter .link:not(.linkflair) .flairselectbtn:before {
-	position: absolute;
-	content: "Assign your own flair";
-	background: #888;
-	color: #fff;
-	top: -3.3em;
-	left: -116px;
-	height: 1.5em;
-	padding: 5px 10px;
-	line-height: 1.5;
-	text-align: center;
-	opacity: .75;
-	font-size: 12px
+.link.linkflair-oc:hover {
+    box-shadow: inset 25px 0 0 0 #660800 !important;
 }
-	
-.post-submitter .link:not(.linkflair) .flairselectbtn:after {
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 1.5em .7em 0;
-	border-color: #888 transparent transparent;
-	top: -1.2em;
-	left: 5px;
-	content: "";
-	position: absolute;
-	opacity: .75
+.link.linkflair-oc {
+    border-left-color: #660800 !important;
 }
-	
-.post-submitter .link:not(.linkflair) .flairselectbtn:hover:before,
-.post-submitter .link:not(.linkflair) .flairselectbtn:hover:after {
-	opacity:1
-}*/
-/* Random Snoos */
-/* Invisible box over "corner snoo" in header, clicking returns to Reddit frontpage */
 #header-img.default-header {
-	top: -178px;
-	height: 175px;
-	width: 124px;
+    top: -178px;
+    height: 175px;
+    width: 124px;
     position: relative;
     z-index: 10;
     margin: 0;
     background: 0 0;
-    left: -3px
+    left: -3px;
 }
-
 body:not(.loggedin) #header-img.default-header {
-    background: url(%%6%%) no-repeat
+    background: url(%%6%%) no-repeat;
 }
-
-/* Make a pseudo-element to display random snoo image if user is logged in */
-input[name=uh]~a:after {
+input[name="uh"] ~ a:after {
     content: "";
     position: absolute;
-    left: calc(25px - 100vw);
-    top: -139px;
+    left: calc(40px - 100vw);
+    top: -160px;
     width: 180px;
-    height: 136px;
+    height: 156px;
     background: url(%%6%%);
-    pointer-events: none
+    pointer-events: none;
 }
-
-/* Offset the sprite-map's vertical position based on the magical mysterious random hash of doom */
-input[name=uh][value^="0"] ~ a:after, input[name=uh][value^="1"] ~ a:after,
-input[name=uh][value^="2"] ~ a:after, input[name=uh][value^="3"] ~ a:after,
-input[name=uh][value^="4"] ~ a:after, input[name=uh][value^="5"] ~ a:after,
-input[name=uh][value^="6"] ~ a:after, input[name=uh][value^="7"] ~ a:after { background-position-x: -720px; } /*Kris*/
-input[name=uh][value^="8"] ~ a:after, input[name=uh][value^="9"] ~ a:after, 
-input[name=uh][value^="a"] ~ a:after, input[name=uh][value^="b"] ~ a:after,
-input[name=uh][value^="c"] ~ a:after, input[name=uh][value^="d"] ~ a:after { background-position-x: -1260px; } /*Susie*/
-input[name=uh][value^="e"] ~ a:after, input[name=uh][value^="f"] ~ a:after,
-input[name=uh][value^="g"] ~ a:after, input[name=uh][value^="h"] ~ a:after,
-input[name=uh][value^="i"] ~ a:after, input[name=uh][value^="j"] ~ a:after { background-position-x: -180px; } /*Ralsei*/
-input[name=uh][value^="k"] ~ a:after, input[name=uh][value^="l"] ~ a:after,
-input[name=uh][value^="m"] ~ a:after, input[name=uh][value^="n"] ~ a:after,
-input[name=uh][value^="o"] ~ a:after, input[name=uh][value^="p"] ~ a:after { background-position-x: -360px; } /*Lancer*/
-input[name=uh][value^="q"] ~ a:after, input[name=uh][value^="r"] ~ a:after,
-input[name=uh][value^="s"] ~ a:after, input[name=uh][value^="t"] ~ a:after,
-input[name=uh][value^="u"] ~ a:after, input[name=uh][value^="v"] ~ a:after { background-position-x: -1440px; } /*Noelle*/
-input[name=uh][value^="w"] ~ a:after, input[name=uh][value^="x"] ~ a:after { background-position-x: -540px; } /*Roulx*/
-input[name=uh][value^="y"] ~ a:after                                       { background-position-x: -1080px; } /*Jevil*/
-input[name=uh][value^="z"] ~ a:after                                       { background-position-x: -900px; } /*Chadner*/
-
-/* undertale dialogue boxes with faces (via nested lists) */
-.md ul>li {
-    position: relative
+input[name="uh"][value^="0"] ~ a:after,
+input[name="uh"][value^="1"] ~ a:after,
+input[name="uh"][value^="2"] ~ a:after,
+input[name="uh"][value^="3"] ~ a:after,
+input[name="uh"][value^="4"] ~ a:after,
+input[name="uh"][value^="5"] ~ a:after {
+    background-position-x: -720px;
 }
-
-.md ul > li > a[href^="/box"] + ul, .md ul > li > a[href^="/diagonal"] + ul, .md ul > li > a[href^="/choice"] + ul{
+input[name="uh"][value^="6"] ~ a:after,
+input[name="uh"][value^="7"] ~ a:after,
+input[name="uh"][value^="8"] ~ a:after,
+input[name="uh"][value^="9"] ~ a:after,
+input[name="uh"][value^="a"] ~ a:after,
+input[name="uh"][value^="b"] ~ a:after {
+    background-position-x: -1260px;
+}
+input[name="uh"][value^="c"] ~ a:after,
+input[name="uh"][value^="d"] ~ a:after,
+input[name="uh"][value^="e"] ~ a:after,
+input[name="uh"][value^="f"] ~ a:after,
+input[name="uh"][value^="g"] ~ a:after,
+input[name="uh"][value^="h"] ~ a:after {
+    background-position-x: -180px;
+}
+input[name="uh"][value^="i"] ~ a:after,
+input[name="uh"][value^="j"] ~ a:after,
+input[name="uh"][value^="k"] ~ a:after,
+input[name="uh"][value^="l"] ~ a:after,
+input[name="uh"][value^="m"] ~ a:after,
+input[name="uh"][value^="n"] ~ a:after {
+    background-position-x: -360px;
+}
+input[name="uh"][value^="o"] ~ a:after,
+input[name="uh"][value^="p"] ~ a:after,
+input[name="uh"][value^="q"] ~ a:after,
+input[name="uh"][value^="r"] ~ a:after,
+input[name="uh"][value^="s"] ~ a:after,
+input[name="uh"][value^="t"] ~ a:after {
+    background-position-x: -1440px;
+}
+input[name="uh"][value^="u"] ~ a:after,
+input[name="uh"][value^="v"] ~ a:after {
+    background-position-x: -540px;
+}
+input[name="uh"][value^="w"] ~ a:after {
+    background-position-x: -1616px;
+}
+input[name="uh"][value^="x"] ~ a:after {
+    background-position-x: -1800px;
+}
+input[name="uh"][value^="y"] ~ a:after {
+    background-position-x: -1080px;
+}
+input[name="uh"][value^="z"] ~ a:after {
+    background-position-x: -900px;
+}
+.md ul > li {
+    position: relative;
+}
+.md ul > li > a[href^="/box"] + ul,
+.md ul > li > a[href^="/diagonal"] + ul,
+.md ul > li > a[href^="/choice"] + ul {
     position: relative;
     list-style-type: none;
     color: #fff;
     background-color: #000;
     padding: 1.1em 1.4em;
-    border: solid 3px #e0e0e0;
-	margin: -12px 0 0 -2em!important;
+    border: 3px solid #e0e0e0;
+    margin: -12px 0 0 -2em !important;
     min-height: 71px;
-    max-width: 675px
+    max-width: 675px;
 }
-
 :lang(dm) .md ul > li > a[href^="/box"] + ul,
 :lang(dm) .md ul > li > a[href^="/diagonal"] + ul,
-:lang(dm) .md ul > li > a[href^="/choice"] + ul{
-	border-width: 14px;
-	border-image: url(%%e%%) 14
+:lang(dm) .md ul > li > a[href^="/choice"] + ul {
+    border-width: 14px;
+    border-image: url(%%e%%) 14;
 }
 :lang(dm) .md ul > li > a[href^="/box"] + ul,
-:lang(dm) .md ul > li > a[href^="/diagonal"] + ul{
-    padding-top: 0.4em
+:lang(dm) .md ul > li > a[href^="/diagonal"] + ul {
+    padding-top: 0.4em;
 }
-
-.md ul>li>a[href^="/box"]+ul ul {
-    list-style-type: none
+.md ul > li > a[href^="/box"] + ul ul {
+    list-style-type: none;
 }
-
-.md ul>li>a+a[href^="/box"]+ul {
-    padding-left: 105px
+.md ul > li > a + a[href^="/box"] + ul {
+    padding-left: 105px;
 }
-
-.md ul>li>a[href="/s0"]+a[href^="/box"]+ul,
-.md ul>li>a[href="/p0"]+a[href^="/box"]+ul {
-    padding-left: 1.4em
+.md ul > li > a[href="/s0"] + a[href^="/box"] + ul,
+.md ul > li > a[href="/p0"] + a[href^="/box"] + ul {
+    padding-left: 1.4em;
 }
-/*
-.md ul>li>a[href^="/box"]+ul a {
-    font-family: Determination Mono,Determination Sans,monospace,sans-serif;
-    text-transform: none;
-    font-size: inherit;
-    color: #6bf
-}*/
-
-.md ul>li>a[href^="/box"]+ul a:visited {
-    color: #eaf
+.md ul > li > a[href^="/box"] + ul a:visited {
+    color: #eaf;
 }
-
-.md ul > li > a[href^="/box"] + ul > li, .md ul > li > a[href^="/choice"] + ul > li {
-	font-family: Determination Mono,Determination Sans,monospace,sans-serif;
-	line-height: 1.5em;
-	text-indent: -1em;
-	padding-left: 1em;
-	color: #fff;
-	font-size: 16px!important;
-	margin: 0
+.md ul > li > a[href^="/box"] + ul > li,
+.md ul > li > a[href^="/choice"] + ul > li {
+    font-family: Determination Mono, Determination Sans, monospace, sans-serif;
+    line-height: 1.5em;
+    text-indent: -1em;
+    padding-left: 1em;
+    color: #fff;
+    font-size: 16px !important;
+    margin: 0;
 }
-
-.md ul>li>a[href^="/box"]+ul>li:before {
-	content: "";
-	display: inline-block;
-	background: url(%%f%%) 0 -6px;
+.md ul > li > a[href^="/box"] + ul > li:before {
+    content: "";
+    display: inline-block;
+    background: url(%%f%%) 0 -6px;
     width: 12px;
     height: 9px;
     margin-bottom: 2px;
     margin-right: 8px;
-    background-size: 12px
+    background-size: 12px;
 }
-
-.md>ul>li>a[href^="/box"]+ul>li>ul {
+.md > ul > li > a[href^="/box"] + ul > li > ul {
     position: relative;
     padding-left: 0;
-    text-indent: 0
+    text-indent: 0;
 }
-
-.md>ul>li>a[href^="/box"]+ul>li>ul>li {
+.md > ul > li > a[href^="/box"] + ul > li > ul > li {
     display: inline;
     padding: 0 0 0 1.6em;
-    color: #fff!important
+    color: #fff !important;
 }
-
-.md>ul>li>a[href^="/box"]+ul>li>ul>li:first-of-type:before, .md > ul > li > a[href^="/choice"] + ul > li:first-of-type:before {
+.md > ul > li > a[href^="/box"] + ul > li > ul > li:first-of-type:before,
+.md > ul > li > a[href^="/choice"] + ul > li:first-of-type:before {
     position: absolute;
     top: -2px;
     left: 0;
@@ -5325,71 +4203,75 @@ input[name=uh][value^="z"] ~ a:after                                       { bac
     height: 16px;
     content: "";
     background-image: url(%%m%%);
-    background-size: 16px
+    background-size: 16px;
 }
-
-.md > ul > li > a[href^="/choice"] + ul > li:first-of-type:before{
+.md > ul > li > a[href^="/choice"] + ul > li:first-of-type:before {
     top: 2px;
-    left: -22px
+    left: -22px;
 }
-
 .md > ul > li > a[href^="/choice"] + ul > li {
-	position: absolute;
-	transform: translate(-50%, 0);
+    position: absolute;
+    transform: translate(-50%, 0);
     top: 40px;
-	left: calc(50% - 140px)
+    left: calc(50% - 140px);
 }
-
 .md > ul > li > a[href^="/choice"] + ul > li:nth-of-type(2) {
-	top: 40px;
-	right: calc(50% - 140px);
-	left: unset;
-	transform: translate(50%,0);
+    top: 40px;
+    right: calc(50% - 140px);
+    left: unset;
+    transform: translate(50%, 0);
 }
-
 .md > ul > li > a[href^="/choice"] + ul > li:nth-of-type(3) {
-	top: 10px;
-	left: 50%;
+    top: 10px;
+    left: 50%;
 }
-
 .md > ul > li > a[href^="/choice"] + ul > li:nth-of-type(4) {
-	top: 70px;
-	left: 50%;
+    top: 70px;
+    left: 50%;
 }
-
-.md ul>li>a[href="/s0"]+a+ul>li,
-.md ul>li>a[href="/s1"]+a+ul>li,
-.md ul>li>a[href="/s2"]+a+ul>li,
-.md ul>li>a[href="/s3"]+a+ul>li,
-.md ul>li>a[href="/s4"]+a+ul>li,
-.md ul>li>a[href="/s5"]+a+ul>li,
-.md ul>li>a[href="/s6"]+a+ul>li,
-.md ul>li>a[href="/s7"]+a+ul>li,
-.md ul>li>a[href="/s8"]+a+ul>li{
+.md ul > li > a[href="/s0"] + a + ul > li,
+.md ul > li > a[href="/s1"] + a + ul > li,
+.md ul > li > a[href="/s2"] + a + ul > li,
+.md ul > li > a[href="/s3"] + a + ul > li,
+.md ul > li > a[href="/s4"] + a + ul > li,
+.md ul > li > a[href="/s5"] + a + ul > li,
+.md ul > li > a[href="/s6"] + a + ul > li,
+.md ul > li > a[href="/s7"] + a + ul > li,
+.md ul > li > a[href="/s8"] + a + ul > li {
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard SE", cursive;
     font-size: 1em;
     text-transform: none;
-    word-spacing: .3ex;
-    font-weight: 700
+    word-spacing: 0.3ex;
+    font-weight: 700;
 }
-
-.md ul>li>a+a[href^="/box"]+ul a[href="/threat"] {
-    font-family: Determination Mono,Determination Sans,monospace,sans-serif
+.md ul > li > a + a[href^="/box"] + ul a[href="/threat"] {
+    font-family: Determination Mono, Determination Sans, monospace, sans-serif;
 }
-
-.md ul>li>a[href^="/box"]+ul a[href="/sans"],
-.md ul>li>a[href^="/box"]+ul a[href="/threat"] {
-    color: #fff
+.md ul > li > a[href^="/box"] + ul a[href="/threat"],
+.md ul > li > a[href^="/box"] + ul a[href="/sans"] {
+    color: #fff;
 }
-
-a[href="/cyan"]{ color: #1ea8fc!important; }
-a[href="/orange"]{ color: #ffa040!important; }
-a[href="/blue"]{ color: #00f!important; }
-a[href="/purple"]{ color: #f0f!important; }
-a[href="/green"]{ color: #0f0!important; }
-a[href="/yellow"]{ color: #ff0!important; }
-a[href="/red"] { color: #f00!important; }
-
+a[href="/cyan"] {
+    color: #1ea8fc !important;
+}
+a[href="/orange"] {
+    color: #ffa040 !important;
+}
+a[href="/blue"] {
+    color: #00f !important;
+}
+a[href="/purple"] {
+    color: #f0f !important;
+}
+a[href="/green"] {
+    color: #0f0 !important;
+}
+a[href="/yellow"] {
+    color: #ff0 !important;
+}
+a[href="/red"] {
+    color: red !important;
+}
 a[href="/cyan"],
 a[href="/orange"],
 a[href="/blue"],
@@ -5398,21 +4280,18 @@ a[href="/green"],
 a[href="/yellow"],
 a[href="/red"] {
     font-weight: 700;
-    pointer-events: none
+    pointer-events: none;
 }
-
-.md ul>li>a[href^="/box"]+ul a[href="/spoiler"],
-.md ul>li>a[href^="/box"]+ul a[href="#spoiler"] {
-    color: #fff!important;
-    background-color: #fff!important
+.md ul > li > a[href^="/box"] + ul a[href="/spoiler"],
+.md ul > li > a[href^="/box"] + ul a[href="#spoiler"] {
+    color: #fff !important;
+    background-color: #fff !important;
 }
-
-.md ul>li>a[href^="/box"]+ul>li a[href="#spoiler"]:hover,
-.md ul>li>a[href^="/box"]+ul>li code {
-    color: #000!important
+.md ul > li > a[href^="/box"] + ul > li a[href="#spoiler"]:hover,
+.md ul > li > a[href^="/box"] + ul > li code {
+    color: #000 !important;
 }
-
-.md li>a+a[href^="/box"]+ul:before {
+.md li > a + a[href^="/box"] + ul:before {
     position: absolute;
     top: 8px;
     left: 10px;
@@ -5420,292 +4299,346 @@ a[href="/red"] {
     height: 85px;
     content: "";
     background-image: url(%%v%%);
-    background-size: 4680px; /*increase this when faces.png gets wider*/
+    background-size: 4680px;
     z-index: 2;
-    pointer-events: none
+    pointer-events: none;
 }
-
 :lang(dm) .md li > a + a[href^="/box"] + ul:before {
-	top: 2px;
+    top: 2px;
 }
-
-.md li>a+a[href^="/boxsmall"]+ul {
-	transform: scale(.55);
-	top: -55px;
-	border: none;
-	background: none;
-	left: 125px;
-	position: absolute;
-	transform-origin: 0 0
-}
-
-.md ul ul>li>a+a[href^="/box"]+ul {
+.md li > a + a[href^="/boxsmall"] + ul {
+    transform: scale(0.55);
+    top: -55px;
     border: none;
-    margin: -18px 0 0 -25px!important;
-    padding: 4px 0 4px 140px!important;
-    min-height: 39px
+    background: 0 0;
+    left: 125px;
+    position: absolute;
+    transform-origin: 0 0;
 }
-.md ul ul>li>a+a[href^="/box"]+ul:before {
-	left: 50px;
+.md ul ul > li > a + a[href^="/box"] + ul {
+    border: none;
+    margin: -18px 0 0 -25px !important;
+    padding: 4px 0 4px 140px !important;
+    min-height: 39px;
+}
+.md ul ul > li > a + a[href^="/box"] + ul:before {
+    left: 50px;
     top: 0;
-	transform: scale(.6);
-	transform-origin: top right
+    transform: scale(0.6);
+    transform-origin: top right;
 }
-.md ul ul>li>a+a[href^="/box"]+ul>li{
-    font-size: 12px!important;
-    display: block
+.md ul ul > li > a + a[href^="/box"] + ul > li {
+    font-size: 12px !important;
+    display: block;
 }
-/*    
-.md ul ul>li>a+a[href^="/box"]+ul>li:before{
-    background-image:url(%%f%%)!important;
-    background-size: 10px!important;
-    width: 10px!important;
-    height: 8px!important;
-    position: relative!important;
-    top: 3px !important
-}*/
-.md ul ul>li>a+a[href^="/box"]+ul>li:before{
+.ad-container,
+.md ul ul > li > a + a[href^="/box"] + ul > li:before,
+.organic-listing,
+.premium-banner {
     display: none;
 }
-
 .md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
-	margin: -62px 0 0 350px !important;
-	padding-left: 0!important;
-	top: -6px;
+    margin: -62px 0 0 350px !important;
+    padding-left: 0 !important;
+    top: -6px;
 }
-
 .md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul:before {
-	left: -90px;
+    left: -90px;
 }
-
 .md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul:after {
-	background: #000;
-	width: 12px;
-	height: 9px;
-	position: absolute;
-	content: "";
-	left: -366px;
-	top: 51px;
-	z-index: 1;
+    background: #000;
+    width: 12px;
+    height: 9px;
+    position: absolute;
+    content: "";
+    left: -366px;
+    top: 51px;
+    z-index: 1;
 }
-
 .md ul > li > a[href^="/diagonal"] + ul {
-	min-height: 99px;
+    min-height: 99px;
 }
-
 .md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul {
-	padding-left: 5em !important;
-	position: relative;
-	margin-left: 0 !important;
-	top: 17px;
+    padding-left: 5em !important;
+    position: relative;
+    margin-left: 0 !important;
+    top: 17px;
 }
-
 .md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(2) > a + a[href^="/box"] + ul {
-	margin-left: 100px !important;
-	z-index: 1;
+    margin-left: 100px !important;
+    z-index: 1;
 }
-
 .md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
-	margin: -16px 0 2px 200px !important;
-	z-index: 2;
+    margin: -16px 0 2px 200px !important;
+    z-index: 2;
 }
-
 .md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul:before {
-	left: -30px;
-	top: -10px;
+    left: -30px;
+    top: -10px;
 }
-
 .md ul > li > a[href^="/box"] + ul a[href^="/cp"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/kk"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/sw"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/clh"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/clm"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/cls"]:before {
-	content: "";
-	position: absolute;
-	background: url(%%minifaces%%);
-	width: 25px;
-	height: 25px;
-	left: -13px;
-	background-size: 151px;
-	top: -3px;
+    content: "";
+    position: absolute;
+    background: url(%%minifaces%%);
+    width: 25px;
+    height: 25px;
+    left: -13px;
+    background-size: 151px;
+    top: -3px;
 }
-
-.md ul > li > a[href^="/box"] + ul a[href^="/cp"]:before{ background-position: 0 0; }
-.md ul > li > a[href^="/box"] + ul a[href^="/kk"]:before {background-position: -25px 0;}
-.md ul > li > a[href^="/box"] + ul a[href^="/sw"]:before {background-position: -50px 0;}
-.md ul > li > a[href^="/box"] + ul a[href^="/clh"]:before{ background-position: -75px 0; }
-.md ul > li > a[href^="/box"] + ul a[href^="/clm"]:before {background-position: -100px 0;}
-.md ul > li > a[href^="/box"] + ul a[href^="/cls"]:before {background-position: -125px 0;}
-
-.md ul > li > a + a[href="/g"] + a + ul:after, .md ul > li > a + a[href="/h"] + a + ul:after {
-	content: "";
-	position: absolute;
-	background: url(%%props%%);
-	width: 90px;
-	height: 90px;
-	background-size: 180px;
-	top: 8px;
-	left: 10px;
-	z-index: 2;
+.md ul > li > a[href^="/box"] + ul a[href^="/cp"]:before {
+    background-position: 0 0;
 }
-
+.md ul > li > a[href^="/box"] + ul a[href^="/kk"]:before {
+    background-position: -25px 0;
+}
+.md ul > li > a[href^="/box"] + ul a[href^="/sw"]:before {
+    background-position: -50px 0;
+}
+.md ul > li > a[href^="/box"] + ul a[href^="/clh"]:before {
+    background-position: -75px 0;
+}
+.md ul > li > a[href^="/box"] + ul a[href^="/clm"]:before {
+    background-position: -100px 0;
+}
+.md ul > li > a[href^="/box"] + ul a[href^="/cls"]:before {
+    background-position: -125px 0;
+}
+.md ul > li > a + a[href="/g"] + a + ul:after,
+.md ul > li > a + a[href="/h"] + a + ul:after {
+    content: "";
+    position: absolute;
+    background: url(%%props%%);
+    width: 90px;
+    height: 90px;
+    background-size: 180px;
+    top: 8px;
+    left: 10px;
+    z-index: 2;
+}
 :lang(dm) .md ul > li > a + a[href="/g"] + a + ul:after,
 :lang(dm) .md ul > li > a + a[href="/h"] + a + ul:after {
-    top: 2px
+    top: 2px;
+}
+.md ul > li > a + a[href="/g"] + a + ul:after {
+    background-position: 0 -7px;
+}
+.md ul > li > a + a[href="/h"] + a + ul:after {
+    background-position: -90px 0;
+}
+.md ul > li > a[href$="1"] + a ~ ul:before {
+    background-position-x: 0;
+}
+.md ul > li > a[href$="2"] + a ~ ul:before {
+    background-position-x: -90px;
+}
+.md ul > li > a[href$="3"] + a ~ ul:before {
+    background-position-x: -180px;
+}
+.md ul > li > a[href$="4"] + a ~ ul:before {
+    background-position-x: -270px;
+}
+.md ul > li > a[href$="5"] + a ~ ul:before {
+    background-position-x: -360px;
+}
+.md ul > li > a[href$="6"] + a ~ ul:before {
+    background-position-x: -450px;
+}
+.md ul > li > a[href$="7"] + a ~ ul:before {
+    background-position-x: -540px;
+}
+.md ul > li > a[href$="8"] + a ~ ul:before {
+    background-position-x: -630px;
+}
+.md ul > li > a[href$="9"] + a ~ ul:before {
+    background-position-x: -720px;
+}
+.md ul > li > a[href$="10"] + a ~ ul:before {
+    background-position-x: -810px;
+}
+.md ul > li > a[href$="11"] + a ~ ul:before {
+    background-position-x: -900px;
+}
+.md ul > li > a[href$="12"] + a ~ ul:before {
+    background-position-x: -990px;
+}
+.md ul > li > a[href$="13"] + a ~ ul:before {
+    background-position-x: -1080px;
+}
+.md ul > li > a[href$="14"] + a ~ ul:before {
+    background-position-x: -1170px;
+}
+.md ul > li > a[href$="15"] + a ~ ul:before {
+    background-position-x: -1260px;
+}
+.md ul > li > a[href$="16"] + a ~ ul:before {
+    background-position-x: -1350px;
+}
+.md ul > li > a[href$="17"] + a ~ ul:before {
+    background-position-x: -1440px;
+}
+.md ul > li > a[href$="18"] + a ~ ul:before {
+    background-position-x: -1530px;
+}
+.md ul > li > a[href$="19"] + a ~ ul:before {
+    background-position-x: -1620px;
+}
+.md ul > li > a[href$="20"] + a ~ ul:before {
+    background-position-x: -1710px;
+}
+.md ul > li > a[href$="21"] + a ~ ul:before {
+    background-position-x: -1800px;
+}
+.md ul > li > a[href$="22"] + a ~ ul:before {
+    background-position-x: -1890px;
+}
+.md ul > li > a[href$="23"] + a ~ ul:before {
+    background-position-x: -1980px;
+}
+.md ul > li > a[href$="24"] + a ~ ul:before {
+    background-position-x: -2070px;
+}
+.md ul > li > a[href$="25"] + a ~ ul:before {
+    background-position-x: -2160px;
+}
+.md ul > li > a[href$="26"] + a ~ ul:before {
+    background-position-x: -2250px;
+}
+.md ul > li > a[href$="27"] + a ~ ul:before {
+    background-position-x: -2340px;
+}
+.md ul > li > a[href$="28"] + a ~ ul:before {
+    background-position-x: -2430px;
+}
+.md ul > li > a[href$="29"] + a ~ ul:before {
+    background-position-x: -2520px;
+}
+.md ul > li > a[href$="30"] + a ~ ul:before {
+    background-position-x: -2610px;
+}
+.md ul > li > a[href$="31"] + a ~ ul:before {
+    background-position-x: -2700px;
+}
+.md ul > li > a[href$="32"] + a ~ ul:before {
+    background-position-x: -2790px;
+}
+.md ul > li > a[href$="33"] + a ~ ul:before {
+    background-position-x: -2880px;
+}
+.md ul > li > a[href$="34"] + a ~ ul:before {
+    background-position-x: -2970px;
+}
+.md ul > li > a[href$="35"] + a ~ ul:before {
+    background-position-x: -3060px;
+}
+.md ul > li > a[href$="36"] + a ~ ul:before {
+    background-position-x: -3150px;
+}
+.md ul > li > a[href$="37"] + a ~ ul:before {
+    background-position-x: -3240px;
+}
+.md ul > li > a[href$="38"] + a ~ ul:before {
+    background-position-x: -3330px;
+}
+.md ul > li > a[href$="39"] + a ~ ul:before {
+    background-position-x: -3420px;
+}
+.md ul > li > a[href$="40"] + a ~ ul:before {
+    background-position-x: -3510px;
+}
+.md ul > li > a[href$="41"] + a ~ ul:before {
+    background-position-x: -3600px;
+}
+.md ul > li > a[href$="42"] + a ~ ul:before {
+    background-position-x: -3690px;
+}
+.md ul > li > a[href$="43"] + a ~ ul:before {
+    background-position-x: -3780px;
+}
+.md ul > li > a[href$="44"] + a ~ ul:before {
+    background-position-x: -3870px;
+}
+.md ul > li > a[href$="45"] + a ~ ul:before {
+    background-position-x: -3960px;
+}
+.md ul > li > a[href$="46"] + a ~ ul:before {
+    background-position-x: -4050px;
+}
+.md ul > li > a[href$="47"] + a ~ ul:before {
+    background-position-x: -4140px;
+}
+.md ul > li > a[href$="48"] + a ~ ul:before {
+    background-position-x: -4230px;
+}
+.md ul > li > a[href$="49"] + a ~ ul:before {
+    background-position-x: -4320px;
+}
+.md ul > li > a[href$="50"] + a ~ ul:before {
+    background-position-x: -4410px;
+}
+.md ul > li > a[href$="51"] + a ~ ul:before {
+    background-position-x: -4500px;
+}
+.md ul > li > a[href$="52"] + a ~ ul:before {
+    background-position-x: -4590px;
+}
+.md ul > li > a[href^="/t"] + a ~ ul:before {
+    background-position-y: -457px;
+}
+.md ul > li > a[href^="/s"] + a ~ ul:before {
+    background-position-y: -1350px;
+}
+.md ul > li > a[href^="/a"] + a ~ ul:before {
+    background-position-y: -630px;
+}
+.md ul > li > a[href^="/j"] + a ~ ul:before {
+    background-position-y: -720px;
+}
+.md ul > li > a[href^="/b"] + a ~ ul:before {
+    background-position-y: -180px;
+}
+.md ul > li > a[href^="/c"] + a ~ ul:before {
+    background-position-y: -1440px;
+}
+.md ul > li > a[href^="/n"] + a ~ ul:before {
+    background-position-y: -360px;
+}
+.md ul > li > a[href^="/r"] + a ~ ul:before {
+    background-position-y: -270px;
+}
+.md ul > li > a[href^="/l"] + a ~ ul:before {
+    background-position-y: -810px;
+}
+.md ul > li > a[href^="/k"] + a ~ ul:before {
+    background-position-y: -990px;
+}
+.md ul > li > a[href^="/u"] + a ~ ul:before {
+    background-position-y: -1080px;
+}
+.md ul > li > a[href^="/q"] + a ~ ul:before {
+    background-position-y: 0;
+}
+.md ul > li > a[href^="/su"] + a ~ ul:before {
+    background-position-y: -90px;
+}
+.md ul > li > a[href^="/ru"] + a ~ ul:before {
+    background-position-y: -1170px;
+}
+.md ul > li > a[href^="/as"] + a ~ ul:before {
+    background-position-y: -1260px;
+}
+.md ul > li > a[href^="/br"] + a ~ ul:before {
+    background-position-y: -1530px;
+}
+.md ul > li > a[href^="/bu"] + a ~ ul:before {
+    background-position-y: -1620px;
+}
+.md ul > li > a[href^="/rk"] + a ~ ul:before {
+    background-position-y: -900px;
 }
 
-.md ul > li > a + a[href="/g"] + a + ul:after { background-position: 0 -7px; }
-.md ul > li > a + a[href="/h"] + a + ul:after { background-position: -90px 0; }
-
-.md ul>li>a[href$="1"]+a~ul:before { background-position-x: 0}
-.md ul>li>a[href$="2"]+a~ul:before { background-position-x: -90px}
-.md ul>li>a[href$="3"]+a~ul:before { background-position-x: -180px}
-.md ul>li>a[href$="4"]+a~ul:before { background-position-x: -270px}
-.md ul>li>a[href$="5"]+a~ul:before { background-position-x: -360px}
-.md ul>li>a[href$="6"]+a~ul:before { background-position-x: -450px}
-.md ul>li>a[href$="7"]+a~ul:before { background-position-x: -540px}
-.md ul>li>a[href$="8"]+a~ul:before { background-position-x: -630px}
-.md ul>li>a[href$="9"]+a~ul:before { background-position-x: -720px}
-.md ul>li>a[href$="10"]+a~ul:before { background-position-x: -810px}
-.md ul>li>a[href$="11"]+a~ul:before { background-position-x: -900px}
-.md ul>li>a[href$="12"]+a~ul:before { background-position-x: -990px}
-.md ul>li>a[href$="13"]+a~ul:before { background-position-x: -1080px}
-.md ul>li>a[href$="14"]+a~ul:before { background-position-x: -1170px}
-.md ul>li>a[href$="15"]+a~ul:before { background-position-x: -1260px}
-.md ul>li>a[href$="16"]+a~ul:before { background-position-x: -1350px}
-.md ul>li>a[href$="17"]+a~ul:before { background-position-x: -1440px}
-.md ul>li>a[href$="18"]+a~ul:before { background-position-x: -1530px}
-.md ul>li>a[href$="19"]+a~ul:before { background-position-x: -1620px}
-.md ul>li>a[href$="20"]+a~ul:before { background-position-x: -1710px}
-.md ul>li>a[href$="21"]+a~ul:before { background-position-x: -1800px}
-.md ul>li>a[href$="22"]+a~ul:before { background-position-x: -1890px}
-.md ul>li>a[href$="23"]+a~ul:before { background-position-x: -1980px}
-.md ul>li>a[href$="24"]+a~ul:before { background-position-x: -2070px}
-.md ul>li>a[href$="25"]+a~ul:before { background-position-x: -2160px}
-.md ul>li>a[href$="26"]+a~ul:before { background-position-x: -2250px}
-.md ul>li>a[href$="27"]+a~ul:before { background-position-x: -2340px}
-.md ul>li>a[href$="28"]+a~ul:before { background-position-x: -2430px}
-.md ul>li>a[href$="29"]+a~ul:before { background-position-x: -2520px}
-.md ul>li>a[href$="30"]+a~ul:before { background-position-x: -2610px}
-.md ul>li>a[href$="31"]+a~ul:before { background-position-x: -2700px}
-.md ul>li>a[href$="32"]+a~ul:before { background-position-x: -2790px}
-.md ul>li>a[href$="33"]+a~ul:before { background-position-x: -2880px}
-.md ul>li>a[href$="34"]+a~ul:before { background-position-x: -2970px}
-.md ul>li>a[href$="35"]+a~ul:before { background-position-x: -3060px}
-.md ul>li>a[href$="36"]+a~ul:before { background-position-x: -3150px}
-.md ul>li>a[href$="37"]+a~ul:before { background-position-x: -3240px}
-.md ul>li>a[href$="38"]+a~ul:before { background-position-x: -3330px}
-.md ul>li>a[href$="39"]+a~ul:before { background-position-x: -3420px}
-.md ul>li>a[href$="40"]+a~ul:before { background-position-x: -3510px}
-.md ul>li>a[href$="41"]+a~ul:before { background-position-x: -3600px}
-.md ul>li>a[href$="42"]+a~ul:before { background-position-x: -3690px}
-.md ul>li>a[href$="43"]+a~ul:before { background-position-x: -3780px}
-.md ul>li>a[href$="44"]+a~ul:before { background-position-x: -3870px}
-.md ul>li>a[href$="45"]+a~ul:before { background-position-x: -3960px}
-.md ul>li>a[href$="46"]+a~ul:before { background-position-x: -4050px}
-.md ul>li>a[href$="47"]+a~ul:before { background-position-x: -4140px}
-.md ul>li>a[href$="48"]+a~ul:before { background-position-x: -4230px}
-.md ul>li>a[href$="49"]+a~ul:before { background-position-x: -4320px}
-.md ul>li>a[href$="50"]+a~ul:before { background-position-x: -4410px}
-.md ul>li>a[href$="51"]+a~ul:before { background-position-x: -4500px}
-.md ul>li>a[href$="52"]+a~ul:before { background-position-x: -4590px}
-
-/* toriel */
-.md ul>li>a[href^="/t"]+a~ul:before { background-position-y: -457px }
-
-
-/* Sans */
-.md ul>li>a[href^="/s"]+a~ul:before { background-position-y: -1350px }
-
-/* alphys */
-.md ul>li>a[href^="/a"]+a~ul:before { background-position-y: -630px }
-
-/* jockington (cool snake guy)*/
-.md ul>li>a[href^="/j"]+a~ul:before { background-position-y: -720px }
-
-/* nerdy */
-.md ul>li>a[href^="/b"]+a~ul:before { background-position-y: -180px }
-
-/* catti */
-.md ul>li>a[href^="/c"]+a~ul:before { background-position-y: -1440px }
-
-/* noelle */
-.md ul>li>a[href^="/n"]+a~ul:before { background-position-y: -360px }
-
-/* ralsei */
-.md ul>li>a[href^="/r"]+a~ul:before { background-position-y: -270px }
-
-/* lancer */
-.md ul>li>a[href^="/l"]+a~ul:before { background-position-y: -810px }
-
-/* the king */
-.md ul>li>a[href^="/k"]+a~ul:before { background-position-y: -990px }
-
-/* undyne */
-.md ul>li>a[href^="/u"]+a~ul:before { background-position-y: -1080px }
-
-/* queen */
-.md ul>li>a[href^="/q"]+a~ul:before { background-position-y: 0 }
-
-/* susie */
-.md ul>li>a[href^="/su"]+a~ul:before { background-position-y: -90px }
-
-/* Rudolph */
-.md ul>li>a[href^="/ru"]+a~ul:before { background-position-y: -1170px }
-
-/* Asgore */
-.md ul>li>a[href^="/as"]+a~ul:before { background-position-y: -1260px }
-
-/* Bratty */
-.md ul>li>a[href^="/br"]+a~ul:before { background-position-y: -1530px }
-
-/* burgershorts */
-.md ul>li>a[href^="/bu"]+a~ul:before { background-position-y: -1620px }
-
-/* rouxls kaard */
-.md ul>li>a[href^="/rk"]+a~ul:before { background-position-y: -900px }
-
-/* hiding spoiler faces from non-subscribers 
-body:not(.subscriber) .md ul>li>a[href="/r16"]+a[href^="/box"]+ul:before,
-body:not(.subscriber) .md ul>li>a[href="/r17"]+a[href^="/box"]+ul:before,
-body:not(.subscriber) .md ul>li>a[href="/r18"]+a[href^="/box"]+ul:before,
-body:not(.subscriber) .md ul>li>a[href="/r19"]+a[href^="/box"]+ul:before{
-    display: none
-}*/
-
-/* ad blocker*/
-.premium-banner, .ad-container, .organic-listing
-{display: none}
-
-/* christmas 
-
-input[name="uh"] ~ a:after {
-	top:-178px;
-	height:175px
-}
-
-.flair-ralseitree {
-    padding-left: 19px;
-    height: 33px;
-    background-position: -36px -6804px;
-    margin-top: -4px;
-    line-height: 33px;
-    animation: sparkle .5s steps(2) infinite;
-    transition: height .2s, line-height .2s
-}
-
-@keyframes sparkle {
-    from {
-        background-position: -36px -6804px
-    }
-    to {
-        background-position: -36px -6906px
-    }
-}
-
-.flair-ralseitree:hover {
-    height: 51px;
-    line-height: 51px
-}
-*/
