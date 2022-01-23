@@ -5,6 +5,8 @@ Shamelessly stolen from /r/MortalKombat. Credit goes to u/Xhogar and u/FanOfTheJ
 
 For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-deltarune-stylesheet
 */
+
+
 .side .md a[href*="http://www.reddit.com/r/deltarune"],.side .md a[href*="http://dm.reddit.com/r/deltarune"]
 {
     display: block;
@@ -3826,20 +3828,20 @@ ul.tabmenu li.selected a {
     margin-bottom: 6px;
     font-size: large;
 }
-.side .md > blockquote:nth-of-type(4) ul {
+.side .md > blockquote:nth-of-type(5) ul {
     padding-left: 18px;
 }
-.side .md > blockquote:nth-of-type(4) ul li {
+.side .md > blockquote:nth-of-type(5) ul li {
     list-style: none;
     margin: 2px 0;
     display: inline-block;
     padding: 0 !important;
     border: none !important;
 }
-.side .md > blockquote:nth-of-type(4) ul li:nth-of-type(odd) {
+.side .md > blockquote:nth-of-type(5) ul li:nth-of-type(odd) {
     margin-right: 10px;
 }
-.side .md > blockquote:nth-of-type(4) ul li a {
+.side .md > blockquote:nth-of-type(5) ul li a {
     display: inline-block;
     color: #000 !important;
     text-align: center;
@@ -3863,20 +3865,20 @@ html:lang(xt) body:not(.comments-page) .link.linkflair-theory,
 html:lang(xw) body:not(.comments-page) .link.linkflair-oc {
     display: none;
 }
-:lang(dm) .side .md > blockquote:nth-of-type(4) ul li a {
+:lang(dm) .side .md > blockquote:nth-of-type(5) ul li a {
     color: #fff !important;
 }
-.side .md > blockquote:nth-of-type(4) ul li a:first-of-type {
+.side .md > blockquote:nth-of-type(5) ul li a:first-of-type {
     width: 90px;
     opacity: 0.75;
 }
-.side .md > blockquote:nth-of-type(4) ul li a:nth-of-type(2) {
+.side .md > blockquote:nth-of-type(5) ul li a:nth-of-type(2) {
     background-color: #bbb;
     width: 25px;
     margin-left: 3px;
     opacity: 0.75;
 }
-.side .md > blockquote:nth-of-type(4) ul li a:hover {
+.side .md > blockquote:nth-of-type(5) ul li a:hover {
     opacity: 1;
 }
 .flairselector .linkflair-news > .linkflairlabel,
@@ -4641,4 +4643,3 @@ a[href="/red"] {
 .md ul > li > a[href^="/rk"] + a ~ ul:before {
     background-position-y: -900px;
 }
-
