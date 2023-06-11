@@ -4136,7 +4136,7 @@ input[name="uh"][value^="z"] ~ a:after {
     background-color: #000;
     padding: 1.1em 1.4em;
     border: 3px solid #e0e0e0;
-    margin: -12px 0 0 -2em !important;
+    margin: -12px 2px 0 -2em !important;
     min-height: 71px;
     max-width: 675px;
 }
@@ -4155,6 +4155,8 @@ input[name="uh"][value^="z"] ~ a:after {
 }
 .md ul > li > a + a[href^="/box"] + ul {
     padding-left: 105px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .md ul > li > a[href="/s0"] + a[href^="/box"] + ul,
 .md ul > li > a[href="/p0"] + a[href^="/box"] + ul {
@@ -4172,6 +4174,10 @@ input[name="uh"][value^="z"] ~ a:after {
     color: #fff;
     font-size: 16px !important;
     margin: 0;
+    width: 100%;
+}
+.md ul > li > a[href^="/choice"] + ul > li {
+    width: auto;
 }
 .md ul > li > a[href^="/box"] + ul > li:before {
     content: "";
@@ -4245,13 +4251,6 @@ input[name="uh"][value^="z"] ~ a:after {
     word-spacing: 0.3ex;
     font-weight: 700;
 }
-.md ul > li > a + a[href^="/box"] + ul a[href="/threat"] {
-    font-family: Determination Mono, Determination Sans, monospace, sans-serif;
-}
-.md ul > li > a[href^="/box"] + ul a[href="/threat"],
-.md ul > li > a[href^="/box"] + ul a[href="/sans"] {
-    color: #fff;
-}
 a[href="/cyan"] {
     color: #1ea8fc !important;
 }
@@ -4319,13 +4318,9 @@ a[href="/red"] {
 }
 .md ul ul > li > a + a[href^="/box"] + ul {
     border: none;
-    margin: -18px 0 0 -25px !important;
-    padding: 4px 0 4px 140px !important;
-    min-height: 39px;
+    // TODO
 }
 .md ul ul > li > a + a[href^="/box"] + ul:before {
-    left: 50px;
-    top: 0;
     transform: scale(0.6);
     transform-origin: top right;
 }
@@ -4339,23 +4334,23 @@ a[href="/red"] {
 .premium-banner {
     display: none;
 }
-.md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
-    margin: -62px 0 0 350px !important;
-    padding-left: 0 !important;
-    top: -6px;
+.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]){
+    width: auto;
+    flex: 1 0 0;
+    margin-top: 15px;
 }
-.md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul:before {
-    left: -90px;
+.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"])::before{
+    display: none;
 }
-.md ul ul > li:nth-of-type(3) > a + a[href^="/box"] + ul:after {
-    background: #000;
-    width: 12px;
-    height: 9px;
-    position: absolute;
-    content: "";
-    left: -366px;
-    top: 51px;
-    z-index: 1;
+.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul {
+    padding: 10px 0 0 0;
+}
+.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul > li {
+    padding-left: 100px;
+    text-indent: 0;
+}
+.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul::before {
+    left: 0;
 }
 .md ul > li > a[href^="/diagonal"] + ul {
     min-height: 99px;
