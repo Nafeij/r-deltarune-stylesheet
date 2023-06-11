@@ -4155,8 +4155,6 @@ input[name="uh"][value^="z"] ~ a:after {
 }
 .md ul > li > a + a[href^="/box"] + ul {
     padding-left: 105px;
-    display: flex;
-    flex-wrap: wrap;
 }
 .md ul > li > a[href="/s0"] + a[href^="/box"] + ul,
 .md ul > li > a[href="/p0"] + a[href^="/box"] + ul {
@@ -4174,7 +4172,6 @@ input[name="uh"][value^="z"] ~ a:after {
     color: #fff;
     font-size: 16px !important;
     margin: 0;
-    width: 100%;
 }
 .md ul > li > a[href^="/choice"] + ul > li {
     width: auto;
@@ -4333,22 +4330,14 @@ a[href="/red"] {
 .premium-banner {
     display: none;
 }
-.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]){
-    width: auto;
-    flex: 1 0 0;
-    margin: 15px 0 -9px 0;
-}
-.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"])::before{
-    display: none;
-}
-.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul {
+.md ul > li > a[href^="/box"] + ul > li > a[href^="/box"] + ul {
     padding: 10px 0 0 0;
 }
-.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul > li {
+.md ul > li > a[href^="/box"] + ul > li > a[href^="/box"] + ul > li {
     padding-left: 100px;
     text-indent: 0;
 }
-.md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]) > ul::before {
+.md ul > li > a[href^="/box"] + ul > li > a[href^="/box"] + ul::before {
     left: 0;
 }
 .md ul > li > a[href^="/diagonal"] + ul {
