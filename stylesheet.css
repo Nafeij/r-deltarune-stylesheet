@@ -4318,7 +4318,6 @@ a[href="/red"] {
 }
 .md ul ul > li > a + a[href^="/box"] + ul {
     border: none;
-    // TODO
 }
 .md ul ul > li > a + a[href^="/box"] + ul:before {
     transform: scale(0.6);
@@ -4337,7 +4336,7 @@ a[href="/red"] {
 .md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"]){
     width: auto;
     flex: 1 0 0;
-    margin-top: 15px;
+    margin: 15px 0 -9px 0;
 }
 .md ul > li > a[href^="/box"] + ul > li:has(a[href^="/box"])::before{
     display: none;
@@ -4356,22 +4355,18 @@ a[href="/red"] {
     min-height: 99px;
 }
 .md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul {
-    padding-left: 5em !important;
+    background: none;
+    padding: 0.5em 0 0 7em !important;
     position: relative;
-    margin-left: 0 !important;
-    top: 17px;
+    margin-left: -30px !important;
 }
 .md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(2) > a + a[href^="/box"] + ul {
-    margin-left: 100px !important;
+    margin-left: 30px !important;
     z-index: 1;
 }
 .md ul > li > a[href^="/diagonal"] + ul > li:nth-of-type(3) > a + a[href^="/box"] + ul {
-    margin: -16px 0 2px 200px !important;
+    margin-left: 90px !important;
     z-index: 2;
-}
-.md ul > li > a[href^="/diagonal"] + ul > li > a + a[href^="/box"] + ul:before {
-    left: -30px;
-    top: -10px;
 }
 .md ul > li > a[href^="/box"] + ul a[href^="/cp"]:before,
 .md ul > li > a[href^="/box"] + ul a[href^="/kk"]:before,
