@@ -1,3 +1,4129 @@
+/*
+Most graphics used are copyright of Toby Fox.
+
+Shamelessly stolen from /r/MortalKombat. Credit goes to u/Xhogar and u/FanOfTheJoystick
+
+For raw unminified css, PM /u/Nafeij or see here: https://github.com/Nafeij/r-deltarune-stylesheet
+*/
+
+
+.side .md a[href*="http://www.reddit.com/r/deltarune"], .side .md a[href*="http://dm.reddit.com/r/deltarune"]
+{
+    display: block;
+    width: 122px;
+    height: 68px;
+    margin: 0 auto;
+    background-image: url(%%t%%);
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% !important;
+    transition: background-size 0.2s ease-out;
+    position: absolute;
+    top: 30px;
+    z-index: 99;
+    right: 15px;
+}
+.side .md a[href*="http://dm.reddit.com/r/deltarune"]
+{
+    background: url(%%g%%);
+}
+.side .md a[href*="http://www.reddit.com/r/deltarune"]:hover, .side .md a[href*="http://dm.reddit.com/r/deltarune"]:hover
+{
+    background-size: 95% !important;
+}
+.side a[href="http://www.reddit.com/r/deltarune"]
+{
+    pointer-events: none;
+}
+:lang(dm) .side .md a[href="http://www.reddit.com/r/deltarune"]
+{
+    pointer-events: auto;
+}
+.side .md a[href="#bullet"] {
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: url(%%f%%) no-repeat;
+    padding-right: 4px;
+    position: relative;
+    left: 2px;
+    pointer-events: none;
+}
+.side .md a[href="#bullet"]:lang(dm) {
+    background-position: 0 -10px;
+}
+body:lang(dm) {
+    background-image: url(%%c%%) !important;
+}
+body {
+    overflow-x: hidden;
+    background-image: url(%%b%%);
+}
+.md code,
+.md pre {
+    background: 0 0 !important;
+    border: 0;
+}
+#header {
+    background: url(%%j%%) center repeat-x #222;
+    height: 210px;
+    border: 0;
+    margin-bottom: 31px;
+}
+.submit-page #header {
+    margin-bottom: 40px;
+}
+#header:lang(dm) {
+    background: url(%%k%%) 80% 18px no-repeat, url(%%l%%) center 18px;
+    animation: flutter 1s steps(4, end) 300;
+}
+@keyframes flutter {
+    100% {
+        background-position: 80% -822px, center 18px;
+    }
+}
+.content a,
+.md a,
+.pagename a,
+.search-expando-button,
+.search-result:link,
+.search-result:link > mark {
+    color: #e82222 !important;
+}
+.side .md > ul:first-of-type {
+    position: absolute;
+    top: 239px;
+    width: 268px;
+    font-size: 11px;
+    border: 16px solid;
+    padding: 0;
+    cursor: default;
+    background: url(%%w%%) center no-repeat #b79675;
+    border-image: url(%%x%%) 16;
+}
+:lang(dm) .side .md > ul:first-of-type {
+    background: url(%%z%%) center no-repeat #8f6e4d;
+    border-image: url(%%y%%) 16;
+}
+.side .md > ul:first-of-type li {
+    list-style: none;
+}
+.side .md > ul:first-of-type ul {
+    background-color: rgba(240, 240, 240, 0.75);
+    padding: 2px 6px;
+    margin: 0.25em;
+}
+:lang(dm) .side .md > ul:first-of-type ul {
+    background-color: #000a0;
+}
+.side .md > ul:first-of-type:hover ul {
+    background-color: #fff;
+}
+:lang(dm) .side .md > ul:first-of-type:hover ul {
+    background-color: #000;
+}
+.side .md > ul:first-of-type a {
+    line-height: 1.75em;
+}
+.side .md > ul:first-of-type ul a:before {
+    content: "❯ ";
+}
+.side .md > ul:first-of-type > li {
+    margin: 4px -8px -8px;
+}
+#searchexpando {
+    width: 161px;
+    border-radius: 0;
+}
+#search input[type="text"] {
+    width: 193px;
+}
+.search-page .side .md > h3:first-of-type,
+.search-page .side .md > h3:first-of-type + ul {
+    display: none;
+}
+.side .md > h3:first-of-type {
+    font-size: 0;
+    line-height: 28px;
+    position: absolute;
+    top: 365px;
+    right: 28px;
+    width: 100px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 100;
+    text-align: center;
+}
+.side .md > h3:first-of-type:after {
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    z-index: 12;
+    content: "search by flair";
+    pointer-events: none;
+    color: #888;
+}
+.side .md > h3:first-of-type + ul {
+    position: absolute;
+    top: 395px;
+    right: 28px;
+    display: block;
+    overflow: hidden;
+    width: 100px;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    height: 0;
+    transition: height 0.5s ease-out, top 0.5s ease-out;
+    border-width: 0 !important;
+}
+.side .md > h3:first-of-type + ul:before {
+    content: "";
+    top: -8px;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 100%;
+}
+.side .md > h3:first-of-type + ul:hover,
+.side .md > h3:first-of-type:hover + ul {
+    height: 337px;
+    border-width: 1px !important;
+}
+.side .md > h3:first-of-type + ul li a:hover {
+    border: 1px solid #e22;
+    padding: 3px 6px;
+}
+.side .md > h3:first-of-type + ul li a {
+    display: block;
+    padding: 4px 7px;
+    color: #666 !important;
+    margin-right: 19px;
+    background-color: transparent;
+}
+:lang(dm) .side .md > h3:first-of-type + ul li a {
+    color: #eee;
+}
+.side .md > h3:first-of-type + ul li a:not(:first-of-type) {
+    display: inline-block;
+    margin-top: -23px;
+    position: absolute;
+    right: -19px;
+}
+.md table {
+    margin: 5px 0 15px;
+}
+.md td,
+.md th {
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+:lang(dm) .content .md td {
+    background: #1a1714;
+}
+:lang(dm) .md th {
+    text-align: inherit;
+    background: #2e2a26;
+}
+.tagline {
+    line-height: 11px;
+}
+.link .score.likes {
+    color: #e22;
+}
+.link .score.dislikes {
+    color: #994747;
+}
+.link .score.unvoted {
+    color: #888;
+}
+:lang(dm) .comment .score {
+    color: #aaa !important;
+}
+.content,
+.md,
+.side,
+.titlebox .bottom a {
+    color: #666;
+}
+#RESShortcuts,
+.srSep,
+:lang(dm) .side .md h3,
+:lang(dm) .wiki-page-content .md h1,
+:lang(dm) .wiki-page-content .md h2,
+:lang(dm) .wiki-page-content .md h6,
+:lang(dm).content,
+:lang(dm).md,
+:lang(dm).side {
+    color: #ccc;
+}
+#sr-more-link,
+.dropdown.srdrop .selected,
+.sr-bar a {
+    color: #ccc;
+    font-size: 8px;
+    transition: all 0.2s ease-out;
+}
+#sr-header-area:hover a,
+#sr-header-area:hover.dropdown.srdrop .selected {
+    color: #e0e0e0;
+}
+.thing .title {
+    margin-bottom: 10px;
+}
+#sr-header-area .selected a,
+.comment .md p > a:visited,
+.pagename a:visited,
+.tagline a:visited,
+.thing .title:visited,
+.thing.visited .title {
+    color: #600 !important;
+}
+:lang(dm)#sr-header-area .selected a,
+:lang(dm).comment .md p > a:visited,
+:lang(dm).pagename a:visited,
+:lang(dm).tagline a:visited,
+:lang(dm).thing .title:visited,
+:lang(dm).thing.visited .title {
+    color: #b00 !important;
+}
+body.loggedin > .content:after,
+body.loggedin > .content:before {
+    display: block;
+    position: fixed;
+}
+.user,
+.user > a {
+    position: relative;
+}
+#header-bottom-right {
+    background-color: transparent;
+    bottom: -30px !important;
+    top: auto !important;
+    height: 37px;
+    font-family: determination mono, determination sans, consolas, monospace;
+    width: 246px;
+    transition: 0.2s ease;
+    border: 2px solid transparent;
+    z-index: 0;
+    padding: 0;
+}
+#header-bottom-right:hover {
+    border-color: #fff;
+    height: 77px;
+}
+:lang(dm) #header-bottom-right:hover {
+    border-color: #00e6ff;
+}
+#header-bottom-right a {
+    color: #fff;
+}
+#header-bottom-right .separator {
+    display: none;
+}
+.user {
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+    background: url(%%B%%) 7px 21px no-repeat #000;
+    padding: 4px 8px 0 5px;
+    height: 25px;
+    transition: border-bottom-color 0.2s linear;
+    border-bottom: 2px solid transparent;
+    z-index: 1;
+}
+.user:lang(dm) {
+    background: url(%%A%%) 8px 8px no-repeat #000;
+}
+#header-bottom-right:hover .user {
+    border-bottom-color: #fff;
+    height: 33px;
+}
+:lang(dm) #header-bottom-right:hover .user {
+    border-bottom-color: #00e6ff;
+}
+.user > a {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+:lang(dm) .user > a {
+    left: 31px;
+    top: 8px;
+}
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
+    width: 27px;
+    height: 9px;
+    left: 3px;
+    position: absolute;
+    background-image: none !important;
+    top: 20px;
+}
+:lang(dm) .res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
+    width: 20px;
+    height: 17px;
+    left: 5px;
+    top: 5px;
+}
+.message-count,
+.presence_circle,
+.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIconOverlay {
+    display: none;
+}
+.user .userkarma {
+    font-size: 0;
+    position: absolute;
+    background: url(%%p%%) 0 -9px no-repeat;
+    width: 116px;
+    display: block;
+    text-align: right;
+    right: 14px;
+}
+.user .userkarma a {
+    position: relative;
+    top: -16px;
+    font-size: 12px;
+}
+:lang(dm) .user .userkarma {
+    height: 9px;
+    background-position: 0 0;
+}
+.user .userkarma a:first-of-type:after {
+    content: "/";
+    margin: 0 3px;
+}
+#header-bottom-right a.login-required {
+    margin: 0 11px 0 40px;
+}
+#chat,
+#header-bottom-right .gearIcon,
+#mail,
+#modmail,
+#new_modmail,
+.logout a,
+.pref-lang {
+    background: url(%%0%%) 244px 99px no-repeat !important;
+    position: absolute;
+    top: auto;
+    bottom: 1px;
+    height: 33px;
+    width: 35px;
+    margin: 0;
+    font-size: 0;
+}
+#header-bottom-right > a:first-of-type:after {
+    background: url(%%0%%) 2px 0 no-repeat;
+    content: "";
+    height: 31px;
+    width: 244px;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: -1;
+}
+#openRESPrefs {
+    position: absolute;
+}
+#mail {
+    left: 18px;
+    overflow: visible;
+}
+#mail.nohavemail {
+    background-position: 2px 0 !important;
+}
+#mail.havemail {
+    background-position: 2px -33px !important;
+}
+#mail:hover {
+    background-position: 2px -66px !important;
+}
+#chat {
+    background-position: -33px 0 !important;
+    left: 53px;
+}
+#chat.active {
+    background-position: -33px -33px !important;
+    background-size: auto;
+}
+#chat:hover {
+    background-position: -33px -66px !important;
+}
+#new_modmail {
+    left: 88px;
+}
+#new_modmail.nohavemail {
+    background-position: -68px 0 !important;
+}
+#new_modmail.havemail {
+    background-position: -68px -33px !important;
+}
+#new_modmail:hover {
+    background-position: -68px -66px !important;
+}
+.pref-lang {
+    left: 123px;
+    background-position: -103px 0 !important;
+}
+.pref-lang:hover {
+    background-position: -103px -66px !important;
+}
+#header-bottom-right .gearIcon {
+    background-image: none !important;
+    left: 158px;
+}
+#header-bottom-right .gearIcon:after {
+    background: url(%%0%%) -138px 0;
+    display: block;
+    height: 33px;
+    content: "";
+}
+#header-bottom-right .gearIcon:hover:after {
+    background-position: -138px -66px;
+}
+.logout a {
+    left: 193px;
+    background-position: -173px 0 !important;
+}
+.logout:hover a {
+    background-position: -173px -66px !important;
+}
+#sr-header-area {
+    background: #2e262b;
+    border: 0;
+}
+#header-bottom-left {
+    bottom: -31px;
+    height: 37px;
+    border: 3px solid #fff;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+}
+:lang(dm) #header-bottom-left {
+    border-color: #322431;
+}
+#header .tabmenu li {
+    float: left;
+}
+:lang(dm) #header .tabmenu li a {
+    color: #ddd;
+}
+#header .tabmenu li a:hover,
+#header .tabmenu li.selected a {
+    color: #eee;
+}
+#header .tabmenu li.selected a {
+    font-weight: 700;
+}
+.pagename {
+    font-size: 0;
+}
+.pagename a {
+    display: block;
+    width: 100%;
+    height: 180px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-out;
+    background: url(%%n%%) 115px 95px no-repeat;
+    top: -182px;
+    position: absolute;
+}
+.pagename a:hover {
+    opacity: 1;
+}
+.side blockquote td {
+    border: 0;
+}
+.side blockquote a[href="#expand"] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffcadb;
+    box-sizing: border-box;
+    border: 1px solid #222;
+    transition: height 0.5s ease;
+    cursor: default;
+}
+:lang(dm) .side blockquote a[href="#expand"] {
+    background: #444240;
+}
+.side blockquote a[href="#expand"]:before {
+    display: block;
+    color: #888;
+    font-size: 16px;
+    transform: rotate(90deg);
+    content: "»";
+    text-align: center;
+}
+:lang(dm) .side blockquote a[href="#expand"]:before {
+    display: block;
+    color: #111;
+    font-size: 16px;
+    transform: rotate(90deg);
+    content: "»";
+    text-align: center;
+}
+.side blockquote:hover a[href="#expand"] {
+    height: 0;
+}
+.side .md hr {
+    display: none;
+}
+.side {
+    width: 330px;
+    background: url(%%3%%) center top #e0e0e0;
+    margin: 5px 10px 20px;
+    border: 3px solid #ccc;
+    padding-top: 116px;
+}
+:lang(dm) .side {
+    background: url(%%4%%) center top #202020;
+    border-color: #555;
+}
+.side .login-form-side {
+    border: 0 !important;
+    margin: 0 11px;
+}
+.side .login-form-side input[type="password"],
+.side .login-form-side input[type="text"] {
+    width: 148px;
+    margin-left: 4px;
+}
+.side .spacer {
+    margin: 0;
+}
+.side #ad_main,
+.side #search,
+.side .sidebox,
+.side .sidecontentbox,
+.side .titlebox {
+    padding: 0 15px 10px;
+}
+.account-activity-box {
+    width: 340px;
+    height: 30px;
+}
+.side .md blockquote,
+.sidecontentbox .content,
+.titlebox .tagline {
+    margin: 0 0 20px;
+    border: 0;
+    color: #202020;
+    background-color: #ffa;
+    box-shadow: 0 0 5px #101010;
+    padding: 10px;
+}
+:lang(dm) .side .md blockquote,
+:lang(dm) .sidecontentbox .content,
+:lang(dm) .titlebox .tagline {
+    background-color: #333130;
+}
+.titlebox .tagline a {
+    font-size: 12px;
+}
+.side .md blockquote {
+    padding: 7px;
+    max-height: 305px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s ease all;
+}
+.side .md blockquote:hover {
+    max-height: 1000px;
+}
+.link.last-clicked,
+.thing > .midcol {
+    overflow: visible;
+}
+.side .md blockquote:nth-of-type(1) {
+    text-align: center;
+}
+.side .md blockquote ul {
+    padding: 0;
+    list-style: none;
+}
+.side .md p {
+    line-height: 20px;
+}
+.sidecontentbox {
+    margin-bottom: -20px;
+}
+.account-activity-box a {
+    width: 280px !important;
+    margin: 14px 10px 0 0;
+}
+.RESDialogSmall.livePreview > h3,
+.RESDialogSmall > h3,
+.side .md blockquote h1,
+.side .title h1,
+.sidecontentbox .title h1,
+form.toggle.flairtoggle {
+    text-align: center;
+    background: #e0e0e0 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 7px 0;
+    display: block;
+    border: 3px solid #202020;
+    border-width: 0 3px;
+}
+:lang(dm) .RESDialogSmall.livePreview > h3,
+:lang(dm) .RESDialogSmall > h3,
+:lang(dm) .side .md blockquote h1,
+:lang(dm) .side .title h1,
+:lang(dm) .sidecontentbox .title h1,
+:lang(dm) form.toggle.flairtoggle {
+    background: #222 !important;
+    border-color: #e0e0e0;
+}
+.RESDialogSmall > h3,
+.side .md blockquote h1,
+.sidecontentbox .title h1,
+.titlebox h1 {
+    color: #222;
+    font-family: arial, sans-serif;
+}
+:lang(dm) .RESDialogSmall > h3,
+:lang(dm) .side .md blockquote h1,
+:lang(dm) .sidecontentbox .title h1,
+:lang(dm) .titlebox h1 {
+    color: #e0e0e0;
+}
+.side .md blockquote h1 a,
+.titlebox h1 a {
+    color: #c01600;
+}
+:lang(dm) .side .md blockquote h1 a,
+:lang(dm) .titlebox h1 a {
+    color: #e0e0e0;
+}
+.account-activity-box a,
+.message-button a,
+.side .md h4 a,
+.sidebox.create .morelink {
+    display: inline-block;
+    letter-spacing: 0;
+    color: #222 !important;
+    font-size: 14px;
+    background: #eee !important;
+    border: 1px solid #222;
+    border-radius: 2px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+.sidebox.create .morelink a {
+    color: #222;
+}
+.account-activity-box a:hover,
+.message-button a:hover,
+.side .md h4 a:hover,
+.sidebox.create .morelink:hover {
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.34);
+}
+:lang(dm) .account-activity-box a,
+:lang(dm) .message-button a,
+:lang(dm) .side .md h4 a,
+:lang(dm) .sidebox.create .morelink {
+    background: #222 !important;
+    color: #ddd !important;
+}
+:lang(dm) .account-activity-box a:hover,
+:lang(dm) .message-button a:hover,
+:lang(dm) .side .md h4 a:hover,
+:lang(dm) .sidebox.create .morelink:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.side .md blockquote h1 {
+    width: 290px;
+}
+.side .md blockquote li {
+    padding: 10px 0;
+    border-top: 1px solid #464442;
+}
+.side .md blockquote ul li:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+.titlebox .tagline {
+    position: relative;
+    font-weight: 700;
+    padding: 10px 0 24px;
+    background: url(%%b%%);
+    background-size: 33%;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-size: 0;
+    text-align: center;
+    border: 1px solid #202020 !important;
+    box-shadow: none;
+    margin-top: 5px !important;
+}
+.titlebox .tagline:hover {
+    border-color: #e22 !important;
+}
+:lang(dm) .titlebox .tagline {
+    border-color: #e0e0e0 !important;
+    background: url(%%c%%);
+}
+.titlebox .tagline .flairselectbtn {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.titlebox .tagline .flairselectbtn:after {
+    content: "click to customize userflair";
+    color: #e22;
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    padding: 1px 0;
+}
+:lang(dm) .titlebox .tagline .flairselectbtn:after {
+    background-color: #222;
+}
+.gadget .reddit-link,
+.icon-menu a {
+    background: 0;
+}
+.leavemoderator,
+.titlebox form.toggle {
+    background: 0 0;
+    color: #333;
+}
+:lang(dm) .leavemoderator,
+:lang(dm) .titlebox form.toggle {
+    color: #e0e0e0;
+}
+.sidebox.create .spacer {
+    display: none;
+}
+.submit .morelink {
+    background: 0 0;
+    border: 0;
+    height: 40px;
+}
+.side .md > h1,
+.submit .morelink a {
+    color: #202020;
+    font-size: 14px;
+    border-left: 2px solid #202020;
+    border-right: 2px solid #202020;
+    box-sizing: border-box;
+}
+.submit .morelink a {
+    width: 300px;
+}
+.submit .morelink a:hover {
+    border-color: #ffb400;
+}
+:lang(dm) .side .md > h1,
+:lang(dm) .submit .morelink a {
+    background: #444240;
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+.submit .morelink a:before {
+    display: block;
+    content: "";
+    height: 40px;
+    background-image: url(%%7%%);
+}
+.disabled .morelink a:before {
+    display: none;
+}
+.submit-link .morelink a:before {
+    background-position: -92px -40px;
+}
+.submit-text .morelink a:before {
+    background-position: -92px -120px;
+}
+.side .md > h1 {
+    background: #e0e0e0;
+    padding: 7px 10px;
+    line-height: 20px;
+}
+:lang(dm) .side .md > h1 {
+    background: #222;
+}
+.side .md > h1 a {
+    text-decoration: underline;
+}
+.disabled .morelink a {
+    color: #aaa;
+    background: #191919;
+    border: #2e2a26;
+}
+.side .subscribers .number:after {
+    content: " Lightners";
+}
+.side .users-online .number:after {
+    content: " kids skipping class";
+}
+.titlebox .subscribers {
+    padding: 7px 0;
+    display: block;
+}
+.titlebox h1.redditname {
+    font-size: 0;
+    margin: 0;
+}
+.users-online:before {
+    margin-top: 6px;
+    background: url(%%f%%);
+    height: 10px;
+}
+:lang(dm).users-online:before {
+    background-position: 0 -10px;
+}
+.titlebox .subscribers,
+.users-online {
+    color: #202020;
+    font-size: 18px;
+    font-family: Determination Sans, Determination Mono, Arial, Serif;
+}
+:lang(dm).titlebox .subscribers,
+:lang(dm).users-online {
+    color: #e0e0e0;
+}
+.titlebox .subButtons {
+    text-align: center;
+}
+.titlebox .fancy-toggle-button.subscribe-button {
+    display: block;
+}
+.titlebox .fancy-toggle-button.subscribe-button .option.active {
+    display: inline-block;
+    height: 54px;
+    width: 288px;
+    font-size: 0;
+    background: url(%%7%%) -20px -303px;
+    border: 0;
+    border-radius: 0;
+}
+.titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
+    background-position: -20px -359px;
+}
+.titlebox .fancy-toggle-button.subscribe-button .option.remove.active {
+    background-position: -20px -191px;
+}
+.titlebox .fancy-toggle-button.subscribe-button .option.remove.active:hover {
+    background-position: -20px -247px;
+}
+.res-fancy-toggle-button {
+    color: #202020 !important;
+}
+:lang(dm) .res-fancy-toggle-button {
+    color: #e0e0e0 !important;
+}
+.res-fancy-toggle-button:hover {
+    background: #202020 !important;
+    color: #ffc90e !important;
+    border-color: #ffc90e;
+}
+.searchpane {
+    background: 0 0;
+}
+#moresearchinfo,
+#search_showmore {
+    display: block;
+    margin-top: 10px;
+}
+.domain a,
+.link .buttons .redditSingleClick,
+.link .buttons li a,
+.link .score,
+.res-voteEnhancements-highlightScores span.score,
+.spam .domain,
+.spam .domain a,
+.tagline {
+    color: #888;
+}
+.thing,
+.thing.stickled {
+    background: #fff;
+    padding: 5px 10px;
+}
+:lang(dm) .thing,
+:lang(dm) .thing.stickled {
+    background: #282832;
+}
+.thing .parent {
+    display: block;
+    margin: -5px 0 10px;
+}
+.over18 .thumbnail img,
+.submit_text h1 {
+    display: none;
+}
+.thing.last-clicked,
+.thing.link {
+    border-left: 5px solid;
+    margin-bottom: 1px;
+    transition: all 0.2s ease-out;
+}
+.thing.link:hover {
+    background: #f2f2f2;
+}
+.thing.stickied:hover {
+    background: #f1f3f1;
+}
+:lang(dm).thing.link:hover,
+:lang(dm).thing.stickied:hover {
+    background: 0 0;
+}
+.link .buttons .redditSingleClick,
+.link .buttons li a {
+    opacity: 0.7;
+}
+:lang(dm) .link .buttons li.first a {
+    color: #e0e0e0;
+    opacity: 1;
+}
+.link:hover .buttons .redditSingleClick,
+.link:hover .buttons li a {
+    opacity: 1;
+}
+.infobar,
+.panestack-title,
+.searchfacets,
+.searchpane,
+.tabpane-content,
+.thing.link {
+    margin-right: 360px;
+    padding-left: 20px;
+}
+.wiki-page .wiki-page-content {
+    margin-right: 360px;
+}
+.wiki-page-content .wiki > .toc > ul {
+    float: none !important;
+}
+:lang(dm).tagline .stickied-tagline,
+:lang(dm).thing.stickied a.title,
+:lang(dm).thing.stickied a.title.visited {
+    color: #39f !important;
+}
+.thing.spam > .entry,
+.thing.spam > .entry.RES-keyNav-activeElement {
+    background: 0 0 !important;
+}
+.comment.spam > .child,
+.message.spam > .child {
+    background: 0 0;
+}
+.comment .midcol {
+    width: 25px;
+    margin-left: 4px;
+}
+.comment .child,
+.comment .showreplies,
+.res-commentBoxes .comment div.child {
+    margin-left: 0;
+}
+.link .rank {
+    margin: 30px 10px 0 -1px;
+}
+.thing:hover .rank {
+    visibility: hidden;
+}
+.thing.stickied .rank {
+    background: url(%%7%%) 0 -107px no-repeat !important;
+    height: 20px !important;
+    width: 20px !important;
+    margin: 28px 4px 0 -6px;
+    opacity: 0.2;
+}
+.link .flat-list {
+    margin-top: 3px;
+}
+.link .midcol,
+.midcol-spacer {
+    margin-right: 16px;
+    width: 5ex !important;
+    height: 90px;
+}
+.content {
+    margin: 7px 0 0;
+}
+.thing.stickied a.title:before {
+    content: "STICKY";
+    font-size: 10px;
+    margin-right: 8px;
+    padding: 4px;
+    font-weight: 400;
+    margin-top: 1px;
+    float: left;
+    background-color: #282;
+    color: #fff;
+}
+:lang(dm) .thing.stickied a.title:before {
+    background-color: #39f !important;
+    color: #e0e0e0;
+}
+.nsfw-stamp,
+.spoiler-stamp {
+    background-color: #5d0400;
+    border: 0 !important;
+    border-radius: 0;
+}
+.nsfw-stamp acronym,
+.spoiler-stamp span {
+    color: #e0e0e0;
+    text-transform: uppercase;
+}
+.thumbnail {
+    height: 70px !important;
+    width: 70px;
+    position: relative;
+    margin-right: 10px;
+    visibility: visible;
+}
+.over18 .thumbnail,
+.thumbnail.default,
+.thumbnail.self,
+.thumbnail.spoiler {
+    background-image: url(%%7%%);
+    background-position: -392px 0;
+    width: 70px !important;
+}
+.thumbnail:hover {
+    width: 90px;
+}
+:lang(dm) .thumbnail.self {
+    background-position: -392px -70px;
+}
+.over18 .thumbnail {
+    background-position: -532px 0;
+}
+:lang(dm) .over18 .thumbnail {
+    background-position: -532px -70px;
+}
+.thumbnail.spoiler {
+    background-position: -462px 0;
+}
+:lang(dm) .thumbnail.spoiler {
+    background-position: -462px -70px;
+}
+.thumbnail img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    top: 0;
+    height: auto;
+}
+.thumbnail:hover img {
+    width: 140px;
+    top: -100%;
+    transition: top 1s 1s;
+}
+.expando-button {
+    background-image: url(%%7%%) !important;
+    background-size: 690px;
+}
+.image.collapsed,
+.image.gallery.collapsedExpando,
+.selftext.collapsed {
+    background-position: -1px -1px !important;
+}
+.image.collapsed:hover,
+.image.gallery.collapsedExpando:hover,
+.selftext.collapsed:hover {
+    background-position: -26px -1px !important;
+}
+.image.expanded,
+.image.gallery.expanded,
+.selftext.expanded {
+    background-position: -1px -26px !important;
+}
+.image.expanded:hover,
+.image.gallery.expanded:hover,
+.selftext.expanded:hover {
+    background-position: -26px -26px !important;
+}
+.video-muted.collapsed,
+.video.collapsed {
+    background-position: -1px -51px !important;
+}
+.video-muted.collapsed:hover,
+.video.collapsed:hover {
+    background-position: -26px -51px !important;
+}
+.video-muted.expanded,
+.video.expanded {
+    background-position: -1px -76px !important;
+}
+.video-muted.expanded:hover,
+.video.expanded:hover {
+    background-position: -26px -76px !important;
+}
+#search input,
+#searchexpando,
+.flairselector .customizer input,
+.roundfield input[type="number"],
+.roundfield input[type="password"],
+.roundfield input[type="text"],
+.roundfield input[type="url"],
+.roundfield textarea,
+.side .md > h3:first-of-type,
+.side .md > h3:first-of-type + ul,
+textarea {
+    background-color: #f8f8f8;
+    color: #222;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    border: 1px solid #888;
+    outline: 0;
+}
+:lang(dm) #search input,
+:lang(dm) #searchexpando,
+:lang(dm) .flairselector .customizer input,
+:lang(dm) .roundfield input[type="number"],
+:lang(dm) .roundfield input[type="password"],
+:lang(dm) .roundfield input[type="text"],
+:lang(dm) .roundfield input[type="url"],
+:lang(dm) .roundfield textarea,
+:lang(dm) .side .md > h3:first-of-type,
+:lang(dm) .side .md > h3:first-of-type + ul,
+:lang(dm) textarea {
+    background-color: #111 !important;
+    color: #e0e0e0 !important;
+}
+.comments-page .usertext-edit textarea {
+    background: url(%%C%%) center no-repeat #e0e0e0;
+    padding: 0 5px;
+}
+:lang(dm) .comments-page .usertext-edit textarea {
+    background: url(%%D%%) center no-repeat #202020;
+}
+.comments-page .usertext-edit textarea:focus,
+.comments-page .usertext-edit textarea:hover {
+    background: 0 0;
+}
+.submit-page .content {
+    width: 520px;
+    margin: 0 auto !important;
+    padding-bottom: 15px;
+    top: -25px;
+}
+.submit-page .content:after {
+    height: 40px;
+    bottom: -20px;
+    background-size: 40px 80px;
+    background-position: 0 -40px;
+}
+.submit-page .side {
+    display: none !important;
+}
+.submit-page .tabmenu.formtab {
+    padding: 0;
+    font-size: large;
+    top: -6px;
+    position: relative;
+    left: 0;
+}
+.submit-page .tabmenu.formtab a {
+    border-color: #e0e0e0;
+}
+.submit-page .tabmenu.formtab .selected a {
+    padding: 0 8px;
+}
+.submit-page .formtabs-content,
+.submit-page .info-notice {
+    border: 0;
+    margin-bottom: 15px;
+    box-shadow: 0 0 25px #0002;
+    background-color: #e0e0e0;
+    padding: 0;
+    margin-top: 8px;
+}
+.submit-page .formtabs-content .spacer {
+    margin: 0;
+}
+.submit-page .infobar,
+.submit-page .roundfield {
+    background-color: #e0e0e0 !important;
+    border-radius: 0;
+    border: 1px solid #ff66b5 !important;
+    width: 500px;
+    padding: 5px 10px 10px !important;
+}
+:lang(dm) .submit-page .infobar,
+:lang(dm) .submit-page .roundfield {
+    background-color: #222 !important;
+}
+.submit-page .btn {
+    width: 100%;
+    height: 40px;
+    background: #e0e0e0;
+    box-shadow: 0 0 25px #0002;
+    padding-top: 10px;
+}
+.submit-page .btn:after {
+    content: "";
+    background: url(%%7%%) -270px -415px;
+    width: 270px;
+    height: 100px;
+    top: 30px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+:lang(dm) .submit-page .btn {
+    background: #202020;
+    color: #e0e0e0;
+}
+:lang(dm) .submit-page .btn:after {
+    background-position: 0 -415px;
+}
+.comment .expand {
+    float: left;
+    margin-top: 8px;
+    margin-right: 4px;
+}
+.comment .author {
+    font-size: 13px;
+    display: inline-block;
+    padding: 8px 4px !important;
+    height: 10px;
+}
+.arrow.down:after,
+.linkinfo {
+    padding: 12px;
+    text-align: center;
+}
+.tagline a.author {
+    color: #202020 !important;
+}
+:lang(dm) a.author {
+    color: #e0e0e0 !important;
+}
+a.moderator {
+    color: #62ae00 !important;
+}
+div.usertext-body {
+    clear: both;
+    margin: 9px 0 8px;
+}
+.new-comment .usertext-body {
+    border: 1px solid #666 !important;
+    margin-top: 15px !important;
+    background: 0 0 !important;
+}
+.link .usertext .md,
+.linkinfo {
+    background: 0 0;
+    border: 0;
+}
+div.usertext-body h1,
+div.usertext-body h2,
+div.usertext-body h3,
+div.usertext-body h4,
+div.usertext-body h5,
+div.usertext-body h6 {
+    font-weight: 700;
+}
+div .titlebox .usertext-body h1 {
+    text-align: center;
+}
+:lang(dm) div.usertext-body h2 {
+    font-size: 24px;
+    color: #e0e0e0;
+}
+div.usertext-body h3 {
+    font-size: 22px;
+}
+div.usertext-body h4 {
+    font-size: 20px;
+}
+div.usertext-body h5 {
+    color: #c01600;
+    font-size: 18px;
+}
+div.usertext-body h6 {
+    font-size: 16px;
+}
+.linkinfo {
+    margin: 0 auto;
+}
+.score .number:after {
+    content: "% TP";
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+.score .word {
+    display: none;
+}
+.sheets {
+    margin-right: 375px;
+}
+.thing > .midcol {
+    position: relative;
+}
+.arrow.down:after,
+.arrow:before {
+    position: absolute;
+    pointer-events: none;
+}
+.arrow.down,
+.arrow.downmod,
+.arrow.up,
+.arrow.upmod {
+    background: url(%%7%%) no-repeat !important;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+.arrow.up {
+    background-position: 0 -191px !important;
+}
+.arrow.upmod {
+    background-position: 0 -211px !important;
+}
+.arrow.down {
+    background-position: 0 -231px !important;
+    top: 46px;
+}
+.arrow.downmod {
+    background-position: 0 -251px !important;
+    top: 46px;
+}
+.link .arrow.down,
+.link .arrow.downmod,
+.link .arrow.up,
+.link .arrow.upmod {
+    margin: 6px auto 2px;
+}
+.arrow.down:after {
+    opacity: 0;
+    display: block;
+    margin: -12px 0 0 -50px;
+    background-color: #9494ff;
+    border-radius: 2px;
+    color: #fff;
+    content: "Please report this or send a modmail if it breaks subreddit rules.";
+    letter-spacing: 1px;
+    font-size: 13px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    z-index: 1;
+}
+.arrow.down:hover:after {
+    opacity: 1;
+    margin-left: 36px;
+}
+.arrow:before {
+    content: " ";
+    width: 100px;
+    height: 110px;
+    visibility: hidden;
+    margin-left: -40px;
+    margin-top: -55px;
+    background: url(%%d%%) no-repeat;
+    animation: none;
+    opacity: 1;
+    z-index: 1000;
+}
+.arrow.upmod:before {
+    display: block;
+    background-position: 9999px 0;
+    visibility: visible;
+    animation: explosion 0.5s steps(12) 1;
+    opacity: 0;
+}
+@keyframes explosion {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -1200px;
+    }
+}
+.link .arrow.up:after,
+.link .arrow.up:before,
+.link .arrow.upmod:hover:after,
+.link .arrow.upmod:hover:before {
+    transition: 1s ease opacity;
+}
+.footer-parent {
+    background: url(%%2%%) center 200px no-repeat;
+}
+:lang(dm) .footer-parent {
+    background: url(%%1%%) center bottom repeat-x;
+}
+.footer {
+    border: 0;
+    height: 350px;
+    display: block;
+}
+.debuginfo {
+    background: #202020;
+    margin-top: 30px;
+}
+.bottommenu {
+    margin-top: -30px;
+}
+form.toggle.flairtoggle {
+    font-size: 0;
+    margin-top: 10px;
+    font-family: arial, sans-serif;
+}
+form.toggle.flairtoggle:after {
+    content: "Show flair";
+    font-size: 13px;
+}
+.flair-bderp::after,
+.flair-bgift:before,
+.flair-daucer:before,
+.flair-kris5:before,
+.flair-maus:before,
+.flair-tv:before {
+    content: "";
+}
+.flairselector li.selected {
+    border: 0;
+    background: #bbb;
+}
+:lang(dm) .flairselector li.selected {
+    background: #000;
+}
+.link .flair {
+    float: left;
+}
+.flair {
+    position: relative;
+    background-color: #e8e8e8 !important;
+    border: 1px solid #888;
+    color: #222;
+    font-weight: 400;
+    background-repeat: no-repeat !important;
+    padding-left: 20px;
+    padding-right: 3px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    font-size: 9px;
+    background: url(%%r%%) -9999px no-repeat;
+    text-indent: 5px;
+}
+.flair-kround:before,
+.flair-lancer4:before,
+.flair-round:before {
+    position: absolute;
+    content: "";
+}
+:lang(dm) .flair {
+    color: #999;
+    background-color: #222 !important;
+}
+.flair-tv,
+:lang(dm) .md blockquote,
+:lang(dm) .md del {
+    color: #aaa;
+}
+.flair-1 {
+    background: url(%%5%%);
+}
+.flair-2 {
+    background: url(%%5%%) 0 -23px;
+}
+.flair-3 {
+    background: url(%%5%%) 0 -46px;
+}
+.flair-4 {
+    background: url(%%5%%) 0 -69px;
+}
+.flair-5 {
+    background: url(%%5%%) 0 -92px;
+}
+.flair-6 {
+    background: url(%%5%%) 0 -115px;
+}
+.flair-7 {
+    background: url(%%5%%) 0 -138px;
+}
+.flair-8 {
+    background: url(%%5%%) 0 -161px;
+}
+.flair-9 {
+    background: url(%%5%%) 0 -184px;
+}
+.flair-10 {
+    background: url(%%5%%) 0 -207px;
+}
+.flair-11 {
+    background: url(%%5%%) 0 -230px;
+}
+.flair-12 {
+    background: url(%%5%%) 0 -253px;
+}
+.flair-13 {
+    background: url(%%5%%) 0 -276px;
+}
+.flair-14 {
+    background: url(%%5%%) 0 -299px;
+}
+.flair-15 {
+    background: url(%%5%%) 0 -322px;
+}
+.flair-16 {
+    background: url(%%5%%) 0 -345px;
+}
+.flair-17 {
+    background: url(%%5%%) 0 -368px;
+}
+.flair-18 {
+    background: url(%%5%%) 0 -391px;
+}
+.flair-19 {
+    background: url(%%5%%) 0 -414px;
+}
+.flair-20 {
+    background: url(%%5%%) 0 -437px;
+}
+.flair-21 {
+    background: url(%%5%%) 0 -460px;
+}
+.flair-22 {
+    background: url(%%5%%) 0 -483px;
+}
+.flair-23 {
+    background: url(%%5%%) 0 -506px;
+}
+.flair-ralsei1 {
+    padding-left: 33px;
+    height: 40px;
+    line-height: 40px;
+    background-position: -22px -2px;
+    animation: sing 0.5s steps(2) infinite;
+    text-indent: 3px;
+}
+@keyframes sing {
+    from {
+        background-position: -28px -3543px;
+    }
+    to {
+        background-position: -28px -3637px;
+    }
+}
+.flair-ralsei1:hover {
+    background-position: -22px -2px;
+    padding-left: 39px;
+    animation: none;
+}
+.flair-ralsei2 {
+    padding-left: 27px;
+    height: 24px;
+    line-height: 24px;
+    background-position: -34px -60px;
+}
+.flair-ralsei2:hover {
+    background-position: -34px -99px;
+}
+.flair-ralsei3 {
+    height: 27px;
+    line-height: 27px;
+    background-position: -35px -137px;
+    padding-left: 27px;
+}
+.flair-ralsei3:hover {
+    background-position: -35px -167px;
+}
+.flair-ralsei4 {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+    animation: wind 0.8s steps(5) infinite;
+    transition: height 0.2s, line-height 0.2s;
+    text-indent: 2px;
+}
+.flair-ralsei4:hover {
+    animation: hands 0.5s steps(4), clap 0.2s steps(2) 0.5s 4, hands 0.5s steps(4) 1.3s reverse;
+    background-position: -32px -2556px;
+}
+@keyframes clap {
+    from {
+        background-position: -32px -2716px;
+    }
+    to {
+        background-position: -32px -2796px;
+    }
+}
+@keyframes hands {
+    from {
+        background-position: -32px -2556px;
+    }
+    to {
+        background-position: -32px -2716px;
+    }
+}
+@keyframes wind {
+    from {
+        background-position: -32px -2396px;
+    }
+    to {
+        background-position: -32px -2596px;
+    }
+}
+.flair-kris1 {
+    padding-left: 24px;
+    height: 25px;
+    line-height: 25px;
+    animation: twirl 0.8s steps(6) infinite;
+}
+@keyframes twirl {
+    from {
+        background-position: -39px -197px;
+    }
+    to {
+        background-position: -39px -371px;
+    }
+}
+.flair-kris2 {
+    padding-left: 21px;
+    height: 31px;
+    line-height: 31px;
+    background-position: -28px -370px;
+    transition: padding-left 0.4s 0.2s;
+}
+.flair-kris2:hover {
+    padding-left: 34px;
+    background-position: -28px -641px;
+    transition: padding-left 0.5s;
+    animation: sword 0.7s steps(8) forwards;
+}
+@keyframes sword {
+    from {
+        background-position: -28px -370px;
+    }
+    to {
+        background-position: -28px -641px;
+    }
+}
+.flair-kris3 {
+    padding-left: 27px;
+    background-position: -10px -732px;
+    transition: padding-left 0.1s, text-indent 0.1s;
+    height: 26px;
+    line-height: 26px;
+}
+.flair-kris3:hover {
+    padding-left: 47px;
+    transition: padding-left 0.1s, background-position 0.7s steps(6) 0.1s;
+    background-position: -10px -894px;
+    text-indent: -8px;
+}
+.flair-kris4 {
+    padding-left: 35px;
+    height: 31px;
+    background-position: -25px -2951px;
+    line-height: 31px;
+    transition: height 0.2s, line-height 0.2s;
+    animation: wind2 1s steps(5) 0.2s infinite;
+}
+@keyframes wind2 {
+    from {
+        background-position: -25px -2796px;
+    }
+    to {
+        background-position: -25px -2951px;
+    }
+}
+.flair-kris4:hover {
+    height: 34px;
+    line-height: 34px;
+    background-position: -22px -3159px;
+    animation: shield 1s steps(5);
+}
+@keyframes shield {
+    from {
+        background-position: -24px -2984px;
+    }
+    to {
+        background-position: -22px -3159px;
+    }
+}
+.flair-susie1 {
+    padding-left: 29px;
+    height: 27px;
+    line-height: 27px;
+    animation: susielaugh 0.3s steps(2) infinite;
+    transition: padding-left 0.2s;
+}
+@keyframes susielaugh {
+    from {
+        background-position: -33px -922px;
+    }
+    to {
+        background-position: -33px -986px;
+    }
+}
+.flair-susie1:hover {
+    padding-left: 49px;
+    background-position: -13px -3194px;
+    animation: 0;
+}
+.flair-susie2 {
+    padding-left: 26px;
+    height: 25px;
+    line-height: 25px;
+    background-position: -36px -985px;
+}
+.flair-susie2:hover {
+    background-position: -36px -1010px;
+}
+.flair-susie3 {
+    padding-left: 28px;
+    height: 27px;
+    line-height: 27px;
+    background-position: 0 -1034px;
+    transition: text-indent 0.2s, padding-left 0.2s;
+}
+.flair-susie3:hover {
+    text-indent: -15px;
+    padding-left: 60px;
+    background-position: 0 -1034px;
+    animation: act2 0.6s steps(5) forwards 0.2s;
+}
+@keyframes act2 {
+    from {
+        background-position: 0 -1064px;
+    }
+    to {
+        background-position: 0 -1214px;
+    }
+}
+.flair-susie4 {
+    background: url(%%E%%) -1px -2px no-repeat;
+    padding-left: 51px;
+    height: 34px;
+    line-height: 34px;
+}
+.flair-susie4:hover {
+    padding-left: 80px;
+    text-indent: -24px;
+    transition: padding-left 0.2s, text-indent 0.2s;
+    background-position: -8px -2px;
+    animation: yeet 0.4s steps(4) forwards 0.2s;
+}
+@keyframes yeet {
+    from {
+        background-position: 10px -52px;
+    }
+    to {
+        background-position: 2px -232px;
+    }
+}
+.flair-lancer1 {
+    padding-left: 19px;
+    height: 22px;
+    line-height: 22px;
+    animation: lancerlaugh 0.3s steps(2) infinite;
+}
+@keyframes lancerlaugh {
+    from {
+        background-position: -42px -1246px;
+    }
+    to {
+        background-position: -42px -1292px;
+    }
+}
+.flair-lancer2 {
+    padding-left: 36px;
+    height: 30px;
+    line-height: 30px;
+    background-position: -26px -1291px;
+}
+.flair-lancer3 {
+    padding-left: 30px;
+    height: 27px;
+    line-height: 27px;
+    background-position: -32px -1321px;
+}
+.flair-lancer3:hover {
+    background-position: -32px -1350px;
+}
+.flair-lancer4 {
+    padding-left: 23px;
+    height: 31px;
+    line-height: 31px;
+    text-indent: 8px;
+    background: 0 0;
+    overflow: hidden;
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
+}
+.flair-lancer4:before {
+    width: 100%;
+    height: 47px;
+    top: 0;
+    left: 0;
+    background: url(%%r%%) -1px -3227px no-repeat;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: 35px 27px;
+}
+.flair-lancer4:hover {
+    padding-left: 47px;
+    height: 47px;
+    line-height: 47px;
+}
+.flair-lancer4:hover:before {
+    transform: rotate(30deg);
+    background-position: -1px -3272px;
+    height: 47px;
+    top: 3px;
+    animation: cruise 1s linear infinite, frame 0.6s steps(6) infinite;
+}
+@keyframes frame {
+    from {
+        background-position: -1px -3272px;
+    }
+    to {
+        background-position: -1px -3542px;
+    }
+}
+@keyframes cruise {
+    0%,
+    100% {
+        left: 0;
+    }
+    49.99% {
+        left: calc(-100%);
+    }
+    50% {
+        left: 100%;
+    }
+}
+.flair-king1 {
+    padding-left: 24px;
+    height: 30px;
+    line-height: 30px;
+    background-position: -38px -1379px;
+    animation: kingsleep 2.2s steps(2) infinite;
+}
+@keyframes kingsleep {
+    from {
+        background-position: -38px -1379px;
+    }
+    to {
+        background-position: -38px -1439px;
+    }
+}
+.flair-king2 {
+    padding-left: 27px;
+    height: 34px;
+    line-height: 34px;
+    background-position: -36px -1439px;
+}
+.flair-king2:hover {
+    background-position: -36px -1473px;
+}
+.flair-round {
+    padding-left: 12px;
+    height: 37px;
+    line-height: 37px;
+    background: 0 0;
+    overflow: hidden;
+    text-indent: 14px;
+}
+.flair-round:before {
+    width: 100%;
+    height: 37px;
+    bottom: 0;
+    left: 0;
+    background: url(%%r%%) -36px -3637px no-repeat;
+    transform-origin: 13px 21px;
+    animation: bounce 0.6s steps(3) infinite;
+}
+@keyframes bounce {
+    0%,
+    100% {
+        background-position: -36px -3637px;
+    }
+    50% {
+        background-position: -36px -3748px;
+    }
+}
+.flair-round:hover:before {
+    height: 33px;
+    bottom: 2px;
+    background-position: -9999px 0;
+    animation: shrink 0.4s steps(2) forwards, roll 1s ease-in 0.5s forwards;
+}
+@keyframes shrink {
+    from {
+        background-position: -36px -3750px;
+    }
+    to {
+        background-position: -36px -3824px;
+    }
+}
+@keyframes roll {
+    from {
+        left: 0;
+        transform: rotate(0);
+    }
+    to {
+        left: -33px;
+        transform: rotate(-100deg);
+    }
+}
+.flair-kround {
+    padding-left: 21px;
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    background: 0 0;
+    overflow: hidden;
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
+}
+.flair-kround:before {
+    width: 45px;
+    height: 75px;
+    bottom: 0;
+    left: 0;
+    background: url(%%r%%) 7px -3800px no-repeat, url(%%r%%) -23px -3841px no-repeat;
+}
+.flair-kround:hover {
+    padding-left: 37px;
+    height: 75px;
+    line-height: 75px;
+    transition: padding-left 0.2s 0.4s, height 0.2s 0.4s, line-height 0.2s 0.4s;
+}
+.flair-kround:hover:before {
+    background-position: 7px -3817px, -23px -3874px;
+    animation: drop 0.3s linear forwards, grow 0.3s steps(2) 0.4s 2 forwards, grow2 0.5s steps(4) 1.3s forwards, idle 5s steps(4) 2s infinite;
+}
+@keyframes drop {
+    from {
+        background-position: 7px -3800px, -23px -3841px;
+    }
+    to {
+        background-position: 7px -3788px, -23px -3841px;
+    }
+}
+@keyframes grow {
+    0% {
+        background-position: 14px -3807px, -16px -3860px;
+    }
+    100% {
+        background-position: 0 9999px, -17px -4030px;
+    }
+}
+@keyframes grow2 {
+    0% {
+        background-position: 0 9999px, -17px -3944px;
+    }
+    100% {
+        background-position: 0 9999px, -18px -4284px;
+    }
+}
+@keyframes idle {
+    0%,
+    50% {
+        background-position: 0 9999px, -18px -4284px;
+    }
+    25%,
+    75% {
+        background-position: 0 9999px, -18px -4606px;
+    }
+    100% {
+        background-position: 0 9999px, -18px -4907px;
+    }
+}
+.flair-jevil {
+    padding-left: 23px;
+    height: 25px;
+    line-height: 25px;
+    background-position: -25px -5019px;
+    transition: text-indent 0.2s, padding-left 0.2s, height 0.2s 0s, line-height 0.2s 0s;
+}
+.flair-jevil:hover {
+    padding-left: 48px;
+    height: 44px;
+    line-height: 44px;
+    background-position: -15px -5065px;
+    animation: prance 1.5s steps(8) 0.2s 4, prance 1s steps(8) 6s 6, prance 0.5s steps(8) 12s infinite;
+}
+@keyframes prance {
+    0% {
+        background-position: -17px -5071px;
+        transform: scaleX(1);
+    }
+    49.99% {
+        background-position: -17px -5457px;
+        transform: scaleX(1);
+    }
+    50% {
+        background-position: -17px -5071px;
+        transform: scaleX(-1);
+    }
+    99.99% {
+        background-position: -17px -5457px;
+        transform: scaleX(-1);
+    }
+}
+.flair-roulx {
+    padding-left: 28px;
+    height: 30px;
+    line-height: 30px;
+    background-position: -24px -5454px;
+    animation: zapin 0.5s steps(7) forwards;
+    background-color: #e8e8e8 !important;
+    transition: background-color 0.2s;
+}
+.flair-roulx:hover {
+    animation: zapout 0.5s steps(7) forwards;
+    background-color: #fff !important;
+}
+@keyframes zapin {
+    0% {
+        background-position: 9999px 0;
+    }
+    0.01% {
+        background-position: -24px -5454px;
+    }
+    100% {
+        background-position: -24px -5881px;
+    }
+}
+@keyframes zapout {
+    0% {
+        background-position: -24px -5881px;
+    }
+    99.99% {
+        background-position: -24px -5454px;
+    }
+    100% {
+        background-position: 9999px 0;
+    }
+}
+.flair-noelle {
+    padding-left: 22px;
+    height: 28px;
+    line-height: 28px;
+    background-position: -39px -5945px;
+}
+.flair-noelle:hover {
+    background-position: -39px -5995px;
+}
+.flair-milk {
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+    background-position: -44px -4985px;
+}
+.flair-bell {
+    padding-left: 22px;
+    height: 23px;
+    line-height: 23px;
+    background-position: -39px -1507px;
+    animation: bellanim 0.5s steps(3) alternate infinite;
+}
+@keyframes bellanim {
+    from {
+        background-position: -39px -1507px;
+    }
+    to {
+        background-position: -39px -1576px;
+    }
+}
+.flair-hathy,
+.flair-hathyex {
+    padding-left: 48px;
+    height: 38px;
+    line-height: 38px;
+}
+.flair-hathyex {
+    background-position: -14px -1574px;
+}
+.flair-hathyex:hover {
+    background-position: -14px -1613px;
+}
+.flair-hathy {
+    background-position: -14px -1650px;
+}
+.flair-hathy:hover {
+    background-position: -14px -1689px;
+}
+.flair-rudinn,
+.flair-rudinnex {
+    padding-left: 27px;
+}
+.flair-rudinn {
+    height: 32px;
+    line-height: 32px;
+    background-position: -36px -1728px;
+    animation: rudinnanim1 0.7s steps(4) infinite;
+}
+@keyframes rudinnanim1 {
+    from {
+        background-position: -36px -1728px;
+    }
+    to {
+        background-position: -36px -1856px;
+    }
+}
+.flair-rudinn:hover {
+    background-position: -36px -1856px;
+    animation: rudinnanim2 0.5s steps(3) infinite;
+}
+@keyframes rudinnanim2 {
+    from {
+        background-position: -36px -1856px;
+    }
+    to {
+        background-position: -36px -1952px;
+    }
+}
+.flair-rudinnex {
+    height: 33px;
+    line-height: 33px;
+    background-position: -36px -1952px;
+}
+.flair-rudinnex:hover {
+    background-position: -36px -1985px;
+}
+.flair-rabbick {
+    background: url(%%r%%) 0 9999px repeat-x, url(%%r%%) -31px -6043px no-repeat;
+    padding-left: 31px;
+    height: 31px;
+    line-height: 31px;
+    animation: ridle 0.7s steps(3) infinite forwards;
+}
+.flair-rabbick:hover {
+    animation: blow 0.7s steps(3);
+    background-position: 0 9999px, -32px -6228px;
+}
+@keyframes ridle {
+    from {
+        background-position: 0 9999px, -31px -6043px;
+    }
+    to {
+        background-position: 0 9999px, -31px -6142px;
+    }
+}
+@keyframes blow {
+    0% {
+        background-position: -28px -6266px, -32px -6148px;
+    }
+    99.99% {
+        background-position: -10px -6266px, -32px -6268px;
+    }
+    100% {
+        background-position: 0 9999px, -32px -6268px;
+    }
+}
+.flair-clover {
+    padding-left: 24px;
+    height: 25px;
+    line-height: 25px;
+    background-position: -20px -6314px;
+    transition: text-indent 0.2s, padding-left 0.2s, height 0.2s 0s, line-height 0.2s 0s;
+}
+.flair-susie5,
+.flair-susie5:hover {
+    transition: line-height 0.2s, height 0.2s, padding-left 0.2s, background-position-y 0s 0.2s;
+}
+.flair-clover:hover {
+    padding-left: 50px;
+    height: 48px;
+    line-height: 48px;
+    background-position: -14px -6314px;
+    animation: cexpand 0.2s linear, cidle 1s steps(5) infinite;
+}
+@keyframes cexpand {
+    0% {
+        background-position-x: -20px;
+    }
+    100% {
+        background-position-x: -14px;
+    }
+}
+@keyframes cidle {
+    0% {
+        background-position-y: -6314px;
+    }
+    100% {
+        background-position-y: -6564px;
+    }
+}
+.flair-pon {
+    padding-left: 28px;
+    height: 32px;
+    line-height: 32px;
+    background-position: -33px -6619px;
+}
+.flair-pon:hover {
+    animation: open 0.5s steps(3) forwards;
+}
+@keyframes open {
+    from {
+        background-position-y: -6619px;
+    }
+    to {
+        background-position-y: -6758px;
+    }
+}
+.flair-coody {
+    padding-left: 24px;
+    height: 30px;
+    line-height: 30px;
+    background-position: -36px -2018px;
+    animation: coodyanim 0.8s steps(2) infinite;
+}
+@keyframes coodyanim {
+    from {
+        background-position-y: -2018px;
+    }
+    to {
+        background-position-y: -2078px;
+    }
+}
+.flair-cake {
+    padding-left: 32px;
+    height: 23px;
+    line-height: 23px;
+    background-position: -31px -2078px;
+}
+.flair-box,
+.flair-chest,
+.flair-goner1 {
+    height: 24px;
+    line-height: 24px;
+}
+.flair-box {
+    padding-left: 21px;
+    background-position: -41px -2101px;
+    animation: boxanim 1s steps(2) infinite;
+}
+@keyframes boxanim {
+    from {
+        background-position: -41px -2101px;
+    }
+    to {
+        background-position: -41px -2149px;
+    }
+}
+.flair-chest {
+    padding-left: 21px;
+    background-position: -41px -2149px;
+}
+.flair-chest:hover {
+    background-position: -41px -2173px;
+}
+.flair-goner1 {
+    padding-left: 18px;
+    background-position: -42px -2197px;
+}
+.side .flair {
+    margin: 0;
+}
+.flair-goldsei {
+    padding-left: 31px;
+    height: 30px;
+    line-height: 30px;
+    background: url(%%goldsei%%) -8px 0;
+}
+.flair-kdd,
+.flair-rdd,
+.flair-sdd {
+    height: 45px;
+    line-height: 45px;
+}
+.flair-sdd {
+    padding-left: 38px;
+    background: url(%%sdd%%);
+    animation: sdd 8s steps(50) infinite;
+}
+@keyframes sdd {
+    from {
+        background-position: -3px -3px;
+    }
+    to {
+        background-position: -3px -2603px;
+    }
+}
+.flair-kdd {
+    padding-left: 35px;
+    background: url(%%kdd%%);
+    animation: kdd 8s steps(25) infinite;
+}
+@keyframes kdd {
+    from {
+        background-position: -5px -3px;
+    }
+    to {
+        background-position: -5px -1253px;
+    }
+}
+.flair-rdd {
+    padding-left: 33px;
+    background: url(%%rdd%%);
+    animation: rdd 8s steps(27) infinite;
+}
+@keyframes rdd {
+    from {
+        background-position: -7px -5px;
+    }
+    to {
+        background-position: -7px -1463px;
+    }
+}
+.flair-a,
+.flair-b,
+.flair-f,
+.flair-h {
+    background-image: url(%%o%%);
+}
+.flair-a {
+    padding-left: 22px;
+    height: 46px;
+    line-height: 46px;
+    background-position: 0 -1050px;
+}
+.flair-a:hover {
+    background-position-y: -1096px;
+}
+.flair-b {
+    padding-left: 37px;
+    height: 44px;
+    line-height: 44px;
+    background-position: 0 -2px;
+}
+.flair-b:hover {
+    background-position: 0 -48px;
+}
+.flair-h {
+    padding-left: 41px;
+    height: 42px;
+    line-height: 42px;
+    background-position: 1px -616px;
+    background-size: 200px;
+}
+.flair-h:hover {
+    background-position: 1px -658px;
+}
+.flair-susie5 {
+    background: url(%%r2%%) -1px 0;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 27px;
+}
+.flair-susie5:hover {
+    background-position: -1px -49px;
+    height: 47px;
+    line-height: 47px;
+    animation: shake 0.15s linear 0.2s;
+}
+.flair-kris5,
+.flair-kris5:hover {
+    transition: line-height 0.2s, height 0.2s, background-position-y 0.2s;
+}
+@keyframes shake {
+    0% {
+        background-position-x: 8px;
+    }
+    25% {
+        background-position-x: -10px;
+    }
+    50% {
+        background-position-x: 5px;
+    }
+    75% {
+        background-position-x: -4px;
+    }
+    100% {
+        background-position-x: -1px;
+    }
+}
+.flair-kris5 {
+    background: url(%%r2%%) -30px -98px;
+    overflow: hidden;
+    padding-left: 16px;
+    text-indent: 8px;
+}
+.flair-kris5:before {
+    background: url(%%r2%%) -2px -98px;
+    width: 27px;
+    height: 28px;
+    position: absolute;
+    left: 1px;
+    top: -28px;
+}
+.flair-kris5:hover {
+    height: 36px;
+    line-height: 36px;
+    background-position-y: -81px;
+}
+.flair-kris5:hover:before {
+    top: -4px;
+    transition: top 0.5s ease-in 0.2s;
+}
+.flair-mecha {
+    background: url(%%r2%%) 0 -158px, url(%%r2%%) -70px 0;
+    transition: all 0.2s;
+    padding-left: 27px;
+}
+.flair-mecha:hover {
+    height: 60px;
+    line-height: 60px;
+    transition: all 0.2s;
+    padding-left: 37px;
+    background-position: 0 -158px, -22px -264px;
+    animation: mecha 1s forwards, oof 0.5s cubic-bezier(0.1, 0.5, 0.5, 0.1) forwards 1.3s;
+}
+@keyframes mecha {
+    0% {
+        background-position: 0 -158px, -20px -264px;
+    }
+    20% {
+        background-position: 5px -144px, -20px -264px;
+    }
+    50%,
+    69.99% {
+        background-position: 5px -144px, -20px -216px;
+    }
+    70%,
+    99.99% {
+        background-position: -2px -413px, -70px 0;
+    }
+    100% {
+        background-position: -2px -506px, -70px 0;
+    }
+}
+@keyframes oof {
+    0% {
+        background-position: -2px -506px, -8px -564px;
+    }
+    50% {
+        background-position: -2px -531px, -8px -564px;
+    }
+    99.99% {
+        background-position: -2px -510px, -8px -589px;
+    }
+    100% {
+        background-position: -2px -510px, -9px -298px;
+    }
+}
+.flair-daucer {
+    background: url(%%r2%%) -2px -652px;
+    padding-left: 47px;
+    height: 33px;
+    line-height: 33px;
+    overflow: hidden;
+}
+.flair-daucer:before {
+    position: absolute;
+    background: url(%%r2%%) -12px -728px;
+    width: 35px;
+    height: 25px;
+    left: 10px;
+    top: 1px;
+}
+.flair-daucer:hover {
+    animation: dprance 0.2s 3 steps(1);
+}
+.flair-daucer:hover:before {
+    animation: lid 0.5s cubic-bezier(0.1, 0.5, 0.5, 0.1);
+}
+@keyframes dprance {
+    0% {
+        background-position: -2px -652px;
+    }
+    50% {
+        background-position: -2px -692px;
+    }
+}
+@keyframes lid {
+    0%,
+    100% {
+        top: 1px;
+    }
+    50% {
+        top: -33px;
+    }
+}
+.flair-queen1 {
+    background: url(%%r2%%) -25px -765px;
+    transition: all 0.2s;
+}
+.flair-queen1:hover {
+    padding-left: 48px;
+    height: 54px;
+    line-height: 54px;
+    background-position-x: -8px;
+    transition: all 0.2s;
+    animation: drunk 2s 0.2s steps(14) forwards;
+}
+@keyframes drunk {
+    from {
+        background-position-y: -833px;
+    }
+    to {
+        background-position-y: -1785px;
+    }
+}
+.flair-noelle1 {
+    background: url(%%r2%%) -16px -1845px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 24px;
+    transition: all 0.2s;
+}
+.flair-noelle1:hover {
+    height: 42px;
+    line-height: 42px;
+    transition: all 0.2s;
+    animation: nbox 1.3s 0.2s steps(13) forwards;
+}
+.flair-berdly1,
+.flair-berdly1:hover,
+.flair-spamton,
+.flair-spamton:hover {
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
+}
+@keyframes nbox {
+    from {
+        background-position-y: -1845px;
+    }
+    to {
+        background-position-y: -2677px;
+    }
+}
+.flair-spamton {
+    background: url(%%r2%%) -6px -2750px;
+    padding-left: 24px;
+}
+.flair-spamton:hover {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 32px;
+    background-position: -2px -4040px;
+    animation: smove 0.2s forwards, slaugh 2.5s 0.2s steps(21, end) forwards;
+}
+@keyframes smove {
+    from {
+        background-position: -6px -2750px;
+    }
+    to {
+        background-position: -2px -2742px;
+    }
+}
+@keyframes slaugh {
+    from {
+        background-position-y: -2801px;
+    }
+    to {
+        background-position-y: -4040px;
+    }
+}
+.flair-bgift {
+    padding-left: 16px;
+}
+.flair-bgift:before {
+    background: url(%%r2%%) -7px -4089px;
+    width: 20px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+}
+.flair-bgift:hover:before {
+    animation: imgswap 0.4s linear forwards;
+}
+@keyframes imgswap {
+    0% {
+        opacity: 1;
+        background-position-x: -7px;
+    }
+    49.99% {
+        opacity: 0;
+        background-position-x: -7px;
+    }
+    50% {
+        opacity: 0;
+        background-position-x: -35px;
+    }
+    100% {
+        opacity: 1;
+        background-position-x: -35px;
+    }
+}
+.flair-berdly1 {
+    background: url(%%r2%%) -7px -4115px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 23px;
+}
+.flair-berdly1:hover {
+    padding-left: 27px;
+    height: 38px;
+    line-height: 38px;
+    animation: bshake 1.5s 0.2s linear forwards;
+}
+@keyframes bshake {
+    0% {
+        background-position: -3px -4158px;
+    }
+    4% {
+        background-position: -11px -4158px;
+    }
+    8% {
+        background-position: -5px -4158px;
+    }
+    12% {
+        background-position: -9px -4158px;
+    }
+    16%,
+    49.99% {
+        background-position: -7px -4158px;
+    }
+    50% {
+        background-position: -7px -4200px;
+    }
+    54% {
+        background-position: -15px -4200px;
+    }
+    58% {
+        background-position: -9px -4200px;
+    }
+    62% {
+        background-position: -13px -4200px;
+    }
+    100%,
+    66% {
+        background-position: -11px -4200px;
+    }
+}
+.flair-roulx1 {
+    background: url(%%r2wide%%) -38px 0;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+    transition: all 0.2s;
+}
+.flair-roulx1:hover {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 65px;
+    transition: all 0.2s;
+    background-position-x: -2px;
+    animation: avast 0.3s 0.2s steps(3) forwards;
+}
+@keyframes avast {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: -198px;
+    }
+}
+.flair-berdly2 {
+    background: url(%%r2%%) -7px -4240px;
+    padding-left: 30px;
+    transition: all 0.2s;
+}
+.flair-berdly2:hover {
+    padding-left: 38px;
+    height: 38px;
+    line-height: 38px;
+    background-position-x: -3px;
+    transition: all 0.2s;
+    animation: flap 0.3s 10 steps(1), hadjust 0.2s 3s forwards, strangle 0.2s 3s infinite steps(3);
+}
+@keyframes flap {
+    0% {
+        background-position-y: -4240px;
+    }
+    50% {
+        background-position-y: -4282px;
+    }
+}
+@keyframes hadjust {
+    0% {
+        padding-left: 38px;
+        background-position-x: -3px;
+    }
+    25% {
+        background-position-x: 2px;
+    }
+    50% {
+        background-position-x: -2px;
+    }
+    75% {
+        background-position-x: 1px;
+    }
+    100% {
+        padding-left: 43px;
+        background-position-x: 0;
+    }
+}
+@keyframes strangle {
+    0% {
+        background-position-y: -4325px;
+    }
+    100% {
+        background-position-y: -4472px;
+    }
+}
+.flair-berdly3 {
+    background: url(%%r2wide%%) -37px -277px;
+    transition: all 0.2s;
+}
+.flair-berdly3:hover {
+    padding-left: 58px;
+    height: 45px;
+    line-height: 45px;
+    background-position-x: -22px;
+    transition: all 0.2s;
+    animation: hadjust2 0.2s forwards, halberd 1.5s 0.2s steps(13, end) forwards;
+}
+@keyframes hadjust2 {
+    0% {
+        background-position-y: -277px;
+    }
+    100% {
+        background-position-y: -273px;
+    }
+}
+@keyframes halberd {
+    0% {
+        background-position-y: -273px;
+    }
+    100% {
+        background-position-y: -975px;
+    }
+}
+.flair-susie6 {
+    background: url(%%r2%%) -16px -4476px;
+    padding-left: 24px;
+    transition: all 0.2s;
+}
+.flair-susie6:hover {
+    padding-left: 46px;
+    height: 35px;
+    line-height: 35px;
+    transition: all 0.2s;
+    animation: trigger 1s forwards, sshake 0.4s 1s infinite;
+}
+.flair-kris6,
+.flair-kris6:hover,
+.flair-noelle2,
+.flair-noelle2:hover,
+.flair-susie7,
+.flair-susie7:hover {
+    transition: padding-left 0.2s, height 0.2s, line-height 0.2s;
+}
+@keyframes trigger {
+    0% {
+        background-position: -16px -4476px;
+    }
+    20%,
+    39.99% {
+        background-position: -6px -4476px;
+    }
+    100%,
+    40% {
+        background-position: -6px -4529px;
+    }
+}
+@keyframes sshake {
+    0% {
+        background-position: -6px -4578px;
+    }
+    12.5% {
+        background-position: -3px -4581px;
+    }
+    25% {
+        background-position: -3px -4575px;
+    }
+    37.5% {
+        background-position: -9px -4575px;
+    }
+    50% {
+        background-position: -6px -4580px;
+    }
+    52.5% {
+        background-position: -4px -4577px;
+    }
+    75% {
+        background-position: -4px -4580px;
+    }
+    87.5% {
+        background-position: -9px -4580px;
+    }
+    100% {
+        background-position: -7px -4575px;
+    }
+}
+.flair-tv {
+    padding-left: 31px;
+    height: 26px;
+    background-color: #000 !important;
+    line-height: 26px;
+}
+.flair-tv:before {
+    position: absolute;
+    width: 29px;
+    height: 18px;
+    left: 5px;
+    background: url(%%r2%%) -1px -4623px;
+    top: 4px;
+    animation: static 0.5s steps(4, end) infinite;
+}
+.flair-tv:hover:before {
+    background-position-x: 29px;
+}
+@keyframes static {
+    0% {
+        background-position-y: -4623px;
+    }
+    100% {
+        background-position-y: -4703px;
+    }
+}
+.flair-banana {
+    background: url(%%r2%%) 3px -4704px;
+    animation: rotata 1s steps(8, end) infinite;
+}
+@keyframes rotata {
+    0% {
+        background-position-y: -4704px;
+    }
+    100% {
+        background-position-y: -4872px;
+    }
+}
+.flair-susie7 {
+    background: url(%%r2%%) -5px -4877px;
+    padding-left: 24px;
+}
+.flair-susie7:hover {
+    height: 54px;
+    line-height: 54px;
+    padding-left: 32px;
+    animation: sajust 0.2s forwards, sjump 3s 0.2s steps(23, end) forwards;
+}
+@keyframes sajust {
+    0% {
+        background-position: -5px -4877px;
+    }
+    100% {
+        background-position: -1px -4872px;
+    }
+}
+@keyframes sjump {
+    0% {
+        background-position-y: -4872px;
+    }
+    100% {
+        background-position-y: -6114px;
+    }
+}
+.flair-kris6 {
+    background: url(%%r2%%) -5px -6172px;
+    padding-left: 24px;
+}
+.flair-kris6:hover {
+    height: 42px;
+    line-height: 42px;
+    animation: kjump 3s 0.2s steps(20, end) forwards;
+}
+@keyframes kjump {
+    0% {
+        background-position-y: -6172px;
+    }
+    100% {
+        background-position-y: -7012px;
+    }
+}
+.flair-noelle2 {
+    background: url(%%r2%%) -5px -7061px;
+    height: 30px;
+    line-height: 30px;
+}
+.flair-noelle2:hover {
+    height: 48px;
+    line-height: 48px;
+    padding-left: 22px;
+    animation: njump 0.4s 0.2s steps(5, end) forwards, gamig 0.3s 0.6s steps(1) infinite;
+}
+@keyframes njump {
+    0% {
+        background-position-y: -7061px;
+    }
+    100% {
+        background-position-y: -7306px;
+    }
+}
+@keyframes gamig {
+    0% {
+        background-position-y: -7306px;
+    }
+    50% {
+        background-position-y: -7355px;
+    }
+}
+.flair-ralsei5 {
+    background: url(%%r2%%) -10px -7409px;
+    transition: background-position-y 0s, height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+}
+.flair-ralsei5:hover {
+    background-position: -6px -7456px;
+    height: 42px;
+    line-height: 42px;
+    transition: background-position-y 0s 0.4s, height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+    padding-left: 30px;
+}
+.flair-trash {
+    background: url(%%r2%%) -9px -7500px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 28px;
+}
+.flair-trash:hover {
+    background-position-y: -7530px;
+}
+.flair-vase {
+    background: url(%%r2%%) -27px -7579px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 19px;
+}
+.flair-vase:hover {
+    height: 48px;
+    line-height: 48px;
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
+    padding-left: 43px;
+    animation: sshift 0.2s forwards, kick 0.3s 0.5s steps(4, end) forwards;
+}
+@keyframes sshift {
+    0% {
+        background-position: -27px -7579px;
+    }
+    100% {
+        background-position: -4px -7563px;
+    }
+}
+@keyframes kick {
+    0% {
+        background-position-y: -7563px;
+    }
+    100% {
+        background-position-y: -7755px;
+    }
+}
+.flair-maus {
+    background: url(%%r2%%) -6px -7824px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 32px;
+    animation: maus 1s steps(8, end) infinite;
+    overflow: hidden;
+}
+.flair-maus:before {
+    background: url(%%r2%%) -7px -7939px;
+    position: absolute;
+    width: 38px;
+    height: 23px;
+    left: 1px;
+    top: -23px;
+}
+@keyframes maus {
+    0% {
+        background-position-y: -7824px;
+    }
+    100% {
+        background-position-y: -7936px;
+    }
+}
+.flair-maus:hover {
+    height: 25px;
+    line-height: 25px;
+    animation: mmove 0.2s forwards;
+    transition: height 0.2s, line-height 0.2s;
+}
+.flair-maus:hover:before {
+    top: 1px;
+    transition: top ease-in 0.2s 0.2s;
+}
+@keyframes mmove {
+    0% {
+        background-position-y: -7824px;
+    }
+    100% {
+        background-position-y: -7815px;
+    }
+}
+.flair-mauswheel {
+    background: url(%%r2%%) -17px -7966px;
+    padding-left: 23px;
+    height: 17px;
+    line-height: 17px;
+    transition: all 0.2s;
+    animation: wheel 0.7s steps(6, end) infinite;
+}
+.flair-mauswheel:hover {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 60px;
+    background-position-x: 1px;
+    transition: all 0.2s;
+}
+.flair-noelle3,
+.flair-noelle3:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
+}
+@keyframes wheel {
+    0% {
+        background-position-y: -7966px;
+    }
+    100% {
+        background-position-y: -8326px;
+    }
+}
+.flair-cheese {
+    background: url(%%r2%%) -4px -8328px;
+}
+.flair-cheese:hover {
+    background-position-y: -8348px;
+}
+.flair-noelle3 {
+    background: url(%%r2%%) -4px -8372px;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 30px;
+    animation: nthink 0.6s steps(1) infinite;
+}
+.flair-noelle3:hover {
+    height: 34px;
+    line-height: 34px;
+    padding-left: 47px;
+    animation: nact 0.7s steps(7, end) 0.2s forwards;
+}
+@keyframes nthink {
+    0% {
+        background-position-y: -8372px;
+    }
+    50% {
+        background-position-y: -8420px;
+    }
+}
+@keyframes nact {
+    0% {
+        background-position-y: -8468px;
+    }
+    100% {
+        background-position-y: -8804px;
+    }
+}
+.flair-swatchling {
+    background: url(%%r2%%) -18px -8857px;
+    transition: all 0.2s;
+}
+.flair-swatchling:hover {
+    height: 47px;
+    line-height: 47px;
+    padding-left: 43px;
+    transition: all 0.2s;
+    background-position-x: -6px;
+    animation: sclap 0.2s steps(1) 0.3s infinite;
+}
+.flair-capn,
+.flair-capn:hover,
+.flair-kk,
+.flair-kk:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+}
+@keyframes sclap {
+    0% {
+        background-position-y: -8906px;
+    }
+    50% {
+        background-position-y: -8955px;
+    }
+}
+.flair-hacker {
+    background: url(%%r2%%) -18px -9010px;
+    height: 27px;
+    line-height: 27px;
+}
+.flair-hacker:hover {
+    background-position-y: -9048px;
+}
+.flair-capn {
+    background: url(%%r2%%) -14px -9086px;
+    padding-left: 29px;
+}
+.flair-capn:hover {
+    height: 31px;
+    line-height: 31px;
+    padding-left: 37px;
+    background-position-x: -11px;
+    animation: capn 0.2s steps(3, end) 0.2s alternate infinite;
+}
+@keyframes capn {
+    0% {
+        background-position-y: -9086px;
+    }
+    100% {
+        background-position-y: -9188px;
+    }
+}
+.flair-kk {
+    background: url(%%r2%%) -14px -9187px;
+    padding-left: 29px;
+}
+.flair-kk:hover {
+    height: 37px;
+    line-height: 37px;
+    padding-left: 44px;
+    background-position-x: -5px;
+    animation: kk 0.5s steps(4, end) 0.2s infinite;
+}
+.flair-sweets,
+.flair-sweets:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s;
+}
+@keyframes kk {
+    0% {
+        background-position-y: -9187px;
+    }
+    100% {
+        background-position-y: -9351px;
+    }
+}
+.flair-sweets {
+    background: url(%%r2%%) -11px -9352px;
+    padding-left: 32px;
+    height: 25px;
+    line-height: 25px;
+}
+.flair-sweets:hover {
+    height: 30px;
+    line-height: 30px;
+    animation: sweets 0.2s steps(3, end) 0.2s alternate infinite;
+}
+@keyframes sweets {
+    0% {
+        background-position-y: -9352px;
+    }
+    100% {
+        background-position-y: -9448px;
+    }
+}
+.flair-nubert {
+    background: url(%%r2%%) -18px -9452px;
+    height: 19px;
+    line-height: 19px;
+}
+.flair-nubert:hover {
+    padding-left: 25px;
+    background-position-x: -16px;
+    height: 23px;
+    line-height: 23px;
+    transition: all 0.2s;
+    animation: nmove 0.2s forwards, nubert 0.6s steps(4, end) 0.2s infinite;
+}
+@keyframes nmove {
+    0% {
+        background-position-y: -9452px;
+    }
+    100% {
+        background-position-y: -9448px;
+    }
+}
+@keyframes nubert {
+    0% {
+        background-position-y: -9448px;
+    }
+    100% {
+        background-position-y: -9540px;
+    }
+}
+.flair-trashy {
+    background: url(%%r2%%) -17px -9551px;
+}
+.flair.flair-trashy:hover {
+    padding-left: 52px;
+    height: 38px;
+    line-height: 38px;
+    transition: all 0.2s;
+    animation: tmove 0.2s forwards, trashy 0.6s steps(4, end) 0.2s infinite;
+}
+.flair-oma,
+.flair-oma:hover,
+.flair-mike,
+.flair-mike:hover,
+.flair-gmike,
+.flair-gmike:hover {
+    transition: height 0.2s, line-height 0.2s, padding-left 0.2s, background-position-x 0.2s;
+}
+@keyframes tmove {
+    0% {
+        background-position: -17px -9551px;
+    }
+    100% {
+        background-position: -2px -9542px;
+    }
+}
+@keyframes trashy {
+    0% {
+        background-position-y: -9542px;
+    }
+    100% {
+        background-position-y: -9698px;
+    }
+}
+.flair-oma {
+    background: url(%%r2%%) -14px -9703px;
+    padding-left: 32px;
+    height: 27px;
+    line-height: 27px;
+}
+.flair-oma:hover {
+    padding-left: 52px;
+    height: 47px;
+    line-height: 47px;
+    background-position-x: -3px;
+    animation: oma 0.6s steps(6, end) 0.2s infinite;
+}
+
+@keyframes oma {
+    0% {
+        background-position-y: -9703px;
+    }
+    100% {
+        background-position-y: -9997px;
+    }
+}
+
+.flair-wire,
+.flair-wire:hover {
+    transition: height 0.2s, line-height 0.2s;
+}
+
+.flair-wire {
+    background: url(%%r2%%) -10px -10504px;
+    padding-left: 38px;
+    height: 28px;
+    line-height: 28px;
+}
+.flair-wire:hover {
+    height: 43px;
+    line-height: 43px;
+    animation: unplug 0.8s steps(11, end) 0.2s forwards;
+}
+.flair-poppup,
+.flair-queen2,
+.flair-queen2:hover,
+.flair-sneo,
+.flair-sneo:hover,
+.flair-tasque,
+.flair-tasque:hover {
+    transition: all 0.2s;
+}
+@keyframes unplug {
+    0% {
+        background-position-y: -10504px;
+    }
+    100% {
+        background-position-y: -10010px;
+    }
+}
+.flair-poppup {
+    background: url(%%r2%%) -7px -10557px;
+    padding-left: 42px;
+    height: 33px;
+    line-height: 33px;
+}
+.flair-poppup:hover {
+    height: 55px;
+    line-height: 55px;
+    transition: all 0.2s;
+    animation: poppup 0.6s steps(6, end) 0.2s infinite;
+}
+@keyframes poppup {
+    0% {
+        background-position-y: -10557px;
+    }
+    100% {
+        background-position-y: -10929px;
+    }
+}
+.flair-queen2 {
+    background: url(%%r2%%) -5px -10930px;
+}
+.flair-queen2:hover {
+    padding-left: 42px;
+    height: 49px;
+    line-height: 49px;
+    background-position-x: -1px;
+    animation: run 3s 0.4s steps(14, end) forwards;
+}
+@keyframes run {
+    from {
+        background-position-y: -10930px;
+    }
+    to {
+        background-position-y: -11666px;
+    }
+}
+.flair-sneo {
+    background: url(%%r2%%) -7px -11730px;
+}
+.flair-sneo:hover {
+    padding-left: 50px;
+    height: 55px;
+    line-height: 55px;
+    background-position-x: -3px;
+    animation: sneo 1.5s 0.4s steps(9, end) infinite;
+}
+@keyframes sneo {
+    from {
+        background-position-y: -11792px;
+    }
+    to {
+        background-position-y: -12350px;
+    }
+}
+.flair-tasque {
+    background: url(%%r2wide%%) -10px -1028px;
+    padding-left: 25px;
+    height: 29px;
+    line-height: 29px;
+}
+.flair-tasque:hover {
+    padding-left: 71px;
+    height: 40px;
+    line-height: 40px;
+    background-position-x: -6px;
+    animation: tasque 0.8s steps(6, end) infinite;
+}
+.flair-viro,
+.flair-viro:hover,
+.flair-wwire,
+.flair-wwire:hover {
+    transition: height 0.2s, line-height 0.2s;
+}
+@keyframes tasque {
+    from {
+        background-position-y: -1028px;
+    }
+    to {
+        background-position-y: -1280px;
+    }
+}
+.flair-car {
+    background: url(%%r2%%) -3px -12350px;
+    padding-left: 23px;
+    animation: car 0.7s steps(4, end) infinite;
+}
+@keyframes car {
+    from {
+        background-position-y: -12350px;
+    }
+    to {
+        background-position-y: -12438px;
+    }
+}
+.flair-viro {
+    background: url(%%r2%%) -7px -12443px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 31px;
+    animation: viro 0.6s steps(6, end) infinite;
+}
+@keyframes viro {
+    from {
+        background-position-y: -12443px;
+    }
+    to {
+        background-position-y: -12761px;
+    }
+}
+.flair-viro:hover {
+    animation: none;
+    background-position: -7px -12760px;
+    height: 42px;
+    line-height: 42px;
+}
+.flair-wwire {
+    background: url(%%r2%%) -4px -12816px;
+    padding-left: 44px;
+    height: 28px;
+    line-height: 28px;
+}
+.flair-wwire:hover {
+    height: 50px;
+    line-height: 50px;
+    animation: wwire 1s steps(12, end) 0.2s infinite;
+}
+.flair-game:hover,
+.flair-queen3,
+.flair-queen3:hover,
+.flair-ralsei6,
+.flair-ralsei6:hover,
+.flair-starw,
+.flair-starw:hover,
+.flair-throne,
+.flair-tmanager,
+.flair-tmanager:hover,
+.flair-what,
+.flair-what:hover,
+.flair.flair-throne:hover {
+    transition: all 0.2s;
+}
+@keyframes wwire {
+    0% {
+        background-position-y: -12816px;
+    }
+    100% {
+        background-position-y: -13596px;
+    }
+}
+.flair-tmanager {
+    background: url(%%r2%%) -24px -13601px;
+}
+.flair-tmanager:hover {
+    height: 47px;
+    line-height: 47px;
+    background-position-x: -6px;
+    padding-left: 48px;
+}
+.flair-ralsei6 {
+    background: url(%%r2%%) -19px -13655px;
+}
+.flair-ralsei6:hover {
+    height: 41px;
+    line-height: 41px;
+}
+.flair-dcone {
+    background: url(%%r2%%) -18px -13705px;
+}
+.flair-what {
+    background: url(%%r2%%) -17px -13731px;
+}
+.flair-what:hover {
+    height: 60px;
+    line-height: 60px;
+    background-position-x: -7px;
+    padding-left: 45px;
+}
+.flair-game {
+    background: url(%%r2%%) -16px -13810px;
+    padding-left: 24px;
+    transition: all 0.2s;
+}
+.flair-game:hover {
+    background-position: -5px -13803px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 45px;
+}
+.flair-queen3 {
+    background: url(%%r2%%) -11px -13875px;
+}
+.flair-queen3:hover {
+    background-position-x: -6px;
+    height: 51px;
+    line-height: 51px;
+    padding-left: 42px;
+}
+.flair-starw {
+    background: url(%%r2%%) -18px -13930px;
+}
+.flair-starw:hover {
+    height: 36px;
+    line-height: 36px;
+    background-position-x: -11px;
+    padding-left: 31px;
+}
+.flair-throne {
+    background: url(%%r2%%) -18px -13973px;
+}
+.flair.flair-throne:hover {
+    height: 32px;
+    line-height: 32px;
+}
+.flair-sgift {
+    background: url(%%r2%%) -18px -14015px;
+}
+.flair-bderp {
+    text-indent: 0;
+    padding-left: 30px;
+    padding-right: 2px;
+}
+.flair-bderp::after {
+    background: url(%%v%%) -59px -64px;
+    background-size: 1560px;
+    width: 28px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+}
+.flair-mike, .flair-gmike {
+    background: url(%%r2%%) -9px -14047px;
+    padding-left: 37px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.flair-gmike {
+    background-position-y: -14437px;
+}
+
+.flair-mike:hover, .flair-gmike:hover {
+    padding-left: 41px;
+    height: 49px;
+    line-height: 49px;
+    background-position-x: -6px;
+    animation: mike 1s steps(5,end) 0.2s infinite;
+}
+
+.flair-gmike:hover {
+    animation: gmike 1s steps(5,end) 0.2s infinite;
+}
+
+@keyframes mike {
+    0% {
+        background-position-y: -14047px;
+    }
+    100% {
+        background-position-y: -14372px;
+    }
+}
+
+@keyframes gmike {
+    0% {
+        background-position-y: -14437px;
+    }
+    100% {
+        background-position-y: -14762px;
+    }
+}
+
+.RESDashboardToggle,
+.RESshortcutside {
+    background: 0 0 !important;
+}
+body.comments-page div.content .comment:hover {
+    border-left-color: #a44 !important;
+}
+.debuginfo .icon {
+    cursor: pointer;
+}
+#reddit-field,.flairoptionpane a.author,.link .arrow.downmod:after,.link .arrow.upmod:after,.morelink .nub,.side .subscribers .word,.side .users-online .word,.side a[href="https://www.reddit.com/r/deltarune"],.side blockquote table th,.sidebox.create .spacer a,.thing.linkflair-spoilers .thumbnail img,.titlebox .bottom .flair,body.loggedin.subscriber>.content:after,body.loggedin.subscriber>.content:before,html:lang(ns) .link.spoiler,html:lang(ns) .side a[href="https://ns.reddit.com/r/deltarune"],ul li a[href$="#wiki_top"]
+{
+    display: none !important;
+}
+html:lang(ns) .side a[href="https://www.reddit.com/r/deltarune"]
+{
+    display: inline-block !important;
+}
+:lang(dm) body.comments-page div.content .comment,
+:lang(dm) body.comments-page div.content .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+:lang(dm) body.comments-page div.content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #202020 !important;
+    border-color: #777 !important;
+}
+.entry.res-selected,
+.res .commentarea .entry.RES-keyNav-activeElement .noncollapsed,
+.res .entry.RES-keyNav-activeElement,
+body .combined-search-page #previoussearch .res-search-pane,
+body ul.res-search-tabs li.res-search-tab-active {
+    background-color: #8882 !important;
+}
+.res .commentarea .entry.RES-keyNav-activeElement .md,
+.res .entry.RES-keyNav-activeElement .md-container {
+    background-color: transparent !important;
+}
+.voteWeight {
+    background-color: #0002 !important;
+}
+.thing .tagline .author.friend {
+    padding: 4px !important;
+}
+.thing.comment .tagline .author.friend {
+    padding: 9px 9px 10px !important;
+}
+#sr-header-area .redesign-beta-optin,
+.flairselector a.title {
+    display: none;
+}
+.md .-text,
+.md li,
+.md p,
+.md pre > code,
+.md td,
+.md textarea,
+.md th {
+    color: #202020;
+}
+:lang(dm).md .-text,
+:lang(dm).md li,
+:lang(dm).md p,
+:lang(dm).md pre > code,
+:lang(dm).md td,
+:lang(dm).md textarea,
+:lang(dm).md th,
+:lang(dm).message .search-result-meta,
+:lang(dm).message .tagline {
+    color: #e0e0e0;
+}
+ul.tabmenu {
+    height: 15px;
+    border: 0;
+    top: 6px;
+    position: absolute;
+    left: 53px;
+}
+ul.tabmenu li a {
+    padding: 10px 8px;
+    background: #000 !important;
+    color: #fff;
+    text-transform: capitalize;
+}
+ul.tabmenu li a:hover {
+    color: #ccc;
+}
+ul.tabmenu li.selected a {
+    border: 2px solid #e0e0e0 !important;
+    border-top-color: #202020 !important;
+    border-bottom-color: #202020 !important;
+    color: #e0e0e0 !important;
+}
+:lang(dm) ul.tabmenu li.selected a {
+    border-color: #e0e0e0;
+}
+.subreddit-rules-page:before {
+    background: url(%%7%%) -320px -160px;
+    width: 370px;
+    height: 228px;
+    left: 0;
+    position: relative;
+    top: -10px;
+}
+.link .title > .linkflairlabel {
+    background-color: transparent;
+    font: 700 12px Lato, Arial, sans-serif;
+    text-transform: uppercase;
+    width: 95px;
+    position: absolute;
+    left: -35px;
+    margin-top: 34px;
+    transform: rotate(90deg);
+    border: none;
+    text-align: center;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: none;
+}
+.link:hover .title > .linkflairlabel {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+.flairselector {
+    position: fixed;
+    top: 158px !important;
+    left: 50% !important;
+    margin-left: -275px;
+    width: 540px !important;
+    padding: 5px !important;
+    background: #eee;
+}
+:lang(dm) .flairselector {
+    background: #2e2a26;
+}
+.flairselector.drop-choices.active {
+    border: 0;
+}
+:lang(dm) .side .flairselector h2:after {
+    color: #eee;
+}
+.side .flairselector form:before {
+    text-align: center;
+    content: "Keep it short and SFW!";
+    font-size: 14px;
+    display: block;
+    color: #ffb400;
+}
+.flairoptionpane {
+    height: calc(100% - 160px);
+    max-height: 50vh;
+}
+.side .flairselector .selected,
+.side .flairselector li {
+    width: auto !important;
+    height: 48px !important;
+    float: left;
+    border: 0 !important;
+}
+.side .flairselector li .flair:hover {
+    pointer-events: none;
+}
+.flairselector .linkflairlabel {
+    text-transform: uppercase;
+    padding: 3px;
+    width: 75px;
+    text-align: center;
+    opacity: 0.75;
+    line-height: 1.6em;
+    margin: 0;
+    color: #fff;
+}
+.link .linkflairlabel {
+    border-radius: 0;
+    border: none;
+    background-color: #606060;
+    color: #fff;
+    padding: 2px;
+    max-width: none;
+}
+.flairselector .linkflairlabel:hover {
+    opacity: 1 !important;
+}
+.flairselector li {
+    background: 0 0 !important;
+    height: auto !important;
+    float: left;
+    width: auto !important;
+}
+.flairselector a.title {
+    display: none;
+}
+.flairselector .flairoptionpane ul {
+    width: 180px !important;
+}
+.side .flairoptionpane ul {
+    width: 500px !important;
+    max-width: 580px;
+    display: block;
+}
+.flairselector h2 {
+    color: #fff;
+    background-color: #222;
+    padding-top: 2px;
+    margin-bottom: 6px;
+    font-size: large;
+}
+.side .md > blockquote:nth-of-type(5) ul {
+    padding-left: 18px;
+}
+.side .md > blockquote:nth-of-type(5) ul li {
+    list-style: none;
+    margin: 2px 0;
+    display: inline-block;
+    padding: 0 !important;
+    border: none !important;
+}
+.side .md > blockquote:nth-of-type(5) ul li:nth-of-type(odd) {
+    margin-right: 10px;
+}
+.side .md > blockquote:nth-of-type(5) ul li a {
+    display: inline-block;
+    color: #000 !important;
+    text-align: center;
+    padding: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+}
+html:lang(xa) body:not(.comments-page) .link.linkflair-announcement,
+html:lang(xc) body:not(.comments-page) .link.linkflair-creation,
+html:lang(xd) body:not(.comments-page) .link.linkflair-discussion,
+html:lang(xg) body:not(.comments-page) .link.linkflair-guide,
+html:lang(xg) body:not(.comments-page) .link.linkflair-poll,
+html:lang(xj) body:not(.comments-page) .link.linkflair-music,
+html:lang(xl) body:not(.comments-page) .link.linkflair-w,
+html:lang(xm) body:not(.comments-page) .link.linkflair-meta,
+html:lang(xn) body:not(.comments-page) .link.linkflair-news,
+html:lang(xo) body:not(.comments-page) .link.linkflair-other,
+html:lang(xq) body:not(.comments-page) .link.linkflair-question,
+html:lang(xs) body:not(.comments-page) .link.linkflair-shipping,
+html:lang(xt) body:not(.comments-page) .link.linkflair-theory,
+html:lang(xw) body:not(.comments-page) .link.linkflair-oc {
+    display: none;
+}
+:lang(dm) .side .md > blockquote:nth-of-type(5) ul li a {
+    color: #fff !important;
+}
+.side .md > blockquote:nth-of-type(5) ul li a:first-of-type {
+    width: 90px;
+    opacity: 0.75;
+}
+.side .md > blockquote:nth-of-type(5) ul li a:nth-of-type(2) {
+    background-color: #bbb;
+    width: 25px;
+    margin-left: 3px;
+    opacity: 0.75;
+}
+.side .md > blockquote:nth-of-type(5) ul li a:hover {
+    opacity: 1;
+}
+.flairselector .linkflair-news > .linkflairlabel,
+.side .md a[href*="flair:news"],
+.wiki-page .wiki-page-content .md a[href*="flair:news"] {
+    background-color: #3a3a3a;
+}
+.link.linkflair-news:hover {
+    box-shadow: inset 25px 0 0 0 #3a3a3a !important;
+}
+.link.linkflair-news {
+    border-left-color: #3a3a3a !important;
+}
+.flairselector .linkflair-creation > .linkflairlabel,
+.side .md a[href*="flair:creation"],
+.wiki-page .wiki-page-content .md a[href*="flair:creation"] {
+    background-color: #d63120;
+}
+.link.linkflair-creation:hover {
+    box-shadow: inset 25px 0 0 0 #d63120 !important;
+}
+.link.linkflair-creation {
+    border-left-color: #d63120 !important;
+}
+.flairselector .linkflair-discussion > .linkflairlabel,
+.side .md a[href*="flair:discussion"],
+.wiki-page .wiki-page-content .md a[href*="flair:discussion"] {
+    background-color: #d35400;
+}
+.link.linkflair-discussion:hover {
+    box-shadow: inset 25px 0 0 0 #d35400 !important;
+}
+.link.linkflair-discussion {
+    border-left-color: #d35400 !important;
+}
+.flairselector .linkflair-question > .linkflairlabel,
+.side .md a[href*="flair:question"],
+.wiki-page .wiki-page-content .md a[href*="flair:question"] {
+    background-color: orange;
+}
+.link.linkflair-question:hover {
+    box-shadow: inset 25px 0 0 0 orange !important;
+}
+.link.linkflair-question {
+    border-left-color: orange !important;
+}
+.flairselector .linkflair-theory > .linkflairlabel,
+.side .md a[href*="flair:theory"],
+.wiki-page .wiki-page-content .md a[href*="flair:theory"] {
+    background-color: #dfb300;
+}
+.link.linkflair-theory:hover {
+    box-shadow: inset 25px 0 0 0 #dfb300 !important;
+}
+.link.linkflair-theory {
+    border-left-color: #dfb300 !important;
+}
+.flairselector .linkflair-poll > .linkflairlabel,
+.side .md a[href*="flair:poll"],
+.wiki-page .wiki-page-content .md a[href*="flair:poll"] {
+    background-color: #da6ff1;
+}
+.link.linkflair-poll:hover {
+    box-shadow: inset 25px 0 0 0 #da6ff1 !important;
+}
+.link.linkflair-poll {
+    border-left-color: #da6ff1 !important;
+}
+.flairselector .linkflair-guide > .linkflairlabel,
+.side .md a[href*="flair:guide"],
+.wiki-page .wiki-page-content .md a[href*="flair:guide"] {
+    background-color: #da6ff1;
+}
+.link.linkflair-guide:hover {
+    box-shadow: inset 25px 0 0 0 #da6ff1 !important;
+}
+.link.linkflair-guide {
+    border-left-color: #da6ff1 !important;
+}
+html:lang(xh) body:not(.comments-page) .link.linkflair-humor {
+    display: none;
+}
+.flairselector .linkflair-humor > .linkflairlabel,
+.side .md a[href*="flair:humor"],
+.wiki-page .wiki-page-content .md a[href*="flair:humor"] {
+    background-color: #9370db;
+}
+.link.linkflair-humor:hover {
+    box-shadow: inset 25px 0 0 0 #9370db !important;
+}
+.link.linkflair-humor {
+    border-left-color: #9370db !important;
+}
+.flairselector .linkflair-meta > .linkflairlabel,
+.side .md a[href*="flair:meta"],
+.wiki-page .wiki-page-content .md a[href*="flair:meta"] {
+    background-color: #2980b9;
+}
+.link.linkflair-meta:hover {
+    box-shadow: inset 25px 0 0 0 #2980b9 !important;
+}
+.link.linkflair-meta {
+    border-left-color: #2980b9 !important;
+}
+.flairselector .linkflair-other > .linkflairlabel,
+.side .md a[href*="flair:other"] {
+    background-color: #2db0ab;
+}
+.link.linkflair-other:hover {
+    box-shadow: inset 25px 0 0 0 #2db0ab;
+}
+.link.linkflair-other {
+    border-left-color: #2db0ab;
+}
+.flairselector .linkflair-announcement > .linkflairlabel,
+.side .md a[href*="flair:psa"],
+.wiki-page .wiki-page-content .md a[href*="flair:psa"] {
+    background-color: #2a2;
+}
+.link.linkflair-announcement:hover {
+    box-shadow: inset 25px 0 0 0 #2a2 !important;
+}
+.link.linkflair-announcement {
+    border-left-color: #2a2 !important;
+}
+.flairselector .linkflair-shipping > .linkflairlabel,
+.side .md a[href*="flair:shipping"],
+.wiki-page .wiki-page-content .md a[href*="flair:shipping"] {
+    background-color: #640089;
+}
+.link.linkflair-shipping:hover {
+    box-shadow: inset 25px 0 0 0 #640089 !important;
+}
+.link.linkflair-shipping {
+    border-left-color: #640089 !important;
+}
+.flairselector .linkflair-music > .linkflairlabel,
+.side .md a[href*="flair:music"],
+.wiki-page .wiki-page-content .md a[href*="flair:music"] {
+    background-color: #0ff;
+}
+.link.linkflair-music:hover {
+    box-shadow: inset 25px 0 0 0 #0ff !important;
+}
+.link.linkflair-music {
+    border-left-color: #0ff !important;
+}
+.flairselector .linkflair-w > .linkflairlabel,
+.side .md a[href*="flair:w"],
+.wiki-page .wiki-page-content .md a[href*="flair:w"] {
+    background-color: #d3d3d3;
+}
+.link.linkflair-w:hover {
+    box-shadow: inset 25px 0 0 0 #d3d3d3 !important;
+}
+.link.linkflair-w {
+    border-left-color: #d3d3d3 !important;
+}
+.flairselector .linkflair-oc > .linkflairlabel,
+.side .md a[href*="flair:oc"],
+.wiki-page .wiki-page-content .md a[href*="flair:oc"] {
+    background-color: #660800;
+}
+.link.linkflair-oc:hover {
+    box-shadow: inset 25px 0 0 0 #660800 !important;
+}
+.link.linkflair-oc {
+    border-left-color: #660800 !important;
+}
+#header-img.default-header {
+    top: -178px;
+    height: 175px;
+    width: 124px;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    background: 0 0;
+    left: -3px;
+}
+body:not(.loggedin) #header-img.default-header {
+    background: url(%%6%%) no-repeat;
+}
+input[name="uh"] ~ a:after {
+    content: "";
+    position: absolute;
+    left: calc(40px - 100vw);
+    top: -160px;
+    width: 180px;
+    height: 156px;
+    background: url(%%6%%);
+    pointer-events: none;
+}
+input[name="uh"][value^="0"] ~ a:after,
+input[name="uh"][value^="1"] ~ a:after,
+input[name="uh"][value^="2"] ~ a:after,
+input[name="uh"][value^="3"] ~ a:after,
+input[name="uh"][value^="4"] ~ a:after,
+input[name="uh"][value^="5"] ~ a:after {
+    background-position-x: -720px;
+}
+input[name="uh"][value^="6"] ~ a:after,
+input[name="uh"][value^="7"] ~ a:after,
+input[name="uh"][value^="8"] ~ a:after,
+input[name="uh"][value^="9"] ~ a:after,
+input[name="uh"][value^="a"] ~ a:after,
+input[name="uh"][value^="b"] ~ a:after {
+    background-position-x: -1260px;
+}
+input[name="uh"][value^="c"] ~ a:after,
+input[name="uh"][value^="d"] ~ a:after,
+input[name="uh"][value^="e"] ~ a:after,
+input[name="uh"][value^="f"] ~ a:after,
+input[name="uh"][value^="g"] ~ a:after,
+input[name="uh"][value^="h"] ~ a:after {
+    background-position-x: -180px;
+}
+input[name="uh"][value^="i"] ~ a:after,
+input[name="uh"][value^="j"] ~ a:after,
+input[name="uh"][value^="k"] ~ a:after,
+input[name="uh"][value^="l"] ~ a:after,
+input[name="uh"][value^="m"] ~ a:after,
+input[name="uh"][value^="n"] ~ a:after {
+    background-position-x: -360px;
+}
+input[name="uh"][value^="o"] ~ a:after,
+input[name="uh"][value^="p"] ~ a:after,
+input[name="uh"][value^="q"] ~ a:after,
+input[name="uh"][value^="r"] ~ a:after,
+input[name="uh"][value^="s"] ~ a:after,
+input[name="uh"][value^="t"] ~ a:after {
+    background-position-x: -1440px;
+}
+input[name="uh"][value^="u"] ~ a:after,
+input[name="uh"][value^="v"] ~ a:after {
+    background-position-x: -540px;
+}
+input[name="uh"][value^="w"] ~ a:after {
+    background-position-x: -1616px;
+}
+input[name="uh"][value^="x"] ~ a:after {
+    background-position-x: -1800px;
+}
+input[name="uh"][value^="y"] ~ a:after {
+    background-position-x: -1080px;
+}
+input[name="uh"][value^="z"] ~ a:after {
+    background-position-x: -900px;
+}
 .md ul > li {
     position: relative;
 }
@@ -50,7 +4176,8 @@
 .md ul > li > a[href^="/box"] + ul > li:before {
     content: "";
     display: inline-block;
-    background-color: #fff;
+    // temp background: url(%%f%%) 0 -6px;
+    background: #fff;
     width: 12px;
     height: 9px;
     margin-bottom: 2px;
@@ -75,7 +4202,8 @@
     width: 16px;
     height: 16px;
     content: "";
-    background-color: red;
+    // temp background-image: url(%%m%%);
+    background: red;
     background-size: 16px;
 }
 .md > ul > li > a[href^="/choice"] + ul > li:first-of-type:before {
@@ -171,7 +4299,7 @@ a[href="/red"] {
     width: 90px;
     height: 85px;
     content: "";
-    // background-image: url(%%v%%);
+    //temp background-image: url(%%v%%);
     background-color: red;
     background-size: 4680px;
     z-index: 2;
@@ -258,6 +4386,7 @@ a[href="/red"] {
 .md ul > li > a[href^="/box"] + ul a[href^="/cls"]:before {
     content: "";
     position: absolute;
+    // temp background: url(%%minifaces%%);
     background-color: gray;
     width: 25px;
     height: 25px;
